@@ -48,14 +48,4 @@ refactor: 💡 A code change that neither fixes a bug or adds a feature
 style: 💄 Markup, white-space, formatting, missing semi-colons...
 ```
 
-Here's an example of a refactor of an hypotetical `address-panel`:
-
-```sh
-git checkout main
-
-git checkout -b refactor/address-panel
-
-git commit -m 'fix: font-size used in the address description'
-
-git commit -m 'refactor: simplified markup for the address panel'
-```
+Find more about contributing [here](docs/open-source/contributing.md), please!
