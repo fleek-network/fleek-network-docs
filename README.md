@@ -5,7 +5,7 @@
 # Docta
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 
-The Psychedelic documentation and guides.
+The Fleek documentation and guides source.
 
 
 ### 🤖 Installation
