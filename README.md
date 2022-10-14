@@ -1,4 +1,9 @@
-# ✏️ Docta
+<div align="center" style="padding-bottom: 20px;">
+  <img src="./static/img/logo-repo.png?202210141848" width="140px" height="auto"/>
+</div>
+
+# Docta
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 
 The Psychedelic documentation and guides.
 
