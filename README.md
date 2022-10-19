@@ -50,6 +50,10 @@ Then you need to start the crawl according to your configuration.
 yarn crawl:docker
 ```
 
+### 📖 Version
+
+WIP
+
 ## 🙏 Contribution guideline
 
 Create branches from the `main` branch and name it in accordance to **conventional commits** [here](https://www.conventionalcommits.org/en/v1.0.0/), or follow the examples bellow:
