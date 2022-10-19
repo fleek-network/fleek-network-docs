@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'TODO',
   tagline: 'TODO',
-  url: 'https://TODO',
-  baseUrl: '/',
+  url: 'https://fleekhq.github.io/docta',
+  baseUrl: '/docta/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
