@@ -60,16 +60,6 @@ const config = {
             label: 'Documentation',
             position: 'left',
           },
-          {
-            href: 'https://TODO',
-            label: 'Feedback',
-            position: 'right',
-          },
-          {
-            href: 'https://TODO',
-            label: 'Help',
-            position: 'right',
-          },
         ],
       },
       footer: {
