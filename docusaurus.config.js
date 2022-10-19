@@ -126,6 +126,17 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '3HJT8PSC35',
+        // Public API key
+        apiKey: '633800ca1e949856c20a92711132900c',
+        indexName: 'docta_poc',
+        // Optional: see doc section below
+        contextualSearch: true,
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+      },
     }),
 };
 
