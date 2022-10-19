@@ -36,3 +36,12 @@
 .DocSearch-Button {
   width: 250px;
 }
+
+div[class*=" searchLogoColumn"],
+[aria-label="Search by Algolia"] {
+  display: none;
+}
+
+div[class*="docItemContainer"] {
+  padding: 20px;
+}
