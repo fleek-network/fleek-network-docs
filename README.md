@@ -34,6 +34,22 @@ This command generates static content into the `build` directory and can be serv
 
 WIP
 
+### 🕸 Web Crawl
+
+The web crawler or spider is used to search and automatically index website content. The process can run periodically by docsearch but if you much prefer you can run it manually.
+
+You can run a crawl from the packaged Docker image to crawl your website.
+
+You'll need to have installed:
+- jq (command-line JSON processor)
+- Docker
+
+Then you need to start the crawl according to your configuration.
+
+```
+yarn crawl:docker
+```
+
 ## 🙏 Contribution guideline
 
 Create branches from the `main` branch and name it in accordance to **conventional commits** [here](https://www.conventionalcommits.org/en/v1.0.0/), or follow the examples bellow:
