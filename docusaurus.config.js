@@ -61,11 +61,6 @@ const config = {
             position: 'left',
           },
           {
-            href: '/Guides',
-            label: 'Guides',
-            position: 'left',
-          },
-          {
             href: 'https://TODO',
             label: 'Feedback',
             position: 'right',
