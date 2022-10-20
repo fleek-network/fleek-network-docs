@@ -50,6 +50,9 @@ html[data-theme='dark'] {
 .DocSearch .DocSearch-Button-Keys {
   display: none;
 }
+.DocSearch-Dropdown .DocSearch-Hit[aria-selected=true] a {
+  background-color: #111;
+}
 .navbar__items .DocSearch-Button {
   width: 250px;
   border-radius: 5px;
