@@ -1,14 +1,24 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+// const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+const commonDocsOptions = {
+  breadcrumbs: false,
+  showLastUpdateAuthor: false,
+  showLastUpdateTime: true,
+  editUrl:
+    'https://github.com/fleek-network/fleek-network-docs',
+};
+
+const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Fleek Network',
   tagline: 'TODO',
-  url: 'https://github.com/fleek-network/fleek-network-docs',
+  url: 'https://docs.fleek-network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -35,10 +45,19 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
-          breadcrumbs: false,
+          routeBasePath: '/docs',
+          breadcrumbs: true,
+          sidebarPath: require.resolve('./sidebars.js'),
         },
-        blog: false,
+        blog: {
+          path: 'blog',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Blog Posts',
+          feedOptions: {
+            type: 'all',
+            copyright,
+          },
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -61,8 +80,13 @@ const config = {
         },
         items: [
           {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
+          },
+          {
             to: 'docs',
-            label: 'Documents',
+            label: 'Docs',
             position: 'left',
             activeBasePath: 'docs',
           },
@@ -140,6 +164,20 @@ const config = {
         searchPagePath: 'search',
       },
     }),
+    plugins: [
+      [
+        'content-docs',
+        /** @type {import('@docusaurus/plugin-content-docs').Options} */
+        ({
+          id: 'guides',
+          path: 'guides',
+          routeBasePath: '/guides',
+          // `undefined` to auto-generate
+          sidebarPath: undefined,
+          ...commonDocsOptions,
+        }),
+      ],
+    ],
 };
 
 module.exports = config;
