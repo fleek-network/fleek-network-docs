@@ -1,12 +1,11 @@
 <div align="center" style="padding-bottom: 20px;">
-  <img src="./static/img/logo-repo.png?202210141848" width="140px" height="auto"/>
+  <img src="./static/img/logo+named.svg?202301091309" width="360px" height="auto"/>
 </div>
 
-# Docta
+# Fleek Network docs
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 
-The Fleek documentation and guides source.
-
+The Fleek Network documentation and guides source.
 
 ### 🤖 Installation
 
