@@ -49,15 +49,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         logo: {
           alt: 'Fleek',
-          src: 'img/logo.png?202210141832',
+          src: 'img/logo.png?2023091241',
         },
         items: [
           {
             href: '/docs',
             label: 'Documentation',
+            position: 'left',
+          },
+          {
+            href: '/docs',
+            label: 'Guides',
             position: 'left',
           },
         ],
@@ -113,7 +123,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Fleek. All rights reserved.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
       algolia: {
