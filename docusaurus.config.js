@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/docta/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.ico?202301091316',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
