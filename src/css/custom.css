@@ -29,6 +29,7 @@
   --ifm-menu-color-background-active: rgba(255, 255, 255, 0.1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-navbar-background-color: #000;
+  --ifm-menu-color-active: #888;
 }
 
 html[data-theme='dark'] {
@@ -99,4 +100,18 @@ div[class*="docItemContainer"] {
 
 .navbar + .main-wrapper {
   padding: 1rem 0;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: transparent;
+}
+
+.menu__link,
+.navbar__item {
+  color: var(--ifm-menu-color-active);
+}
+
+.menu__link--active,
+.navbar__link--active {
+  color: var(--ifm-color-primary);
 }

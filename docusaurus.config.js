@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TODO',
+  title: 'Fleek Network',
   tagline: 'TODO',
   url: 'https://github.com/fleek-network/fleek-network-docs',
   baseUrl: '/',
@@ -61,14 +61,16 @@ const config = {
         },
         items: [
           {
-            href: '/docs',
-            label: 'Documentation',
+            to: 'docs',
+            label: 'Documents',
             position: 'left',
+            activeBasePath: 'docs',
           },
           {
-            href: '/docs',
+            to: 'guides',
             label: 'Guides',
             position: 'left',
+            activeBasePath: 'guides',
           },
         ],
       },
