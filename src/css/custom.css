@@ -89,3 +89,10 @@ div[class*="docItemContainer"] {
     justify-content: center;
   }
 }
+
+/* Main wrapper */
+.navbar__inner,
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
