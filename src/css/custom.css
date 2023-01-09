@@ -96,3 +96,7 @@ div[class*="docItemContainer"] {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.navbar + .main-wrapper {
+  padding: 1rem 0;
+}
