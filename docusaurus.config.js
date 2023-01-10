@@ -9,7 +9,7 @@ const commonDocsOptions = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   editUrl:
-    'https://github.com/fleek-network/fleek-network-docs',
+    'https://github.com/fleek-network/fleek-network-docs/edit/main/',
 };
 
 const commonNavbarItems = [{
