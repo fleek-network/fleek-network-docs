@@ -238,3 +238,11 @@ article h1,
   max-width: 1440px;
   padding: 0;
 }
+
+.markdown li a {
+  color: var(--ifm-color-primary-darker);
+}
+
+.table-of-contents__left-border {
+  border-left-style: dashed;
+}

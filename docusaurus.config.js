@@ -13,13 +13,13 @@ const commonDocsOptions = {
 };
 
 const commonNavbarItems = [{
-  to: 'blog',
-  label: 'Blog',
+  to: 'docs',
+  label: 'Documentation',
   position: 'left',
 },
 {
-  to: 'docs',
-  label: 'Documentation',
+  to: 'blog',
+  label: 'Engineering',
   position: 'left',
 },
 {
