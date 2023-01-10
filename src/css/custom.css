@@ -129,3 +129,21 @@ div[class*="docItemContainer"] {
 .navbar__link--active {
   color: var(--ifm-color-primary);
 }
+
+.DocSearch-Button-Container svg {
+  width: 14px;
+  height: 14px;
+}
+
+.DocSearch-Button-Container .DocSearch-Button-Placeholder {
+  padding: 0 0.5rem;
+}
+
+.DocSearch-Button svg {
+  opacity: 0.5;
+}
+.DocSearch-Button:active svg,
+.DocSearch-Button:focus svg,
+.DocSearch-Button:hover svg {
+  opacity: 1;
+}
