@@ -34,6 +34,7 @@
 
 :root {
   --docsearch-modal-background: #000 !important;
+  --custom-color-gray-blue: rgb(62 72 105 / 37.5%);
 }
 
 html[data-theme='dark'] {
@@ -179,6 +180,7 @@ input[class^="searchQueryInput_"] {
 }
 .breadcrumbs__item--active .breadcrumbs__link {
   color: var(--ifm-menu-color);
+  background: none;
 }
 
 .footer [class^="footerLogoLink_"] {
@@ -186,4 +188,14 @@ input[class^="searchQueryInput_"] {
 }
 .footer [class^="footerLogoLink_"]:hover {
   opacity: 0.5;
+}
+
+article .markdown h1 {
+  background: linear-gradient(90deg, rgb(0, 115, 255), rgb(0, 250, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pagination-nav__link {
+  background: var(--custom-color-gray-blue);
 }
