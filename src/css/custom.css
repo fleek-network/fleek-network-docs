@@ -123,7 +123,17 @@ div[class*="docItemContainer"] {
   }
   .footer .container {
     padding: 0;
-  }  
+  }
+  main .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width:  85% !important;
+  }
+  /* main .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: none !important;
+  }
+  .container .pagination-nav {
+    display: flex;
+    justify-content: space-between;
+  } */
 }
 
 /* Main wrapper */
@@ -136,6 +146,10 @@ div[class*="docItemContainer"] {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+}
+
+.menu .menu__list {
+  padding-right: 2rem;
 }
 
 .menu__link--active:not(.menu__link--sublist) {
@@ -218,4 +232,9 @@ article h1,
 
 .pagination-nav__link {
   background: var(--custom-color-gray-blue);
+}
+
+.main-wrapper .container {
+  max-width: 1440px;
+  padding: 0;
 }
