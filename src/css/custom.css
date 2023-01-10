@@ -102,6 +102,9 @@ div[class*="docItemContainer"] {
   [class^="sidebar_"] .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
     padding: 1rem 0;
   }
+  .footer .container {
+    padding: 0;
+  }  
 }
 
 /* Main wrapper */
