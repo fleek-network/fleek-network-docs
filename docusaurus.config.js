@@ -80,21 +80,26 @@ const config = {
         },
         items: [
           {
-            to: '/blog',
+            to: 'blog',
             label: 'Blog',
             position: 'left',
           },
           {
             to: 'docs',
-            label: 'Docs',
+            label: 'Documentation',
             position: 'left',
-            activeBasePath: 'docs',
           },
           {
             to: 'guides',
             label: 'Guides',
             position: 'left',
             activeBasePath: 'guides',
+          },
+          {
+            to: 'reference',
+            label: 'Reference',
+            position: 'left',
+            activeBasePath: 'reference',
           },
         ],
       },
@@ -172,6 +177,18 @@ const config = {
           id: 'guides',
           path: 'guides',
           routeBasePath: '/guides',
+          // `undefined` to auto-generate
+          sidebarPath: undefined,
+          ...commonDocsOptions,
+        }),
+      ],
+      [
+        'content-docs',
+        /** @type {import('@docusaurus/plugin-content-docs').Options} */
+        ({
+          id: 'reference',
+          path: 'reference',
+          routeBasePath: '/reference',
           // `undefined` to auto-generate
           sidebarPath: undefined,
           ...commonDocsOptions,
