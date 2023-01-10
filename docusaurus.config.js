@@ -154,7 +154,13 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Fleek. All rights reserved.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Fleek. All rights reserved.`,
+        logo: {
+          alt: 'Fleek Network',
+          src: 'img/logo+named.svg?202301101154',
+          href: 'https://fleek.network',
+          width: 160
+        },
       },
       prism: {
         theme: darkCodeTheme,

@@ -177,3 +177,10 @@ input[class^="searchQueryInput_"] {
 .breadcrumbs__item--active .breadcrumbs__link {
   color: var(--ifm-menu-color);
 }
+
+.footer [class^="footerLogoLink_"] {
+  opacity: 1;
+}
+.footer [class^="footerLogoLink_"]:hover {
+  opacity: 0.5;
+}
