@@ -124,9 +124,6 @@ div[class*="docItemContainer"] {
   .footer .container {
     padding: 0;
   }
-  main .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
-    max-width:  85% !important;
-  }
   /* main .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
     max-width: none !important;
   }
@@ -245,4 +242,17 @@ article h1,
 
 .table-of-contents__left-border {
   border-left-style: dashed;
+}
+
+.markdown img {
+  border-radius: 8px;
+}
+
+.table-of-contents li a:hover {
+  text-decoration: underline;
+}
+
+ul.table-of-contents > li:first-child a.toc-highlight {
+  font-weight: bold;
+  font-size: 1rem;
 }
