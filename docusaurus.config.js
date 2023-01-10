@@ -12,6 +12,33 @@ const commonDocsOptions = {
     'https://github.com/fleek-network/fleek-network-docs',
 };
 
+const commonNavbarItems = [{
+  to: 'blog',
+  label: 'Blog',
+  position: 'left',
+},
+{
+  to: 'docs',
+  label: 'Documentation',
+  position: 'left',
+},
+{
+  to: 'guides',
+  label: 'Guides',
+  position: 'left',
+  activeBasePath: 'guides',
+},
+{
+  to: 'reference',
+  label: 'Reference',
+  position: 'left',
+  activeBasePath: 'reference',
+}];
+
+const commonDiscord = 'https://discord.gg/fleekxyz';
+const commonTwitter = 'https://twitter.com/fleek_net';
+const commonHome = 'https://fleek.network';
+
 const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
@@ -79,28 +106,7 @@ const config = {
           src: 'img/logo.png?2023091241',
         },
         items: [
-          {
-            to: 'blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
-            to: 'docs',
-            label: 'Documentation',
-            position: 'left',
-          },
-          {
-            to: 'guides',
-            label: 'Guides',
-            position: 'left',
-            activeBasePath: 'guides',
-          },
-          {
-            to: 'reference',
-            label: 'Reference',
-            position: 'left',
-            activeBasePath: 'reference',
-          },
+          ...commonNavbarItems,
         ],
       },
       footer: {
@@ -109,10 +115,7 @@ const config = {
           {
             title: 'Resources',
             items: [
-              {
-                label: 'Documents',
-                to: '/docs',
-              },
+              ...commonNavbarItems,
             ],
           },
           {
@@ -120,11 +123,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/yVEcEzmrgm',
+                href: commonDiscord,
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/plug_wallet',
+                href: commonTwitter,
               },
             ],
           },
@@ -133,11 +136,11 @@ const config = {
             items: [
               {
                 label: 'Home',
-                href: 'https://fleek.co',
+                href: commonHome,
               },
               {
                 label: 'Contact us',
-                href: 'https://fleek.co',
+                href: commonDiscord,
               },
             ],
           },
@@ -146,7 +149,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/fleekhq',
+                href: 'https://github.com/fleek-network',
               },
             ],
           },
