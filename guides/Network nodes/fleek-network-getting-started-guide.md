@@ -19,19 +19,14 @@ tags:
 
 ![Fleek Network: Getting started guide](./assets/fleek-network-getting-started.png?202301101924)
 
+## Introduction
+
 In this guide, we’ll have a simple look into how Fleek Network works in its current development phase and briefly share some of the core concepts like spinning up a node and putting + retrieving .car files from the network.
 
 For those seeking advanced knowledge:
 
 * Read our [whitepaper](https://fleek.network/fleek-network.pdf?202212011428).
 * Check out [our open source code](https://github.com/fleek-network/ursa).
-
-### Table of Contents
-
-* [A Quick TL;DR on Fleek Network](https://blog.fleek.co/posts/fleek-network-getting-started-guide#need-a-quick-fleek-network-tl-dr)
-* [Why is Fleek Network Needed?](https://blog.fleek.co/posts/fleek-network-getting-started-guide#why-is-fleek-network-needed)
-* [How Does Fleek Network work?](https://blog.fleek.co/posts/fleek-network-getting-started-guide#how-does-fleek-network-work)
-* [Running a Node](https://blog.fleek.co/posts/fleek-network-getting-started-guide#running-a-node)
 
 ***
 
@@ -83,7 +78,9 @@ We’ll clone the repository locally, build it and interact with the node throug
 
 Start by cloning the repository located at [https://github.com/fleek-network/ursa](https://github.com/fleek-network/ursa "https://github.com/fleek-network/ursa")
 
-    git clone git@github.com:fleek-network/ursa.git
+```sh
+git clone git@github.com:fleek-network/ursa.git
+```
 
 You’ll notice that we try our best to document the project as we go, so it should be easy to follow if interested. Of course, don’t shy away from contributing with any amends or your wording poetry!
 
@@ -91,7 +88,9 @@ Once the git clone completes, you’ll have the latest version at the time of cl
 
 Execute the install command to build and install the Fleek Network CLI.
 
-    make install
+```sh
+make install
+```
 
 The install command uses the Rust compiler to build; depending on how fast your machine is, it might take a while.
 
@@ -103,15 +102,21 @@ Once the Rust compiler completes generating the binary, it’ll include it in th
 
 Run the CLI with the flag `version` to confirm it's available.
 
-    ursa --version
+```sh
+ursa --version
+```
 
 The CLI has an optional “config.toml” for custom configuration settings. As it depends on the CLI version, you can find what’s available with the flag "help".
 
-    ursa --help
+```sh
+ursa --help
+```
 
 The CLI can be called without flags or options to start a new node with default settings.
 
-    ursa
+```sh
+ursa
+```
 
 Here’s the output of the listener's host and port numbers:
 
@@ -137,40 +142,46 @@ We can check the available CLI commands to determine how to perform our desired 
 
 After we checked our base `help`, we'll find that RPC is available as a subcommand.
 
-    ursa rpc --help
-    
-    run rpc commands from cli
-    
-    USAGE:
-        ursa rpc <SUBCOMMAND>
-    
-    FLAGS:
-        -h, --help       Prints help information
-        -V, --version    Prints version information
-    
-    SUBCOMMANDS:
-        help    Prints this message or the help of the given subcommand(s)
-        put     put the file on the node
+```sh
+ursa rpc --help
+
+run rpc commands from cli
+
+USAGE:
+ursa rpc <SUBCOMMAND>
+
+FLAGS:
+-h, --help       Prints help information
+-V, --version    Prints version information
+
+SUBCOMMANDS:
+help    Prints this message or the help of the given subcommand(s)
+put     put the file on the node
+```
 
 Very simple to find help by simply passing the help flat after the desired subcommand.
 
-    ursa rpc put --help
-    
-    put the file on the node
-    
-    USAGE:
-        ursa rpc put <path>
-    
-    FLAGS:
-        -h, --help       Prints help information
-        -V, --version    Prints version information
-    
-    ARGS:
-        <path>
+```sh
+ursa rpc put --help
+
+put the file on the node
+
+USAGE:
+    ursa rpc put <path>
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+ARGS:
+    <path>
+```
 
 Finally, we can put our `basic.car` file into our node.
 
-    ursa rpc put basic.car
+```sh
+ursa rpc put basic.car
+```
 
 On success, you’ll get a hash representing the data of its content; it uses a format called CID (**C**ontent **ID**entifier).
 
@@ -187,15 +198,19 @@ The subcommand is `get` followed by a valid `CID` and the output `pathname` wher
 
 Here’s the syntax:
 
-    ursa rpc get <CID> <PATHNAME>
+```sh
+ursa rpc get <CID> <PATHNAME>
+```
 
 As previously explained, we can always use the flag `help` to find out more about any available subcommands.
 
 Following up on the “put” example, we have a valid CID that was returned in response to our request in our network.
 
-    ursa rpc \
-        get bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei \
-        ./output
+```sh
+ursa rpc \
+    get bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei \
+    ./output
+```
 
 > 💡 Note that we have used a backslash `\` in our command example to break into several lines merely - you can ignore and write all in a single line!
 
@@ -205,20 +220,28 @@ If successful, the output will be similar to the following:
 
 At this point, we are interested in the file in the “output” directory. The file is named after the CID (Content identifier) plus the file extension car (the CAR file type).
 
-    bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```sh
+bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```
 
 The content is a string binary that only an interpreter can understand. Still, you can assert the file size by executing a simple list command to check the files in the `output` directory, as follows:
 
-    ls -hl ./output
+```sh
+ls -hl ./output
+```
 
 The output in our machines shows the following:
 
-    -rw-r--r-- 1 fleek staff 26K 29 Nov 17:23 
-    bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```sh
+-rw-r--r-- 1 fleek staff 26K 29 Nov 17:23 
+bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```
 
 Notice that it's the same file size, as the original [basic.car](https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi) we’ve put into the network. You can verify by using the `cmp` command, you'll get no output because there's no difference:
 
-    cmp basic.car bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```sh
+cmp basic.car bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei.car
+```
 
 **We’ve now been successful in retrieving the original car file content we “put” into the network earlier!**
 

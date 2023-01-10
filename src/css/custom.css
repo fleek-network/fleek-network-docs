@@ -199,6 +199,8 @@ div[class*="docItemContainer"] {
 
 input[class^="searchQueryInput_"] {
   border: 1px solid var(--ifm-toc-border-color);
+  max-width: 480px;
+  width: 100%;
 }
 
 .breadcrumbs__item span,
@@ -251,8 +253,18 @@ article h1,
 .table-of-contents li a:hover {
   text-decoration: underline;
 }
-
+/* 
 ul.table-of-contents > li:first-child a.toc-highlight {
   font-weight: bold;
   font-size: 1rem;
+} */
+
+.table-of-contents:before {
+  content: "Content";
+  font-weight: bold;
+  font-size: 1rem;
+}
+.table-of-contents .table-of-contents__link--active:before {
+  content: "► ";
+  font-size: 0.62rem;
 }
