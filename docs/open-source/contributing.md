@@ -1,10 +1,7 @@
 ---
 title: Contributing
-hide_title: true
 sidebar_position: 1
 ---
-
-# 🙏 Contributing
 
 Create branches from the `main` branch and name it in accordance to **conventional commits** [here](https://www.conventionalcommits.org/en/v1.0.0/), or follow the examples bellow:
 

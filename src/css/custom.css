@@ -37,12 +37,29 @@
   --custom-color-gray-blue: rgb(62 72 105 / 37.5%);
 }
 
+.main-wrapper a,
+.main-wrapper span,
+.main-wrapper p {
+  line-height: 1.4;
+}
+
+.main-wrapper::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: radial-gradient(circle at 10% 30%, rgb(0, 16, 49), rgba(255, 255, 255, 0) 18%), radial-gradient(circle at 90% 90%, rgb(0, 12, 41), rgba(255, 255, 255, 0) 26%);
+  z-index: -1;
+}
+
 html[data-theme='dark'] {
   background: #000;
 }
 
 [data-theme='dark'] .footer {
-  background: #000;
+  background: transparent;
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
@@ -67,6 +84,7 @@ html[data-theme='dark'] {
 .navbar__items .DocSearch-Button:hover {
   box-shadow: var(--ifm-toc-border-color);
   background: var(--docsearch-searchbox-focus-background);
+  border: 1px solid var(--ifm-color-primary);
 }
 
 .footer__bottom {
@@ -190,8 +208,10 @@ input[class^="searchQueryInput_"] {
   opacity: 0.5;
 }
 
-article .markdown h1 {
-  background: linear-gradient(90deg, rgb(0, 115, 255), rgb(0, 250, 255));
+article h1,
+.col article header > h2 {
+  /* background: linear-gradient(90deg, rgb(0, 115, 255), rgb(0, 250, 255)); */
+  background: linear-gradient(90deg, #888, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

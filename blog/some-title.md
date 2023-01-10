@@ -1,12 +1,11 @@
 ---
-title: Intro blog engineering
+title: Some title
 ---
 
-Blog ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna est, tincidunt in diam et apter.
+
+Blog Nulla sem ligula, lobortis vitae ornare vitae, venenatis commodo lectus. Mauris at nibh vel sapien porta fermentum non vitae felis.
 
 <!--truncate-->
-
-orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna est, tincidunt in diam et, cursus iaculis felis. In et vehicula purus, ac vulputate tortor. Praesent ullamcorper felis id maximus commodo. Integer sed nisl orci. Ut mauris ipsum, dapibus ac tincidunt sed, luctus et lorem. Suspendisse tortor sapien, condimentum ut lacus quis, laoreet semper ante. Quisque eleifend a libero ut rutrum. Mauris tristique arcu eu urna consequat, semper sodales lorem fringilla. Fusce ac leo augue. Ut sed sapien facilisis, tristique eros id, iaculis erat. Mauris eu tellus pharetra, laoreet turpis ac, consequat turpis. Duis id dapibus neque. Proin viverra quam semper, egestas lectus convallis, lacinia mi. Aenean pharetra tincidunt arcu vel luctus. Integer in luctus justo, ut tristique ligula. Etiam sit amet lobortis nibh.
 
 Nulla sem ligula, lobortis vitae ornare vitae, venenatis commodo lectus. Mauris at nibh vel sapien porta fermentum non vitae felis. Proin venenatis, diam non lacinia maximus, nunc nibh fermentum augue, eu malesuada ipsum quam nec sapien. Mauris molestie gravida elit, sed ultricies ipsum convallis vel. Mauris congue, felis vitae feugiat lobortis, quam diam varius lectus, a elementum eros lorem eu leo. Cras rutrum ex ut interdum vestibulum. Vivamus auctor lacinia ullamcorper. Etiam finibus nunc vel facilisis sagittis. Nulla id porttitor quam. Sed volutpat nunc lacus. Quisque commodo, sem quis vehicula porttitor, ligula orci ornare nisi, et consectetur urna libero sed libero.
 

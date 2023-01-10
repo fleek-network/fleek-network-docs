@@ -1,10 +1,7 @@
 ---
 title: Configure NPM for Github Package Registry
-hide_title: true
 sidebar_position: 1
 ---
-
-## 👻 Configure NPM for Github Package Registry
 
 You'll need to have @Psychedelic Github Package Registry setup, if you haven't done for other projects find out how here.
 
