@@ -43,6 +43,14 @@ You'll need to have installed:
 - jq (command-line JSON processor)
 - Docker
 
+Also, have a dotenv (.env) with the following:
+
+```sh
+APPLICATION_ID=<YOUR APP ID>
+API_KEY=<YOUR API KEY>
+```
+
+
 Then you need to start the crawl according to your configuration.
 
 ```

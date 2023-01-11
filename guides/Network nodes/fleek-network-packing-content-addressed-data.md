@@ -38,7 +38,7 @@ To follow this guide, you will need:
 
 - Some experience with command-line interfaces
 
-For other topics, check our [getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide).
+For other topics, check our [getting started guide](fleek-network-getting-started-guide).
 
 <CheckoutCommitWarning />
 

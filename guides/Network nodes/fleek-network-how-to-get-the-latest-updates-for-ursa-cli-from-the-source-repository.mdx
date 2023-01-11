@@ -38,7 +38,7 @@ To follow this guide, you will need:
 - Bit of experience with Git version control
 - Docker (if you're following that path)
 
-We're also assuming that you have followed our initial [getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide). If you haven't already 😅, read it [here](https://blog.fleek.co/posts/fleek-network-getting-started-guide).
+We're also assuming that you have followed our initial [getting started guide](fleek-network-getting-started-guide). If you haven't already 😅, read it [here](fleek-network-getting-started-guide).
 
 <CheckoutCommitWarning />
 
@@ -115,7 +115,7 @@ To kick things out, we're going to discuss the installation process in a host OS
 
 ### Native build
 
-💁‍♀️ We are assuming that your system setup hasn't changed, either Rust toolchain is still installed correctly or if you opted to run via Docker have the Docker application). If you have made changes to your system and need to revisit our getting started guide find it [here]([here](https://blog.fleek.co/posts/fleek-network-getting-started-guide)).
+💁‍♀️ We are assuming that your system setup hasn't changed, either Rust toolchain is still installed correctly or if you opted to run via Docker have the Docker application). If you have made changes to your system and need to revisit our getting started guide find it [here](fleek-network-getting-started-guide).
 
 First, `change directory` to the Ursa directory in your file system:
 
@@ -140,7 +140,7 @@ Installing /root/.cargo/bin/ursa
 Installed package `ursa vX.X.X (/temp/ursa/crates/ursa)` (executable `ursa`)
 ```
 
-> Rust creates the binary and stores it in the Cargo bin directory. On mac and linux, this is located at $HOME/.cargo/bin and on Windows %USERPROFILE%\.cargo\bin. If ursa is not available as a command, it’s very likely that your OS Rust setup is unhealthy, thus as recommended above, revisit the [Getting started guide]([here](https://blog.fleek.co/posts/fleek-network-getting-started-guide)).
+> Rust creates the binary and stores it in the Cargo bin directory. On mac and linux, this is located at $HOME/.cargo/bin and on Windows %USERPROFILE%\.cargo\bin. If ursa is not available as a command, it’s very likely that your OS Rust setup is unhealthy, thus as recommended above, revisit the [Getting started guide](fleek-network-getting-started-guide).
 
 ### Docker build
 
@@ -183,7 +183,7 @@ Thirdly, we run the `docker run` with any necessary flags, such as exposing port
 docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ursa
 ```
 
-😅 We have utility methods for your convenience to run docker easily and not have to remember these long commands, check [Running a node in Docker](https://blog.fleek.co/posts/fleek-network-running-a-node-in-a-docker-container) for more details. Hints:
+😅 We have utility methods for your convenience to run docker easily and not have to remember these long commands, check [Running a node in Docker](fleek-network-running-a-node-in-a-docker-container) for more details. Hints:
 
 ```sh
 make docker-build
@@ -191,7 +191,7 @@ make docker-build
 make docker-run
 ```
 
-Learn more about Docker by checking our guide into [Running a node in Docker](https://blog.fleek.co/posts/fleek-network-running-a-node-in-a-docker-container) from our getting started guides.
+Learn more about Docker by checking our guide into [Running a node in Docker](fleek-network-running-a-node-in-a-docker-container) from our getting started guides.
 
 
 Great 👌 ! You have successfully reinstalled the Ursa CLI.

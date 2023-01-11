@@ -172,7 +172,7 @@ Here's how our [Dockerfile](https://github.com/fleek-network/ursa/blob/22de01ecb
 
 ### Build the Docker image
 
-We are assuming 😅 that you've followed our [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide) and have successfully cloned the `ursa` repository. If you haven't give it a go, before you proceed!
+We are assuming 😅 that you've followed our [Fleek Network: Getting started guide](fleek-network-getting-started-guide) and have successfully cloned the `ursa` repository. If you haven't give it a go, before you proceed!
 
 The reason is that the image builder requires the source files as the input file to have information to build a container, as mentoned [earlier](#image). 
 
@@ -249,7 +249,7 @@ For that reason, we provide you a quick demonstration on how to pull the image a
 
 The Fleek Network Ursa image is built nightly, and some of our users might find handy to pull it instead of building it for quick access to a running node!
 
-> The official [fleek-network/ursa:nightly](https://github.com/fleek-network/ursa/pkgs/container/ursa) image is currently hosted in Github's container registry and updated every night, you can `docker pull` the image and run it locally. Beware that the version is built at a particular time of the day, so if you are looking for a custom image then you're better off learning how to build one yourself. The extended guide provides you all the information you need, but we also have a guide on how to update images that you may be interested in reading [here](https://blog.fleek.co/posts/
+> The official [fleek-network/ursa:nightly](https://github.com/fleek-network/ursa/pkgs/container/ursa) image is currently hosted in Github's container registry and updated every night, you can `docker pull` the image and run it locally. Beware that the version is built at a particular time of the day, so if you are looking for a custom image then you're better off learning how to build one yourself. The extended guide provides you all the information you need, but we also have a guide on how to update images that you may be interested in reading [here](fleek-network-packing-content-addressed-data)
 
 Firstly, start by running the `docker pull`, as follows:
 
@@ -367,7 +367,7 @@ For users who need high customisation 😎, the Docker port binding is an import
 -p <HOST-ADDRESS>:<CONTAINER-PORT>:<HOST-PORT>
 ```
 
-Following up 👇, we'll look into how to control Ursa via the container's processes, to help you understand a bit more of Ursa. This can be useful, if you want to follow some of ursa subcommands explained in the [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide), or if you need to interact with the process in the container:
+Following up 👇, we'll look into how to control Ursa via the container's processes, to help you understand a bit more of Ursa. This can be useful, if you want to follow some of ursa subcommands explained in the [Fleek Network: Getting started guide](fleek-network-getting-started-guide), or if you need to interact with the process in the container:
 
 - [Stop the Docker container](#stop-the-docker-container)
 - [Restart the Docker container](#restart-the-docker-container)
