@@ -1,6 +1,7 @@
 ---
 template: post
 draft: false
+hide_title: true
 title: How to get the latest updates for Ursa CLI from the source repository
 slug: fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository
 date: 2022-12-09T13:00:00.000+00:00
@@ -23,7 +24,7 @@ tags:
 
 Fleek Network's Ursa CLI source code 🤖 is updated frequently and thus keeping up with changes can be a bit of a chore and especially difficult for users who are trying to have it compiled for the first time, or updating the Ursa CLI binary for their operating systems. While we should have stable releases in the future at the current phase of development, there's a requirement to follow the contributions directly in the repository: checking in and out, the commits you're interested in 🧐.
 
-In this guide, we’ll have a simple look into how to pull changes and update the Ursa CLI binary for Linux, macOS and Windows (WSL): for the Linux guides we’ll use Ubuntu as an example. 
+In this guide, we’ll have a simple look into how to pull changes and update the Ursa CLI binary for Linux, macOS and Windows (WSL): for the Linux guides, we’ll use Ubuntu as an example. 
 
 ## Pre-requisites
 
