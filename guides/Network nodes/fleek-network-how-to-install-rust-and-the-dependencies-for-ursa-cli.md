@@ -14,8 +14,12 @@ tags:
 - Getting Started
 - Fleek Network
 - Rust dependencies
-
 ---
+
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 
 ![](./assets/fleek-network-dependencies-for-ursa-cli.png?202212071243)
 
@@ -33,6 +37,8 @@ To follow the guide, you will need the following:
 You're required to have some experience with the command-line interface 😿 and have Git installed; Also, you should be happy to troubleshoot, since versions might differ from the time of writing and reading. Most times, a simple web search provides the best answers 🙏!
 
 If you don't have Git installed, learn more about it and the instructions by reading the [Git documentation](https://git-scm.com/book/en/v2).
+
+<CheckoutCommitWarning />
 
 ## Install Rust with Rustup tool
 

@@ -14,8 +14,12 @@ tags:
 - Getting Started
 - Fleek Network
 - health checks
-
 ---
+
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 
 ![](./assets/fleek-network-node-health-check-guide.png?202301041235)
 
@@ -30,6 +34,14 @@ You should have followed our [getting started guide](#fleek-network-getting-star
 We'll give you a basic introduction to the topic, but you should also appreciate the fact that development is ongoing, and other factors, such as the introduction of features that may cause malfunction of a node beyond what a simple health check can hint about the network.
 
 For any unexpected behavior, we appreciate the contribution of the community by any means which includes reporting to our [Discord](https://discord.gg/fleekxyz), opening a [PR](https://github.com/fleek-network), reporting issues in our [Github repository](https://github.com/fleek-network/ursa/issues), etc.
+
+## Pre-requisites
+
+To follow the guide, you will need the following:
+
+- Familiarity with the command-line interface
+
+ <CheckoutCommitWarning />
 
 ## What's a node health check?
 

@@ -14,8 +14,12 @@ tags:
 - Getting Started
 - Fleek Network
 - Keystore
-
 ---
+
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 
 ![](./assets/fleek-network-managing-the-keystore.png?202301021625)
 
@@ -30,6 +34,14 @@ The key store is in the file system and the location is defined in the Fleek Net
 This is interesting, as you may want to move to a new server setup and persist the identity you had originally from another server, let's say!
 
 The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any supported system you're migrating to.
+
+## Pre-requisites
+
+To follow the guide, you will need the following:
+
+- Familiarity with the command-line interface
+
+<CheckoutCommitWarning />
 
 ## Configuration file
 

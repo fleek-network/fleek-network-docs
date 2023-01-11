@@ -16,8 +16,12 @@ tags:
 - GIT
 - CAR
 - Content Addressable aRchive
-
 ---
+
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 
 ![](./assets/fleek-network-how-fleek-network-deals-with-files.png?202212131140)
 
@@ -35,6 +39,8 @@ To follow this guide, you will need:
 - Some experience with command-line interfaces
 
 For other topics, check our [getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide).
+
+<CheckoutCommitWarning />
 
 ***
 
