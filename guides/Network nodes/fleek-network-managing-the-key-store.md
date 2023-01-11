@@ -31,16 +31,6 @@ This is interesting, as you may want to move to a new server setup and persist t
 
 The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any supported system you're migrating to.
 
-## Topics
-  - [Configuration file](#configuration-file)
-    - [Locating the file](#locating-the-file)
-    - [Configuration sections](#configuration-sections)
-    - [Identity selection](#identity-selection)
-  - [Identity](#identity)
-    - [Type of keys](#type-of-keys)
-    - [Key privacy](#key-privacy)
-  - [Conclusion](#conclusion)
-
 ## Configuration file
 
 ### Locating the file
