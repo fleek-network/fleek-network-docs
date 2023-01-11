@@ -272,3 +272,38 @@ ul.table-of-contents > li:first-child a.toc-highlight {
 .blog-wrapper aside nav {
   border-right: 1px dashed var(--ifm-toc-border-color);
 }
+
+blockquote {
+  position: relative;
+  border: none;
+  padding: 20px;
+  background: #112;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+blockquote code {
+  color: #f76ec3;
+}
+
+blockquote a {
+  font-weight: bold;
+  color: #eee;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -5px;
+  left: -5px;
+  border-radius: 8px;
+  height: calc(100% + var(--margin)*2);
+  width: calc(100% + var(--margin)*2);
+  transform: translate(calc(0px - var(--margin)),calc(0px - var(--margin)));
+  z-index: -2;
+  transition: background .5s ease;
+  background: linear-gradient(to right, #001ac9, #0073ff, #f76ec3, #00faff);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+}
