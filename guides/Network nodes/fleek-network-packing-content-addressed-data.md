@@ -38,7 +38,7 @@ For other topics, check our [getting started guide](https://blog.fleek.co/posts/
 
 ***
 
-# How does Fleek Network deal with files?
+## How does Fleek Network deal with files?
 
 The way content is handled, stored and distributed defines how trustworthy a protocol is 🤞. Some of the primitives to achieve it has roots in immutability, verification, the [Semantic Web](https://www.w3.org/standards/semanticweb/) and [Linked Data](https://www.w3.org/standards/semanticweb/data). 
 
