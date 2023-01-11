@@ -46,7 +46,7 @@ const config = {
   title: 'Fleek Network',
   tagline: 'TODO',
   url: 'https://docs.fleek-network',
-  baseUrl: '/',
+  baseUrl: '/fleek-network-docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico?202301091316',
