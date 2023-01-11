@@ -268,3 +268,7 @@ ul.table-of-contents > li:first-child a.toc-highlight {
   content: "► ";
   font-size: 0.62rem;
 }
+
+.blog-wrapper aside nav {
+  border-right: 1px dashed var(--ifm-toc-border-color);
+}
