@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prodUrl="wispy-shape-2208.on.fleek.co"
+prodUrl="uhqta-saaaa-aaaad-qevxa-cai.ic.fleek.co"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   sed -i "" "s/\/fleek-network-docs//g" docusaurus.config.js
