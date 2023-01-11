@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Fleek Network Blog</title>
-        <link>https://docs.fleek-network/blog</link>
+        <link>https://docs.fleek-network/fleek-network-docs/blog</link>
         <description>Fleek Network Blog</description>
         <lastBuildDate>Tue, 10 Jan 2023 13:22:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -11,7 +11,7 @@
         <copyright>Copyright © 2023 Fleek</copyright>
         <item>
             <title><![CDATA[Some title]]></title>
-            <link>https://docs.fleek-network/blog/some-title</link>
+            <link>https://docs.fleek-network/fleek-network-docs/blog/some-title</link>
             <guid>/some-title</guid>
             <pubDate>Tue, 10 Jan 2023 13:22:56 GMT</pubDate>
             <description><![CDATA[Blog Nulla sem ligula, lobortis vitae ornare vitae, venenatis commodo lectus. Mauris at nibh vel sapien porta fermentum non vitae felis.]]></description>
@@ -19,7 +19,7 @@
         </item>
         <item>
             <title><![CDATA[Intro blog engineering]]></title>
-            <link>https://docs.fleek-network/blog/index</link>
+            <link>https://docs.fleek-network/fleek-network-docs/blog/index</link>
             <guid>/index</guid>
             <pubDate>Mon, 09 Jan 2023 19:37:07 GMT</pubDate>
             <description><![CDATA[Blog ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna est, tincidunt in diam et apter.]]></description>
