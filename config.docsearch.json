@@ -1,7 +1,8 @@
 {
-  "index_name": "fleek_network_docs",
+  "index_name": "fleekNetworkDocs",
   "start_urls": [
-    "https://fleek-network.github.io/fleek-network-docs/"
+    "https://fleek-network.github.io/fleek-network-docs/docs",
+    "https://fleek-network.github.io/fleek-network-docs/guides"
   ],
   "sitemap_urls": [
     "https://fleek-network.github.io/fleek-network-docs/sitemap.xml"
