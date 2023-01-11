@@ -44,8 +44,8 @@ const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Fleek Network',
-  tagline: 'TODO',
-  url: 'https://docs.fleek-network',
+  tagline: '',
+  url: 'https://fleek-network.github.io',
   baseUrl: '/fleek-network-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
