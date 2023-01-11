@@ -1,8 +1,8 @@
 ---
 template: post
 draft: false
-title: Running a node in a Docker container
 hide_title: true
+title: Running a node in a Docker container
 slug: fleek-network-running-a-node-in-a-docker-container
 date: 2022-12-05T23:00:00Z
 canonical: ''
