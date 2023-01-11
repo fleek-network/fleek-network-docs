@@ -1,7 +1,7 @@
 ---
 template: post
 draft: false
-title: 'Fleek Network: Getting Started Guide'
+title: Getting Started Guide
 hide_title: true
 slug: fleek-network-getting-started-guide
 date: 2022-11-30T23:00:00.000+00:00
