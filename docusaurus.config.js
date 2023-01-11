@@ -45,7 +45,7 @@ const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 const config = {
   title: 'Fleek Network',
   tagline: '',
-  url: 'https://fleek-network.github.io',
+  url: 'https://fleek-network.github.io/fleek-network-docs',
   baseUrl: '/fleek-network-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -168,10 +168,10 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: '3HJT8PSC35',
+        appId: 'M6MU756GIR',
         // Public API key
-        apiKey: '633800ca1e949856c20a92711132900c',
-        indexName: 'docta_poc',
+        apiKey: '764d537839d73a11b1c069f2aa03ee55',
+        indexName: 'fleek_network_docs',
         // Optional: see doc section below
         contextualSearch: true,
         // Optional: path for search page that enabled by default (`false` to disable it)
