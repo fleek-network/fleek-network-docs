@@ -11,6 +11,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    env:
+      PAT: ${{ secrets.PAT }}
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
