@@ -329,6 +329,13 @@ blockquote:before {
   color: var(--ifm-color-primary-darker);
   font-weight: bold;
 }
+.author_card a img {
+  transition: transform 0.3s, opacity 0.3s;
+}
+.author_card a img:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
 .author_card div:before {
   content: "";
   position: absolute;

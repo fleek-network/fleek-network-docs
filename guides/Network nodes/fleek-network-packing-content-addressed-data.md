@@ -22,6 +22,7 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
+import Author from '@site/src/components/Author';
 
 ![](./assets/fleek-network-how-fleek-network-deals-with-files.png?202212131140)
 
@@ -306,3 +307,10 @@ We have then provided a [demonstration](#creating-car-files) of how to deal with
 While we try our best to provide you with the best information, we are not free of typos and software updates. 👌 Feel free to provide us with any feedback to help us improve our guides!
 
 Discover more about the project by watching or contributing on [Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

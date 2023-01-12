@@ -20,6 +20,7 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
+import Author from '@site/src/components/Author';
 
 ![](./assets/fleek-network-node-health-check-guide.png?202301041235)
 
@@ -235,3 +236,10 @@ Finally, we hinted that exposing services externally requires a bit more setup, 
 While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories 🙏.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
