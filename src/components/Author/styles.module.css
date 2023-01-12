@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+  height: var(--ifm-avatar-photo-size);
+  overflow: hidden;
+  width: var(--ifm-avatar-photo-size);
+}
