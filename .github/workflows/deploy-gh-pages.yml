@@ -43,4 +43,4 @@ jobs:
         with:
           algolia_application_id: ${{env.ALGOLIA_APP_ID}}
           algolia_api_key: ${{env.ALGOLIA_API_KEY}}
-          file: ../../config.docsearch.json
+          file: config.docsearch.json
