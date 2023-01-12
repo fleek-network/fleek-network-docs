@@ -1,5 +1,6 @@
 ---
 title: Introducing guides
+slug: introducing_guides
 sidebar_position: 1
 ---
 
