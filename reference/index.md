@@ -1,6 +1,10 @@
 ---
 title: Introducing reference
 sidebar_position: 1
+tags:
+- References
+- Help
+- Fleek Network
 ---
 
 Our [Fleek Network](https://fleek.network) reference section provides the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
