@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PAT: ${{ secrets.PAT }}
+      ALGOLIA_APP_ID: 1RFAB49JUD
+      ALGOLIA_API_KEY: 76d5e1152fb478c8a97adf44e3cbe424
 
     steps:
       - uses: actions/checkout@v3
@@ -34,3 +36,10 @@ jobs:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Algolia docsearch indexer
+        uses: darrenjennings/algolia-docsearch-action@master
+        with:
+          algolia_application_id: ${{env.ALGOLIA_APP_ID}}
+          algolia_api_key: ${{env.ALGOLIA_API_KEY}}
+          file: ../../config.docsearch.json
