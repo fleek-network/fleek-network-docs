@@ -1,7 +1,7 @@
 ---
 template: post
 draft: false
-hide_title: true
+hide_title: false
 title: How to checkout a commit in project history
 slug: fleek-network-how-to-checkout-a-commit-in-project-history
 date: 2023-01-02T23:00:00Z
