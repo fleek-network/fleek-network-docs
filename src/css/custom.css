@@ -317,3 +317,7 @@ blockquote:before {
   width: calc(100% + 10px);
   height: calc(100% + 10px);
 }
+
+.menu__link::first-letter {
+  text-transform: capitalize;
+}
