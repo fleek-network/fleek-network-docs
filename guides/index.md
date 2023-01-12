@@ -3,4 +3,4 @@ title: Introducing guides
 sidebar_position: 1
 ---
 
-The guides for the Fleek Network, a decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
+The guides for the [Fleek Network](https://fleek.network) to learn about the services powering the Fleek Network, and how to set up a node or customize it for your needs.
