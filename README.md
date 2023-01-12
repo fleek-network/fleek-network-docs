@@ -31,7 +31,19 @@ This command generates static content into the `build` directory and can be serv
 
 ### 🚀 Deployment
 
-WIP
+The documentation site is the static output result of the build command (as directory `build`).
+
+A Github workflow is set up to build and publish to `gh_pages`, which when committed to `gh_pages`, the [pages-build-deployment](https://github.com/fleek-network/fleek-network-docs/actions) triggers.
+
+Any new commit into the `main` branch will trigger the [Deploy (Github pages)](https://github.com/fleek-network/fleek-network-docs/actions/workflows/deploy-gh-pages.yml) action. For this reason, to publish a new build all you have to do is to commit to `main` branch.
+
+Alternatively, to publish manually to `gh_pages` use the `deploy` command. Here we prefix the command with the optional variables.
+
+```sh
+USE_SSH=true GIT_USER=<Your github username> yarn deploy
+```
+
+💡 The command requires you to have Git authenticated via ssh.
 
 ### 🕸 Web Crawl
 
