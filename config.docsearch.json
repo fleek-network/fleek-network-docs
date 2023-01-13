@@ -1,13 +1,13 @@
 {
   "index_name": "fleekNetworkDocs",
   "start_urls": [
-    "https://fleek-network.github.io/fleek-network-docs/blog",
-    "https://fleek-network.github.io/fleek-network-docs/docs",
-    "https://fleek-network.github.io/fleek-network-docs/guides",
-    "https://fleek-network.github.io/fleek-network-docs/reference"
+    "https://docs.fleek.network/blog",
+    "https://docs.fleek.network/docs",
+    "https://docs.fleek.network/guides",
+    "https://docs.fleek.network/reference"
   ],
   "sitemap_urls": [
-    "https://fleek-network.github.io/fleek-network-docs/sitemap.xml"
+    "https://docs.fleek.network/sitemap.xml"
   ],
   "sitemap_alternate_links": true,
   "stop_urls": [
