@@ -114,7 +114,9 @@ Decentralize our entire stack! Today we start with an important piece in our sta
 | Tusk     | 3     | E(7)     |  yes  | no |
 | Bullshark     | 2     | E(6)     | yes    | during sync |
 
+<!-- TODO: Broken link
 [Fleek Network Consensus](/nDhRUebeSbmCEBrTG0DQyw) More information about Fleek Network consensus
+-->
 
 > Decoupling data dissemination from metadata ordering is the key mechanism to allow scalable and high throughput consensus systems 
 > 
