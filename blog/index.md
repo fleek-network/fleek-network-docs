@@ -98,7 +98,6 @@ Decentralize our entire stack! Today we start with an important piece in our sta
 - Gossip Only
 - Peer exchange through our Fleek bootstrap nodes
 
-
 ## Consensus
 
 ![](./assets/fleek-network-consensus.png?202301121718)
