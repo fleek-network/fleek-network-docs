@@ -104,7 +104,7 @@ Decentralize our entire stack! Today we start with an important piece in our sta
 ![](./assets/fleek-network-consensus.png?202301121718)
 
 - Narwhal and Bullshark
-    - Data availabiltiy is ensured using Narwhal
+    - Data availability is ensured using Narwhal
     - Bullshark over Tusk for ordering
 
 **Comparing Tusk vs Bullshark:**
@@ -114,9 +114,8 @@ Decentralize our entire stack! Today we start with an important piece in our sta
 | Tusk     | 3     | E(7)     |  yes  | no |
 | Bullshark     | 2     | E(6)     | yes    | during sync |
 
-<!-- TODO: Broken link
-[Fleek Network Consensus](/nDhRUebeSbmCEBrTG0DQyw) More information about Fleek Network consensus
--->
+
+Click [here](../docs/whitepaper) to find more information about the Fleek Network consensus.
 
 > Decoupling data dissemination from metadata ordering is the key mechanism to allow scalable and high throughput consensus systems 
 > 
