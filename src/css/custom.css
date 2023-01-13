@@ -158,6 +158,9 @@ div[class*="docItemContainer"] {
 .menu .menu__list {
   padding-right: 2rem;
 }
+.menu .menu__list a {
+  text-transform: capitalize;
+}
 
 .menu__link--active:not(.menu__link--sublist) {
   background-color: transparent;
