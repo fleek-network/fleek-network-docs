@@ -38,6 +38,7 @@ const commonNavbarItems = [{
 const commonDiscord = 'https://discord.gg/fleekxyz';
 const commonTwitter = 'https://twitter.com/fleek_net';
 const commonHome = 'https://fleek.network';
+const commonCompanyUrl = 'https://fleek.xyz';
 
 const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
@@ -136,7 +137,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                href: commonHome,
+                href: commonCompanyUrl,
               },
               {
                 label: 'Contact us',
