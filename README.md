@@ -69,6 +69,14 @@ Then you need to start the crawl according to your configuration.
 yarn crawl:docker
 ```
 
+### 👩‍🎨 Custom domain
+
+A custom domain (cloudflare) is setup to point to github pages as `docs.fleek.network`.
+
+The `docusaurus.config.js` and `config.docsearch.json` are set to use the custom domain. There's another file to persist the custom name for github pages, the `static.CNAME` that should contain the `docs.fleek.network` custom domain.
+
+This is important as otherwise, the DNS checkup would fail!
+
 ### 📖 Version
 
 WIP
