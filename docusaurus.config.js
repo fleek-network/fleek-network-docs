@@ -204,6 +204,13 @@ const config = {
           ...commonDocsOptions,
         }),
       ],
+      [
+        '@docusaurus/plugin-google-gtag',
+        {
+          trackingID: 'G-GPHQQEZ1SP',
+          anonymizeIP: true,
+        },
+      ],
     ],
 };
 
