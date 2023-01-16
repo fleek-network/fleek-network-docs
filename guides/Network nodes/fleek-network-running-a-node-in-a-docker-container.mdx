@@ -37,6 +37,7 @@ Alternatively, if you need a deep dive into Docker, check the official getting s
 To follow the guide, you will need the following:
 
 - Familiarity with the command-line interface
+- Git
 
 <!--
   The following <CheckoutCommitWarning /> is intentional
@@ -66,6 +67,36 @@ Here's a quick look into the resources used during runtime (very quiet usage �
 | ursa-cli    | 1.06%       | 49.7MiB / 7.775GiB    | 0.62%          |
 
 In the example, for this guide, we have 8 GB spare memory and 20 GB spare disk space that we'll set up Docker to run our node! You'll find more about that later in the [recommended settings](#recommended-settings) section.
+
+### Ursa CLI source-code
+
+Start by cloning the repository located at [https://github.com/fleek-network/ursa](https://github.com/fleek-network/ursa "https://github.com/fleek-network/ursa").
+
+```sh
+git clone git@github.com:fleek-network/ursa.git
+```
+
+The command will copy the repository files to your local machine, by default into a directory by the name of the repository `ursa`.
+
+When git clone completes 👍, `change directory` to the project directory e.g. we cloned to the default name `ursa`:
+
+```sh
+cd ursa
+```
+
+If you list (`ls`) the files in the directory, it should be similar to:
+
+```sh
+.
+├── Cargo.toml
+├── Dockerfile
+├── Makefile
+├── README.md
+├── crates
+├── infra
+├── rust-toolchain.toml
+└── specs
+```
 
 ### Install Docker desktop
 
