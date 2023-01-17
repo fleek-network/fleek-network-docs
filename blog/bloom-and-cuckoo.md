@@ -35,7 +35,7 @@ If all bits at the resulting array positions are 1, the element is assumed to be
 However, even if all bits are 1, it might still be the case that the bits were set by a combination of other elements. This is where the aforementioned false positive rate comes into play.  
 Since we also need a `remove` operation for our use case, we have been using Counting Bloom filters, a variant of Bloom filters.
 Counting Bloom filters retain most of the properties that regular Bloom filters have. The `remove` operation comes at the cost of an increased memory footprint.
-Each position in the array is no longer a single bit but rather by a group of bits that represent a counter.
+Each position in the array is no longer a single bit but rather a group of bits that represent a counter.
 Whenever an element is inserted into the filter, the counters for all $k$ positions are incremented by 1. To remove an element, we simply decrement the counters.
 
 ## Cuckoo Filters
