@@ -89,6 +89,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-GPHQQEZ1SP',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -203,13 +207,6 @@ const config = {
           sidebarPath: undefined,
           ...commonDocsOptions,
         }),
-      ],
-      [
-        '@docusaurus/plugin-google-gtag',
-        {
-          trackingID: 'G-GPHQQEZ1SP',
-          anonymizeIP: true,
-        },
       ],
     ],
 };
