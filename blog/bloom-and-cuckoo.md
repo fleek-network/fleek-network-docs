@@ -72,7 +72,7 @@ Lookup speed is important too because Fleek Network aims to serve user requests 
 ## Experimental Setup
 We are using our own Counting Bloom filter [implementation](https://github.com/fleek-network/ursa/blob/483f4d56cbaa5e83182454d2c1db6f6af7c54912/crates/ursa-network/src/utils/bloom_filter.rs#L11) and 
 [this](https://github.com/sile/scalable_cuckoo_filter) Cuckoo filter implementation in Rust (the [original](https://github.com/efficient/cuckoofilter) implementation is in C++). All experiments
-were performed on a Linux machine with 16 GB RAM and an Intel Core i7 (10th Gen). Whenever the experiment is probabilistic, we repeat the experiment 20 times and report mean and standard deviation.
+were performed on a Linux machine with 16 GB RAM and an Intel Core i7 (10th Gen). Whenever the experiment is probabilistic, we repeat the experiment 20 times and report the mean and standard deviation.
 
 ## Memory Footprint
 For both Counting Bloom filters and Cuckoo filters, the memory footprint is determined by two factors: the filter's capacity and the desired false positive rate. In the first experiment, we examine the impact that
