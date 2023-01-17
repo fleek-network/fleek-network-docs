@@ -47,7 +47,7 @@ For each element, we determine two candidate buckets by using two different hash
 The `contains` operation will check if either bucket contains the element.
 For insertion, if either bucket is empty, the element will be inserted into the empty bucket.
 If neither bucket is empty, one of the buckets is selected and the existing element is removed and inserted into its alternate location.
-This may trigger another relocation, if the alternate location is not empty.  
+This may trigger another relocation if the alternate location is not empty.  
 Although the insertion operation may perform a sequence of relocations, the amortized runtime is $O(1)$.  
 Most implementations of Cuckoo hash tables and consequently Cuckoo filters will use buckets that can hold multiple elements, as proposed in [3].  
 For Cuckoo filters, the hash table size is reduced by only storing fingerprints - a bit string that is calculated from an element's hash - rather than key-value pairs.
