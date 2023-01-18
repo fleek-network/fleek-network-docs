@@ -126,7 +126,7 @@ for Bloom filters. For Cuckoo filters, the performance decreases as the filter b
 </p>
 
 ## Capacity and Scaling
-We already mentioned the capacity of a filter several times now. An interesting case to consider is what happens when a filter's capacity is exceeded.
+We have mentioned the capacity of a filter several times now. An interesting case is what happens when a filter's capacity is exceeded.
 Bloom filters and Cuckoo filters behave differently in this scenario. For Bloom filters, the `insertion` operation always succeeds. However, the false positive rate
 will rapidly increase as we exceed the filter's capacity. While Bloom filters fail silently, Cuckoo filters are more explicit. Most implementations have a maximum number of
 relocations that will be performed for an insertion. If more relocations are required, the `insertion` operation will return an error.  
