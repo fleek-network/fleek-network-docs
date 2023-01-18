@@ -66,7 +66,7 @@ An important property of this technique is that $h_1(x)$ can also be computed fr
 ## Benchmarking
 As this post mentioned, we are not aiming for a general comparison of Counting Bloom and Cuckoo filters.
 Instead, we want to determine which filter suits our specific use case better. The two main properties we are looking for are space efficiency and lookup performance.  
-Space-efficiency is important because nodes frequently update their cache and have to communicate these changes with their peers. These messages should take up as little bandwidth as possible.
+Space efficiency is important because nodes frequently update their cache and have to communicate these changes with their peers. These messages should take up as little bandwidth as possible.
 Lookup speed is important too because Fleek Network aims to serve user requests as fast as possible. Checking whether a peer has some content stored in their cache summary should not be a bottleneck.  
 
 ## Experimental Setup
