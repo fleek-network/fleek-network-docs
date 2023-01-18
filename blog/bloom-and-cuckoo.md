@@ -81,7 +81,7 @@ To this end, we fix the false positive rate and initialize the filters with capa
 scales linearly with the capacity. Cuckoo filters are more space-efficient. This result is consistent with the experiments reported in [1].
 
 <p align="center">
-<img src="./assets/bloom-cuckoo/capacity-size.png">
+<img src="./assets/bloom-cuckoo/capacity-size.png"></img>
 </p>
 <p align="center">
 <i>Figure 1: We fix the false positive rate and initialize the filters with capacities ranging from 100K to 1M. The y-axis shows the size of the filters in Megabytes.</i>
@@ -91,7 +91,7 @@ Next, we fix the capacity and initialize the filters with false positive rates r
 The gap between Counting Bloom filters and Cuckoo filters grows as the false positive rate decreases. This is also consistent with experiments in [1].
 
 <p align="center">
-<img src="./assets/bloom-cuckoo/fp-rate-size.png">
+<img src="./assets/bloom-cuckoo/fp-rate-size.png"></img>
 </p>
 <p align="center">
 <i>Figure 2: We fix the capacity and initialize the filters with false positive rates ranging from 0.0001 to 0.5. The y-axis shows the size of the filters in Megabytes.</i>
@@ -106,7 +106,7 @@ own unreleased Bloom filter implementation. In contrast, we use a Rust Cuckoo fi
 However, the performance difference is negligible.
 
 <p align="center">
-<img src="./assets/bloom-cuckoo/lookup.png">
+<img src="./assets/bloom-cuckoo/lookup.png"></img>
 </p>
 <p align="center">
 <i>Figure 3: Lookup performance for different ratios of positive and negative lookups. For example, ratio 0.25 indicates that 25% of lookups are positive and 75% are negative.
@@ -119,7 +119,7 @@ Fig. 4 shows the results. The insertion performance is constant across all level
 for Bloom filters. For Cuckoo filters, the performance decreases as the filter becomes fuller because more relocations are required. In Fig. 4, the performance for Bloom filters is not constant. It quickly increases and then remains constant. This can be explained by CPU caching. 
 
 <p align="center">
-<img src="./assets/bloom-cuckoo/insert.png">
+<img src="./assets/bloom-cuckoo/insert.png"></img>
 </p>
 <p align="center">
 <i>Figure 4: Insertion performance for different occupancy levels. The shaded region indicates the standard deviation.</i>
