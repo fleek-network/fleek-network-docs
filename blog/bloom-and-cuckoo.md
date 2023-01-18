@@ -133,7 +133,7 @@ will rapidly increase as we exceed the filter's capacity. While Bloom filters fa
 relocations that will be performed for an insertion. If more relocations are required, the `insertion` operation will return an error.  
 For both filters, we can avoid this problem by simply initializing the filter with a sufficiently large capacity. However, this will increase the memory footprint of the filter.
 Furthermore, it is difficult to predict how many elements a node on Fleek Network will cache. It is also likely that the number of cached elements will greatly vary for different nodes.  
-Fortunately, there is a variant of Bloom filters called _Scalable Bloom Filters_ [4] that can adapt dynamically to the number of elements stored, while guaranteeing a maximum false positive rate.
+Fortunately, a variant of Bloom filters called _Scalable Bloom Filters_ [4] can adapt dynamically to the number of elements stored while guaranteeing a maximum false positive rate.
 The proposed technique is also applicable to Cuckoo filters.
 
 ## Other Filters
