@@ -37,11 +37,11 @@ The answer to an approximate set membership query is not `no` or `yes,` but rath
 One of the convenient features of Bloom filters is that they can be configured to have a specific false positive rate.
 Of course, there is a tradeoff here; the lower the false positive rate, the larger the memory footprint. Bloom filters support two operations: `insert` and `contains.`  
 
-A Bloom filter is represented by an array of $m$ bits together with $k$ independent hash functions. To insert an element into the filter, it is hashed with each of the $k$ hash functions.
-The resulting hashes are interpreted as integers (modulo $m$) to obtain $k$ array positions. The bits at these positions are then set to 1 (if there aren't already 1).  
+A Bloom filter is represented by an array of m bits together with k independent hash functions. To insert an element into the filter, it is hashed with each of the k hash functions.
+The resulting hashes are interpreted as integers (modulo m) to obtain k array positions. The bits at these positions are then set to 1 (if there aren't already 1).  
+To check whether or not an element is contained in the filter, the element is hashed k times with the different hash functions.
 
-To check whether or not an element is contained in the filter, the element is hashed $k$ times with the different hash functions.
-If all bits at the resulting array positions are 1, the element is assumed to be present. If any of the $k$ bits are zero, we can be certain that the queried element is not present in the set.
+If all bits at the resulting array positions are 1, the element is assumed to be present. If any of the k bits are zero, we can be certain that the queried element is not present in the set.
 
 However, even if all bits are 1, it might still be the case that the bits were set by a combination of other elements. This is where the aforementioned false positive rate comes into play.  
 
@@ -49,7 +49,7 @@ Since we also need a `remove` operation for our use case, we have been using Cou
 Counting Bloom filters retain most of the properties that regular Bloom filters have. The `remove` operation comes at the cost of an increased memory footprint.
 
 Each position in the array is no longer a single bit but a group of bits representing a counter.
-Whenever an element is inserted into the filter, the counters for all $k$ positions are incremented by 1. To remove an element, we decrement the counters.
+Whenever an element is inserted into the filter, the counters for all k positions are incremented by 1. To remove an element, we decrement the counters.
 
 ## Cuckoo Filters
 
@@ -58,10 +58,8 @@ A relatively recent addition to this class is the Cuckoo filter [1]. Cuckoo filt
 
 They are space-efficient and can be used for approximate set membership queries. Cuckoo filters also support the operations `insert,` `contains,` and `remove,` and have configurable false positive rates.  
 
-Cuckoo filters are based on Cuckoo hash tables [2] and leverage an optimization called _partial-key cuckoo hashing_. A basic Cuckoo hash table consists of an array of buckets.
-
-
-We determine two candidate buckets for each element using two different hash functions, $h_1$ and $h_2$.  
+Cuckoo filters are based on Cuckoo hash tables [2] and leverage an optimization called partial-key cuckoo hashing. A basic Cuckoo hash table consists of an array of buckets.
+We determine two candidate buckets for each element using two different hash functions, h1 and h2.  
 
 The `contains` operation will check if either bucket contains the element.
 For insertion, if either bucket is empty, the element will be inserted into the empty bucket.
@@ -69,7 +67,7 @@ For insertion, if either bucket is empty, the element will be inserted into the 
 If neither bucket is empty, one of the buckets is selected, and the existing element is removed and inserted into its alternate location.
 This may trigger another relocation if the alternate location is not empty.  
 
-Although the insertion operation may perform a sequence of relocations, the amortized runtime is $O(1)$.  
+Although the insertion operation may perform a sequence of relocations, the amortized runtime is O(1).  
 
 Most implementations of Cuckoo hash tables and, consequently, Cuckoo filters will use buckets that can hold multiple elements, as proposed in [3].
 
@@ -79,9 +77,10 @@ The fingerprint size is derived from the desired false positive rate.
 A problem that arises is that, to relocate existing fingerprints using the Cuckoo hashing approach described above, we need the original hash from which the fingerprint was derived.
 
 Of course, we could store this hash somewhere, but the whole point of using fingerprints is to reduce the memory footprint of the filter.
-The solution to this predicament is the aforementioned _partial-key cuckoo hashing_, a technique for determining an element's alternate location using only its fingerprint.  
 
-For a given element $x$, the two candidate buckets are computed as follows:  
+The solution to this predicament is the aforementioned partial-key cuckoo hashing, a technique for determining an element's alternate location using only its fingerprint.  
+For a given element x, the two candidate buckets are computed as follows:  
+
 
 <!-- 
 TODO: Install math forms renderer, till then use img
@@ -93,7 +92,7 @@ $h_2(x) = h_1(x) \oplus \text{hash}(\text{fingerprint}(x))$
 
 ![](./assets/bloom-cuckoo/math-formul.png?202301181528)
 
-An important property of this technique is that $h_1(x)$ can also be computed from $h_2(x)$ and the fingerprint.
+An important property of this technique is that h1(x) can also be computed from h2(x) and the fingerprint.
 
 ## Benchmarking
 
@@ -170,7 +169,8 @@ For both filters, we can avoid this problem by simply initializing the filter wi
 
 Furthermore, it is difficult to predict how many elements a node on Fleek Network will cache. It is also likely that the number of cached elements will greatly vary for different nodes.  
 
-Fortunately, a variant of Bloom filters called _Scalable Bloom Filters_ [4] can adapt dynamically to the number of elements stored while guaranteeing a maximum false positive rate.
+Fortunately, a variant of Bloom filters called Scalable Bloom Filters [4] can adapt dynamically to the number of elements stored while guaranteeing a maximum false positive rate.
+
 The proposed technique is also applicable to Cuckoo filters.
 
 ## Other Filters
