@@ -144,7 +144,7 @@ While we only looked at Bloom filters and Cuckoo filters, there are other AMQ fi
 ## Conclusion
 We examined whether Counting Bloom filters or Cuckoo filters are more suitable for summarizing caches on Fleek Network. Cuckoo filters are more space-efficient, especially
 for lower false positive rates. Bloom filters have a slightly better insertion and lookup performance for the implementations we tested.
-Both filters can be adapted to dynamically grow and shrink in size as needed. Since the difference in insertion and lookup performance is negligible while Cuckoo filters
+Both filters can be adapted to grow and shrink in size dynamically. Since the difference in insertion and lookup performance is negligible while Cuckoo filters
 are significantly more space-efficient, we favor Cuckoo filters for our use case.  
 
 ### References
