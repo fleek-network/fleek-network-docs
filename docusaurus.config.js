@@ -59,16 +59,6 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  // Metadata Module for Global Head metadata. Can be overriden by page-specific settings.
-  // https://docusaurus.io/docs/next/seo - 
-
-  module.exports = {
-    themeConfig: {
-      metadata: [{description: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.', og:image: 'https://storageapi.fleek.co/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/documentation.png', twitter:card: 'summary_large_image', twitter:image: 'https://storageapi.fleek.co/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/documentation.png'}],
-      // This would become <meta name="keywords" content="cooking, blog"> in the generated HTML
-    },
-  };
-
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -110,6 +100,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata:{
+        description: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.',
+        og:image: 'https://storageapi.fleek.co/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/documentation.png',
+        twitter:card: 'summary_large_image',
+        twitter:image: 'https://storageapi.fleek.co/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/documentation.png',
+      },      
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
