@@ -43,7 +43,7 @@ Bloom filters are the most known members of a class of data structures called Ap
 A relatively recent addition to this class are Cuckoo filters [1]. Cuckoo filters share many similarities with Bloom filters, and especially Counting Bloom filters.
 They are space-efficient, they are used for approximate set membership queries, the false positive rate can be configured, and they support the operations `insert`, `contains`, and `remove`.  
 Cuckoo filters are based on Cuckoo hash tables [2] and leverage an optimization called _partial-key cuckoo hashing_. A basic Cuckoo hash table consists of an array of buckets.
-For each element, we determine two candidate buckets by using two different hash functions $h_1$ and $h_2$.  
+We determine two candidate buckets for each element using two different hash functions, $h_1$ and $h_2$.  
 The `contains` operation will check if either bucket contains the element.
 For insertion, if either bucket is empty, the element will be inserted into the empty bucket.
 If neither bucket is empty, one of the buckets is selected, and the existing element is removed and inserted into its alternate location.
