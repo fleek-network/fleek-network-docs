@@ -44,8 +44,8 @@ const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fleek Network',
-  tagline: '',
+  title: 'Fleek Network Docs',
+  tagline: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.',
   url: 'https://docs.fleek.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -100,6 +100,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/documentation.png',
+      metadata:[{
+        description: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.'}],      
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
