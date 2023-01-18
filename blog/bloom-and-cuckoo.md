@@ -129,7 +129,7 @@ for Bloom filters. For Cuckoo filters, the performance decreases as the filter b
 We have mentioned the capacity of a filter several times now. An interesting case is what happens when a filter's capacity is exceeded.
 Bloom filters and Cuckoo filters behave differently in this scenario. For Bloom filters, the `insertion` operation always succeeds. However, the false positive rate
 will rapidly increase as we exceed the filter's capacity. While Bloom filters fail silently, Cuckoo filters are more explicit. Most implementations have a maximum number of
-relocations that will be performed for an insertion. If more relocations are required, the `insertion` operation will return an error.  
+relocations that will be performed for an insertion. The `insertion` operation will return an error if more relocations are required.  
 For both filters, we can avoid this problem by simply initializing the filter with a sufficiently large capacity. However, this will increase the memory footprint of the filter.
 Furthermore, it is difficult to predict how many elements a node on Fleek Network will cache. It is also likely that the number of cached elements will greatly vary for different nodes.  
 Fortunately, a variant of Bloom filters called _Scalable Bloom Filters_ [4] can adapt dynamically to the number of elements stored while guaranteeing a maximum false positive rate.
