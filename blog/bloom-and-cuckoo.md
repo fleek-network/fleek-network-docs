@@ -50,7 +50,7 @@ If neither bucket is empty, one of the buckets is selected, and the existing ele
 This may trigger another relocation if the alternate location is not empty.  
 Although the insertion operation may perform a sequence of relocations, the amortized runtime is $O(1)$.  
 Most implementations of Cuckoo hash tables and, consequently, Cuckoo filters will use buckets that can hold multiple elements, as proposed in [3].
-For Cuckoo filters, the hash table size is reduced by only storing fingerprints - a bit string that is calculated from an element's hash - rather than key-value pairs.
+For Cuckoo filters, the hash table size is reduced by only storing fingerprints - a bit string calculated from an element's hash - rather than key-value pairs.
 The fingerprint size is derived from the desired false positive rate.  
 A problem that arises is that, in order to relocate existing fingerprints using the Cuckoo hashing approach as described above, we need the original hash from which the fingerprint was derived.
 Of course, we could store this hash somewhere but the whole point of using fingerprints is to reduce the memory footprint of the filter.
