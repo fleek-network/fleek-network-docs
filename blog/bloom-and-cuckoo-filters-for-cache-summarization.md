@@ -24,8 +24,6 @@ Nodes on Fleek Network currently use Counting Bloom filters to summarize their c
 If a particular node does not store a requested piece of content, it can use the Bloom filters that it received from its peers to check if a peer stores the requested content. 
 We are using Counting Bloom filters rather than regular Bloom filters because we need to be able to remove elements from the filter to support cache eviction.
 
-<!--truncate-->
-
 ## Bloom Filters
 
 A Bloom filter is a space-efficient probabilistic data structure that can be used to perform approximate set membership queries.
