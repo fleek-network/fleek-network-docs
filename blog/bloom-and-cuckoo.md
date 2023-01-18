@@ -27,7 +27,7 @@ We are using Counting Bloom filters rather than regular Bloom filters because we
 A Bloom filter is a space-efficient probabilistic data structure that can be used to perform approximate set membership queries.
 The answer to an approximate set membership query is not `no` or `yes,` but rather `no` or `probably.` This `probably` is quantified with the false positive rate.  
 One of the convenient features of Bloom filters is that they can be configured to have a specific false positive rate.
-Of course there is a tradeoff here; the lower the false positive rate, the larger the memory footprint. Bloom filters support two operations: `insert` and `contains`.  
+Of course, there is a tradeoff here; the lower the false positive rate, the larger the memory footprint. Bloom filters support two operations: `insert` and `contains.`  
 A Bloom filter is represented by an array of $m$ bits together with $k$ independent hash functions. To insert an element into the filter, it is hashed with each of the $k$ hash functions.
 The resulting hashes are interpreted as integers (modulo $m$) to obtain $k$ array positions. The bits at these positions are then set to 1 (if there aren't already 1).  
 To check whether or not an element is contained in the filter, the element is hashed $k$ times with the different hash functions.
