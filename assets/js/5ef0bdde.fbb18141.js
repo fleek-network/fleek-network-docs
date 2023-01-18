@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[8567],{7778:t=>{t.exports=JSON.parse('{"label":"content routing","permalink":"/blog/tags/content-routing","allTagsPath":"/blog/tags","count":1}')}}]);
