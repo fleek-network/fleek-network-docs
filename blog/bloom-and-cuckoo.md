@@ -52,7 +52,7 @@ Although the insertion operation may perform a sequence of relocations, the amor
 Most implementations of Cuckoo hash tables and, consequently, Cuckoo filters will use buckets that can hold multiple elements, as proposed in [3].
 For Cuckoo filters, the hash table size is reduced by only storing fingerprints - a bit string calculated from an element's hash - rather than key-value pairs.
 The fingerprint size is derived from the desired false positive rate.  
-A problem that arises is that, in order to relocate existing fingerprints using the Cuckoo hashing approach as described above, we need the original hash from which the fingerprint was derived.
+A problem that arises is that, to relocate existing fingerprints using the Cuckoo hashing approach described above, we need the original hash from which the fingerprint was derived.
 Of course, we could store this hash somewhere but the whole point of using fingerprints is to reduce the memory footprint of the filter.
 The solution to this predicament is the aforementioned _partial-key cuckoo hashing_, a technique for determining an element's alternate location using only its fingerprint.  
 For a given element $x$, the two candidate buckets are computed as follows:  
