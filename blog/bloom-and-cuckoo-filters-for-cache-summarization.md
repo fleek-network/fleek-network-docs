@@ -60,8 +60,15 @@ Of course, we could store this hash somewhere, but the whole point of using fing
 The solution to this predicament is the aforementioned _partial-key cuckoo hashing_, a technique for determining an element's alternate location using only its fingerprint.  
 For a given element $x$, the two candidate buckets are computed as follows:  
 
-$h_1(x) = \text{hash}(x)$<br/>
-$h_2(x) = h_1(x) \oplus \text{hash}(\text{fingerprint}(x))$  
+<!-- 
+TODO: Install math forms renderer, till then use img
+
+$h_1(x) = \text{hash}(x)$
+
+$h_2(x) = h_1(x) \oplus \text{hash}(\text{fingerprint}(x))$
+-->
+
+![](./assets/bloom-cuckoo/math-formul.png?202301181528)
 
 An important property of this technique is that $h_1(x)$ can also be computed from $h_2(x)$ and the fingerprint.
 
