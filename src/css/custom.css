@@ -391,3 +391,8 @@ blockquote:before {
 .author_card .name {
   font: bold var(--ifm-h4-font-size) / var(--ifm-heading-line-height) var(--ifm-font-family-base);
 }
+
+.youtube-player iframe { 
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
