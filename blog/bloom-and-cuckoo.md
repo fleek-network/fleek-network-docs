@@ -103,7 +103,7 @@ A positive lookup is for an existing element, and a negative lookup is for an el
 the average lookup duration and standard deviation. Fig. 3 shows the results. Bloom filters perform slightly better on average than Cuckoo filters. This result is inconsistent with [1],
 where Cuckoo filters were reported to have a better lookup performance than Bloom filters. It should be noted here that the authors in [1] use the original C++ Cuckoo filter implementation and their
 own unreleased Bloom filter implementation. In contrast, we use a Rust Cuckoo filter implementation and our Bloom filter implementation. We cannot easily determine the reason for this discrepancy.
-however, the performance difference is negligible.
+However, the performance difference is negligible.
 
 <p align="center">
 <img src="./assets/bloom-cuckoo/lookup.png">
