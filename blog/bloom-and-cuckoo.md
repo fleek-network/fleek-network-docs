@@ -67,7 +67,7 @@ An important property of this technique is that $h_1(x)$ can also be computed fr
 As this post mentioned, we are not aiming for a general comparison of Counting Bloom and Cuckoo filters.
 Instead, we want to determine which filter suits our specific use case better. The two main properties we are looking for are space efficiency and lookup performance.  
 Space efficiency is important because nodes frequently update their cache and have to communicate these changes with their peers. These messages should take up as little bandwidth as possible.
-Lookup speed is important too because Fleek Network aims to serve user requests as fast as possible. Checking whether a peer has some content stored in their cache summary should not be a bottleneck.  
+Lookup speed is also important because Fleek Network aims to serve user requests as quickly as possible. Checking whether a peer has some content stored in their cache summary should not be a bottleneck.  
 
 ## Experimental Setup
 We are using our own Counting Bloom filter [implementation](https://github.com/fleek-network/ursa/blob/483f4d56cbaa5e83182454d2c1db6f6af7c54912/crates/ursa-network/src/utils/bloom_filter.rs#L11) and 
