@@ -101,7 +101,7 @@ The gap between Counting Bloom filters and Cuckoo filters grows as the false pos
 We first add elements to both filters until the capacity is reached. We then measure the lookup performance for different ratios of positive and negative lookups.
 A positive lookup is for an existing element, and a negative lookup is for an element not contained in the filter. We perform 100K lookups for each ratio and report
 the average lookup duration and standard deviation. Fig. 3 shows the results. Bloom filters perform slightly better on average than Cuckoo filters. This result is inconsistent with [1],
-where Cuckoo filters were reported to have a better lookup performance compared to Bloom filters. It should be noted here that the authors in [1] use the original C++ Cuckoo filter implementation and their
+where Cuckoo filters were reported to have a better lookup performance than Bloom filters. It should be noted here that the authors in [1] use the original C++ Cuckoo filter implementation and their
 own unreleased Bloom filter implementation, while we use a Rust Cuckoo filter implementation and our Bloom filter implementation. We cannot easily determine the reason for this discrepancy,
 however, the performance difference is negligible.
 
