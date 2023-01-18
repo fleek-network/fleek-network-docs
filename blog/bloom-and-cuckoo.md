@@ -36,7 +36,7 @@ However, even if all bits are 1, it might still be the case that the bits were s
 Since we also need a `remove` operation for our use case, we have been using Counting Bloom filters, a variant of Bloom filters.
 Counting Bloom filters retain most of the properties that regular Bloom filters have. The `remove` operation comes at the cost of an increased memory footprint.
 Each position in the array is no longer a single bit but a group of bits representing a counter.
-Whenever an element is inserted into the filter, the counters for all $k$ positions are incremented by 1. To remove an element, we simply decrement the counters.
+Whenever an element is inserted into the filter, the counters for all $k$ positions are incremented by 1. To remove an element, we decrement the counters.
 
 ## Cuckoo Filters
 Bloom filters are the most known members of a class of data structures called Approximate Membership Query Filters (AMQ Filters).
