@@ -16,13 +16,13 @@ tags:
 Disclaimer: This is not a general comparison between Bloom filters and Cuckoo filters.  
 This blog post summarizes some of the experiments we conducted to decide whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters, for a specific use case.
 
+<!--truncate-->
+
 ## Background
 
 Nodes on Fleek Network currently use Counting Bloom filters to summarize their cached content. These cache summaries are exchanged with other nodes in order to facilitate content routing.
 If a particular node does not store a requested piece of content, it can use the Bloom filters that it received from its peers to check if a peer stores the requested content. 
 We are using Counting Bloom filters rather than regular Bloom filters because we need to be able to remove elements from the filter to support cache eviction.
-
-<!--truncate-->
 
 ## Bloom Filters
 
