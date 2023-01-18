@@ -137,7 +137,7 @@ Fortunately, a variant of Bloom filters called _Scalable Bloom Filters_ [4] can 
 The proposed technique is also applicable to Cuckoo filters.
 
 ## Other Filters
-While we only looked at Bloom filters and Cuckoo filters, there are other AMQ filters that we want to briefly mention here:
+While we only looked at Bloom filters and Cuckoo filters, there are other AMQ filters that we want to mention here briefly:
 * Quotient filters [5, 6]: Compact hash tables that support insertion, lookup, and deletion. Less space-efficient than Bloom filters and Cuckoo filters.  
 * XOR filters [7]: More space-efficient than Bloom filters and Cuckoo filters. However, they are static meaning the filter has to be rebuilt if additional elements are added.  
 
