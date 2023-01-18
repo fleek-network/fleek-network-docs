@@ -116,8 +116,7 @@ The shaded region indicates the standard deviation.</i>
 ## Insertion Performance
 Less critical than lookup performance but still important for our purposes is insertion performance. We measure how the insertion performance varies for different occupancy levels.
 Fig. 4 shows the results. The insertion performance is constant across all levels of occupancy
-for Bloom filters. For Cuckoo filters, the performance decreases as the filter becomes fuller because more relocations are required. Note that in Fig. 4, the performance for Bloom
-filters is actually not constant at first. It quickly increases and then remains constant. This can be explained by CPU caching. 
+for Bloom filters. For Cuckoo filters, the performance decreases as the filter becomes fuller because more relocations are required. In Fig. 4, the performance for Bloom filters is not constant. It quickly increases and then remains constant. This can be explained by CPU caching. 
 
 <p align="center">
 <img src="./assets/bloom-cuckoo/insert.png">
