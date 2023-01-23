@@ -176,10 +176,10 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: '1RFAB49JUD',
+        appId: 'ZLPPXSKTFE',
         // Public API key
-        apiKey: '76d5e1152fb478c8a97adf44e3cbe424',
-        indexName: 'fleekNetworkDocs',
+        apiKey: 'b5a1b413bf888563db4710fe6a9b5de4',
+        indexName: 'fleek',
         // Optional: see doc section below
         contextualSearch: true,
         // Optional: path for search page that enabled by default (`false` to disable it)
