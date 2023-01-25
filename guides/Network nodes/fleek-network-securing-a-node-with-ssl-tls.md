@@ -183,7 +183,7 @@ We can conclude that at the time of running, `Ngrok` generated the following dom
 https://94e7-159-65-87-194.eu.ngrok.io 
 ```
 
-> Be aware that this is useful for a quick demo, by stopping the Ngrok process the domain it generates might differ if you are not a paying customer. We have no affiliation with `Ngrok` and you are happy to use whichever domain provider of your liking. We are only using `Ngrok` as a quick example for the users educational interest. If you've been following the guide, should know that the domain name is declared in the reverse proxy configuration file and the Let's encrypt initialisation script. In fact, Ngrok forces HTTPS by default, you wouldn't have to set up, but in any case we are not knowledgable with the service it provides and the level of security but its useful for quick demos.
+> Be aware that this is useful for a quick demo, by stopping the Ngrok process the domain it generates might differ if you are not a paying customer. We have no affiliation with `Ngrok` and you are happy to use whichever domain provider of your liking. We are only using `Ngrok` as a quick example for the users educational interest. If you've been following the guide, should know that the domain name is declared in the reverse proxy configuration file and the Let's encrypt initialisation script, meaning you'd have to update it everytime. In fact, Ngrok forces HTTPS by default, you wouldn't have to set up, but in any case we are not knowledgable with the service it provides and the level of security but its useful for quick demos.
 
 ### How to verify DNS records?
 
