@@ -323,7 +323,7 @@ ssl_certificate_key /etc/letsencrypt/live/fleek-network-node.fleek.xyz/privkey.p
 
 3) If you have followed our guides, it's likely that you have commented out or removed the lines for the SSL certificates in the Nginx `app.conf` file.
 
-Here's an example of the missing part and how it should look like (take particular care that you have to replace `<YOUR DOMAIN NAME>` and that this is only if you have deleted this part in the `app.conf` file):
+Here's an example of the missing part and how it should look like (take particular care that you have to replace `<YOUR DOMAIN NAME>` and that this is only if you have deleted the SSL configuration part in the `app.conf` file):
 
 ```sh
 server {
