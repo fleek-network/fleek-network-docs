@@ -158,7 +158,7 @@ To create a new domain name via `Ngrok`, use the following syntax:
 ngrok http 80
 ```
 
-The Ngrok process will generate the following output, where you can find the address it created for you that is publicly accessible and mapping to the machine port `80`.
+The Ngrok process will generate the following output, where you can find the address created (that is publicly accessible) which maps to the server port `80`. Our reverse proxy forwards request to port `80` to our `Ursa` node. Find more about how the services work in the [Node Health check guide](fleek-network-node-health-check-guide).
 
 ```sh
 Add Okta or Azure to protect your ngrok dashboard with SSO: https://ngrok.com/dashSSO                                                               
