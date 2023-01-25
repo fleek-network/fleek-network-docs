@@ -223,7 +223,7 @@ Our Nginx reverse proxy has `app.conf` file where the SSL certificate(s) are, or
 
 If we recall our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) and [Video guide](https://www.youtube.com/watch?v=uAFIDu3UBvw), the SSL configuration is omitted to keep things simple, as the configuration requires a domain name, etc. 
 
-⚠️ If you try to run the Node Stack with the example SSL setup, it'd fail. There aren't any valid SSL/TLS certificates, you need valid SSL/TLS certificates to operate HTTPS and secure your reverse server connections! We'll look into this briefly in the section [Which came first: the chicken or the egg?](#which-came-first-the-chicken-or-the-egg).
+⚠️ If you try to run the Node Stack with the example SSL setup, it'd fail. There aren't any valid SSL/TLS certificates, you need valid SSL/TLS certificates to operate HTTPS and secure your reverse server connections! We'll look into this briefly in the section [Which came first: the chicken or the egg?](#which-came-first-the-chicken-or-the-egg)
 
 We removed the SSL on those guides to keep things simple for you, but it's not recommended for production! You are incentivized to operate the Node to the best knowledge and follow security principles for greater rewards and helping to have a healthy and secure network!
 
