@@ -120,7 +120,7 @@ DNS changes may take some time to propagate, thus make sure to [verify the DNS r
 
 Domain names are costly, you might not have one, or not be interested at this time! For this reason, we're going to provide some hints on how to set up a free domain name for your server.
 
-There are plenty of free domain server providers but for this guide will opt for [Ngrok](https://ngrok.com), there are other alternatives such as [Localhost.run](localhost.run) or [LocalTunnel.me](https://localtunnel.me), but we're keeping things simple here and will not try to provide support for anything else, but should be quite similar! 
+There are plenty of free domain server providers but for this guide will opt for [Ngrok](https://ngrok.com), there are other alternatives such as [Localhost.run](localhost.run) or [LocalTunnel.me](https://localtunnel.me), but we're keeping things simple here and will not provide support for anything else, as it should be quite similar! 
 
 > While `localhost`.run` doesn't require you to install any apps, it requires exposing port 22 publicly and some users might not be happy about it.
 
