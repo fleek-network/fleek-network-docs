@@ -177,7 +177,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
                               0       0       0.00    0.00    0.00    0.00
 ```
 
-We can conclude that at the time of running `Ngrok` the domain it generated is:
+We can conclude that at the time of running, `Ngrok` generated the following domain:
 
 ```sh
 https://94e7-159-65-87-194.eu.ngrok.io 
