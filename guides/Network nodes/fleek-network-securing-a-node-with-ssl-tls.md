@@ -128,7 +128,7 @@ Bear in mind that the domain address provided by this service changes whenever y
 
 With that in mind, let's use `Ngrok`, as a quick demo only!
 
-Vist the [Ngrok website](https://ngrok.com), visit the downlods page and follow the instructions to install it on your operating system. Here's how we'd install it for Linux `snap` package manager users.
+Vist the [Ngrok website](https://ngrok.com), visit the downloads page and follow the instructions to install it on your operating system. Here's how we'd install it for Linux `snap` package manager users.
 
 ```sh
 snap install ngrok
