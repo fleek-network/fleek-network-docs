@@ -35,7 +35,7 @@ Secure Sockets Layer or Transport Layer Security are the technologies used to ke
 A secure connection is required to prevent others from modifying, reading or tempering the data that is transmitted. Otherwise, it can be intercepted by third parties, such as hackers.
 HTTP connections are insecure by default, SSL or TLS (the modern version of SSL) is used to encrypt the data by using advanced encryption algorithms in transit, preventing others from reading it as it's transferred over the connection.
 
-💡 Generally referred to as SSL, or TLS (Transport Layer Security), the modern version that's usually named SSL)
+💡 Generally referred to as SSL, or TLS (Transport Layer Security), the modern version that's usually named SSL
 
 You've likely noticed `HTTPS://` when surfing the web, and more specifically when making payments or dealing with sensitive data! This is used to secure and encrypt the connection.
 
