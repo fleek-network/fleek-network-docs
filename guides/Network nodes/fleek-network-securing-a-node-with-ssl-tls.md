@@ -407,6 +407,8 @@ For our example, that would look a bit like this:
 EMAIL="ops@fleek.xyz" DOMAINS="fleek-network-node.fleek.xyz" ./init-letsencrypt.sh
 ```
 
+> Note: if multiple domains are provided, the certificates will be stored under the first one
+
 If the script is executed successfully, the output should be similar to (have in mind that we are using `fleek-network-node.fleek.xyz` as an example, you should see yours):
 
 ```sh
