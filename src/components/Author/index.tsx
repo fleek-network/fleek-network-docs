@@ -14,7 +14,7 @@ const Author = ({
   return (
     <section className='author_card'>
       <div>
-        <span><a href={url} target="_blank" alt={name}><img src={image} alt={name} /></a></span>
+        <span className='avatar'><a href={url} target="_blank" alt={name}><img src={image} alt={name} /></a></span>
         <div>
           <span className='name'><a href={url} target="_blank" alt={name}>{name}</a></span>
           <span className='title'>{title}</span>

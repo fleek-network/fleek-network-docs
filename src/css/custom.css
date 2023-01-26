@@ -333,8 +333,13 @@ blockquote:before {
   color: var(--ifm-color-primary-darker);
   font-weight: bold;
 }
+.author_card a {
+  flex-shrink: 0;
+}
 .author_card a img {
   transition: transform 0.3s, opacity 0.3s;
+  width: 60px;
+  height: 60px;
 }
 .author_card a img:hover {
   opacity: 0.9;
@@ -361,9 +366,12 @@ blockquote:before {
   line-height: 1.4;
 }
 .author_card > div {
-  display: flex;
+  /* display: flex;
+  gap: 1rem; */
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 1rem;
-  height: 120px;
+  height: auto;
   position: relative;
   border: none;
   padding: 20px;
@@ -395,4 +403,14 @@ blockquote:before {
 .youtube-player iframe { 
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+  .author_card > div {
+    height: 120px;
+  }
+  .author_card a img {
+    width: 80px;
+    height: 80px;
+  }
 }
