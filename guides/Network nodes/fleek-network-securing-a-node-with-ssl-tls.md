@@ -194,8 +194,8 @@ dig fleek-network-node.fleek.xyz +nostats +nocomments +nocmd
 ```
 
 ```sh
-;fleek-network-node.fleek.xyz.		IN	A
-fleek-network-node.fleek.xyz.	390	IN	A	dyna.wikimedia.org.
+;fleek-network-node.fleek.xyz.      IN	A
+fleek-network-node.fleek.xyz.		484 IN	A	181.196.118.156
 ```
 
 👆 The goal is to determine if the DNS record matches the machine IP Address we set up earlier. There might be cases you'll need to wait longer, but it's good to double-check your DNS record dashboard and revise it if the desired settings fail to show!
