@@ -135,4 +135,4 @@ Should get the response back `pong`
 pong
 ```
 
-For longer detailed instructions, check our guide [Securing a Node with SSL/TSL](fleek-network-securing-a-node-with-ssl-tls).
+For longer detailed instructions, check our guide [Securing a Node with SSL/TSL](../../guides/Network nodes/fleek-network-securing-a-node-with-ssl-tls).
