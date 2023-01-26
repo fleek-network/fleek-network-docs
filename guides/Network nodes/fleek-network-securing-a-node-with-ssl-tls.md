@@ -121,7 +121,7 @@ Domain names are costly, you might not have one, or not be interested at this ti
 
 There are plenty of free domain server providers, but for this guide, we will opt for [Ngrok](https://ngrok.com). There are other alternatives such as [Localhost.run](https://localhost.run) or [LocalTunnel.me](https://localtunnel.me), but we're keeping things simple here and will not try to provide support for anything else. Using an alternative should be quite similar!
 
-> While `localhost`.run` doesn't require you to install any apps, it requires exposing port 22 publicly and some users might not be happy about it.
+> While `localhost.run` doesn't require you to install any apps, it requires exposing port 22 publicly and some users might not be happy about it.
 
 Bear in mind that the domain address provided by this service changes whenever you restart it! Purchasing a domain is better in the long term (which services like Ngrok also provide), as otherwise, you'd have to modify the configuration every time you restart the server as the domain changes, etc. 
 
