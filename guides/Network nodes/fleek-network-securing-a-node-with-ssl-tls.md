@@ -33,7 +33,7 @@ import Author from '@site/src/components/Author';
 Secure Sockets Layer or Transport Layer Security are the technologies used to keep an internet connection secure by protecting sensitive data that is transferred between systems. It's a protocol for servers and web clients to ensure that data passed between them is private!
 
 A secure connection is required to prevent others from modifying, reading or tempering the data that is transmitted. Otherwise, it can be intercepted by third parties, such as hackers.
-HTTP connections are insecure by default, SSL or TLS (the modern version of SSL) is used to encrypt the data by using advanced encryption algorithms in transit, preventing others from reading it as it's transferred over the connection.
+HTTP connections are insecure by default. SSL, or TLS (the modern version of SSL), uses advanced encryption algorithms in transit, preventing others from reading or tampering with the data as it's transferred over the connection.
 
 💡 Generally referred to as SSL, or TLS (Transport Layer Security), the modern version that's usually named SSL
 
