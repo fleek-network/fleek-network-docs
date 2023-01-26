@@ -4,6 +4,7 @@ draft: false
 hide_title: true
 title: How to install Rust and the dependencies for Ursa CLI
 slug: fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli
+image: ./assets/fleek-network-dependencies-for-ursa-cli.png?202212071243
 date: 2022-12-06T23:00:00Z
 canonical: ''
 description: A Rust installation walkthrough to help compile and run Ursa CLI

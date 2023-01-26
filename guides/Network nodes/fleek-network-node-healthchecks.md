@@ -4,6 +4,7 @@ draft: false
 hide_title: true
 title: Node Health Check guide
 slug: fleek-network-node-health-check-guide
+image: ./assets/fleek-network-node-health-check-guide.png?202301041235
 date: 2023-01-04T23:00:00Z
 canonical: ''
 description: The purpose of the guide is to provide basic information about the node resource by explaining the host, port numbers, logs during runtime, etc for the Fleek Network.

@@ -4,6 +4,7 @@ draft: false
 hide_title: true
 title: How to deal with files using Content Addressable aRchives
 slug: fleek-network-packing-content-addressed-data
+image: ./assets/fleek-network-how-fleek-network-deals-with-files.png?202212131140
 date: 2022-12-13T13:00:00.000+00:00
 canonical: ''
 description: How to deal with files using Content Addressable aRchives
