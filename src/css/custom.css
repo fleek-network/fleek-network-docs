@@ -251,6 +251,10 @@ article h1,
   padding: 0;
 }
 
+.col .markdown:not(#post-content) p img {
+  display: none;
+} 
+
 .markdown li a,
 .markdown p a {
   color: var(--ifm-color-primary-darker);
@@ -267,11 +271,6 @@ article h1,
 .table-of-contents li a:hover {
   text-decoration: underline;
 }
-/* 
-ul.table-of-contents > li:first-child a.toc-highlight {
-  font-weight: bold;
-  font-size: 1rem;
-} */
 
 .table-of-contents:before {
   content: "Content";
