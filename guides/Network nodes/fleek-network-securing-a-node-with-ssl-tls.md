@@ -43,7 +43,7 @@ In recent years, the non-profit organization [Let's Encrypt](https://en.wikipedi
 
 In that respect, we'll look into how to secure a Fleek Node with TLS certificates provided by Let's Encrypt, by harnessing the knowledge provided in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide. We'll look into how to set up our custom domain in the Nginx configuration, generate dummy certificates, and finally real certificates to understand how the certificate automation is handled to mitigate issues, such as expiration.
 
-The knowledge demonstrated here should be useful and can be easily applied to native setups (none Docker). As some troubleshooting and differences are found in different systems, we'll stick with our Docker Stack for that matter and simplicity!
+The knowledge demonstrated here should be useful and can be easily applied to native setups (not Docker). As some troubleshooting and differences are found in different systems, we'll stick with our Docker Stack for that matter and simplicity!
 
 If you have any feedback or questions join [our community Discord](https://discord.gg/fleekxyz) channel!
 
@@ -114,7 +114,7 @@ Learn more about record types [here](https://en.wikipedia.org/wiki/List_of_DNS_r
 
 DNS changes may take some time to propagate, thus make sure to [verify the DNS records](#how-to-verify-dns-records).
 
-### Alternatively, getting a free domain name for testing?
+### Alternatively, how can one get a free domain name for testing?
 
 Domain names are costly, you might not have one, or not be interested at this time! For this reason, we're going to provide some hints on how to set up a free domain name for your server.
 
@@ -476,7 +476,7 @@ This certificate expires on 2023-04-25.
 These files will be updated when the certificate renews.
 ```
 
-You may also find that the paragraph after, that mentions that the certificate expires is important. If you are running the Docker Stack we provide, the `certbot` is installed and automating the certification for you.
+You may also find that the paragraph after, that mentions that the certificate expires is important. If you are running the Docker Stack we provide, the `certbot` is installed and automates renewing the certification for you.
 
 ```sh
 NEXT STEPS:
