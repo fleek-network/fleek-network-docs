@@ -7,7 +7,7 @@ slug: uninstall-the-ursa-cli
 date: 2023-01-02T23:00:00Z
 canonical: ''
 description: Instructions about how to find help for the Ursa command line
-category: Tutorial
+category: Reference
 tags:
 - Reference
 - Fleek Network
