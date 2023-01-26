@@ -303,6 +303,8 @@ If you have followed our introductory guides, you have probably commented out or
 
 ⚠️ Beware, that this is highly customizable and we might make tweaks in any earlier version of `ursa` which that guide might not consider. Check our original repository for any updates! Also, some advanced users have a preference to modify this on their own. In any case, for more on this you have to check the [Nginx docs](https://docs.nginx.com/) to learn more!
 
+> Note: if multiple domain names are used, the `init-letsencrypt.sh` script will export them under the first domain provided
+
 2) Replace the pathname with your custom domain, by replacing the following `ursa.earth` domain with yours
 
 ```sh
@@ -369,7 +371,7 @@ First, change the directory to the `docker/full-node` path in your local reposit
 cd docker/full-node
 ```
 
-The directory file structure should look like:
+The directory file structure should look like this:
 
 ```sh
 .
