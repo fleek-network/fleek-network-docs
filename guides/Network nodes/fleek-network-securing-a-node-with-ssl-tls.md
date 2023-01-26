@@ -6,7 +6,7 @@ title: Securing a node with SSL/TLS
 slug: fleek-network-securing-a-node-with-ssl-tls
 date: 2023-01-24T09:30:00Z
 canonical: ''
-description: We'll look into how to secure a Fleek Node with TLS certificates provided by the nonprofit Certificate Authority (CA) Let's Encrypt in the Docker stack
+description: We'll look into how to secure a Fleek Node with TLS certificates provided by Let's Encrypt, the nonprofit Certificate Authority (CA) used in the Docker stack
 category: Tutorial
 tags:
 - DCDN
