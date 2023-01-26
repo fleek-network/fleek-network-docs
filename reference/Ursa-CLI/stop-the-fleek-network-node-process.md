@@ -7,7 +7,7 @@ slug: stop-the-fleek-network-node-process
 date: 2023-01-02T23:00:00Z
 canonical: ''
 description: Reference about stopping a Fleek network node process
-category: Tutorial
+category: Reference
 tags:
 - Reference
 - Fleek Network
