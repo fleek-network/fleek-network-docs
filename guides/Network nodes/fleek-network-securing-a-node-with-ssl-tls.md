@@ -118,7 +118,7 @@ DNS changes may take some time to propagate, thus make sure to [verify the DNS r
 
 Domain names are costly, you might not have one, or not be interested at this time! For this reason, we're going to provide some hints on how to set up a free domain name for your server.
 
-There are plenty of free domain server providers but for this guide will opt for [Ngrok](https://ngrok.com), there are other alternatives such as [Localhost.run](localhost.run) or [LocalTunnel.me](https://localtunnel.me), but we're keeping things simple here and will not provide support for anything else, as it should be quite similar! 
+There are plenty of free domain server providers, but for this guide, we will opt for [Ngrok](https://ngrok.com). There are other alternatives such as [Localhost.run](localhost.run) or [LocalTunnel.me](https://localtunnel.me), but we're keeping things simple here and will not try to provide support for anything else. Using an alternative should be quite similar!
 
 > While `localhost`.run` doesn't require you to install any apps, it requires exposing port 22 publicly and some users might not be happy about it.
 
@@ -126,7 +126,7 @@ Bear in mind that the domain address provided by this service changes whenever y
 
 With that in mind, let's use `Ngrok`, as a quick demo only!
 
-Vist the [Ngrok website](https://ngrok.com), visit the downloads page and follow the instructions to install it on your operating system. Here's how we'd install it for Linux `snap` package manager users.
+Visit the [Ngrok website](https://ngrok.com), visit the downloads page and follow the instructions to install it on your operating system. Here's how we'd install it for Linux `snap` package manager users.
 
 ```sh
 snap install ngrok
