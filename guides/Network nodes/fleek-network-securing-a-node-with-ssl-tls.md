@@ -41,7 +41,7 @@ Nonetheless, accessing a service via `HTTPS://` does not make it secure, as the 
 
 In recent years, the non-profit organization [Let's Encrypt](https://en.wikipedia.org/wiki/Let's_Encrypt) started providing TLS certificate encryption, that is free of charge. The Let's Encrypt organization also improved the administration experience by providing automation features for system administrator processes.
 
-In that respect, we'll look into how to secure a Fleek Node with TLS certificates provided by the nonprofit Certificate Authority (CA) Let's Encrypt, by harnessing the knowledge provided in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide. We'll look into how to set up our custom domain in the Nginx configuration, generate dummy certificates, and real certificates and understand how the certificate automation is handled to mitigate issues, such as expiration.
+In that respect, we'll look into how to secure a Fleek Node with TLS certificates provided by Let's Encrypt, by harnessing the knowledge provided in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide. We'll look into how to set up our custom domain in the Nginx configuration, generate dummy certificates, and finally real certificates to understand how the certificate automation is handled to mitigate issues, such as expiration.
 
 The knowledge demonstrated here should be useful and can be easily applied to native setups (none Docker). As some troubleshooting and differences are found in different systems, we'll stick with our Docker Stack for that matter and simplicity!
 
