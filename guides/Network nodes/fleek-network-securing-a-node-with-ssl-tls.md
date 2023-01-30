@@ -26,8 +26,11 @@ tags:
 -->
 import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
+import YoutubePlayer from '@site/src/components/YoutubePlayer';
 
 ![](./assets/fleek-network-how-to-secure-a-network-node.png?202301251236)
+
+https://www.youtube.com/watch?v=LvnIHH5hnr8
 
 ## Introduction
 
@@ -57,6 +60,18 @@ To follow the guide, you will need the following:
 - Have a domain name and DNS setup management permissions (ideally if you want to persist a domain for a long time, we'll provide you with a free alternative that is dynamic and only suitable for the demo)
 
  <CheckoutCommitWarning />
+
+## Quick Video
+
+A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
+
+The video content is stored in our Fleek Network [playlist](https://www.youtube.com/watch?v=uAFIDu3UBvw&list=PL3v9ZaTBrN9GEQ2NmS5xc6YH0E2df5VTn) on the Fleek XYZ [Youtube channel](https://www.youtube.com/@fleekxyz).
+
+<YoutubePlayer
+  title="Securing a node with SSL/TLS"
+  source="https://www.youtube.com/watch?v=LvnIHH5hnr8"
+/>
+
 
 ## What are SSL/TLS certificates?
 
