@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PAT: ${{ secrets.PAT }}
-      ALGOLIA_APP_ID: 1RFAB49JUD
-      ALGOLIA_API_KEY: 76d5e1152fb478c8a97adf44e3cbe424
+      ALGOLIA_APP_ID: ZLPPXSKTFE
+      ALGOLIA_API_KEY: b5a1b413bf888563db4710fe6a9b5de4
 
     steps:
       - uses: actions/checkout@v3
