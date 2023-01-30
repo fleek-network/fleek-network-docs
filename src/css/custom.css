@@ -250,8 +250,12 @@ article h1,
   max-width: 1440px;
   padding: 0;
 }
+/* 
+.col article.itemprop .markdown:not(#post-content) p img {
+  display: none;
+}  */
 
-.col article[itemprop="blogPost"] .markdown p img {
+.col article[itemprop="blogPost"] .markdown:not(#post-content) p img {
   display: none;
 } 
 
