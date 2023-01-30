@@ -251,7 +251,7 @@ article h1,
   padding: 0;
 }
 
-.col .markdown:not(#post-content) p img {
+.col article[itemprop="blogPost"] .markdown p img {
   display: none;
 } 
 
