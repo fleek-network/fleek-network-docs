@@ -67,7 +67,7 @@ The video content is stored in our Fleek Network [playlist](https://www.youtube.
 
 <YoutubePlayer
   title="Securing a node with SSL/TLS"
-  source="https://www.youtube.com/watch?v=LvnIHH5hnr8"
+  videoId="LvnIHH5hnr8"
 />
 
 ## What are SSL/TLS certificates?

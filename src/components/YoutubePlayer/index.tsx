@@ -1,16 +1,16 @@
 import React from 'react';
 
 const YoutubePlayer = ({
-  source,
+  videoId,
   title,
 }: {
-  source: string;
+  videoId: string;
   title: string;
 }): JSX.Element => {
   return (
     <div className="youtube-player">
       <iframe
-        src={`${source}?controls=1&modestbranding=1&playsinline=1&rel=0`}
+        src={`https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=1&playsinline=1&rel=0`}
         title={title}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
