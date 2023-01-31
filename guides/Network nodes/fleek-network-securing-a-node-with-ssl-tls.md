@@ -30,8 +30,6 @@ import YoutubePlayer from '@site/src/components/YoutubePlayer';
 
 ![](./assets/fleek-network-how-to-secure-a-network-node.png?202301251236)
 
-https://www.youtube.com/watch?v=LvnIHH5hnr8
-
 ## Introduction
 
 Secure Sockets Layer or Transport Layer Security are the technologies used to keep an internet connection secure by protecting sensitive data that is transferred between systems. It's a protocol for servers and web clients to ensure that data passed between them is private!
@@ -55,7 +53,7 @@ If you have any feedback or questions join [our community Discord](https://disco
 
 To follow the guide, you will need the following:
 
-- Familiarity with the command-line interface
+- Familiarity with the command-line interface 
 - Ability to run the Docker Stack successfully as instructed in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) or [video guide](https://www.youtube.com/watch?v=uAFIDu3UBvw)
 - Have a domain name and DNS setup management permissions (ideally if you want to persist a domain for a long time, we'll provide you with a free alternative that is dynamic and only suitable for the demo)
 
@@ -71,7 +69,6 @@ The video content is stored in our Fleek Network [playlist](https://www.youtube.
   title="Securing a node with SSL/TLS"
   source="https://www.youtube.com/watch?v=LvnIHH5hnr8"
 />
-
 
 ## What are SSL/TLS certificates?
 
