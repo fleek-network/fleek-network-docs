@@ -27,6 +27,12 @@ Stop the Fleek Network node by sending a terminate signal (SIGTERM) to the `ursa
 pkill ursa
 ```
 
+Kill all `ursa` processes
+
+```sh
+killall ursa
+```
+
 Stop the Fleek Network node in Ubuntu Linux by finding what the process id (PID) of `ursa` cli is by finding which process is listening on the port 6009 or 4069.
 
 ```sh
