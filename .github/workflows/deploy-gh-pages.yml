@@ -51,10 +51,13 @@ jobs:
         uses: dcarbone/install-jq-action@v1.0.1
         with:
           version: 1.6
-      - name: run scraper
-        run: |
-          ls -la
-          pwd
-          cd /
-          ls -la
-          ./docsearch docker:run config.docsearch.json 
+      - name: algolia.json as config
+        id: algolia_config
+        run: echo "::set-output name=config::$(cat algolia.json | jq -r tostring)"
+
+      - name: Push indices
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
