@@ -4,13 +4,42 @@ on:
   push:
     branches:
       - main
+      - chore/scraper-in-docker-version
 
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Deploy
+  # deploy:
+  #   name: Deploy
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     PAT: ${{ secrets.PAT }}
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
+  #         cache: yarn
+
+  #     - name: Install dependencies
+  #       run: yarn install --frozen-lockfile
+  #     - name: Build website
+  #       run: yarn build
+
+  #     - name: Deploy to GitHub Pages
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./build
+  #         # https://github.com/actions/checkout/issues/13#issuecomment-724415212
+  #         user_name: github-actions[bot]
+  #         user_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+  docsearch-scraper:
     runs-on: ubuntu-latest
+    container:
+      image: algolia/docsearch-scraper
     env:
       PAT: ${{ secrets.PAT }}
       ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
@@ -18,28 +47,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Install jq
+        uses: dcarbone/install-jq-action@v1.0.1
         with:
-          node-version: 18
-          cache: yarn
+          version: 1.6
+      - name: config.docsearch.json as config
+        id: algolia_config
+        run: echo "::set-output name=config::$(cat config.docsearch.json | jq -r tostring)"
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Build website
-        run: yarn build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          # https://github.com/actions/checkout/issues/13#issuecomment-724415212
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-
-      - name: Algolia docsearch indexer
-        uses: darrenjennings/algolia-docsearch-action@master
-        with:
-          algolia_application_id: ${{env.ALGOLIA_APP_ID}}
-          algolia_api_key: ${{env.ALGOLIA_API_KEY}}
-          file: config.docsearch.json
+      - name: Push indices
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
