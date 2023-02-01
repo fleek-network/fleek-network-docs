@@ -22,6 +22,7 @@ tags:
 -->
 import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
+import GitCloneOptions from '../partials/_git-clone-options.mdx';
 
 ![](./assets/fleek-network-dependencies-for-ursa-cli.png?202212071243)
 
@@ -234,23 +235,7 @@ Generally, users report issues with commands not being found. 🧐 To avoid frus
 
 If you haven't already 🙄, clone the Fleek Network's Ursa repository to your machine.
 
-You have several ways of doing this:
-- Clone via HTTPS
-- Clone via SSH
-- Download via Github CLI
-- Download the [zip package](https://github.com/fleek-network/ursa/archive/refs/heads/main.zip) from the repository
-
-We recommend HTTPS because it is the easiest to set up in the wild, and by users who are new to all this.
-
-```sh
-git clone https://github.com/fleek-network/ursa.git
-```
-
-Although, we strongly recommend using an SSH connection when interacting with GitHub. If you are to this and are interested read more about it [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
-
-```sh
-git clone git@github.com:fleek-network/ursa.git
-```
+<GitCloneOptions />
 
 💡 Optionally, you can pass a directory name at the end of the commands (as the last argument), otherwise defaults to the repository name and for our case the name is `ursa`. Note that you don't have to use `<` or `>` when naming, it's just illustrative.
 

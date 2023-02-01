@@ -22,6 +22,7 @@ tags:
 -->
 import CheckoutCommitWarning from '../partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
+import GitCloneOptions from '../partials/_git-clone-options.mdx';
 
 ![Fleek Network: Getting started guide](./assets/fleek-network-getting-started.png?202301101924)
 
@@ -93,23 +94,7 @@ We’ll clone the repository locally, build it and interact with the node throug
 
 Start by cloning the repository located at [https://github.com/fleek-network/ursa](https://github.com/fleek-network/ursa "https://github.com/fleek-network/ursa")
 
-You have several ways of doing this:
-- Clone via HTTPS
-- Clone via SSH
-- Download via Github CLI
-- Download the [zip package](https://github.com/fleek-network/ursa/archive/refs/heads/main.zip) from the repository
-
-We recommend HTTPS because it is the easiest to set up on the wild, and by users who are new to all this.
-
-```sh
-git clone https://github.com/fleek-network/ursa.git
-```
-
-Although, we strongly recommend using an SSH connection when interacting with GitHub. If you are to this and are interested read more about it [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
-
-```sh
-git clone git@github.com:fleek-network/ursa.git
-```
+<GitCloneOptions />
 
 You’ll notice that we try our best to document the project as we go, so it should be easy to follow if interested. Of course, don’t shy away from contributing with any amends or your wording poetry!
 
