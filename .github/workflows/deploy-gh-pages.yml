@@ -51,9 +51,9 @@ jobs:
         uses: dcarbone/install-jq-action@v1.0.1
         with:
           version: 1.6
-      - name: algolia.json as config
+      - name: config.docsearch.json as config
         id: algolia_config
-        run: echo "::set-output name=config::$(cat algolia.json | jq -r tostring)"
+        run: echo "::set-output name=config::$(cat config.docsearch.json | jq -r tostring)"
 
       - name: Push indices
         uses: signcl/docsearch-scraper-action@master
