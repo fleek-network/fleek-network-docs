@@ -178,7 +178,7 @@ const config = {
         // The application ID provided by Algolia
         appId: 'ZLPPXSKTFE',
         // Public API key
-        apiKey: 'b5a1b413bf888563db4710fe6a9b5de4',
+        apiKey: '33ed5b78ac12317e4243d3f44874cbc8',
         indexName: 'fleek',
         // Optional: see doc section below
         contextualSearch: true,
