@@ -37,9 +37,10 @@ jobs:
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Algolia docsearch indexer
-        uses: darrenjennings/algolia-docsearch-action@master
-        with:
-          algolia_application_id: ${{env.ALGOLIA_APP_ID}}
-          algolia_api_key: ${{env.ALGOLIA_API_KEY}}
-          file: config.docsearch.json
+      # TODO: Method not allowed with this API key (might not be available for docsearch free)
+      # - name: Algolia docsearch indexer
+      #   uses: darrenjennings/algolia-docsearch-action@master
+      #   with:
+      #     algolia_application_id: ${{env.ALGOLIA_APP_ID}}
+      #     algolia_api_key: ${{env.ALGOLIA_API_KEY}}
+      #     file: config.docsearch.json
