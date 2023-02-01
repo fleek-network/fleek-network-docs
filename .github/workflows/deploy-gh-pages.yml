@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - chore/scraper-in-docker-version
 
   workflow_dispatch:
 
