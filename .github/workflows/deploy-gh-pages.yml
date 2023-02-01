@@ -37,7 +37,8 @@ jobs:
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
 
-      # TODO: Method not allowed with this API key (might not be available for docsearch free)
+      # TODO: Method not allowed with this API key (not be available for docsearch os free)
+      # TODO: Read the README #crawler for more details
       # - name: Algolia docsearch indexer
       #   uses: darrenjennings/algolia-docsearch-action@master
       #   with:
