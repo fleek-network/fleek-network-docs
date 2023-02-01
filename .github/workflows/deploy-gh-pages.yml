@@ -54,4 +54,7 @@ jobs:
       - name: run scraper
         run: |
           ls -la
+          pwd
+          cd /
+          ls -la
           ./docsearch docker:run config.docsearch.json 
