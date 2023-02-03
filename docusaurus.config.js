@@ -184,6 +184,7 @@ const config = {
         contextualSearch: true,
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
+        schedule: 'every 1 day at 6:00 pm',
       },
     }),
     plugins: [
