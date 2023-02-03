@@ -152,7 +152,7 @@ You should have completed the topics above to understand what and why the endpoi
 
 We're going to use [cURL](https://curl.se/), make sure that you have it installed otherwise install it in your operating system.
 
-In any case, you should have the Node running to be able to follow the steps. We'll use the Docker Container version but if you have a custom setup in a server or host you'll be able to follow.
+In any case, you should have the Node running to be able to follow the steps. We'll use the Docker compose Stack version but if you have a custom setup in a server or host you'll be able to follow.
 
 For the ones who followed the [getting started guide](#fleek-network-getting-started-guide), the following request should be familiar.
 
@@ -167,6 +167,8 @@ The response should be:
 ```sh
 pong
 ```
+
+💡 As mentioned, we are interacting with the Stack, thus we interact with port 80 which our reverse proxy (Nginx) maps to the internal port 4069. Of course, you can test any port but the port that should be publicly available is going to be port 80. Learn how to run a stack [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container#run-the-container-from-the-recommended-stack) and [How to secure a Network Node](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls) to find out more about how to secure external communications internally.
 
 You can also check the headers of the response:
 
