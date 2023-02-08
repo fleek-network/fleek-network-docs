@@ -53,6 +53,12 @@ USE_SSH=true GIT_USER=<Your github username> yarn deploy
 
 ### 🕸 Web Crawl
 
+⚠️ The `crawl:docker` will not work for now as we moved to the open source version of Algolia called Docsearch and the Crawler has to be triggered manually through their dashboard or awaited for the scheduled job. If preferred to use the `crawl:docker` in the CI, a paid subscription is required.
+
+To trigger manually read [here](https://docsearch.algolia.com/docs/manage-your-crawls/#trigger-a-new-crawl)
+
+#### CLI version, requires a paid subscription
+
 The web crawler or spider is used to search and automatically index website content. The process can run periodically by docsearch but if you much prefer you can run it manually.
 
 You can run a crawl from the packaged Docker image to crawl your website.
