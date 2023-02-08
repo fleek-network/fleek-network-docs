@@ -99,7 +99,7 @@ Log messages are well formatted and have an associated type, as described in the
 
 Depending on development time, some Log message types might be present in your output that offer very low-priority information but that can be of good use for the development team, e.g. the `debug` and `trace` are good examples. 
 
-🙏 We understand this can be quite intimidating at the time, but expect to reduce the verbosity of the output as soon as possible!
+🙏 We understand this can be quite intimidating at the time - some people ask "Is it ok?", a few "Is my Node working?", other's "Is it working?", in general you shouldn't bother much about warning messages as those are expected through development. In any case, we expect to reduce the verbosity of the output as soon as possible!
 
 Here's an example, yours might differ a bit:
 
