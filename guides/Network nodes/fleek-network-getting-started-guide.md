@@ -259,6 +259,14 @@ cmp basic.car ./output/bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqg
 
 **We’ve now been successful in retrieving the original car file content we “put” into the network earlier!**
 
+## Next steps 🫡
+
+While you can run the Network Node as described here, in our getting started guide, it's required to set up the Network Node correctly and securily! It requires some degree of patience, knowledge and time to go through our guides but we offer a recommendation to have it ready quickly.
+
+Our recommendation is to use our Docker compose Stack, as it provides aditional services for monitoring, analytics, a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
+
+Find our guide Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md).
+
 ***
 
 ## Final Thoughts
@@ -267,7 +275,7 @@ Content delivery services have a significant position in our web experience on a
 
 We have learned a bit about the importance of decentralized content delivery networks to mitigate the conflicting interest we otherwise face when trusting traditional content delivery providers for a complete web three experience: reasoning and fundamentals.
 
-Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer!
+Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md)!
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
