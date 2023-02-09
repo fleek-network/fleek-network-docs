@@ -116,7 +116,7 @@ If you list (`ls`) the files in the directory, it should be similar to:
 
 The simplest way to run docker is to visit the [https://www.docker.com/](https://www.docker.com/), download and install Docker Desktop.
 
-💡 Some users might prefer to look into the Docker daemon (dockerd), in that case, check the [docs](https://docs.docker.com), as we're trying to keep it simple here! If you are going to install and run the Docker daemon (e.g., Linux Ubuntu server) remember to enable BuildKit (required by Docker build), check out reference [here](../../reference/Docker/buildkit-required.md).
+💡 Some users might prefer to look into the Docker daemon (dockerd), in that case, check the [docs](https://docs.docker.com), as we're trying to keep it simple here! If you are going to install and run the Docker daemon (e.g., Linux Ubuntu server) remember to enable BuildKit (required by Docker build), check out reference [here](../../reference/Docker/buildkit-required-by-docker-build).
 
 Once Docker desktop is installed, you should start or open the application in your operating system! 
 

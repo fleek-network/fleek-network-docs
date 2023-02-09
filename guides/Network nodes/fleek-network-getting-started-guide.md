@@ -275,7 +275,7 @@ Content delivery services have a significant position in our web experience on a
 
 We have learned a bit about the importance of decentralized content delivery networks to mitigate the conflicting interest we otherwise face when trusting traditional content delivery providers for a complete web three experience: reasoning and fundamentals.
 
-Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md)!
+Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container)!
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
