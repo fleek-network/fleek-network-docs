@@ -258,6 +258,10 @@ When ready, run the Docker build command:
 docker build -t ursa -f ./Dockerfile .
 ```
 
+If you are running the Docker daemon (not the Desktop version), BuildKit needs to be enabled.
+
+💩 BuildKit is required by Docker Build if you are running the docker daemon (desktop users have it enabled by default), read our reference [BuildKit required by Docker build](../../reference/Docker/buildkit-required-by-docker-build) to learn more about how to enable it.
+
 The build process takes awhile and you have to wait for completion. 
 
 🤖 The output should be similar to:
@@ -576,6 +580,8 @@ grafana uses an image, skipping
 💡 The `ursa` Docker image should be built every time you want to pull and use an update, learn how by following the guide [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
 In the project root, execute the docker-compose command by providing the `docker-compose.yml` configuration file and the subcommand up.
+
+💩 If you are running the Docker daemon (not the Desktop version), BuildKit needs to be enabled, (desktop users have it enabled by default). Read our reference [BuildKit required by Docker build](../../reference/Docker/buildkit-required-by-docker-build) to learn more about how to enable it!
 
 ```sh
 docker-compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
