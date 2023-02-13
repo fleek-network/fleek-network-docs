@@ -51,11 +51,13 @@ To follow the guide, you will need the following:
 
 For the one's interested in running the node as quickly as possible, there are a few options, among those we pick two you might find handy:
 
+- Install a Network Node in a Linux Server e.g., Ubuntu or Debian latest by using our "Get Fleek Network", an assisted installer to help onboard as quickly as possible by simply executing `curl https://get.fleek.network | bash`. Learn more about the assisted installer [here](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md)
+
 - A Docker compose Stack, which is an opinionated stack that provides a reverse proxy service for the Node (Proxied internal `4069` to external ports `80` and `443`), a service to enable HTTPS on your server, services for monitoring and analytics, etc. You can run a stack quickly by following the instructions in [run the container from the recommended stack](#run-the-container-from-the-recommended-stack).
 
 - Building a Docker image requires some effort and some of our users might find it easier to pull our nightly image for quick access to Ursa, which does not require them to build from source. For that reason, we provide you with a quick demonstration of how to pull the image and run the Docker container quickly! Check the [run the container from the official nightly image](#run-the-container-from-the-official-nightly-image)
 
-At some point in time you will have to look at the how things work and figure out what abstractions did wrong. For some advanced users that are used to it is not a big deal, but for everyone else that might cause quite a lot of hassle! Therefore, challenge yourself to learn the basics instead of executing commands you are yet to understand, this guide is your friend!
+At some point in time, you will have to look at how things work and figure out what abstractions did wrong. For some advanced users that are used to it is not a big deal, but for everyone else that might cause quite a lot of hassle! Therefore, challenge yourself to learn the basics instead of executing commands you are yet to understand, this guide is your friend!
 
 ## Quick Video
 
