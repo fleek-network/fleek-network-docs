@@ -90,7 +90,7 @@ A Fleek Network node can be built and run on your local machine. It’s an [open
 
 The project is built with Rust, a general-purpose programming language, be sure to have it installed on your local machine in advance to be able to follow the guide.
 
-> Installing and configuring Rust, packages and library dependencies can be tricky! If you haven't already, check the guides [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli) or [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) for help.
+> Installing and configuring Rust, packages and library dependencies can be tricky! If you haven't already, check the guides [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli),  [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) or our [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for help.
 
 We’ll clone the repository locally, build it and interact with the node through the binary or the HTTP JSON-RPC API with a client like cURL, but you can use a GUI (Postman, Insomnia, etc.) if your preference.
 
@@ -267,13 +267,11 @@ cmp basic.car ./output/bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqg
 
 ## Next steps 🫡
 
-While you can run the Network Node as described here, in our getting started guide, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we offer a recommendation to have it ready quickly.
+While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we provide a recommendation to have it ready quickly!
 
-Our recommendation is to use our Docker compose Stack, as it provides additional services for monitoring, analytics, a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
+Our recommendation is to use our Docker compose Stack, as it provides additional services for monitoring, analytics, and a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
 
-Find our guide on Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md).
-
-***
+Find our guide on Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md), or the [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for quick onboarding.
 
 ## Final Thoughts
 
