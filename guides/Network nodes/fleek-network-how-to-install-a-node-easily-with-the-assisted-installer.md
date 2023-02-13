@@ -67,7 +67,7 @@ Once the user executes the command, a process is initiated that attempts to prov
 
 After the installations, there'll be a request to provide a valid custom domain name of the user control, to decorate the server's public [IP](https://en.wikipedia.org/wiki/IP_address) address](https://en.wikipedia.org/wiki/IP_address), where an attempt to [secure it](./fleek-network-securing-a-node-with-ssl-tls) with SSL/TLS Certificates will be handled by leveraging the [Let's Encrypt](https://letsencrypt.org/) API for the matter.
 
-Once the SSL/TLS certification is provided, the Stack provided by [Docker](https://www.docker.com/) (a program that helps accelerate and simplify the distribution of applications via containers) is restarted. The services in the Stack, as described in our [guide](./fleek-network-node-healthchecks#processes) will then start with the final changes made during the certification process (mainly the reverse proxy, that's responsible to map the public port 80 to the internal 4069).
+Once the SSL/TLS certification is provided, the Stack provided by [Docker](https://www.docker.com/) (a program that helps accelerate and simplify the distribution of applications via containers) is restarted. The services in the Stack, as described in our [guide](./fleek-network-node-health-check-guide#healthchecks#processes) will then start with the final changes made during the certification process (mainly the reverse proxy, that's responsible to map the public port 80 to the internal 4069).
 
 If all goes successfully, the user will have a running node that is secured with SSL/TSL and the operations monitored by our suggested apps Prometheus and Grafana available to you easily in our opinionated Docker Stack.
 
@@ -153,7 +153,7 @@ Once the assisted installer is launched 🚀 you are presented with enough infor
 
 ### Health check
 
-We provide a [Node health check guide](./fleek-network-node-healthchecks) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
+We provide a [Node health check guide](./fleek-network-node-health-check-guide) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
 
 As a quick take on this during this read, you can do a quick health check to verify that the domain is indeed running and set up correctly.
 
