@@ -54,7 +54,7 @@ Follow the steps and have your complete ready quickly! For example, during the p
 
 ## What is the assisted installer?
 
-The assisted installer is a shell script written in Bash shell scripting language (a language used to interface with the system), that goes through the installation proccess instructed in our guide [Running a node in a docker container](./fleek-network-running-a-node-in-a-docker-container).
+The assisted installer is a shell script written in Bash shell scripting language (a language used to interface with the system), that goes through the installation process instructed in our guide [Running a node in a docker container](./fleek-network-running-a-node-in-a-docker-container).
 Operating systems are highly customizable and some users might much prefer to set up the Network Node required applications and dependencies themselves. Some of these users have a lot of system-level knowledge, which not all other users have. By putting down the steps programmatically, or in a sequence of commands, we help reduce the frustration that some users might feel otherwise when following guides or long descriptive processes.
 
 The assisted installer is one of the many options we provide to onboard users of any shape, geographical location, and technical knowledge into the Fleek Network, an open network made for everybody.
@@ -71,21 +71,19 @@ Once the SSL/TLS certification is provided, the Stack provided by [Docker](https
 
 If all goes successfully, the user will have a running node that is secured with SSL/TSL and the operations monitored by our suggested apps Prometheus and Grafana available to you easily in our opinionated Docker Stack.
 
-## Which operating systems are supported?
+## Which operating systems are supported?
 
-At the present time, the assisted installer is supporting the latest Ubuntu (22.04 LTS) and Debian (version 11), or earlier. Including ArchLinux, which has rolling updates.
+At present, the assisted installer is supporting the latest:
+
+- Ubuntu (22.04 LTS), or earlier
+- Debian (version 11), or earlier
+- ArchLinux, which has rolling updates.
 
 It's also recommended to have enough disk space and memory to run our containers, which is about 8 GB of memory and a reasonable amount of space for the installation and running processes (at your consideration, as required to check Docker image containers, etc). You can find more details about it [here](fleek-network-running-a-node-in-a-docker-container#recommended-settings)
 
 ⚠️ Unfortunately, Desktop operating systems are not supported by the installer (e.g. Docker when run on a Desktop, runs in a Linux VM). If you're curious and would like to test, you might want to do it on your own by following our [guide](./fleek-network-running-a-node-in-a-docker-container.md).
 
 If you are serious about running a Node, consider running a Ubuntu, Debian or ArchLinux server. We'll provide support for more Linux operating systems shortly.
-
-## How to use the assisted installer?
-
-Get a custom domain name from one domain name registrar of your liking, or create a subdomain in an existing domain you may have registered and update the DNS Record settings to answer to the server where the Ursa Network Node is going to be installed and run.
-
-💡 The process is illustrated in our guide [Securing a node with SSL/TLS](./fleek-network-securing-a-node-with-ssl-tls#how-to-set-up-the-dns-settings-for-a-node-server) and provides a bit more information about why this is required. If you have questions, start by using the guide to get answers.
 
 ## Is running the assisted installer secure?
 
@@ -108,6 +106,12 @@ Also, if you have a custom environment, then is best to follow the instructions 
 We'll provide guides on how to help improve the security of the Network Node server, but be aware that dodgy scripts might take control of the server, which may be locating your private keys, copying them, etc.
 At this point, you should understand that running a `curl | bash` script from the internet comes with a lot of risks and the responsibility is on your side as a user!
 
+## How to use the assisted installer?
+
+Get a custom domain name from one domain name registrar of your liking, or create a subdomain in an existing domain you may have registered and update the DNS Record settings to answer to the server where the Ursa Network Node is going to be installed and run.
+
+💡 The process is illustrated in our guide [Securing a node with SSL/TLS](./fleek-network-securing-a-node-with-ssl-tls#how-to-set-up-the-dns-settings-for-a-node-server) and provides a bit more information about why this is required. If you have questions, start by using the guide to get answers.
+
 ### Connect to the server
 
 Once you have the domain prepared, launch a terminal window on your computer and connect to your server.
@@ -120,7 +124,7 @@ ssh -i ~/.ssh/id_personal.pub user@ip-address
 
 ### Running the assisted installer
 
-Our [Piped installer](#piped-installer) also known as `curl | bash` installer is available in the following address [https://get.fleek.network](https://get.fleek.network). You are advised to open it on your browser or access it via the repository [here](https://github.com/fleek-network/get.fleek.network/blob/main/install.sh) to read the entire it of it to understand what it does or can do!
+Our [Piped installer](#piped-installer) also known as `curl | bash` installer is available at the following address [https://get.fleek.network](https://get.fleek.network). You are advised to open it on your browser or access it via the repository [here](https://github.com/fleek-network/get.fleek.network/blob/main/install.sh) to read the entire it of it to understand what it does or can do!
 
 ⚠️ Notice that you should use `https://` and not `http://` to access the script in the `get.fleek.network` to establish a secure connection.
 
@@ -130,7 +134,7 @@ The command to run it is the following:
 curl https://get.fleek.network | bash
 ```
 
-Alternatively, which is a safer bet and as suggested in the [Is running the assited installer secure](#is-running-the-assisted-installer-secure), we have:
+Alternatively, which is a safer bet and as suggested in the [Is running the assisted installer secure](#is-running-the-assisted-installer-secure), we have:
 
 ```sh
 curl https://get.fleek.network > install-node-network.sh
@@ -147,9 +151,9 @@ chmod +x install-node-network.sh
 The difference between the `curl | bash` and this version is that the alternative copies the file locally first and can only be run if you provide the correct permissions and type the command. Which to run you'd do:
 Once the assisted installer is launched 🚀 you are presented with enough information to help you complete the installation process.
 
-### Healthcheck
+### Health check
 
-We provide a [Node healthcheck guide](./fleek-network-node-healthchecks) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
+We provide a [Node health check guide](./fleek-network-node-healthchecks) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
 
 As a quick take on this during this read, you can do a quick health check to verify that the domain is indeed running and set up correctly.
 
