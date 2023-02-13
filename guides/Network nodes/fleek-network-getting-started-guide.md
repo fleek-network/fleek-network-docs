@@ -33,7 +33,7 @@ In this guide, we’ll have a simple look into how Fleek Network works in its cu
 For those seeking advanced knowledge:
 
 * Read our [whitepaper](https://fleek.network/fleek-network.pdf?202212011428).
-* Check out [our open source code](https://github.com/fleek-network/ursa).
+* Check out [our open-source code](https://github.com/fleek-network/ursa).
 
 ## Pre-requisites
 
@@ -44,13 +44,19 @@ To follow the guide, you will need the following:
 
 <CheckoutCommitWarning />
 
-***
-
 ## Need a quick Fleek Network TL;DR?
 
 Fleek Network is a decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer. An alternative to traditional content delivery networks without a central authority that is reliable and censorship-resistant. Fleek Network relies on blockchain technology at its core, allowing governance and token rewards as incentives for participation in serving the network.
 
-***
+Install a Network Node in a Linux Server e.g., Ubuntu or Debian latest by using our "Get Fleek Network", an assisted installer to help onboard as quickly as possible.
+
+To start open a terminal and execute:
+
+```sh
+curl https://get.fleek.network | bash
+```
+
+Learn more about the assisted installer [here](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md).
 
 ## Why is Fleek Network Needed?
 
@@ -61,8 +67,6 @@ On the other hand, content delivery services depend on costly infrastructure tha
 Most web3 services have their client-facing interfaces hosted and delivered through centralized host providers and traditional content delivery networks, breaking the trust upfront and causing immense disappointment to the end user.
 
 Since decentralized storage is a reality, a decentralized content delivery network can help achieve the goal of providing a fully decentralized web3 application.
-
-***
 
 ## How Does Fleek Network Work?
 
@@ -79,8 +83,6 @@ Clients operate with the Fleek Network independently but interact with the netwo
 Fleek Network allows direct access to content instead of only being accessible via HTTP-HTTPS methods, as the content is universally addressable and linkable. Users can access Fleek Network via the Gateway or the RPC interfaces.
 
 The Gateway Nodes act like a reverse proxy for the entire network, handling client HTTPS GET requests. There are Origin Servers that persist Client data and respond to trivial requests from Cache Nodes.
-
-***
 
 ## Running a Node
 
@@ -110,7 +112,7 @@ The install command uses the Rust compiler to build; depending on how fast your 
 
 ![](./assets/fleek-network-rust-compiler.png?202301101928)
 
-⚠️ If you encounter errors in the install process, is very likely that you're missing dependencies, packages, libraries for Rust to compile the Ursa CLI 😅. Save yourself time and energy, read the guide [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli) or [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) for help!
+⚠️ If you encounter errors in the install process, is very likely that you're missing dependencies, packages, and libraries for Rust to compile the Ursa CLI 😅. Save yourself time and energy, read the guide [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli) or [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) for help!
 
 Once the Rust compiler completes generating the binary, it’ll include it in the cargo’s bin directory. On macOS and Linux this is located at `$HOME/.cargo/bin` and on Windows `%USERPROFILE%\\.cargo\\bin`. These should be in your `$PATH` environment variable. If you have customized these, check the [installation guide](https://rust-lang.github.io/rustup/installation/index.html) for any questions.
 
@@ -148,7 +150,9 @@ At the current development stage, there’s only support for IPLD car file forma
 
 As we’re keeping things simple, we’ll download an existing “car” demo file to our local machine to use later for our example.
 
-    curl https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi -o basic.car
+```sh
+curl https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi -o basic.car
+```
 
 If successful, we should have a `basic.car`.
 
@@ -199,10 +203,12 @@ ursa rpc put basic.car
 
 On success, you’ll get a hash representing the data of its content; it uses a format called CID (**C**ontent **ID**entifier).
 
-    2022-11-23T20:23:09.440690Z  INFO ursa_rpc_client: Using JSON-RPC v2 HTTP URL: <http://0.0.0.0:4069/rpc/v0>
-    2022-11-23T20:23:09.441011Z  INFO surf::middleware::logger::native: sending request
-    2022-11-23T20:23:09.451132Z  INFO surf::middleware::logger::native: request completed
-    2022-11-23T20:23:09.451216Z  INFO ursa::ursa::rpc_commands: Put car file done: "bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei"
+```sh
+2022-11-23T20:23:09.440690Z  INFO ursa_rpc_client: Using JSON-RPC v2 HTTP URL: <http://0.0.0.0:4069/rpc/v0>
+2022-11-23T20:23:09.441011Z  INFO surf::middleware::logger::native: sending request
+2022-11-23T20:23:09.451132Z  INFO surf::middleware::logger::native: request completed
+2022-11-23T20:23:09.451216Z  INFO ursa::ursa::rpc_commands: Put car file done: "bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei"
+```
 
 ### Retrieve Data Via the CLI
 
@@ -261,11 +267,11 @@ cmp basic.car ./output/bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqg
 
 ## Next steps 🫡
 
-While you can run the Network Node as described here, in our getting started guide, it's required to set up the Network Node correctly and securily! It requires some degree of patience, knowledge and time to go through our guides but we offer a recommendation to have it ready quickly.
+While you can run the Network Node as described here, in our getting started guide, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we offer a recommendation to have it ready quickly.
 
-Our recommendation is to use our Docker compose Stack, as it provides aditional services for monitoring, analytics, a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
+Our recommendation is to use our Docker compose Stack, as it provides additional services for monitoring, analytics, a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
 
-Find our guide Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md).
+Find our guide on Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md).
 
 ***
 
