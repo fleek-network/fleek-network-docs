@@ -76,11 +76,15 @@ At present, the assisted installer is supporting the latest:
 - Debian (version 11), or earlier
 - ArchLinux, which has rolling updates.
 
-It's also recommended to have enough disk space and memory to run our containers, which is about 8 GB of memory and a reasonable amount of space for the installation and running processes (at your consideration, as required to check Docker image containers, etc). You can find more details about it [here](fleek-network-running-a-node-in-a-docker-container#recommended-settings)
-
 ⚠️ Unfortunately, Desktop operating systems are not supported by the installer (e.g. Docker runs in a Linux virtual machine when running on a Desktop). If you're curious and would like to test, you might want to do it on your own by following our [guide](./fleek-network-running-a-node-in-a-docker-container.md).
 
 If you are serious about running a Node, consider running a Ubuntu, Debian or ArchLinux server. We'll provide support for more Linux operating systems shortly.
+
+## What are the server requirements?
+
+It's recommended to have enough disk space and memory to run the Stack containers, which is about 8 GB of memory and a reasonable amount of space for the installation and running processes. At the time being, during the initial test phase, this should be above what's required by Docker images, containers, volumes, etc.
+
+You can find more details about it [here](fleek-network-running-a-node-in-a-docker-container#recommended-settings)
 
 ## Is running the assisted installer secure?
 
