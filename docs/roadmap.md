@@ -14,7 +14,7 @@ tags:
 
 ## Introduction
 
-This is a high-level roadmap overview of Fleek Network's development updated on `February 2023`. The roadmap is divided in three phases:
+This is a high-level roadmap overview of Fleek Network's development, updated on `February 2023`. The roadmap is divided into three phases:
 
 - **Devnet**: Focused on the building of the Network's core features and architecture.
 - **Testnet**: Focused on the testing of the Network's individual components.
