@@ -10,7 +10,7 @@ tags:
 - Fleek Network
 ---
 
-![Fleek Network: Roadmap](./images/fleek-network-roadmap-feb-2023.png?202301101924)
+![Fleek Network: Roadmap](./images/fleek-network-roadmap-feb23.png?202301101924)
 
 ## Introduction
 
@@ -51,7 +51,7 @@ The team will develop different testnet versions, **test-specific**, to individu
 - Performance
 - Incentives
 
-We also intend to **integrate IPFS/Filecoin** to allow direct file-fetching from IPFS and Filecoin nodes through Fleek Network (aside from the network's direct HTTPs capabilities).
+We also intend to **integrate IPFS/Filecoin/Arweave and other storage protocols** to allow direct file-fetching from them through Fleek Network (aside from the network's direct HTTPs capabilities).
 
 ## Mainnet
 
