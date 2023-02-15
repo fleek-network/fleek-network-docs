@@ -10,7 +10,7 @@ tags:
 - Fleek Network
 ---
 
-![Fleek Network: Roadmap](./images/fra.png?202301101924)
+![Fleek Network: Roadmap](./images/fleek-network-roadmap-feb-2023.png?202301101924)
 
 ## Introduction
 
