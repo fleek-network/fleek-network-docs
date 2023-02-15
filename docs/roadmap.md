@@ -26,7 +26,7 @@ During Devnet, the current stage, the team will set the foundational components 
 - The network actors
     - Cache and Gateway Nodes
         - Full chain nodes, validators, and light nodes
-            - Full Chain nodes: maintain history but are not necceseraily validators in the network.
+            - Full Chain nodes: maintain history but are not necessarily validators in the network.
             - Validators: don’t have to maintain the full network history.
             - Light nodes: act as light verification nodes. 
 - Content Routing and Replication
