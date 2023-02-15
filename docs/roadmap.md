@@ -55,4 +55,4 @@ We also intend to **integrate IPFS/Filecoin** to allow direct file-fetching from
 
 ## Mainnet
 
-The mainnet release of Fleek Network will come with the arrival to a stable and end-to-end tested version of the protocol. The transition to mainnet depends on u
+The mainnet release of Fleek Network will come with the arrival of a stable and end-to-end tested version of the protocol. The transition to mainnet depends on you!
