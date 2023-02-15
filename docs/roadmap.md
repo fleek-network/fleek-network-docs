@@ -21,7 +21,7 @@ This is a high-level roadmap overview of Fleek Network's development, updated on
 - **Mainnet**: Stable and production release of the protocol, fully featured and tested.
 
 ## Devnet
-During Devnet, the current stage, the team will set the foundational components needed to build Fleek Network's decentralize edge, including the following:
+During Devnet, the current stage, the team will set the foundational components needed to build Fleek Network's decentralized edge, including the following:
 
 - The network actors
     - Cache and Gateway Nodes
