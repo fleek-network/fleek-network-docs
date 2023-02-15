@@ -51,7 +51,7 @@ The team will develop different testnet versions, **test-specific**, to individu
 - Performance
 - Incentives
 
-We also intend to **integrate IPFS/Filecoin** to allow direct file-fetching from IPFS an Filecoin nodes through Fleek Network (aside from the network's direct HTTPs capabilities).
+We also intend to **integrate IPFS/Filecoin** to allow direct file-fetching from IPFS and Filecoin nodes through Fleek Network (aside from the network's direct HTTPs capabilities).
 
 ## Mainnet
 
