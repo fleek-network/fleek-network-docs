@@ -34,7 +34,7 @@ During Devnet, the current stage, the team will set the foundational components 
 - Modular Consensus Algorithm
     - Narwhal and Bullshark
 - Network Governance and Economics
-- EVM Compatiable application layer
+- EVM Compatible application layer
 - L1 <> L2 <> Fleek Network Bridge
 - SDK Libraries (Rust / Typescript)
 
