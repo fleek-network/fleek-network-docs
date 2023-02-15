@@ -43,7 +43,7 @@ During Devnet, the current stage, the team will set the foundational components 
 During Testnet, the focus is twofold:
 
 - Stress-test and iterate Fleek Network
-- Maximize number of operators, nodes, and geographical distribution.
+- Maximize the number of operators, nodes, and geographical distribution.
 
 The team will develop different testnet versions, **test-specific**, to individually test, stress, and validate the network's performance and design. These are some of the items we intend to test:
 
