@@ -23,7 +23,7 @@ import Author from '@site/src/components/Author';
 
 ## Introduction
 
-The concept of file permissions and ownership is crucial in preventing private or sensitive data from being exposed to dodgy actors. In this guide, we will explain Linux file permissions and ownership to help us improve the security of our Network Node server.
+The concept of file permissions and ownership is crucial in preventing private or [sensitive data](https://en.wikipedia.org/wiki/Information_sensitivity) from being exposed to dodgy actors. In this guide, we will explain Linux file permissions and ownership to help us improve the security of our Network Node server.
 
 Our Ursa CLI process is run by a `user`, that has some sort of permissions, some users run it as `root` which should be considered, as `root privileges` are not a necessary good.
 
@@ -50,7 +50,7 @@ A Linux server is a multi-user system that uses permissions and ownership has se
 
 Ideally, you should be the only actor who can read or modify the private keys. The processes or programs installed should not be able to read your private files without permission. For example, if you run a random script from the internet, as `root`, and if the script is maliciously targeting Fleek Network node operators, your identity and private data can be compromised. There'll be no one to help you or blame than yourself!
 
-As the Wu-Tang once rapped about "Protect ya neck".
+As the [Wu-Tang](https://en.wikipedia.org/wiki/Wu-Tang_Clan) once rapped about ["Protect ya neck"](https://www.youtube.com/watch?v=1_-3Bh1VFI8).
 
 ## How do I know if my system is vulnerable?
 
@@ -88,7 +88,7 @@ docker compose -f ./docker/full-node/docker-compose.yml down
 
 Afterward, we'll run the Docker Stack as a new user with non-root privileges.
 
-### Group existence checkups
+### Group existence checkups
 
 Start by checking if the `docker` group exists in the system by running the following command (if the `docker` group exists, you should get the response "🥳 Docker group exists!").
 
