@@ -349,6 +349,12 @@ Also, remember that the group may have permissions, and when a user is added to 
 
 ## Final Thoughts
 
+We started by declaring that is crucial to learn about Linux file permissions and ownership, to improve the security of our server, also protect sensitive data from being captured by malicious actors.
+
+Used the Docker Stack for guidance, where we instruct how to start it without `sudo`, learned how to create a new user and groups, and change ownership and permissions in the file system, including the `.ursa` configuration files where the identity or private keys are stored.
+
+Finally, completed our guide by demonstrating how to check if the Ursa directories are secured.
+
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
 <Author
