@@ -13,7 +13,7 @@ tags:
 
 ## Introduction
 
-This is a high-level roadmap overview of Fleek Network's development, updated on `February 2023`. For a full-view of the roadmap, [visit here](https://storage.fleek.zone/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/roadmap-int.png). The roadmap is divided into three phases:
+This is a high-level roadmap overview of Fleek Network's development, updated on `February 2023`. For a full view of the roadmap, [visit here](https://storage.fleek.zone/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/roadmap-int.png). The roadmap is divided into three phases:
 
 - **Devnet**: Focused on the building of the Network's core features and architecture.
 - **Testnet**: Focused on the testing of the Network's individual components.
