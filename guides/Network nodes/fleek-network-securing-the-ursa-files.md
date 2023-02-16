@@ -5,7 +5,7 @@ hide_title: true
 title: Securing the Ursa files
 slug: securing-the-ursa-files
 image: ./assets/fleek-network-securing-the-ursa-files.png?202302161437
-date: 2022-11-30T23:00:00.000+00:00
+date: 2023-02-16T23:00:00.000+00:00
 canonical: ''
 description: The concept of file permissions and ownership is crucial in preventing private or sensitive data from being exposed to dodgy actors. In this guide, we will explain Linux file permissions and ownership to help us improve the security of our Network Node server.
 category: Tutorial
