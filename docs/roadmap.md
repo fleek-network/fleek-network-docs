@@ -21,7 +21,7 @@ This is a high-level roadmap overview of Fleek Network's development, updated on
 
 ## Devnet
 
-![Fleek Network: Roadmap](./images/fleek-network-devnet.png)
+![Fleek Network: Roadmap](./assets/fleek-network-devnet.png)
 
 During Devnet, the current stage, the team will set the foundational components needed to build Fleek Network's decentralized edge, including the following:
 
@@ -43,7 +43,7 @@ During Devnet, the current stage, the team will set the foundational components 
 
 ## Testnet
 
-![Fleek Network: Roadmap](./images/fleek-network-testnet.png)
+![Fleek Network: Roadmap](./assets/fleek-network-testnet.png)
 
 During Testnet, the focus is twofold:
 
