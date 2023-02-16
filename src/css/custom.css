@@ -157,6 +157,7 @@ div[class*="docItemContainer"] {
 
 .menu .menu__list {
   padding-right: 2rem;
+  padding-bottom: 4rem;
 }
 .menu .menu__list a::first-letter {
   text-transform: capitalize;
