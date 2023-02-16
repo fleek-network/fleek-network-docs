@@ -3,7 +3,7 @@ draft: false
 title: Roadmap
 date: 2023-01-10T09:00:00.000+00:00
 
-description: Fleek Network's high level roadmap per stage. Devnet, Testnet, and Mainnet.
+description: Fleek Network's high-level roadmap per stage. Devnet, Testnet, and Mainnet.
 category: Documentation
 keywords: [roadmap]
 tags:
@@ -13,7 +13,7 @@ tags:
 
 ## Introduction
 
-This is a high-level roadmap overview of Fleek Network's development, updated on `February 2023`. For a full-view of the roadmap, [visit here](https://storage.fleek.zone/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/roadmap-int.png). The roadmap is divided into three phases:
+This is a high-level roadmap overview of Fleek Network's development, updated on `February 2023`. For a full view of the roadmap, [visit here](https://storage.fleek.zone/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/roadmap-int.png). The roadmap is divided into three phases:
 
 - **Devnet**: Focused on the building of the Network's core features and architecture.
 - **Testnet**: Focused on the testing of the Network's individual components.
@@ -37,7 +37,7 @@ During Devnet, the current stage, the team will set the foundational components 
     - Narwhal and Bullshark
 - Network Governance and Economics
 - EVM Compatible application layer
-- L1 <> L2 <> Fleek Network Bridge
+- L1 `<>` L2 `<>` Fleek Network Bridge
 - SDK Libraries (Rust / Typescript)
 
 
@@ -56,7 +56,7 @@ The team will develop different testnet versions, **test-specific**, to individu
 - Performance
 - Incentives
 
-We also intend to **integrate IPFS/Filecoin/Arweave and other storage protocols** to allow direct file-fetching from them through Fleek Network (aside from the network's direct HTTPs capabilities).
+We also intend to **integrate IPFS/Filecoin/Arweave and other storage protocols** to allow direct file-fetching through Fleek Network (aside from the network's direct HTTPS capabilities).
 
 ## Mainnet
 
