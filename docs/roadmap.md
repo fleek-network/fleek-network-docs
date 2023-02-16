@@ -56,7 +56,7 @@ The team will develop different testnet versions, **test-specific**, to individu
 - Performance
 - Incentives
 
-We also intend to **integrate IPFS/Filecoin/Arweave and other storage protocols** to allow direct file-fetching from them through Fleek Network (aside from the network's direct HTTPs capabilities).
+We also intend to **integrate IPFS/Filecoin/Arweave and other storage protocols** to allow direct file-fetching through Fleek Network (aside from the network's direct HTTPS capabilities).
 
 ## Mainnet
 
