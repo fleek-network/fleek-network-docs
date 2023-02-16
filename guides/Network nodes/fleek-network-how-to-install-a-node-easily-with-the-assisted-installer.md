@@ -18,6 +18,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
+import YoutubePlayer from '@site/src/components/YoutubePlayer';
 
 ![Fleek Network: Getting started guide](./assets/how-to-install-a-node-easily-with-the-assisted-installer.png?202302101751)
 
@@ -36,6 +37,17 @@ To follow the guide, you will need the following:
   - Debian (version 11), or earlier
   - ArchLinux, which has rolling updates.
 - Domain name and permissions to update the DNS Record settings
+
+## Quick Video
+
+A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
+
+The video content is stored in our Fleek Network [playlist](https://www.youtube.com/watch?v=uAFIDu3UBvw&list=PL3v9ZaTBrN9GEQ2NmS5xc6YH0E2df5VTn) on the Fleek XYZ [Youtube channel](https://www.youtube.com/@fleekxyz).
+
+<YoutubePlayer
+  title="How to Install a Node Easily with the Assisted Installer"
+  videoId="AnhXbS9GSDw"
+/>
 
 ## TL;DR
 
