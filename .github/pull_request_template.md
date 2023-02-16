@@ -18,11 +18,11 @@ Clear and short explanation here.
 
 - [ ] The commit messages are detailed
 - [ ] The `build` command runs locally
-- [ ] Assets or static content is linked and stored in project
+- [ ] Assets or static content is linked and stored in the project
 - [ ] Document filename is named after the slug
-- [ ] You've reviewed spelling using a grammar checkeri
+- [ ] You've reviewed spelling using a grammar checker
 - [ ] For guides or references, you've tested the commands and steps
-- [ ] You've done enough research before writting
+- [ ] You've done enough research before writing
 
 ## Security checklist?
 
