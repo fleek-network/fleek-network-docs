@@ -268,7 +268,7 @@ Start the Docker Stack as `skywalker` by executing the following command that yo
 docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
-💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in detached mode if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid the log output but can check anytime with `logs -f`)
+💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in [detached mode](https://docs.docker.com/engine/reference/commandline/compose_up/) if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid the log output but can check anytime with `logs -f`)
 
 ```sh
 docker compose -f ./docker/full-node/docker-compose.yml up --detach
@@ -300,7 +300,7 @@ It's a good practice to verify the health of your setup from time to time. Doing
 
 We're using the example username `skywalker`, change to the one you've used on your setup accordingly.
 
-Use the `ls` command to list information about the files. For example, we can check the parent directory with `ls` and the `l` flag.
+Use the [ls](https://en.wikipedia.org/wiki/Ls) command to list information about the files. For example, we can check the parent directory with `ls` and the `l` flag.
 
 ```sh
 ls -l /home/skywalker/.ursa
