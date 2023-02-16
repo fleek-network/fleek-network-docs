@@ -7,7 +7,7 @@ slug: securing-the-ursa-files
 image: ./assets/fleek-network-securing-the-ursa-files.png?202302161437
 date: 2022-11-30T23:00:00.000+00:00
 canonical: ''
-description: 
+description: The concept of file permissions and ownership is crucial in preventing private or sensitive data from being exposed to dodgy actors. In this guide, we will explain Linux file permissions and ownership to help us improve the security of our Network Node server.
 category: Tutorial
 tags:
 - CDN
@@ -68,7 +68,11 @@ We'll look into securing access to the `$HOME/.ursa` directory, where sensitive 
 
 💡 For our example, we are sticking with Ubuntu, do the equivalent for your OS and we're assuming that you are login as `root`. Additionally, we're going to use the Docker Stack but if you have it installed natively, should be very similar, do the required tweaks accordingly.
 
-Before we get started, let's look at how the `Docker` daemon works! Your container runs one single process. The process runs as a `UID:GID` (User:Group), just like any other process on your system. We should set the permissions on the directory we bind mount accordingly!
+### What's the relation with running the node?
+
+Before we get started, let's look at how the `Docker` daemon works! Your container runs one single process. The process runs as a `UID:GID` (User:Group), just like any other process on your system. We should set the permissions on the directory we bind mount accordingly! 
+
+This means that that is the same principle that is applied if running the Node natively! In other words, there is nothing special about this process running in the container - treat it as if it wasn't!
 
 By default, `Docker` daemon runs as the `root` user, the `root` user has full control of the system and has the power to do some nasty things if not careful. We want to run Docker as a non-administrative user (lower permissions in the system), apps are meant to be run with non-root privileges and ideally, only elevate their privileges to modify the underlying system when authorized.
 
