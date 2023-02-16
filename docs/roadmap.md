@@ -37,7 +37,7 @@ During Devnet, the current stage, the team will set the foundational components 
     - Narwhal and Bullshark
 - Network Governance and Economics
 - EVM Compatible application layer
-- L1 <> L2 <> Fleek Network Bridge
+- L1 `<>` L2 `<>` Fleek Network Bridge
 - SDK Libraries (Rust / Typescript)
 
 
