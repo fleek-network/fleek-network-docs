@@ -4,7 +4,7 @@ draft: false
 hide_title: true
 title: Securing the Ursa files
 slug: securing-the-ursa-files
-image: ./assets/fleek-network-securing-the-ursa-files.png?202302151700
+image: ./assets/fleek-network-securing-the-ursa-files.png?202302161437
 date: 2022-11-30T23:00:00.000+00:00
 canonical: ''
 description: 
@@ -19,10 +19,15 @@ tags:
 
 import Author from '@site/src/components/Author';
 
-![Fleek Network: Getting started guide](./assets/fleek-network-securing-the-ursa-files.png?202302151700)
+![Fleek Network: Getting started guide](./assets/fleek-network-securing-the-ursa-files.png?202302161437)
 
 ## Introduction
 
+The concept of file permissions and ownership is crucial in preventing private or sensitive data from being exposed to dodgy actors. In this guide, we will explain Linux file permissions and ownership to help us improve the security of our Network Node server.
+
+Our Ursa CLI process is run by a `user`, that has some sort of permissions, some users run it as `root` which should be considered, as `root privileges` are not a necessary good.
+
+Let's discuss the topic and open up a few ideas to help us improve the security of our server!
 
 ## Pre-requisites
 
@@ -34,6 +39,26 @@ To follow the guide, you will need the following:
   - Debian (version 11), or earlier
   - ArchLinux, which has rolling updates.
 - Ursa Network Node installed and running correctly
+
+## Why should I care?
+
+You should be interested in securing the server, to prevent unwanted access to sensitive data, for instance, your identity (private keys) to which the rewards are sent!
+
+This can happen in many ways, but if you follow good practices you can reduce some of the risks managing the server where the Ursa Network Node is run.
+
+A Linux server is a multi-user system that uses permissions and ownership has security. By allowing multiple users into a system, trust has to be thought out! There should be a way to control file permissions, naming who's allowed to access what, and in which locations.
+
+Ideally, you should be the only actor who can read or modify the private keys. The processes or programs installed should not be able to read your private files without permission. For example, if you run a random script from the internet, as `root`, and if the script is maliciously targeting Fleek Network node operators, your identity and private data can be compromised. There'll be no one to help you or blame than yourself!
+
+As the Wu-Tang once rapped about "Protect ya neck".
+
+## How do I know if my system is vulnerable?
+
+If you are running the Docker Stack, or the Ursa CLI, as the `root` user, your file permissions are likely in need of good care.
+
+On the other hand, if you have questions, or are curious, about where your identity (private keys) is kept and don't know how to improve the security of the files, then this is a good start! You'll also find our guide about [Managing the key store](./fleek-network-managing-the-key-store.md) a good read.
+
+There's also a quick introduction about [How to check if the Ursa directories are secured](#how-to-check-if-the-ursa-directories-are-secured)
 
 ## Securing the Ursa home directory
 
@@ -47,7 +72,9 @@ Before we get started, let's look at how the `Docker` daemon works! Your contain
 
 By default, `Docker` daemon runs as the `root` user, the `root` user has full control of the system and has the power to do some nasty things if not careful. We want to run Docker as a non-administrative user (lower permissions in the system), apps are meant to be run with non-root privileges and ideally, only elevate their privileges to modify the underlying system when authorized.
 
-Before going any further, let's stop the Docker Stack (a must, if you have started the Fleek Network Ursa Docker Stack with `root` user).
+### Stopping the Network Node
+
+Before going any further, let's stop the Docker Stack (a must, if you have started the Fleek Network Ursa Docker Stack with `root` user). If you're following while running in a native setup, you need to stop the `ursa cli` process, as mentioned earlier we'll stick with the Docker stack as an example, so apply the required tweaks where needed.
 
 Change the directory to the Ursa repository (by default, located in `$HOME/fleek-network/ursa`).
 
@@ -57,7 +84,11 @@ docker compose -f ./docker/full-node/docker-compose.yml down
 
 Afterward, we'll run the Docker Stack as a new user with non-root privileges.
 
+### Group existence checkups
+
 Start by checking if the `docker` group exists in the system by running the following command (if the `docker` group exists, you should get the response "🥳 Docker group exists!").
+
+💡 If you are following this guide while running a native build, you don't need a `docker` group, but you might consider creating a group meant to manage and run the Ursa process. We'll stick with the Docker Stack setup as an example, and apply the required tweaks where necessary.
 
 ```sh
 cat /etc/group | grep 'docker' > /dev/null  && echo "🥳 Docker group exists!"
@@ -68,6 +99,8 @@ If not, create the `docker` group.
 ```sh
 sudo groupadd docker
 ```
+
+## Create new user for running the node
 
 Add a new user with the following command:
 
@@ -87,7 +120,11 @@ Let's add the user `skywalker` to the docker group:
 sudo usermod -aG docker skywalker
 ```
 
+⚠️ If you are following this guide by owning a native setup, you won't need a `docker` group, but another group of your liking might apply. Make the required tweaks as necessary, as we'll stick with Docker Stack as an example.
+
 💡 You may have to restart the Docker daemon (which requires `sudo` if you are not `root`).
+
+### Restart the docker daemon
 
 Run the `stop` and then `start` commands.
 
@@ -117,22 +154,25 @@ docker compose -f ./docker/full-node/docker-compose.yml down
 docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
-Our recommendation is to keep the user `skywalker` from the `sudoers` list, as a proper Jedi, we separate ourselves from the dark forces! 
+### Things to have in mind
 
-🥹 Advanced users might customize their system as they wish, here we try to provide knowledge for the inclusivity of all kinds of knowledge users.
+Here are a few things to have in mind, there are more but these are the ones that came in mind at time of writing (feel free to contribute or provide feedback):
 
-Here are a few things to have in mind:
+- Our recommendation is to keep the user `skywalker` from the `sudoers` list, as a proper Jedi, we separate ourselves from the dark forces
+- Advanced users might customize their system as they wish, here we try to provide knowledge for the inclusivity of all kinds of knowledge users
 - You should NOT run the Fleek Network Stack with `root` privilege
 - `sudo` allows users to execute system commands with `root` privilege
 - A user in the `sudoer` list can do whatever he wants in the system
 - Do not trust users e.g., anyone might run a script or command that exposes or compromises your private keys located in `$HOME/.ursa/keystore`
 - Users who logged in as `root` during the installation, most likely have it installed under `/home/root/fleek-network/ursa`, meaning that when switching users have to move the `fleek-network` directory to `$HOME/fleek-network` or reinstall
 
+### Move the ursa source to the new user home
+
 Since we are logged in as, installed as, and running as `root`, our Ursa repository is stored in the `$HOME/fleek-network` (by default), which `$HOME` for `root` is `/home/root`. The user `skywalker` won't have permission to read, write or execute in or from the directory. We'll then either, reinstall the ursa using our assisted installer after we switch the user to `skywalker`, or move `mv` the directories beforehand.
 
 We're going to opt to move the directories, as an example but if you have a preference for running the assisted installer, that's fine! Do remember to remove or delete the `/home/root/fleek-network` and `/home/root/.ursa` (⚠️ be careful, the `.ursa` directory has your private keys, so do a backup otherwise you'll lose it and we won't be able to help).
 
-💡 Notice that we are using the default `$HOME/fleek-network/ursa` path, you may have installed it in a different location, so tweak accordingly to your customizations
+💡 Notice that we are using the default `$HOME/fleek-network/ursa` path, you may have installed it in a different location, so tweak it accordingly to your customizations
 
 ```sh
 mv /home/root/fleek-network /home/skywalker/
@@ -180,6 +220,8 @@ This is what the directory `/home/skywalker/.ursa` looks like at the time of wri
     └── default.pem
 ```
 
+### Changing ursa ownership
+
 We haven't yet switched from `root` to `skywalker`, so before we switch from `root` to `skywalker`, we're going to change the owner of the `$HOME/.ursa` directory, where sensitive data is located (in particular the private identity keys).
 
 ```sh
@@ -200,6 +242,8 @@ chmod -R go-rwx /home/skywalker/.ursa
 
 Alternatively, you can do `chmod -R 700 /home/skywalker/.ursa`, but as we are aiming for clarity in the instructions, we opted for the clearest option to suit more users.
 
+### Switching to the non-administrative user
+
 Finally, we switch to the user `skywalker`:
 
 ```sh
@@ -212,19 +256,25 @@ Change the directory to the `skywalker` Ursa's source repository path:
 cd $HOME/fleek-network/ursa
 ```
 
-Start the Docker Stack by executing the following command that you should be familiar with at this point:
+### Start Ursa as the non-administrative user
+
+Start the Docker Stack as `skywalker` by executing the following command that you should be familiar with at this point:
 
 ```sh
 docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
-💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in detached mode, if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid the log output but can check anytime with `logs -f`)
+💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in detached mode if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid the log output but can check anytime with `logs -f`)
 
 ```sh
 docker compose -f ./docker/full-node/docker-compose.yml up --detach
 ```
 
+### Quick health-check
+
 Make sure everything's ok by doing a quick health check. If you'd like to learn more about health checks, check our guide [here](./fleek-network-node-healthchecks.md).
+
+You can do this check in any location, but ideally from outside the server network to ensure you're making a remote call
 
 ```sh
 curl https://YOUR-DOMAIN-NAME/ping
@@ -238,15 +288,15 @@ pong
 
 🫡 That's it skywalker! If you've followed this guide successfully, you've secured the `.ursa` directory, the configuration files and your private keys.
 
-## How to check if the Ursa directory is secured?
+## How to check if the Ursa directories are secured?
 
-It's a good practice to verify the health of your setup from time to time. Doing a permissions checkup on the file system gives you peace of mind that sensitive data is protected.
+It's a good practice to verify the health of your setup from time to time. Doing a permissions checkup on the file system gives you peace of mind and helps ensure that sensitive data is protected.
 
-⚠️ You're required to have followed the steps before to secure the `.ursa` configuration directory and also run the Node as non-root. If you haven't yet, follow the steps provided earlier!
+⚠️ You're required to have followed the steps before to secure the `.ursa` configuration directory and also run the Node as non-root. If you haven't yet, follow the steps provided [here](#securing-the-ursa-home-directory).
 
-We're using the example username `skywalker`, tweak to the one you've used on your setup accordingly.
+We're using the example username `skywalker`, change to the one you've used on your setup accordingly.
 
-Use the `ls` command to list information about the files. For example, we check the parent directory
+Use the `ls` command to list information about the files. For example, we can check the parent directory with `ls` and the `l` flag.
 
 ```sh
 ls -l /home/skywalker/.ursa
@@ -283,6 +333,14 @@ drwx------ skywalker skywalker /home/skywalker/.ursa/keystore
 ```
 
 In the outputs, we can see the `UID:GID` (user:group) identifiers and also in the left bit the permissions that are set.
+
+🤔 Try to read it this way, the first character is the file type while the remaining is the access permissions.
+
+For `drwx------`, the `d` represents a directory, when not `-` means `file`, we then have `rwx` for read, write and execute for section `user`.
+
+Notice that after, `------` there's nothing set for `group` and `other`. In short (file type)(user permissions)(group permissions)(other permissions). 
+
+Also, remember that the group may have permissions, and when a user is added to the group it'll inherit those permissions.
 
 ***
 
