@@ -353,7 +353,11 @@ We started by declaring that is crucial to learn about Linux file permissions an
 
 Used the Docker Stack for guidance, where we instruct how to start it without `sudo`, learned how to create a new user and groups, and change ownership and permissions in the file system, including the `.ursa` configuration files where the identity or private keys are stored.
 
-Finally, completed our guide by demonstrating how to check if the Ursa directories are secured.
+Finally, completed our guide by demonstrating how to check if the Ursa directories are secured by providing some command examples and a description to help understand the attributes that describe the file types and permissions.
+
+The guide serves as a getting started in the subject and in any way tries to fulfill the role of granting the ultimate security of the server. For advanced topics in securing a Linux server, it's best to invest time and better resources which is not possible in the scope of this short guide: the knowledge of Linux security is applicable in the context of running a Fleek Network node.
+
+If you'd like to contribute and share your knowledge you are free to do so by providing us a PR in our repository [here](https://github.com/fleek-network/fleek-network-docs).
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
