@@ -342,7 +342,6 @@ Notice that after, `------` there's nothing set for `group` and `other`. In shor
 
 Also, remember that the group may have permissions, and when a user is added to the group it'll inherit those permissions.
 
-***
 
 ## Final Thoughts
 
