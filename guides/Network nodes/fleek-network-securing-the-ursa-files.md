@@ -58,7 +58,7 @@ If you are running the Docker Stack, or the Ursa CLI, as the `root` user, your f
 
 On the other hand, if you have questions, or are curious, about where your identity (private keys) is kept and don't know how to improve the security of the files, then this is a good start! You'll also find our guide about [Managing the key store](./fleek-network-managing-the-key-store.md) a good read.
 
-There's also a quick introduction about [How to check if the Ursa directories are secured](#how-to-check-if-the-ursa-directories-are-secured)
+There's also a section in this about [How to check if the Ursa directories are secured](#how-to-check-if-the-ursa-directories-are-secured)
 
 ## Securing the Ursa home directory
 
@@ -66,17 +66,17 @@ We'll look into securing access to the `$HOME/.ursa` directory, where sensitive 
 
 > "Trust leads to the dark side." - Obi Wan Kenobi
 
-💡 For our example, we are sticking with Ubuntu, do the equivalent for your OS and we're assuming that you are login as `root`. Additionally, we're going to use the Docker Stack but if you have it installed natively, should be very similar, do the required tweaks accordingly.
+💡 For our example, we are sticking with Ubuntu, do the equivalent for your OS. We'll assume that you are login as `root`, to emphasize our goal. Additionally, we're going to use the Docker Stack, but it should be similar even if you have Ursa installed natively, but you'll have to do the required tweaks accordingly.
 
 ### What's the relation with running the node?
 
 Before we get started, let's look at how the `Docker` daemon works! Your container runs one single process. The process runs as a `UID:GID` (User:Group), just like any other process on your system. We should set the permissions on the directory we bind mount accordingly! 
 
-This means that that is the same principle that is applied if running the Node natively! In other words, there is nothing special about this process running in the container - treat it as if it wasn't!
+This means that the same principle is applied if running the Node natively! In other words, there is nothing special about this process running in the container - treat it as if it wasn't!
 
 By default, `Docker` daemon runs as the `root` user, the `root` user has full control of the system and has the power to do some nasty things if not careful. You can run Docker daemon without root (Rootless mode) and docker provides [documentation](https://docs.docker.com/engine/security/rootless/) about it. 
 
-For our use-case, we want to run the Docker Stack as a non-administrative user (lower permissions in the system), as our service is meant to be run with non-root privileges, and ideally, only elevate their privileges to modify the underlying system when authorized. In any case, be aware that even if you can start the docker daemon without root, you'd still have the ability to start our Docker Stack with root, which is something we want you to avoid doing, as its not necessary.
+For our use-case, we want to run the Docker Stack as a non-administrative user (lower permissions in the system), as our service is meant to be run with non-root privileges, and ideally, only elevate their privileges to modify the underlying system when authorized. In any case, be aware that even if you can start the docker daemon without root, you'd still have the ability to start our Docker Stack with root, which is something we want you to avoid doing, as it's not necessary.
 
 ### Stopping the Network Node
 
@@ -94,7 +94,7 @@ Afterward, we'll run the Docker Stack as a new user with non-root privileges.
 
 Start by checking if the `docker` group exists in the system by running the following command (if the `docker` group exists, you should get the response "🥳 Docker group exists!").
 
-💡 If you are following this guide while running a native build, you don't need a `docker` group, but you might consider creating a group meant to manage and run the Ursa process. We'll stick with the Docker Stack setup as an example, and apply the required tweaks where necessary.
+💡 If you are following this guide while running a native build, you don't need a `docker` group, but you might consider creating a group meant to manage and run the Ursa process, you can name it whatever is more meaningful to you. We'll stick with the Docker Stack setup as an example, and apply the required tweaks where necessary.
 
 ```sh
 cat /etc/group | grep 'docker' > /dev/null  && echo "🥳 Docker group exists!"
@@ -106,7 +106,7 @@ If not, create the `docker` group.
 sudo groupadd docker
 ```
 
-## Create new user for running the node
+## Create a new user for running the node
 
 Add a new user with the following command:
 
@@ -126,7 +126,7 @@ Let's add the user `skywalker` to the docker group:
 sudo usermod -aG docker skywalker
 ```
 
-⚠️ If you are following this guide by owning a native setup, you won't need a `docker` group, but another group of your liking might apply. Make the required tweaks as necessary, as we'll stick with Docker Stack as an example.
+⚠️ If you are following this guide on a native setup, you won't need a `docker` group, but another group of your liking might apply. Make the required tweaks as necessary, as we'll stick with Docker Stack as an example.
 
 💡 You may have to restart the Docker daemon (which requires `sudo` if you are not `root`).
 
@@ -162,7 +162,7 @@ docker compose -f ./docker/full-node/docker-compose.yml up
 
 ### Things to have in mind
 
-Here are a few things to have in mind, there are more but these are the ones that came in mind at time of writing (feel free to contribute or provide feedback):
+Here are a few things to have in mind - there are more -, but these are the ones that came to mind at the time of writing (feel free to contribute or provide feedback):
 
 - Our recommendation is to keep the user `skywalker` from the `sudoers` list, as a proper Jedi, we separate ourselves from the dark forces
 - Advanced users might customize their system as they wish, here we try to provide knowledge for the inclusivity of all kinds of knowledge users
@@ -172,9 +172,9 @@ Here are a few things to have in mind, there are more but these are the ones tha
 - Do not trust users e.g., anyone might run a script or command that exposes or compromises your private keys located in `$HOME/.ursa/keystore`
 - Users who logged in as `root` during the installation, most likely have it installed under `/home/root/fleek-network/ursa`, meaning that when switching users have to move the `fleek-network` directory to `$HOME/fleek-network` or reinstall
 
-### Move the ursa source to the new user home
+### Move the Ursa source to the new user's home
 
-Since we are logged in as, installed as, and running as `root`, our Ursa repository is stored in the `$HOME/fleek-network` (by default), which `$HOME` for `root` is `/home/root`. The user `skywalker` won't have permission to read, write or execute in or from the directory. We'll then either, reinstall the ursa using our assisted installer after we switch the user to `skywalker`, or move `mv` the directories beforehand.
+Since we are logged in as, installed as, and running as `root`, our Ursa repository is stored in the `$HOME/fleek-network` by default, which `$HOME` for `root` is `/home/root`. The user `skywalker` won't have permission to read, write or execute in or from the directory. We'll then either, reinstall the Ursa using our assisted installer after we switch the user to `skywalker`, or move `mv` the directories beforehand.
 
 We're going to opt to move the directories, as an example but if you have a preference for running the assisted installer, that's fine! Do remember to remove or delete the `/home/root/fleek-network` and `/home/root/.ursa` (⚠️ be careful, the `.ursa` directory has your private keys, so do a backup otherwise you'll lose it and we won't be able to help).
 
@@ -226,7 +226,7 @@ This is what the directory `/home/skywalker/.ursa` looks like at the time of wri
     └── default.pem
 ```
 
-### Changing ursa ownership
+### Changing Ursa files ownership
 
 We haven't yet switched from `root` to `skywalker`, so before we switch from `root` to `skywalker`, we're going to change the owner of the `$HOME/.ursa` directory, where sensitive data is located (in particular the private identity keys).
 
@@ -270,7 +270,7 @@ Start the Docker Stack as `skywalker` by executing the following command that yo
 docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
-💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in [detached mode](https://docs.docker.com/engine/reference/commandline/compose_up/) if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid the log output but can check anytime with `logs -f`)
+💡 Use the flag `-d` or `--detach` at the end to start the Docker Stack in [detached mode](https://docs.docker.com/engine/reference/commandline/compose_up/) if you'd like to run the containers in the background (meaning that the process does NOT communicate via the screen and the keyboard, e.g., avoid displaying the log output which can be enabled at any time with `logs -f`)
 
 ```sh
 docker compose -f ./docker/full-node/docker-compose.yml up --detach
