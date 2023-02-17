@@ -74,7 +74,9 @@ Before we get started, let's look at how the `Docker` daemon works! Your contain
 
 This means that that is the same principle that is applied if running the Node natively! In other words, there is nothing special about this process running in the container - treat it as if it wasn't!
 
-By default, `Docker` daemon runs as the `root` user, the `root` user has full control of the system and has the power to do some nasty things if not careful. You can run Docker daemon without root (Rootless mode) and docker provides [documentation](https://docs.docker.com/engine/security/rootless/) about it, but for our use-case, we want to run the Docker Stack as a non-administrative user (lower permissions in the system), as our service is meant to be run with non-root privileges, and ideally, only elevate their privileges to modify the underlying system when authorized.
+By default, `Docker` daemon runs as the `root` user, the `root` user has full control of the system and has the power to do some nasty things if not careful. You can run Docker daemon without root (Rootless mode) and docker provides [documentation](https://docs.docker.com/engine/security/rootless/) about it. 
+
+For our use-case, we want to run the Docker Stack as a non-administrative user (lower permissions in the system), as our service is meant to be run with non-root privileges, and ideally, only elevate their privileges to modify the underlying system when authorized. In any case, be aware that even if you can start the docker daemon without root, you'd still have the ability to start our Docker Stack with root, which is something we want you to avoid doing, as its not necessary.
 
 ### Stopping the Network Node
 
