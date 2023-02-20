@@ -2,7 +2,7 @@
 template: post
 draft: false
 hide_title: false
-title: disable docker iptables tampering
+title: Disable docker iptables tampering
 slug: disable-docker-iptables-tampering
 date: 2023-02-09T31:00:00Z
 canonical: ''

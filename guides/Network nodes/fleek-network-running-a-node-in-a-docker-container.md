@@ -545,6 +545,16 @@ SUBCOMMANDS:
 
 Executing the bash shell in the container is not mandatory and what we shared here is to demonstrate how to interact with the `ursa` process for the users that don't have it on their local machines and/or are interested in checking subcommands, learning, following tutorials, etc in the same way someone who have it installed in their operating system would.
 
+## Firewall tampering
+
+Docker tampers with the firewall rules to some extent and that may cause some headaches if you are not aware of this.
+
+By default, Docker will manipulate the `iptables`, so if you are using `ufw`, you might find that docker overrules it, that is Docker overrides UFW rules.
+
+The `ufw` cli will fail to represent the actual state of `iptables`.
+
+Check our [reference](../../reference/Docker/disable-docker-iptables-tampering) or find more about this subject in the official [Docker iptables](https://docs.docker.com/network/iptables/).
+
 ## Run the container from the recommended stack
 
 Stack is a way to describe a list of services (applications), we'll have running in our network and Docker Compose is a tool for defining and running multi-container Docker applications (services).

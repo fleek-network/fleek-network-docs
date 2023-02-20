@@ -204,6 +204,16 @@ pong
 
 🥳 If you made it this far, congratulations and thank you for the support!
 
+## Firewall tampering
+
+Docker tampers with the firewall rules to some extent and that may cause some headaches if you are not aware of this.
+
+By default, Docker will manipulate the `iptables`, so if you are using `ufw`, you might find that docker overrules it, that is Docker overrides UFW rules.
+
+The `ufw` cli will fail to represent the actual state of `iptables`.
+
+Check our [reference](../../reference/Docker/disable-docker-iptables-tampering) or find more about this subject in the official [Docker iptables](https://docs.docker.com/network/iptables/).
+
 ## How to help improve the onboarding experience?
 
 We try our best to provide the best onboarding experience, but custom scripts to fit a whole range of computers or servers is a big chore and we expect some issues on the journey to make it better. Your feedback is of extreme importance to illustrate our end goal!
