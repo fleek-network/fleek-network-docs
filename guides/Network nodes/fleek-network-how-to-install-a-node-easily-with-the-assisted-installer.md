@@ -105,7 +105,7 @@ While `Piped Installers` are widely used on the web, e.g., as you can find for [
 You are advised to read the source code of the script before accepting to use it. Also, instead of [piping](https://en.wikipedia.org/wiki/Pipeline_(Unix)) the script to your bash shell program, you could instead copy the file locally after verifying it.
 
 ```sh
-curl https://example.com > install.sh
+curl https://example.com > install
 ```
 
 Instead of piping the script immediately to your bash shell
@@ -148,7 +148,7 @@ ssh user@ip-address
 
 ### Running the assisted installer
 
-Our [Piped installer](#piped-installer) also known as `curl | bash` installer is available at the following address [https://get.fleek.network](https://get.fleek.network). You are advised to open it on your browser or access it via the repository [here](https://github.com/fleek-network/get.fleek.network/blob/main/install.sh) to read the entire it of it to understand what it does or can do!
+Our [Piped installer](#piped-installer) also known as `curl | bash` installer is available at the following address [https://get.fleek.network](https://get.fleek.network). You are advised to open it on your browser or access it via the repository [here](https://github.com/fleek-network/get.fleek.network/blob/main/install) to read the entire it of it to understand what it does or can do!
 
 ⚠️ Notice that you should use `https://` and not `http://` to access the script in the `get.fleek.network` to establish a secure connection.
 
