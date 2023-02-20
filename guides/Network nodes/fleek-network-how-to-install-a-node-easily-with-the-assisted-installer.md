@@ -38,6 +38,10 @@ To follow the guide, you will need the following:
   - ArchLinux, which has rolling updates.
 - Domain name and permissions to update the DNS Record settings
 
+### 🤖 Requirements
+
+- Bash >= 4.2
+
 ## Quick Video
 
 A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
