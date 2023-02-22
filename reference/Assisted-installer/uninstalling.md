@@ -158,3 +158,9 @@ Uninstall `dnsutils`
 ```sh
 apt-get remove dnsutils
 ```
+
+Uninstall `git`
+
+```sh
+apt-get remove git
+```
