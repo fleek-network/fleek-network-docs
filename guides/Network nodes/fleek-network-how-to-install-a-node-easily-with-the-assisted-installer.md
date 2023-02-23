@@ -218,6 +218,16 @@ The `ufw` cli will fail to represent the actual state of `iptables`.
 
 Check our [reference](../../reference/Docker/disable-docker-iptables-tampering) or find more about this subject in the official [Docker iptables](https://docs.docker.com/network/iptables/).
 
+## Update Nightly
+
+The assisted installer can modify the default `docker-compose.yml`, to have the Ursa Stack service use the [nightly image build](https://github.com/fleek-network/ursa/pkgs/container/ursa) from our repository. This is optional, but users have to be aware that to update `nightly`, the latest image has to be docker pulled.
+
+When a user accepts to use `Nightly` the first perceived runtime is faster, in comparison to having to build the Ursa Docker image from source. Where for building, Docker-compose does it automatically when changes occur, `nightly` users have to pull the latest.
+
+You can see the status of the config file in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` (this is the default location, you may have changed it).
+
+Learn how to pull by checking our reference [here](../../reference/Docker/update-nightly-stack-images.md).
+
 ## How to help improve the onboarding experience?
 
 We try our best to provide the best onboarding experience, but custom scripts to fit a whole range of computers or servers is a big chore and we expect some issues on the journey to make it better. Your feedback is of extreme importance to illustrate our end goal!
