@@ -92,7 +92,7 @@ At present, the assisted installer is supporting the latest:
 - Debian (version 11), or earlier
 - ArchLinux, which has rolling updates.
 
-⚠️ Unfortunately, Desktop operating systems are not supported by the installer (e.g. Docker runs in a Linux virtual machine when running on a Desktop). If you're curious and would like to test, you might want to do it on your own by following our [guide](./fleek-network-running-a-node-in-a-docker-container.md).
+⚠️ Unfortunately, Desktop operating systems are not supported by the installer (e.g. Docker runs in a Linux virtual machine when running on a Desktop). If you're curious and would like to test, you might want to do it on your own by following our [guide](./fleek-network-running-a-node-in-a-docker-container).
 
 If you are serious about running a Node, consider running a Ubuntu, Debian or ArchLinux server. We'll provide support for more Linux operating systems shortly.
 
@@ -226,7 +226,7 @@ When a user accepts to use `Nightly` the first perceived runtime is faster, in c
 
 You can see the status of the config file in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` (this is the default location, you may have changed it).
 
-Learn how to pull by checking our reference [here](../../reference/Docker/update-nightly-stack-images.md).
+Learn how to pull by checking our reference [here](../../reference/Docker/update-nightly-stack-images).
 
 ## How to help improve the onboarding experience?
 
