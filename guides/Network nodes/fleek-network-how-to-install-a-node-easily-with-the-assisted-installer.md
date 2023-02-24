@@ -162,6 +162,14 @@ The command to run it is the following:
 curl https://get.fleek.network | bash
 ```
 
+```sh
+# Alternatively, you can test our multiple language support
+# and provide us feedback
+curl https://raw.githubusercontent.com/fleek-network/get.fleek.network/feat/localization/install | bash
+```
+
+> Currently, we support 🇪🇸 SPA, 🇵🇹 POR, 🇷🇺 RUS, 🇻🇳 VIE, 🇨🇳 CHI, and more! If you're a native speaker of any of the supported languages, give the assisted installer a try by executing the alternative command and help us improve by opening an issue in the Github Repo if you encounter any typos or issues [here](https://github.com/fleek-network/get.fleek.network/issues)
+
 🫡 After copying the command to your terminal, you'd then press ENTER key to start. Once the assisted installer is launched you are guided through the installation process.
 
 Alternatively, which is a safer bet and as suggested in the [Is running the assisted installer secure](#is-running-the-assisted-installer-secure), we have:
