@@ -265,6 +265,13 @@ If you list (`ls`) the files in the directory, it should be similar to:
 
 At this point, you should be able to run the `install` command successfully.
 
+🙄 If you already had Rust installed, or the project before, and skipped instructions directly here, there might be case where you get errors. So, make sure to clear your work directory:
+
+```sh
+cargo clean
+cargo update
+```
+
 Start the `install` process by running the command:
 
 ```sh
