@@ -130,7 +130,7 @@ sudo usermod -aG docker skywalker
 
 💡 You may have to restart the Docker daemon (which requires `sudo` if you are not `root`).
 
-### Restart the docker daemon
+### Restart the docker daemon
 
 Run the `stop` and then `start` commands.
 
@@ -248,7 +248,7 @@ chmod -R go-rwx /home/skywalker/.ursa
 
 Alternatively, you can do `chmod -R 700 /home/skywalker/.ursa`, but as we are aiming for clarity in the instructions, we opted for the clearest option to suit more users.
 
-### Switching to the non-administrative user
+### Switching to the non-administrative user
 
 Finally, we switch to the user `skywalker`:
 
@@ -262,7 +262,7 @@ Change the directory to the `skywalker` Ursa's source repository path:
 cd $HOME/fleek-network/ursa
 ```
 
-### Start Ursa as the non-administrative user
+### Start Ursa as the non-administrative user
 
 Start the Docker Stack as `skywalker` by executing the following command that you should be familiar with at this point:
 
