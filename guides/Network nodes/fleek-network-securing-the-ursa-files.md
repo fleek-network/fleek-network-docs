@@ -18,6 +18,7 @@ tags:
 ---
 
 import Author from '@site/src/components/Author';
+import YoutubePlayer from '@site/src/components/YoutubePlayer';
 
 ![Fleek Network: Getting started guide](./assets/fleek-network-securing-the-ursa-files.png?202302161437)
 
@@ -39,6 +40,19 @@ To follow the guide, you will need the following:
   - Debian (version 11), or earlier
   - ArchLinux, which has rolling updates.
 - Ursa Network Node installed and running correctly
+
+## Quick Video
+
+A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
+
+The video content is stored in our Fleek Network [playlist](https://www.youtube.com/watch?v=uAFIDu3UBvw&list=PL3v9ZaTBrN9GEQ2NmS5xc6YH0E2df5VTn) on the Fleek XYZ [Youtube channel](https://www.youtube.com/@fleekxyz).
+
+<YoutubePlayer
+  title="How to Secure Ursa Files on Fleek Network Nodes"
+  videoId="55SH6KQf3cs"
+/>
+
+How do you find the video content? Help us improve by sending feedback in our Discord channel [here](https://discord.gg/fleekxyz).
 
 ## Why should I care?
 
