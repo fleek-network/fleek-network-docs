@@ -162,13 +162,7 @@ The command to run it is the following:
 curl https://get.fleek.network | bash
 ```
 
-```sh
-# Alternatively, you can test our multiple language support
-# and provide us feedback
-curl https://raw.githubusercontent.com/fleek-network/get.fleek.network/feat/localization/install | bash
-```
-
-> Currently, we support 🇪🇸 SPA, 🇵🇹 POR, 🇷🇺 RUS, 🇻🇳 VIE, 🇨🇳 CHI, and more! If you're a native speaker of any of the supported languages, give the assisted installer a try by executing the alternative command and help us improve by opening an issue in the Github Repo if you encounter any typos or issues [here](https://github.com/fleek-network/get.fleek.network/issues)
+> Currently, we support 🇪🇸 SPA, 🇵🇹 POR, 🇷🇺 RUS, 🇻🇳 VIE, 🇨🇳 CHI, and more! Type your preferred language in the command-line prompt, e.g., type "日本語" for Japanese, or the corresponding number 8 for Japanese. Otherwise, if a language is not selected and you press ENTER it'll default to 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English.
 
 🫡 After copying the command to your terminal, you'd then press ENTER key to start. Once the assisted installer is launched you are guided through the installation process.
 
