@@ -222,11 +222,11 @@ Check our [reference](../../reference/Docker/disable-docker-iptables-tampering) 
 
 ## Update to Latest
 
-The assisted installer can modify the default `docker-compose.yml`, to have the Ursa Stack service use the [latest image build](https://github.com/fleek-network/ursa/pkgs/container/ursa) from our repository. This is optional, but users have to be aware that to update `latest`, the latest image has to be docker pulled.
+The assisted installer can modify the default `docker-compose.yml`, for example to have the Ursa Stack service use the [latest image build](https://github.com/fleek-network/ursa/pkgs/container/ursa) from our repository. This is optional, but users have to be aware that to update the `latest` Docker image, the `latest` image has to be Docker pulled.
 
-When a user accepts to use `latest` the first perceived runtime is faster, in comparison to having to build the Ursa Docker image from the source. Where for building, Docker-compose does it automatically when changes occur, `latest` users have to pull the latest.
+When a user accepts to use `latest` the first launch is faster, in comparison to having to build the Ursa Docker image from the source. This means that for building from source-code, `Docker-compose` does it automatically when changes occur, `latest` Docker users have to pull the `latest`.
 
-You can see the status of the config file in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` (this is the default location, you may have changed it).
+You can see the status of the config file in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` (this is the default location, you may have changed where the file docker-compose.yml is located).
 
 Learn how to pull by checking our reference [here](../../reference/Docker/update-latest-stack-images).
 
