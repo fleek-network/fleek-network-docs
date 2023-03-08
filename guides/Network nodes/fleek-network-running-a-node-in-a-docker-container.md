@@ -55,7 +55,7 @@ For the one's interested in running the node as quickly as possible, there are a
 
 - A Docker compose Stack, which is an opinionated stack that provides a reverse proxy service for the Node (Proxied internal `4069` to external ports `80` and `443`), a service to enable HTTPS on your server, services for monitoring and analytics, etc. You can run a stack quickly by following the instructions in [run the container from the recommended stack](#run-the-container-from-the-recommended-stack).
 
-- Building a Docker image requires some effort and some of our users might find it easier to pull our nightly image for quick access to Ursa, which does not require them to build from source. For that reason, we provide you with a quick demonstration of how to pull the image and run the Docker container quickly! Check the [run the container from the official nightly image](#run-the-container-from-the-official-nightly-image)
+- Building a Docker image requires some effort and some of our users might find it easier to pull our latest image for quick access to Ursa, which does not require them to build from source. For that reason, we provide you with a quick demonstration of how to pull the image and run the Docker container quickly! Check the [run the container from the official latest image](#run-the-container-from-the-official-latest-image)
 
 At some point in time, you will have to look at how things work and figure out what abstractions did wrong. For some advanced users that are used to it is not a big deal, but for everyone else that might cause quite a lot of hassle! Therefore, challenge yourself to learn the basics instead of executing commands you are yet to understand, this guide is your friend!
 
@@ -292,21 +292,21 @@ Following up, we'll learn how to run the Docker container that includes our `urs
 
 📢 We've been referencing the Dockerfile to a particular commit hash in our repository, to secure the pointer to it, but you are free to check any commit message, including the latest version of our main branch! This is explained in our guide to help you update the Ursa CLI source and binary [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
-### Run the container from the official nightly image
+### Run the container from the official latest image
 
 <!-- 
-Building a Docker image requires some effort and some of our users might find easier to pull our nightly image for quick access to Ursa, which does not require them to build from source.
+Building a Docker image requires some effort and some of our users might find easier to pull our latest image for quick access to Ursa, which does not require them to build from source.
 
 For that reason, we provide you a quick demonstration on how to pull the image and run the Docker container quickly! If you need more detailed information, then you'll be happier to follow the [run the Docker container](#run-the-docker-container). -->
 
-The Fleek Network Ursa image is built nightly, and some of our users might find handy to pull it instead of building it for quick access to a running node!
+The Fleek Network Ursa image is built latest, and some of our users might find handy to pull it instead of building it for quick access to a running node!
 
-> The official [fleek-network/ursa:nightly](https://github.com/fleek-network/ursa/pkgs/container/ursa) image is currently hosted in Github's container registry and updated every night, you can `docker pull` the image and run it locally. Beware that the version is built at a particular time of the day, so if you are looking for a custom image then you're better off learning how to build one yourself. The extended guide provides you all the information you need, but we also have a guide on how to update images that you may be interested in reading [here](fleek-network-packing-content-addressed-data)
+> The official [fleek-network/ursa:latest](https://github.com/fleek-network/ursa/pkgs/container/ursa) image is currently hosted in Github's container registry and updated every night, you can `docker pull` the image and run it locally. Beware that the version is built at a particular time of the day, so if you are looking for a custom image then you're better off learning how to build one yourself. The extended guide provides you all the information you need, but we also have a guide on how to update images that you may be interested in reading [here](fleek-network-packing-content-addressed-data)
 
 Firstly, start by running the `docker pull`, as follows:
 
 ```sh
-docker pull ghcr.io/fleek-network/ursa:nightly
+docker pull ghcr.io/fleek-network/ursa:latest
 ```
 
 ⚠️ Important: The Github container registry is private, you need a Github account and private token to login via the CLI to be able to pull, find the instructions [here](https://ghcr.io/).
@@ -314,10 +314,10 @@ docker pull ghcr.io/fleek-network/ursa:nightly
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
-docker run -p 4069:4069 -p 6009:6009 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
+docker run -p 4069:4069 -p 6009:6009 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:latest
 ```
 
-Notice that the command arguments we pass are for the flag's `-p` for port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we pulled earlier (ghcr.io/fleek-network/ursa:nightly), if you hadn't pulled and not found, docker would pull it for you.
+Notice that the command arguments we pass are for the flag's `-p` for port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we pulled earlier (ghcr.io/fleek-network/ursa:latest), if you hadn't pulled and not found, docker would pull it for you.
 
 You can then do a quick healthcheck as described [here](#ursa-healthcheck).
 

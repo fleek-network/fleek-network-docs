@@ -2,8 +2,8 @@
 template: post
 draft: false
 hide_title: false
-title: Update nightly stack images
-slug: update-nightly-stack-images
+title: Update latest stack images
+slug: update-latest-stack-images
 date: 2023-02-09T31:00:00Z
 canonical: ''
 description: Update Nightly stack images
@@ -13,13 +13,13 @@ tags:
 - docker-compose
 - Fleek Network
 - update
-- nightly
+- latest
 - stack
 ---
 
-This is only useful if you are using `nightly`. You can see the latest builds [here](https://github.com/fleek-network/ursa/pkgs/container/ursa).
+This is only useful if you are using `latest`. You can see the latest builds [here](https://github.com/fleek-network/ursa/pkgs/container/ursa).
 
-💡 This is because you either have the `nightly` image declared in the `docker-compose.yml` file for the `ursa` service (quick process), or the local `Dockerfile`, which requires to have it built (longer process). By default, located in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml`
+💡 This is because you either have the `latest` image declared in the `docker-compose.yml` file for the `ursa` service (quick process), or the local `Dockerfile`, which requires to have it built (longer process). By default, located in `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml`
 
 Change directory to ursa, e.g., by default is `$HOME/fleek-network/ursa` (you may have opted for a different location, if that's the case check your notes).
 
@@ -37,7 +37,7 @@ Remove stopped containers
 docker-compose -f ./docker/full-node/docker-compose.yml rm
 ```
 
-Pull the latest images e.g., Ursa's nightly
+Pull the latest images e.g., Ursa's `latest`
 
 ```sh
 docker-compose -f ./docker/full-node/docker-compose.yml pull
