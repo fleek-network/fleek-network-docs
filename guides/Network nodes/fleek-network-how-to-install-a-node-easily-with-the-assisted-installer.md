@@ -210,6 +210,48 @@ pong
 
 🥳 If you made it this far, congratulations and thank you for the support!
 
+## How to restart the Node Stack?
+
+Firstly, you should understand that the "Assisted Installer" process has provided you with the Docker container to run the Fleek Network Node. Use the guide [running a node in a Docker Container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container) to learn more about how Docker works and mainly the "Docker compose" bit!
+
+For example, if you have stopped or would like to control the Docker Stack, where your Fleek Network Node is running (the Ursa CLI is in a Docker container), you'll do:
+
+Change directory to where Ursa is installed (e.g., by default is located at `$HOME/fleek-network/ursa`)
+
+```sh
+cd ~/fleek-network/ursa
+```
+
+Then after, use the "Docker compose" command to start or stop the services.
+
+Here's how to start (up):
+
+```sh
+docker compose -f docker/full-node/docker-compose.yml up
+```
+
+💡 If you are running an old version of Docker compose, then switch the command for `docker-compose`, instead of `docker compose` as a subcommand.
+
+If you don't want to show the service logs or output when executing the commands, you can run in detached mode
+
+```sh
+docker compose -f docker/full-node/docker-compose.yml up -d
+```
+
+Here's how you'd stop it (down):
+
+```sh
+docker compose -f docker/full-node/docker-compose.yml down
+```
+
+If running in detached mode, you can show/display the logs at anytime by using the command
+
+```sh
+docker compose -f docker/full-node/docker-compose.yml logs -f
+```
+
+Learn more by reading the [running a node in a Docker Container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container) guide.
+
 ## Firewall tampering
 
 Docker tampers with the firewall rules to some extent and that may cause some headaches if you are not aware of this.
