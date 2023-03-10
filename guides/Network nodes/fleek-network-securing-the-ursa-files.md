@@ -292,7 +292,7 @@ docker compose -f ./docker/full-node/docker-compose.yml up --detach
 
 ### Quick health-check
 
-Make sure everything's ok by doing a quick health check. If you'd like to learn more about health checks, check our guide [here](./fleek-network-node-healthchecks.md).
+Make sure everything's ok by doing a quick health check. If you'd like to learn more about health checks, check our guide [here](./fleek-network-node-health-check-guide).
 
 You can do this check in any location, but ideally from outside the server network to ensure you're making a remote call
 
