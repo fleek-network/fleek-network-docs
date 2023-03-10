@@ -90,7 +90,7 @@ You can execute commands in the container shell with the `bash`. Run `bash` in t
 docker exec -it $(docker ps -a | grep 'ursa' | cut -d ' ' -f1) bash
 ```
 
-Ping the port `4069`, as described in the guide [node healthchecks](../../guides/Network%20nodes/fleek-network-node-healthchecks).
+Ping the port `4069`, as described in the guide [node healthchecks](../../guides/Network%20nodes/fleek-network-node-health-check-guide).
 
 ```sh
 curl -s http://localhost:4069/ping | grep 'pong'
