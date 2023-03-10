@@ -105,4 +105,4 @@ Confirm that Docker container Nginx service is running, by executing.
 docker ps -a
 ```
 
-Ensure that you don't have any Firewalls or similar applications blocking the required ports (80 and 443).
+Ensure that you don't have any Firewalls or similar applications blocking the required ports (80 and 443). Learn more about the services and the ports by reading our guide [Node Healthcheck](../../guides/Network%20nodes/fleek-network-node-health-check-guide) to help you comprehend to better troubleshoot.
