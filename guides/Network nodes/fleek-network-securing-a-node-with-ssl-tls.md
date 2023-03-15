@@ -88,6 +88,16 @@ Since this is a serious web security vulnerability, [attackers can place themsel
 
 > You want to secure the server for better participation in the network and ensure good behavior, rewards, and global network security.
 
+## Why is a domain name required?
+
+A domain name is required to secure the communications. SSL/TLS by Let's Encrypt is used to improve the operator experience. Let's Encrypt makes it easy as possible for you by automating the process without cost.
+
+Unfortunately, Let's Encrypt doesn't issue certificates for IP addresses, only domain names are supported.
+
+For this reason, a domain name is required to get a Let's Encrypt certificate.
+
+Advanced users might want to set up the node as they wish, for example, have their own SSL provider or even secure the IP address of their servers. But bear in mind, that is very likely that the reward mechanism and performance of your Node will be taken into account, so to avoid disappointment make the right choice and follow our recommendations.
+
 ## Domain name setup
 
 A domain name is required to follow the instructions, these can be registered by a domain registry provider such as [Open domain registry](https://www.opendomainregistry.net/), [Gandi](https://www.gandi.net/en-GB) and many others! Some domain name registrys' provide SSL certificates as an additional service, but we are going to create TLS certificates on our own, so you won't need the domain name registry provider SSL service for this guide!
