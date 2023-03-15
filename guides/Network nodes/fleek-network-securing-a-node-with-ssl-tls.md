@@ -98,9 +98,17 @@ For this reason, a domain name is required to get a Let's Encrypt certificate.
 
 Advanced users might want to set up the node as they wish, for example, have their own SSL provider or even secure the IP address of their servers. But bear in mind, that is very likely that the reward mechanism and performance of your Node will be taken into account, so to avoid disappointment make the right choice and follow our recommendations.
 
+## Where to get a domain name?
+
+We are not affiliated with any domain name registrar, so recommend getting a domain name at a reasonable cost. Some domain name registrars provide "cheap" registrations which have rather expensive renewals, so make sure you check the renewals before committing to registering a domain name.
+
+## Can I use an ENS domain?
+
+ENS stands for Ethereum Name Service, and ENS domains are not supported. You're required to have a [DNS - Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) web domain.
+
 ## Domain name setup
 
-A domain name is required to follow the instructions, these can be registered by a domain registry provider such as [Open domain registry](https://www.opendomainregistry.net/), [Gandi](https://www.gandi.net/en-GB) and many others! Some domain name registrys' provide SSL certificates as an additional service, but we are going to create TLS certificates on our own, so you won't need the domain name registry provider SSL service for this guide!
+A domain name is required to follow the instructions, these can be registered by a domain registry provider such as [Open domain registry](https://www.opendomainregistry.net/), [Gandi](https://www.gandi.net/en-GB) and many others! Some domain name registrars provide SSL certificates as an additional service, but we are going to create TLS certificates on our own, so you won't need the domain name registry provider SSL service for this guide!
 
 💡 SSL without a domain is possible, but we are going to work with domain names to keep this guide simple. If you are looking into securing a public IP Address, you'll have to do it on your own or wait for a future guide!
 
