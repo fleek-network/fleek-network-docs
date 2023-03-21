@@ -2,8 +2,8 @@
 template: post
 draft: false
 hide_title: false
-title: Domain name troubleshooting
-slug: domain-name-troubleshooting
+title: Domain Name System nameserver troubleshooting
+slug: domain-name-system-nameserver-troubleshooting
 date: 2023-03-21T23:00:00Z
 canonical: ''
 description: Troubleshooting domain name issues
@@ -14,6 +14,7 @@ tags:
 - DNS
 - Dynamic name system
 - dig
+- nameserver
 ---
 
 When attempting to secure the server with SSL/TLS some users might be blocked at the Let's Encrypt step because the installer says that it "Doesn't have a DNS record type A pointing to the server". As mentioned, DNS might take some time to propagate but other issues might cause it too...
@@ -70,4 +71,24 @@ Flush cache
 
 ```sh
 sudo resolvectl flush-caches 
+```
+
+Verify that the domain name is pointing to the correct IP address
+
+```sh
+dig <YOUR-DOMAIN-NAME> +nocomments
+```
+
+Should output
+
+```sh
+;<YOUR-DOMAIN-NAME>.		IN	A
+<YOUR-DOMAIN-NAME>.	199	IN	A	1.2.3.4
+```
+
+Example
+
+```sh
+;my-node.example.com.		IN	A
+my-node.example.com.	199	IN	A	99.20.33.45
 ```
