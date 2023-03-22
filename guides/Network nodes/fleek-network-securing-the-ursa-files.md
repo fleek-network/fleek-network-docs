@@ -297,7 +297,7 @@ Make sure everything's ok by doing a quick health check. If you'd like to learn 
 You can do this check in any location, but ideally from outside the server network to ensure you're making a remote call
 
 ```sh
-curl https://YOUR-DOMAIN-NAME/ping
+curl -w "\n" https://YOUR-DOMAIN-NAME/ping
 ```
 
 Should reply with the response `pong`
