@@ -162,7 +162,7 @@ We execute a `cURL` request with the `--head` or `-I` flag to show the document 
 curl -w "\n" 127.0.0.1/ping
 ```
 
-💡 If you have used the [Assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer), you'll find that a health check can be performed to your secured domain name, learn how [here](#health-check-my-secured-domain).
+💡 If you have used the [Assisted installer](./how-to-install-a-node-easily-with-the-assisted-installer), you'll find that a health check can be performed to your secured domain name, learn how [here](#health-check-my-secured-domain).
 
 The response should be:
 
