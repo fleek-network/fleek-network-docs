@@ -159,8 +159,10 @@ For the ones who followed the [getting started guide](#fleek-network-getting-sta
 We execute a `cURL` request with the `--head` or `-I` flag to show the document info only, in our case the headers of our HTTP response.
 
 ```sh
-curl 127.0.0.1/ping
+curl -w "\n" 127.0.0.1/ping
 ```
+
+💡 If you have used the [Assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer), you'll find that a health check can be performed to your secured domain name, learn how [here](#health-check-my-secured-domain).
 
 The response should be:
 
@@ -227,6 +229,32 @@ Content-Length: 19
 ```
 
 💡 You can open `http://localhost:9090` to access the `Prometheus` dashboard, and if you'd like to open it from any location outside your network, you need a bit of work in the server setup, the same for any of the endpoints or ports described in this guide. Checking the `Stack` (docker-compose) can give you an idea of how that'd look in terms of configuration or where to find the configuration file of those services, for example, the [full-node](https://github.com/fleek-network/ursa/blob/cd6fb3d21ce647dc3f06ee9128ba2a4164623ee5/docker/full-node/docker-compose.yml) can be used as a reference.
+
+## Health-check my secured domain?
+
+A Health-check can be done to your secured server via HTTPS. If you have completed the installation with the Assisted Installer, you can run the following command from any remote location that has access to the internet;
+
+```sh
+curl -w "\n" https://<YOUR-DOMAIN>/ping
+```
+
+You'll get the response back `pong`
+
+```sh
+pong
+```
+
+If you'd like to have a prettier response use:
+
+```sh
+curl -s https://<YOUR-DOMAIN>/ping | grep -q 'pong' && echo "✅ Health check is ok!"
+```
+
+You should get back the response:
+
+```sh
+✅ Health check is ok!
+```
 
 ## Conclusion
 

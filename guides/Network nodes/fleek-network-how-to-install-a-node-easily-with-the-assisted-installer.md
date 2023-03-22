@@ -208,7 +208,7 @@ As a quick take on this during this read, you can do a quick health check to ver
 From outside the server network where the Network Node is running or installed, do a curl request to the `/ping` path, where you should get back a response `pong`, as follows:
 
 ```sh
-curl https://<YOUR-NETWORK-NODE-DOMAIN-NAME>/ping
+curl -w "\n" https://<YOUR-NETWORK-NODE-DOMAIN-NAME>/ping
 ```
 
 💡 The `<YOUR-NETWORK-NODE-DOMAIN-NAME>` is the domain name you have provided or set during the assisted installer process.
@@ -217,6 +217,18 @@ If successful, you'll get a response back:
 
 ```sh
 pong
+```
+
+If you'd like to have a prettier response use:
+
+```sh
+curl -s https://<YOUR-DOMAIN>/ping | grep -q 'pong' && echo "✅ Health check is ok!"
+```
+
+You should get back the response:
+
+```sh
+✅ Health check is ok!
 ```
 
 🥳 If you made it this far, congratulations and thank you for the support!
