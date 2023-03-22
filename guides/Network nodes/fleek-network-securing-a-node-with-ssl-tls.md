@@ -521,13 +521,13 @@ NEXT STEPS:
 As previously instructed in our [guide](fleek-network-node-health-check-guide), we can do a quick health check by making `cURL` requests to our server and reading the response. There's the option to get the response body that should be text `pong` or get some HTTP Headers.
 
 ```sh
-curl https://<YOUR DOMAIN NAME>/ping
+curl -w "\n" https://<YOUR DOMAIN NAME>/ping
 ```
 
 For our example, we have the domain `fleek-network-node.fleek.xyz` and this is how the `cURL` request would look like:
 
 ```sh
-curl https://fleek-network-node.fleek.xyz/ping
+curl -w "\n" https://fleek-network-node.fleek.xyz/ping
 ```
 
 A successful response should be `pong`
