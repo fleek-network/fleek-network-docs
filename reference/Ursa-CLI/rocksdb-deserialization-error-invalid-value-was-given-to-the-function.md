@@ -25,7 +25,7 @@ Panic ERROR typed_store::rocks: error: (de)serialization error: Invalid value wa
 Clear the `ursa_db` directory
 
 ```sh
-rm -f ~/.ursa/data/ursa_db/*
+rm -f ~/.ursa/data
 ```
 
 Restart the Ursa node!
