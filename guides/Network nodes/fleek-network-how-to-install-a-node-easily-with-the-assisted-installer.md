@@ -69,7 +69,7 @@ Open your terminal, connect to your Linux server and run the following command:
 curl https://get.fleek.network | bash
 ```
 
-Follow the wizard recommnedations and have the Network Node setup quickly! For example, during the process, you are required to provide a domain name that should respond with the server where you want the node installed, as the assisted installer will try to secure it.
+Follow the wizard recommendations and have the Network Node set up quickly! For example, during the process, you are required to provide a domain name that should respond with the server where you want the node installed, as the assisted installer will try to secure it.
 
 ***
 
