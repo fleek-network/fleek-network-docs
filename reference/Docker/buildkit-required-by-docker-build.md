@@ -30,7 +30,7 @@ DOCKER_BUILDKIT=1
 Here's the complete prefixed command
 
 ```sh
-COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker/full-node/docker-compose.yml up -d
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose -f docker/full-node/docker-compose.yml up -d
 ```
 
 Docker desktop users don't have to has its enabled by default default.

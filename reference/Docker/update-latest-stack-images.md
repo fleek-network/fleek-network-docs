@@ -52,33 +52,33 @@ Change directory to ursa, e.g., by default is `$HOME/fleek-network/ursa` (you ma
 Stop the Stack
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml stop
+docker compose -f ./docker/full-node/docker-compose.yml stop
 ```
 
 Remove stopped containers
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml rm
+docker compose -f ./docker/full-node/docker-compose.yml rm
 ```
 
 Pull the latest images e.g., Ursa's `latest`
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml pull
+docker compose -f ./docker/full-node/docker-compose.yml pull
 ```
 
 Start the Stack
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml up
+docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
 Most users find that is enough to do (you have to restart the service)
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml pull
+docker compose -f ./docker/full-node/docker-compose.yml pull
 ```
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml up
+docker compose -f ./docker/full-node/docker-compose.yml up
 ```

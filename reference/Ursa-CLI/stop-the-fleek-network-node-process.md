@@ -18,7 +18,7 @@ tags:
 Stop the Fleek Network node for Docker
 
 ```sh
-docker-compose -f docker/full-node/docker-compose.yml down
+docker compose -f docker/full-node/docker-compose.yml down
 ```
 
 Stop the Fleek Network node by sending a terminate signal (SIGTERM) to the `ursa` process
