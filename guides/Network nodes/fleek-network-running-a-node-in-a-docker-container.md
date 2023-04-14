@@ -127,18 +127,19 @@ Also, you'll be able to run it via the CLI, as such:
 ```sh
 docker -v
 ```
+
 ```
-Docker version 20.10.6, build 370c289
+Docker version 23.0.0, build e92dd87c32
 ```
 
-Let's do the same for `docker-compose`
-
-```sh
-docker-compose -v
-```
+Let's do the same for `docker compose`
 
 ```sh
-docker-compose version 1.29.1, build c34c88b2
+docker compose -v
+```
+
+```sh
+Docker version 23.0.0, build e92dd87c32
 ```
 
 💡 Versions might differ a bit from the time of writing.
@@ -565,7 +566,7 @@ Also, by using Docker compose it'll be easier to persist the configuration files
 
 ### Running a stack with Docker compose
 
-We have defined a Stack 🕸 that can be useful for running and monitoring; At time of writing, this is declared in a docker-compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
+We have defined a Stack 🕸 that can be useful for running and monitoring; At time of writing, this is declared in a docker compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
 
 There you'll find specified all the configuration options, such as the ones we've discussed in the previous topics about the host, port bindings, bind mount, etc. You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). 
 
@@ -591,38 +592,24 @@ grafana uses an image, skipping
 
 💡 The `ursa` Docker image should be built every time you want to pull and use an update, learn how by following the guide [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
-In the project root, execute the docker-compose command by providing the `docker-compose.yml` configuration file and the subcommand up.
+In the project root, execute the docker compose command by providing the `docker-compose.yml` configuration file and the subcommand up.
 
 💩 If you are running the Docker daemon (not the Desktop version), BuildKit needs to be enabled, (desktop users have it enabled by default). Read our reference [BuildKit required by Docker build](../../reference/Docker/buildkit-required-by-docker-build) to learn more about how to enable it!
 
 ```sh
-docker-compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
+docker compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
 ```
 
 For our use-case, here's how it'll look like:
 
 ```sh
-docker-compose -f docker/full-node/docker-compose.yml up
+docker compose -f docker/full-node/docker-compose.yml up
 ```
 
 Where for stopping, you have option `down`:
 
 ```sh
-docker-compose -f docker/full-node/docker-compose.yml down
-```
-
-Also, we provide the following utility commands for your convenience.
-
-A command to execute the docker compose up:
-
-```sh
-make compose-up
-```
-
-Also, to execute the docker compose down:
-
-```sh
-make compose-down
+docker compose -f docker/full-node/docker-compose.yml down
 ```
 
 Here, we have an opinionated stack that you can use as a base for your system, or as a reference, for your research and learning. This means you aren't obligated to use Grafana or Prometheus. Ursa works without any dependency!
