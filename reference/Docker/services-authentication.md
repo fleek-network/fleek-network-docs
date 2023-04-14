@@ -20,13 +20,13 @@ tags:
 - admin
 ---
 
-The Docker-compose stack configuration files have some services declared for monitoring and analytics. You might be interested in accessing the dashboard of these services, which you can do by requesting via a hostname and port number where the service is listening to.
+The Docker compose stack configuration files have some services declared for monitoring and analytics. You might be interested in accessing the dashboard of these services, which you can do by requesting via a hostname and port number where the service is listening to.
 
-Our Docker-compose stack configuration is located at `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` by default.
+Our Docker compose stack configuration is located at `$HOME/fleek-network/ursa/docker/full-node/docker-compose.yml` by default.
 
 There, you can check which services are declared and the port numbers they're accessible from and the access detail settings.
 
-When launching the Docker-compose stack, you'll see that the admin user and password details are blank.
+When launching the Docker compose stack, you'll see that the admin user and password details are blank.
 
 ```sh
 WARNING: The ADMIN_USER variable is not set. Defaulting to a blank string.
@@ -65,7 +65,7 @@ ADMIN_USER=fleek
 ADMIN_PASSWORD=oiG!s@s_3Az
 ```
 
-Launch the Docker-compose stack (if running, use `down` and then after `up`).
+Launch the Docker compose stack (if running, use `down` and then after `up`).
 
 Our example shows the `up` version.
 

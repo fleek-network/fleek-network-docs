@@ -2,7 +2,7 @@
 template: post
 draft: false
 hide_title: false
-title: Docker-compose use latest image instead of building
+title: Docker compose use latest image instead of building
 slug: docker-compose-use-latest-image-instead-of-building
 date: 2023-02-09T31:00:00Z
 canonical: ''
@@ -10,7 +10,7 @@ description: Quick reference on how to use the latest image instead of building
 category: Reference
 tags:
 - Reference
-- docker-compose
+- docker compose
 - Fleek Network
 - build
 - latest
@@ -52,33 +52,33 @@ Change directory to ursa root, e.g., by default is `$HOME/fleek-network/ursa`.
 Stop the Stack
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml stop
+docker compose -f ./docker/full-node/docker-compose.yml stop
 ```
 
 Remove stopped containers
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml rm
+docker compose -f ./docker/full-node/docker-compose.yml rm
 ```
 
 Pull the latest images e.g., Ursa's `latest`
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml pull
+docker compose -f ./docker/full-node/docker-compose.yml pull
 ```
 
 Start the Stack
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml up
+docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
 Most users find that is enough to do (you have to restart the service)
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml pull
+docker compose -f ./docker/full-node/docker-compose.yml pull
 ```
 
 ```sh
-docker-compose -f ./docker/full-node/docker-compose.yml up
+docker compose -f ./docker/full-node/docker-compose.yml up
 ```
