@@ -76,6 +76,7 @@ const config = {
           routeBasePath: '/docs',
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsed: false,
         },
         blog: {
           path: 'blog',
@@ -197,6 +198,8 @@ const config = {
           routeBasePath: '/guides',
           // `undefined` to auto-generate
           sidebarPath: undefined,
+          sidebarCollapsed: false,
+          sidebarCollapsible: false,
           ...commonDocsOptions,
         }),
       ],
