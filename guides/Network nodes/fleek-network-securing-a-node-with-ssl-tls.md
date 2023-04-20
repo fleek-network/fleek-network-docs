@@ -269,8 +269,8 @@ proxy_pass = "127.0.0.1:4069"
 listen_addr = "0.0.0.0:443"
 
 [server.tls]
-cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/fullchain.pem"
-key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/privkey.pem"
+cert_path = "/etc/letsencrypt/live/YOUR-DOMAIN/fullchain.pem"
+key_path = "/etc/letsencrypt/live/YOUR-DOMAIN/privkey.pem"
 
 # Admin service.
 # You can omit this section as this is the default.
@@ -350,14 +350,14 @@ proxy_pass = "127.0.0.1:4069"
 listen_addr = "0.0.0.0:443"
 
 [server.tls]
-cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/fullchain.pem"
-key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/privkey.pem"
+cert_path = "/etc/letsencrypt/live/YOUR-DOMAIN/fullchain.pem"
+key_path = "/etc/letsencrypt/live/YOUR-DOMAIN/privkey.pem"
 
 [admin]
 addr = "0.0.0.0:8881"
 ```
 
-3) Make sure that you replace the `<YOUR-DOMAIN>` with your custom domain name in the `config.toml` file
+3) Make sure that you replace the `YOUR-DOMAIN` with your custom domain name in the `config.toml` file
 
 💡 A domain name is required to be pointing to your server public IP address, this is used by certbot to create the Let's Encrypt TLS certificates
 
@@ -410,7 +410,7 @@ The directory file structure should look like this:
 We have to provide a domain name, such as the example `fleek-network-node.fleek.xyz` and a valid email address `ops@fleek.xyz` that you as an operator have access to.
 
 ```sh
-sudo certbot certonly --standalone --preferred-challenges http --email <YOUR-EMAIL-ADDRESS> --domain <YOUR-DOMAIN> --rsa-key-size 4096
+sudo certbot certonly --standalone --preferred-challenges http --email <YOUR-EMAIL-ADDRESS> --domain YOUR-DOMAIN --rsa-key-size 4096
 ```
 
 Since we have already:
@@ -418,7 +418,7 @@ Since we have already:
 - Updated the `A Records` in the [previous step](#how-to-set-up-the-dns-settings-for-a-node-server)
 - [Verified](#how-to-verify-dns-records) that the DNS records are correct
 
-We can go ahead and execute the command. Here we've replaced the <YOUR-EMAIL> and <YOUR-DOMAIN> with our example domain and email addresses.
+We can go ahead and execute the command. Here we've replaced the YOUR-EMAIL and YOUR-DOMAIN with our example domain and email addresses.
 
 ```sh
 sudo certbot certonly --standalone --preferred-challenges http --email ops@fleek.xyz --domain fleek-network-node.fleek.xyz --rsa-key-size 4096
