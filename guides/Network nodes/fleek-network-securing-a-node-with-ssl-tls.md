@@ -43,7 +43,7 @@ Nonetheless, accessing a service via `HTTPS://` does not make it secure, as the 
 
 In recent years, the non-profit organization [Let's Encrypt](https://en.wikipedia.org/wiki/Let's_Encrypt) started providing TLS certificate encryption, that is free of charge. The Let's Encrypt organization also improved the administration experience by providing automation features for system administrator processes.
 
-In that respect, we'll look into how to secure a Fleek Node with TLS certificates provided by Let's Encrypt, by harnessing the knowledge provided in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide. We'll look into how to set up our custom domain in the Nginx configuration, generate dummy certificates, and finally real certificates to understand how the certificate automation is handled to mitigate issues, such as expiration.
+In that respect, we'll look into how to secure a Fleek Node with TLS certificates provided by Let's Encrypt, by harnessing the knowledge provided in our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide. We'll look into how to set up our custom domain in the ursa-proxy configuration, generate dummy certificates, and finally real certificates to understand how the certificate automation is handled to mitigate issues, such as expiration.
 
 The knowledge demonstrated here should be useful and can be easily applied to native setups (not Docker). As some troubleshooting and differences are found in different systems, we'll stick with our Docker Stack for that matter and simplicity!
 
@@ -60,6 +60,8 @@ To follow the guide, you will need the following:
  <CheckoutCommitWarning />
 
 ## Quick Video
+
+⚠️ Nginx is being replaced by ursa-proxy, meaning that the video is only relevant if you're running the original proposed setup
 
 A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
 
@@ -112,7 +114,7 @@ A domain name is required to follow the instructions, these can be registered by
 
 💡 SSL without a domain is possible, but we are going to work with domain names to keep this guide simple. If you are looking into securing a public IP Address, you'll have to do it on your own or wait for a future guide!
 
-The domain name DNS records should point to the Network Node server IP address so that when the custom domain is requested, the DNS translates into the server IP address. Our reverse proxy (NGINX) will identify itself with the transport-layer authentication mechanism that includes the SSL certificates.
+The domain name DNS records should point to the Network Node server IP address so that when the custom domain is requested, the DNS translates into the server IP address. Our reverse proxy will identify itself with the transport-layer authentication mechanism that includes the SSL certificates.
 
 ### How to set up the DNS settings for a Node server?
 
@@ -126,7 +128,7 @@ The custom domain address would be:
 fleek-network-node.fleek.xyz
 ```
 
-💡 Keep a note about the domain name as it'll be required for your reverse proxy configuration (NGINX).
+💡 Keep a note about the domain name as it'll be required for your reverse proxy configuration.
 
 Our server IP Address (this should be public, accessible outside the private network, otherwise external Nodes won't be able to communicate):
 
@@ -238,7 +240,7 @@ There are many other tools you can use to verify the DNS records, feel free to p
 In our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) guide, we propose a Stack to run the Network Node that offers you a service for:
 
 - Ursa - The Network Node (Ursa CLI process)
-- Nginx - A reverse proxy for Ursa Node service
+- Ursa-proxy - A reverse proxy for Ursa Node service
 - Prometheus - A monitoring system for real-time metrics with a web client
 - Grafana - Metric visualization for logs, traces, etc.
 
@@ -246,176 +248,169 @@ This can be fully customized or exchanged for other options for the reverse prox
 
 ⚠️ We only provide support for [Ursa CLI](https://github.com/fleek-network/ursa), which we are developing. You'll have to visit the official project for more information on how to operate them!
 
-## NGINX SSL/TLS configuration
+## Ursa-proxy SSL/TLS configuration
 
-Our Nginx reverse proxy has `app.conf` file where the SSL certificate(s) are, or can be configured. We keep the `app.conf` pre-configured with an example that you can modify with yours.
+Our reverse proxy has a `config.toml` file where the SSL certificate(s) are, or can be configured. We keep the `config.toml` pre-configured with an example that you can modify with yours.
 
-If we recall our [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) and [Video guide](https://www.youtube.com/watch?v=uAFIDu3UBvw), the SSL configuration is omitted to keep things simple, as the configuration requires a domain name, etc. 
+```toml
+# Server settings for insecure communication via HTTP
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:80"
+# Certobot requirement for ACME challenge
+# during the SSL/TLS certificate generation
+# the certbot standalone web server
+# will serve a file in the directory path
+serve_dir_path = ".well-known"
 
-⚠️ If you try to run the Node Stack with the example SSL setup, it'd fail. There aren't any valid SSL/TLS certificates, you need valid SSL/TLS certificates to operate HTTPS and secure your reverse server connections! We'll look into this briefly in the section [Which came first: the chicken or the egg?](#which-came-first-the-chicken-or-the-egg)
+# Server settings for secure communication via HTTPS (SSL/TLS)
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:443"
 
-We removed the SSL on those guides to keep things simple for you, but it's not recommended for production! You are incentivized to operate the Node to the best knowledge and follow security principles for greater rewards and helping to have a healthy and secure network!
+[server.tls]
+cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/fullchain.pem"
+key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/privkey.pem"
 
-Considering where we left off on the guide, we are going to provide instructions to make it easier for you to get started securing the Node!
-
-### Which came first: the chicken or the egg?
-
-We'd like to start our Stack, but Nginx reverse proxy fails to perform the "Let's Encrypt" validation. This causes the reverse proxy to not start because the certificates are not valid. Leading to the "Which came first: the chicken or the egg?" problem!
-
-We need Nginx to perform the Let’s Encrypt validation somehow! The process that is commonly found if you search online is the following:
-
-- Create a dummy certificate
-- Start Nginx
-- Delete the dummy certificate
-- Request the real certificates
-
-By happy chance, you don’t have to do all this tedious process manually, as its a known issue you'll find scripts (like the [one](https://github.com/wmnnd/nginx-certbot/blob/master/init-letsencrypt.sh) we borrowed from) shared by the community that can be very convenient to automate the process for you.
+# Admin service.
+# You can omit this section as this is the default.
+[admin]
+addr = "0.0.0.0:8881"
+```
 
 ### Creating a valid certificate
 
-We are going to run the `init-letsencrypt.sh` script that we have borrowed from [Philipp
-wmnnd Github account](https://github.com/wmnnd/nginx-certbot/blob/master/init-letsencrypt.sh).
+Certificates can be generated by [Certbot](https://certbot.eff.org/), a free, open-source software tool for automating the use of Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.
 
-You don't have to fork it, as we have a [fork/copy](https://github.com/fleek-network/ursa/blob/main/docker/full-node/init-letsencrypt.sh) available to you in your local repository. Find it in the path `docker/full-node/init-letsencrypt.sh`.
-
-### Preparing the Let's Encrypt initialization script
-
-Make sure that you have execution writes to execute the script. To set the correct permissions, you can run the following command from the root of your local `ursa` repository:
+We provide a [script](https://get.fleek.network/lets_encrypt) to handle this for you - install it, run the commands with correct arguments, etc - that can be run as easily as you do for the assisted installer.
 
 ```sh
-chmod +x docker/full-node/init-letsencrypt.sh
+curl https://get.fleek.network/lets_encrypt | bash
 ```
 
-Modify the Nginx `app.conf` file with the correct custom domain name and also the path where the SSL/TSL certificate for the custom domain is going to be stored once the `Let's Encrypt` initialization runs.
+Alternatively, we describe how to do it manually by following the guide here.
 
-1) Replace the Nginx `server_name` property that has `ursa.earth` declared to yours.
+### Preparing the Certbot initialization
+
+First, check if you already have certbot installed. The certbot documentation suggests uninstalling preinstalled versions and pull the latest version from snap package manager.
 
 ```sh
-server {
-    listen 80;
-    listen [::]:80;
-    server_name node.ursa.earth www.node.ursa.earth;
-
-    ...
-}
-
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name node.ursa.earth www.node.ursa.earth;
-
-    ...
-}
+apt-get remove certbot
 ```
 
-As we are using `fleek-network-node.fleek.xyz`, as an example that'd look like:
+In Ubuntu, you'd start by updating snap package manager.
 
 ```sh
-server {
-    listen 80;
-    listen [::]:80;
-    server_name fleek-network-node.fleek.xyz;
-
-    ...
-}
-
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name fleek-network-node.fleek.xyz;
-
-    ...
-}
+sudo snap install core
+sudo snap refresh core
 ```
 
-😅 Notice that we have omitted a lot of text for your convenience, you can always check out our remote repository for the original files, for example [here](https://raw.githubusercontent.com/fleek-network/ursa/cd6fb3d21ce647dc3f06ee9128ba2a4164623ee5/docker/full-node/data/nginx/app.conf). 
-
-If you have followed our introductory guides, you have probably commented out or removed the SSL configuration, keep reading to find the template or check the repository `app.conf` as mentioned earlier.
-
-⚠️ Beware, that this is highly customizable and we might make tweaks in any earlier version of `ursa` which that guide might not consider. Check our original repository for any updates! Also, some advanced users have a preference to modify this on their own. In any case, for more on this you have to check the [Nginx docs](https://docs.nginx.com/) to learn more!
-
-> Note: if multiple domain names are used, the `init-letsencrypt.sh` script will export them under the first domain provided
-
-2) Replace the pathname with your custom domain, by replacing the following `ursa.earth` domain with yours
+Install the certbot cli
 
 ```sh
-# SSL code
-ssl_certificate /etc/letsencrypt/live/ursa.earth/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/ursa.earth/privkey.pem;
+snap install --classic certbot
 ```
 
-For our demo, we replace `ursa.earth` to `fleek-network-node.fleek.xyz`
+If the `/snap/bin` is in the system PATH environment variable, you should be able to:
+
+```
+certbot --version
+```
+
+Otherwise, add `/snap/bin` to the PATH, or symlink the certbot binary to the `/usr/local/bin`.
 
 ```sh
-# SSL code
-ssl_certificate /etc/letsencrypt/live/fleek-network-node.fleek.xyz/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/fleek-network-node.fleek.xyz/privkey.pem;
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-3) If you have followed our guides, it's likely that you have commented out or removed the lines for the SSL certificates in the Nginx `app.conf` file.
+Create the ursa-proxy configuration file in the path `~/.ursa/proxy/config.toml` by default the ursa configuration directory is located under `/root/.ursa` but some users customise it to `$HOME/.ursa`.
 
-Here's an example of the missing part and how it should look like (take particular care that you have to replace `<YOUR DOMAIN NAME>` and that this is only if you have deleted the SSL configuration part in the `app.conf` file):
+Here, we create the directory, if one doesn't exist (we'll use the default .ursa location):
+
+```
+mkdir -p /root/.ursa/proxy
+```
+
+1) Create a new `config.toml` file:
 
 ```sh
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name <YOUR DOMAIN NAME>;
-
-    server_tokens off;
-
-    # SSL code
-    ssl_certificate /etc/letsencrypt/live/<YOUR DOMAIN NAME>/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/<YOUR DOMAIN NAME>/privkey.pem;
-
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-    location /stub_status {
-      stub_status;
-    }
-
-    location / {
-      add_header content-type  application/vnd.ipld.raw;
-      add_header content-type  application/vnd.ipld.car;
-      add_header content-type  application/octet-stream;
-      add_header cache-control public,max-age=31536000,immutable;
-
-      proxy_cache nodecache;
-      proxy_cache_valid 200 31536000s;
-      add_header X-Proxy-Cache $upstream_cache_status;
-      proxy_cache_methods GET HEAD POST;
-      proxy_cache_key "$request_uri|$request_body";
-      client_max_body_size 1G;
-
-
-      proxy_pass http://ursa:4069;
-    }
-}
+touch /root/.ursa/proxy/config.toml
 ```
+
+2) Put the following content in the newly created file:
+
+```sh
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:80"
+serve_dir_path = ".well-known"
+
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:443"
+
+[server.tls]
+cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/fullchain.pem"
+key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN>/privkey.pem"
+
+[admin]
+addr = "0.0.0.0:8881"
+```
+
+3) Make sure that you replace the `<YOUR-DOMAIN>` with your custom domain name in the `config.toml` file
+
+💡 A domain name is required to be pointing to your server public IP address, this is used by certbot to create the Let's Encrypt TLS certificates
+
+Here's an example of how the `cert_path` or `key_path` would look like for the hypothetical domain name `fleek-network-node.mydomain.com` in the `config.toml` file settings.
+
+```sh
+[server.tls]
+cert_path = "/etc/letsencrypt/live/fleek-network-node.mydomain.com/fullchain.pem"
+key_path = "/etc/letsencrypt/live/fleek-network-node.mydomain.com/privkey.pem"
+```
+
+💡 We are just showing the two lines and omitting the remaining lines, to keep it short, you should not delete the remaining lines.
 
 ### Running the Let's Encrypt automation script
 
-First, change the directory to the `docker/full-node` path in your local repository. This is where our `init-letsencrypt.sh` is located!
+First, change the directory where you've stored the ursa repository, e.g. by default its located at `~/fleek-network/ursa`
 
 ```sh
-cd docker/full-node
+cd ~/fleek-network/ursa
 ```
 
 The directory file structure should look like this:
 
 ```sh
 .
+├── CODE_OF_CONDUCT.md
+├── Cargo.lock
+├── Cargo.toml
+├── Dockerfile
+├── Dockerfile-gateway
+├── Dockerfile-proxy
+├── LICENSE-APACHE
+├── LICENSE-MIT
+├── Makefile
 ├── README.md
-├── data
-├── docker-compose.yml
-└── init-letsencrypt.sh
+├── contracts
+├── crates
+├── doc
+├── docker
+├── foundry.toml
+├── infra
+├── remappings.txt
+├── rust-toolchain.toml
+├── sdk
+├── target
+├── test-plans
+└── test_files
 ```
 
 We have to provide a domain name, such as the example `fleek-network-node.fleek.xyz` and a valid email address `ops@fleek.xyz` that you as an operator have access to.
 
 ```sh
-EMAIL="<VALID EMAIL>" DOMAINS="<DOMAIN WITH CORRECT DNS RECORDS>" ./init-letsencrypt.sh
+sudo certbot certonly --standalone --preferred-challenges http --email <YOUR-EMAIL-ADDRESS> --domain <YOUR-DOMAIN> --rsa-key-size 4096
 ```
 
 Since we have already:
@@ -423,32 +418,16 @@ Since we have already:
 - Updated the `A Records` in the [previous step](#how-to-set-up-the-dns-settings-for-a-node-server)
 - [Verified](#how-to-verify-dns-records) that the DNS records are correct
 
-We can execute the `init-letsencrypt.sh` by prefixing the script with the variables `EMAIL` and `DOMAINS`.
-
-- DOMAINS - A list separated by space, e.g. `DOMAINS="foobar.com my-node.fleek.xyz"`
-- EMAIL - A valid email address that the server administrator, the ops operator or anyone of concern should have access to, e.g. `ops@fleek.xyz`
+We can go ahead and execute the command. Here we've replaced the <YOUR-EMAIL> and <YOUR-DOMAIN> with our example domain and email addresses.
 
 ```sh
-EMAIL="<VALID EMAIL>" DOMAINS="<DOMAIN WITH CORRECT DNS RECORDS>" ./init-letsencrypt.sh
+sudo certbot certonly --standalone --preferred-challenges http --email ops@fleek.xyz --domain fleek-network-node.fleek.xyz --rsa-key-size 4096
 ```
-
-For our example, that would look a bit like this:
-
-```sh
-EMAIL="ops@fleek.xyz" DOMAINS="fleek-network-node.fleek.xyz" ./init-letsencrypt.sh
-```
-
-> Note: if multiple domains are provided, the certificates will be stored under the first one
 
 If the script is executed successfully, the output should be similar to (have in mind that we are using `fleek-network-node.fleek.xyz` as an example, you should see yours):
 
 ```sh
 Domains: fleek-network-node.fleek.xyz
-### Creating dummy certificate for fleek-network-node.fleek.xyz ...
-WARNING: The ADMIN_USER variable is not set. Defaulting to a blank string.
-WARNING: The ADMIN_PASSWORD variable is not set. Defaulting to a blank string.
-WARNING: The UID variable is not set. Defaulting to a blank string.
-WARNING: The GID variable is not set. Defaulting to a blank string.
 Creating full-node_certbot_run ... done
 Generating a RSA private key
 ...........................................++++
@@ -456,26 +435,6 @@ Generating a RSA private key
 writing new private key to '/etc/letsencrypt/live/fleek-network-node.fleek.xyz/privkey.pem'
 -----
 
-### Starting nginx ...
-WARNING: The ADMIN_USER variable is not set. Defaulting to a blank string.
-WARNING: The ADMIN_PASSWORD variable is not set. Defaulting to a blank string.
-WARNING: The UID variable is not set. Defaulting to a blank string.
-WARNING: The GID variable is not set. Defaulting to a blank string.
-Recreating full-node_certbot_1 ... done
-Recreating full-node_nginx_1   ... done
-
-### Deleting dummy certificate for fleek-network-node.fleek.xyz ...
-WARNING: The ADMIN_USER variable is not set. Defaulting to a blank string.
-WARNING: The ADMIN_PASSWORD variable is not set. Defaulting to a blank string.
-WARNING: The UID variable is not set. Defaulting to a blank string.
-WARNING: The GID variable is not set. Defaulting to a blank string.
-Creating full-node_certbot_run ... done
-
-### Requesting Let's Encrypt certificate for fleek-network-node.fleek.xyz ...
-WARNING: The ADMIN_USER variable is not set. Defaulting to a blank string.
-WARNING: The ADMIN_PASSWORD variable is not set. Defaulting to a blank string.
-WARNING: The UID variable is not set. Defaulting to a blank string.
-WARNING: The GID variable is not set. Defaulting to a blank string.
 Creating full-node_certbot_run ... done
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Requesting a certificate for fleek-network-node.fleek.xyz
@@ -493,10 +452,6 @@ NEXT STEPS:
 If you like Certbot, please consider supporting our work by:
  * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
  * Donating to EFF:                    https://eff.org/donate-le
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-### Reloading nginx ...
-2023/01/25 18:56:34 [notice] 17#17: signal process started
 ```
 
 It's a long output but we can find the last few paragraphs useful, where it reads:
@@ -544,7 +499,7 @@ You can do these tests from any remote location that is not your server or local
 
 Congratulations! If you reached this far you have improved the security of your Network Node and helped contribute to a safer Fleek Network!
 
-By providing a brief introduction to SSL/TLS certificates, the reasons why they exist or why you'd want to secure the Network Node, we jumped quickly to the domain name setup. After completing the verification of the DNS records, where our Stack and Node are running from, prepared the SSL configuration in our Nginx `app.conf` to then have the certificates generated by `Let's encrypt`.
+By providing a brief introduction to SSL/TLS certificates, the reasons why they exist or why you'd want to secure the Network Node, we jumped quickly to the domain name setup. After completing the verification of the DNS records, where our Stack and Node are running from, prepared the ursa-proxy configuration.
 
 To complete we verified that our Node is healthy by doing a quick checkup, using one of the options previously discussed in our [Node health check](fleek-network-node-health-check-guide) guide. We have then secured the Node!
 
