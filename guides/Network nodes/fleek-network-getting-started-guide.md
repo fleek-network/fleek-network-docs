@@ -48,7 +48,7 @@ To follow the guide, you will need the following:
 
 Fleek Network is a decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer. An alternative to traditional content delivery networks without a central authority that is reliable and censorship-resistant. Fleek Network relies on blockchain technology at its core, allowing governance and token rewards as incentives for participation in serving the network.
 
-Install a Network Node in a Linux Server e.g., Ubuntu or Debian latest by using our "Get Fleek Network", an assisted installer to help onboard as quickly as possible.
+Install a Network Node in a Linux Server e.g., Ubuntu or Debian latest by using our "Get Fleek Network", an assisted installer to help onboard as quickly as possible. Our network is permissionless, as the name suggests, no permission is required to become part of this network, you are free to join and participate at anytime!
 
 To start open a terminal and execute:
 
@@ -58,7 +58,7 @@ curl https://get.fleek.network | bash
 
 Learn more about the assisted installer [here](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md).
 
-## Why is Fleek Network Needed?
+## Why is Fleek Network needed?
 
 The demand for content delivery is skyrocketing, and due to the rise of video, gaming, and other media content popularity, demand will keep going up. Content delivery providers have a central infrastructure giving immense control to obscure authorities that can block access to content and even manipulate it.
 
@@ -98,7 +98,7 @@ Start by cloning the repository located at [https://github.com/fleek-network/urs
 
 <GitCloneOptions />
 
-You’ll notice that we try our best to document the project as we go, so it should be easy to follow if interested. Of course, don’t shy away from contributing with any amends or your wording poetry!
+We try our best to document the project as we go, so it should be easy to follow. Of course, don’t shy away from contributing with any amends or your wording poetry!
 
 Once the git clone completes, you’ll have the latest version at the time of cloning. You should use git to fetch or pull the latest versions consequently.
 
@@ -108,7 +108,7 @@ Execute the install command to build and install the Fleek Network CLI.
 make install
 ```
 
-The install command uses the Rust compiler to build; depending on how fast your machine is, it might take a while.
+The install command uses the Rust compiler to build; It might take awhile depending on how speedy is your machine.
 
 ![](./assets/fleek-network-rust-compiler.png?202301101928)
 
@@ -144,7 +144,7 @@ We can interact with the network via the CLI, the HTTP endpoint "/", or the JSON
 
 For today’s example, we're going to “put” a [file](https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi) and then after, retrieve it.
 
-Make sure you've started a node already, as described in the previous section.
+Make sure you've started the node, as described in the previous section!
 
 At the current development stage, there’s only support for IPLD car file format (content addressable aRchive). If curious, learn more about “IPLD car” in the [official specs](https://ipld.io/specs/transport/car/).
 
@@ -154,7 +154,7 @@ As we’re keeping things simple, we’ll download an existing “car” demo fi
 curl https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi -o basic.car
 ```
 
-If successful, we should have a `basic.car`.
+If successful, we should have a `basic.car`!
 
 We can check the available CLI commands to determine how to perform our desired goal and put the [car file](https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi) into our network.
 
@@ -177,7 +177,7 @@ help    Prints this message or the help of the given subcommand(s)
 put     put the file on the node
 ```
 
-Very simple to find help by simply passing the help flat after the desired subcommand.
+Very simple to find help by simply passing the help just after the desired subcommand.
 
 ```sh
 ursa rpc put --help
@@ -195,7 +195,7 @@ ARGS:
     <path>
 ```
 
-Finally, we can put our `basic.car` file into our node.
+Finally, we can put our `basic.car` file into our node!
 
 ```sh
 ursa rpc put basic.car
@@ -269,17 +269,17 @@ cmp basic.car ./output/bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqg
 
 While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we provide a recommendation to have it ready quickly!
 
-Our recommendation is to use our Docker compose Stack, as it provides additional services for monitoring, analytics, and a reverse proxy to allow you to decorate the service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
+Our recommendation is to use our Docker compose stack, installed with the [assisted installer](../Network%20nodes/fleek-network-how-to-install-a-node-easily-with-the-assisted-installer). The Docker compose stack provides additional services for monitoring, analytics, and a reverse proxy to allow you to decorate teh service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
 
-Find our guide on Running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md), or the [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for quick onboarding.
+Find our guide [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for quick onboarding, and the running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md) to learn more about the Docker stack.
 
 ## Final Thoughts
 
 Content delivery services have a significant position in our web experience on access to information; If not considered, it might limit access to or manipulate the information we consume.
 
-We have learned a bit about the importance of decentralized content delivery networks to mitigate the conflicting interest we otherwise face when trusting traditional content delivery providers for a complete web three experience: reasoning and fundamentals.
+We have learned a bit about the importance of decentralized content delivery networks to mitigate the conflicting interest we otherwise face when trusting traditional content delivery providers for a complete web 3 experience: the reasoning and fundamentals.
 
-Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container)!
+Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container), which can be easily installed with our [assisted installer](../Network%20nodes/fleek-network-how-to-install-a-node-easily-with-the-assisted-installer).
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
