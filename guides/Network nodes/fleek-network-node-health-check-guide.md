@@ -81,11 +81,11 @@ We recommend running the Stack (for docker-compose users), which provides a prox
 
 The Stack has the following services:
   - Node - we call `Ursa` the living process that we refer to as Node, this is started via the `Ursa CLI` (`ports 4069, 6009, 8070`)
-  - Reverse proxy - we use `NGINX` as a reverse proxy for `Ursa` Node service where we have configured the public port 80, SSL certification, a server name, etc. Port 80 maps to the `4069` internally, as to provide a secure connection over HTTP
+  - Reverse proxy - we have `ursa-proxy` as a reverse proxy for `Ursa` Node service where we have configured the public port 80, SSL certification, a server name, etc. Port 80 maps to the `4069` internally, as to provide a secure connection over HTTP. Previously, Nginx was used as the reverse proxy. If you have Nginx, you're advised to update your Node setup
   - Process monitoring - a monitoring system for real-time metrics with a web client (`port 9090`) that exposes metrics of the reverse proxy (`port 9113`) and the actual Node metrics (`port 4069`)
   - Metric visualization - for visualizing metrics, logs, and traces collected from the `Ursa` Node we have Grafana (`port 3000`)
 
-The `Stack` is our recommendation but we only provide support for `Ursa CLI`. Thus, support for `Grafana`, `Prometheus` or `Nginx` is on the operator side.
+The `Stack` is our recommendation but we only provide support for `Ursa CLI`. Thus, support for `Grafana`, or `Prometheus` is on the operator side.
 
 ### Log messages
 
@@ -118,11 +118,20 @@ ursa_1           | TRACE hyper::proto::h1::io buffer.queue, self.len=120, buf.le
 Where also,
 
 ```sh
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:38 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:43 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:48 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
-grafana_1        | logger=cleanup t=2023-01-06T18:29:51.663801631Z level=info msg="Completed cleanup jobs" duration=16.523158ms
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:53 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
+FQkVGR94kERB6i2rry1ewQdXKwJLwsVmDe
+full-node-ursa-1        |     at /usr/local/cargo/git/checkouts/rust-libp2p-98135dbcf5b63918/d8de86e/protocols/gossipsub/src/behaviour.rs:1391
+full-node-ursa-1        |
+full-node-ursa-1        |   2023-04-19T14:44:42.219537Z  WARN libp2p_gossipsub::behaviour: GRAFT: ignoring request from direct peer 12D3KooWA4FoPrNGjMnRqfqio5fmJSwhVGwpcEw7T7zQfb4qpHXW
+full-node-ursa-1        |     at /usr/local/cargo/git/checkouts/rust-libp2p-98135dbcf5b63918/d8de86e/protocols/gossipsub/src/behaviour.rs:1391
+full-node-ursa-1        |
+full-node-ursa-1        |   2023-04-19T14:44:43.499924Z  WARN libp2p_gossipsub::handler: Dial upgrade error Timeout
+full-node-ursa-1        |     at /usr/local/cargo/git/checkouts/rust-libp2p-98135dbcf5b63918/d8de86e/protocols/gossipsub/src/handler.rs:578
+full-node-ursa-1        |
+full-node-ursa-1        |   2023-04-19T14:44:43.775971Z  WARN libp2p_gossipsub::handler: Dial upgrade error Timeout
+full-node-ursa-1        |     at /usr/local/cargo/git/checkouts/rust-libp2p-98135dbcf5b63918/d8de86e/protocols/gossipsub/src/handler.rs:578
+full-node-ursa-1        |
+full-node-ursa-1        |   2023-04-19T14:44:49.741600Z  WARN ursa_network::service: Private NAT detected. Nodes should be publically accessable on 4890(udp) and 6009(tcp), as well as standard http(80) and https(443)! Falling back temporarily to public relay address on bootstrap node /ip4/159.223.211.234/tcp/6009/p2p/12D3KooWDji7xMLia6GAsyr4oiEFD2dd3zSryqNhfxU3Grzs1r9p/p2p-circuit/p2p/12D3KooWDvevmfe8gSwUVCTBcEW5bZ2iDdHcHTZent3aaQSwXUp8
+full-node-ursa-1        |     at crates/ursa-network/src/service.rs:435
 ```
 
 ### Host
@@ -134,6 +143,8 @@ Any traffic sent to an addressable interface that hits the correct endpoint or p
 ### Ports
 
 A Fleek Network Node, or the process we refer to as Node has bound to `0.0.0.0` and has a port exposed to the host, port 6009 and in the Stack's network, port 4069.
+
+⚠️ If you have choose to install natively the ports 4069 and 6009 are bound to the host. Otherwise, if you've installed the recommended Docker stack the port 4069 is not exposed to the host (you cannot communicate with port 4069 from your host, you'd have to run in the docker stack network).
 
 Below, we explain what these are used for:
 
@@ -170,7 +181,7 @@ The response should be:
 pong
 ```
 
-💡 As mentioned, we are interacting with the Stack, thus we interact with port 80 which our reverse proxy (Nginx) maps to the internal port 4069. Of course, you can test any port but the port that should be publicly available is going to be port 80. Learn how to run a stack [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container#run-the-container-from-the-recommended-stack) and [How to secure a Network Node](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls) to find out more about how to secure external communications internally.
+💡 As mentioned, we are interacting with the Stack, thus we interact with port 80 which our reverse proxy maps to the internal port 4069. Of course, you can test any port but the port that should be publicly available is going to be port 80. Learn how to run a stack [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container#run-the-container-from-the-recommended-stack) and [How to secure a Network Node](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls) to find out more about how to secure external communications internally.
 
 You can also check the headers of the response:
 
@@ -182,32 +193,31 @@ Which response is:
 
 ```sh
 HTTP/1.1 200 OK
-Server: nginx/1.23.3
-Date: Fri, 06 Jan 2023 20:07:16 GMT
-Content-Type: text/plain; charset=utf-8
-Content-Length: 4
-Connection: keep-alive
-content-type: application/vnd.ipld.raw
-content-type: application/vnd.ipld.car
-content-type: application/octet-stream
-cache-control: public,max-age=31536000,immutable
-X-Proxy-Cache: HIT
+content-type: text/plain; charset=utf-8
+content-length: 4
+date: Thu, 20 Apr 2023 09:59:34 GMT
 ```
 
-We can do the same for other ports, and you'll notice different responses where for port `6009`, get an empty reply from the server because it works over a different protocol which is not HTTP/S, as described [above](#ports):
+The service listens in different [ports](#ports), for example, we can check the name of the process listening in port 6009 by:
 
 ```sh
-curl: (52) Empty reply from server
+lsof -i :6009
 ```
 
-⚠️ A curl (52) usually means *something* accepted the TCP connection but just closed it. For our use case, we can take this as something running in port `6009`. Although, there are more appropriate ways to check this in particular. In comparison, port `4069` is used for HTTP RPC, REST, and metrics, which operate via HTTP, as such a Http Header is expected but not for `6009`.
-
-You can determine failure when you make a `cURL` request which fails:
+In the response, we can identify the COMMAND name `ursa` and other details. A long continuous response is expected because port `6009` is used by the P2P (peer-to-peer) protocol running in the network (press ctrl+c to interrupt it).
 
 ```sh
-curl: (7) Failed to connect to 127.0.0.1 port 80: Connection refused
-curl: (7) Failed to connect to 127.0.0.1 port 6009: Connection refused
+COMMAND    PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+ursa    164985 root   15u  IPv4 1012942      0t0  TCP ubuntu-s-8vcpu-16gb-intel-lon1-01:6009->95.214.54.56:6009 (ESTABLISHED)
+ursa    164985 root   16u  IPv4 3122608      0t0  TCP ubuntu-s-8vcpu-16gb-intel-lon1-01:6009->vmi1146262.contaboserver.net:6009 (ESTABLISHED)
+ursa    164985 root   17u  IPv4  957309      0t0  TCP *:6009 (LISTEN)
+ursa    164985 root   35u  IPv4  972232      0t0  TCP ubuntu-s-8vcpu-16gb-intel-lon1-01:6009->vmi1275896.contaboserver.net:8614 (ESTABLISHED)
+ursa    164985 root   40u  IPv4 1599455      0t0  TCP ubuntu-s-8vcpu-16gb-intel-lon1-01:6009->43.156.110.73:6009 (ESTABLISHED)
 ```
+
+For our use case, we can take this as `ursa` Fleen Network Node listening in port `6009`. We can do the same for the port `4069` that's used for HTTP RPC, REST, and metrics, which operate via HTTP, as such a Http Header is expected which is not the case for `6009` and thus we do a different mode of verification instead of `curl` `/ping`.
+
+You can determine failure if the `ursa` process is not showing the expected listening ports as described in [ports](#ports).
 
 If you're running the `Stack` (docker-compose), then a service like `Prometheus` (`port 9090`) or `Grafana` (`port 3000`) could also be checked!
 
