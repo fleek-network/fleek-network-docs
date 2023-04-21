@@ -77,6 +77,7 @@ const config = {
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsed: false,
+          sidebarCollapsible: false,
         },
         blog: {
           path: 'blog',
