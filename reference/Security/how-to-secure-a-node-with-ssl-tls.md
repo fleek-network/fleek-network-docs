@@ -49,34 +49,6 @@ The result should contain a response with the `<SERVER-PUBLIC-IP-ADDRESS>` set i
 `<YOUR-DOMAIN-NAME>`.		484 IN	A	`<SERVER-PUBLIC-IP-ADDRESS>` 
 ```
 
-Update the Ursa-proxy `config.toml`, providing the `cert_path` and `key_path` to match the desired domain name `<YOUR-DOMAIN-NAMe>`
-
-```sh
-[[server]]
-proxy_pass = "127.0.0.1:4069"
-listen_addr = "0.0.0.0:80"
-serve_dir_path = ".well-known"
-
-[[server]]
-proxy_pass = "127.0.0.1:4069"
-listen_addr = "0.0.0.0:443"
-
-[server.tls]
-cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem"
-key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem"
-
-[admin]
-addr = "0.0.0.0:8881"
-```
-
-Replace the pathname `<YOUR-DOMAIN-NAME>` with your custom domain
-
-```sh
-# SSL code
-cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem"
-key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem"
-```
-
 Run the Let's Encrypt script to generate the SSL/TLS certificates.
 
 ```sh
@@ -102,6 +74,34 @@ If you like Certbot, please consider supporting our work by:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ### Reloading nginx ...
 2023/01/25 18:56:34 [notice] 17#17: signal process started
+```
+
+The process should create `~/.ursa/proxy/config.toml` with the required domain name customization.
+
+```sh
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:80"
+serve_dir_path = ".well-known"
+
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:443"
+
+[server.tls]
+cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem"
+key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem"
+
+[admin]
+addr = "0.0.0.0:8881"
+```
+
+The `cert_path` and `key_path` should have declared your custom domain name, e.g. for the domain name node.foobar.xyz would look like:
+
+```sh
+# SSL code
+cert_path = "/etc/letsencrypt/live/node.foobar.xyz/fullchain.pem"
+key_path = "/etc/letsencrypt/live/node.foobar.xyz/privkey.pem"
 ```
 
 Do a health check anywhere on the web to confirm
