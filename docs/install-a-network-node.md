@@ -13,6 +13,8 @@ tags:
 - Fleek Network
 ---
 
+import Author from '@site/src/components/Author';
+
 ![Fleek Network: Install a Network Node](./assets/fleek-network-install-a-network-node.png?202304211911)
 
 ## Prerequisites
@@ -163,6 +165,51 @@ Type your selection number>
 ```
 
 Follow the wizard by reading any of the instructions presented. For example, in the prompt above you'll have to select one of the options by typing the number, where the Docker Stack (our recommendation) is option number one!
+
+Once complete, the output should be similar to the following:
+
+```sh
+★★★★★★★★★
+
+🥳 Great! We have completed the installation!
+
+The Stack should be running now, and you can show or hide the log output anytime.
+
+Our Stack logs can be quite verbose, as it shows WARNINGS, INFO, ERRORS, etc.
+It's essential to understand what they mean by simply reading our Node Health-check guide
+https://docs.fleek.network/guides/Network%20nodes/fleek-network-node-health-check-guide
+
+Here are some handy commands to show or hide the logs
+
+  - If you have the Stack running and want to show the logs:
+
+    docker compose -f ./docker/full-node/docker-compose.yml logs -f
+
+  - Terminate by sending the interrupt signal (SIGNIT) to Docker using the hotkey:
+
+    Ctrl-c
+
+You can Stop or Start the Docker Stack at anytime, for that change the directory to the location where the source code of Ursa is stored ("/root/fleek-network/ursa").For example, if you accepted the installation recommendation that is ~/fleek-network/ursa
+
+Then after, run the following commands, to either Start (up) or Stop (down)
+
+  - Start the Docker Stack
+
+    docker compose -f ./docker/full-node/docker-compose.yml up
+
+  - Stop the Docker Stack
+
+    docker compose -f ./docker/full-node/docker-compose.yml down
+
+🥹 Seems a lot? All the commands and much more are available in our documentation site!
+🤓  Learn how to maintain your Node by visiting our documentation at "https://docs.fleek.network"🌈 Got feedback? Find our Discord at "https://discord.gg/fleekxyz" and Twitter at https://twitter.com/fleek_net
+★★★★★★★★★
+
+
+🙋‍♀️ Want to see the output for the Docker Stack? Bear in mind that the Network Node Docker Stack is currently running as a background process, displaying logs messages is optional!
+Type "yes" or press ENTER to confirm. Otherwise, type skip!
+>
+```
 
 ## Post-installation
 
@@ -315,3 +362,10 @@ curl https://get.fleek.network/diagnostic | bash
 - Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network, etc.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
