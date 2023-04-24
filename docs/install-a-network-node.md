@@ -215,7 +215,7 @@ Type "yes" or press ENTER to confirm. Otherwise, type skip!
 
 ### Health check
 
-We provide a [Node health check guide](./fleek-network-node-health-check-guide) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
+We provide a [Node health check guide](../guides/Network%20nodes/fleek-network-node-health-check-guide) where you can find a more in-depth approach and detailed information about how the process work (log messages, hostnames, ports, etc).
 
 As a quick take on this during this read, you can do a quick health check to verify that the domain is indeed running and set up correctly.
 
@@ -353,7 +353,7 @@ curl https://get.fleek.network/diagnostic | bash
 
 - Help contribute to a healthy network by monitoring the health of your setup! Learn how to check if your node is healthy by reading the [Node health-check guide](../guides/Network%20nodes/fleek-network-node-health-check-guide)
 
-- Would you like to learn how to improve the security of your server file system? Check our guide [Securing the Ursa files](../guides/Network%20nodes/fleek-network-securing-the-ursa-files)
+- Would you like to learn how to improve the security of your server file system? Check our guide [Securing the Ursa files](../guides/Network%20nodes/fleek-network-node-health-check-guide)
 
 - Interested in running a fully working Node? Read our [guides](/guides) to learn more about the services powering the Fleek Network, and how to set up a node or customize it for your needs.
 

@@ -56,7 +56,7 @@ To start open a terminal and execute:
 curl https://get.fleek.network | bash
 ```
 
-Learn more about the assisted installer [here](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md).
+Learn more about the assisted installer [here](./how-to-install-a-node-easily-with-the-assisted-installer).
 
 ## Why is Fleek Network needed?
 
@@ -90,7 +90,7 @@ A Fleek Network node can be built and run on your local machine. It’s an [open
 
 The project is built with Rust, a general-purpose programming language, be sure to have it installed on your local machine in advance to be able to follow the guide.
 
-> Installing and configuring Rust, packages and library dependencies can be tricky! If you haven't already, check the guides [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli),  [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) or our [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for help.
+> Installing and configuring Rust, packages and library dependencies can be tricky! If you haven't already, check the guides [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli),  [Running a node in a Docker container](fleek-network-running-a-node-in-a-docker-container) or our [assisted installer](./how-to-install-a-node-easily-with-the-assisted-installer) for help.
 
 We’ll clone the repository locally, build it and interact with the node through the binary or the HTTP JSON-RPC API with a client like cURL, but you can use a GUI (Postman, Insomnia, etc.) if your preference.
 
@@ -108,7 +108,7 @@ Execute the install command to build and install the Fleek Network CLI.
 make install
 ```
 
-The install command uses the Rust compiler to build; It might take awhile depending on how speedy is your machine.
+The install command uses the Rust compiler to build; It might take a while depending on how speedy is your machine.
 
 ![](./assets/fleek-network-rust-compiler.png?202301101928)
 
@@ -269,9 +269,9 @@ cmp basic.car ./output/bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqg
 
 While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we provide a recommendation to have it ready quickly!
 
-Our recommendation is to use our Docker compose stack, installed with the [assisted installer](../Network%20nodes/fleek-network-how-to-install-a-node-easily-with-the-assisted-installer). The Docker compose stack provides additional services for monitoring, analytics, and a reverse proxy to allow you to decorate teh service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
+Our recommendation is to use our Docker compose stack, installed with the [assisted installer](../Network%20nodes/how-to-install-a-node-easily-with-the-assisted-installer). The Docker compose stack provides additional services for monitoring, analytics, and a reverse proxy to allow you to decorate teh service with a nice custom domain name and [SSL/TLS security](../Network%20nodes/fleek-network-securing-a-node-with-ssl-tls.md), etc.
 
-Find our guide [assisted installer](./fleek-network-how-to-install-a-node-easily-with-the-assisted-installer.md) for quick onboarding, and the running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md) to learn more about the Docker stack.
+Find our guide [assisted installer](./how-to-install-a-node-easily-with-the-assisted-installer) for quick onboarding, and the running a node in a Docker container [here](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container.md) to learn more about the Docker stack.
 
 ## Final Thoughts
 
@@ -279,7 +279,7 @@ Content delivery services have a significant position in our web experience on a
 
 We have learned a bit about the importance of decentralized content delivery networks to mitigate the conflicting interest we otherwise face when trusting traditional content delivery providers for a complete web 3 experience: the reasoning and fundamentals.
 
-Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container), which can be easily installed with our [assisted installer](../Network%20nodes/fleek-network-how-to-install-a-node-easily-with-the-assisted-installer).
+Finally, we introduced an open-source solution called Fleek Network, appealed for collaboration, and gave a brief example of how simple it is to run a node on anyone’s computer; And of course, a call to step up your game and run our recommended stack by reading our [Running a node in a docker container](../Network%20nodes/fleek-network-running-a-node-in-a-docker-container), which can be easily installed with our [assisted installer](../Network%20nodes/how-to-install-a-node-easily-with-the-assisted-installer).
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
