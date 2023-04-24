@@ -3,7 +3,7 @@ template: post
 draft: false
 hide_title: false
 title: How to secure a node with SSL/TSL
-slug: how-to-secure-a-node-with-ssl-tsl
+slug: how-to-secure-a-node-with-ssl-tls
 date: 2023-01-02T26:00:00Z
 canonical: ''
 description: Quick reference to secure a Node with SSL/TSL
@@ -49,64 +49,45 @@ The result should contain a response with the `<SERVER-PUBLIC-IP-ADDRESS>` set i
 `<YOUR-DOMAIN-NAME>`.		484 IN	A	`<SERVER-PUBLIC-IP-ADDRESS>` 
 ```
 
-Update the Nginx `app.conf`, providing the `server_name` to match the desired domain name `<YOUR-DOMAIN-NAMe>`
+Update the Ursa-proxy `config.toml`, providing the `cert_path` and `key_path` to match the desired domain name `<YOUR-DOMAIN-NAMe>`
 
 ```sh
-server {
-    listen 80;
-    listen [::]:80;
-    server_name `<YOUR-DOMAIN-NAME>`;
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:80"
+serve_dir_path = ".well-known"
 
-    ...
-}
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:443"
 
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name `<YOUR-DOMAIN-NAME>`;
+[server.tls]
+cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem"
+key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem"
 
-    ...
-}
+[admin]
+addr = "0.0.0.0:8881"
 ```
 
-💡 We are using the three dots `...` to represent the text that is omitted to keep it short. You are not supposed to add the dots or delete any other text apart from replacing the `server_name` value with your desired domain.
-
-If you have followed our introductory guides, you have probably commented out or removed the SSL configuration, you can find the `app.conf` file [here](https://raw.githubusercontent.com/fleek-network/ursa/cd6fb3d21ce647dc3f06ee9128ba2a4164623ee5/docker/full-node/data/nginx/app.conf). This is pointing to the file version at a certain commit in history, recent versions might differ! Beware, that this is highly customizable and we might make tweaks in any earlier version of `ursa` which that guide might not consider. Check our original repository on recent commits for any updates!
-
- Replace the pathname with your custom domain `<YOUR-DOMAIN-NAME>`
+Replace the pathname `<YOUR-DOMAIN-NAME>` with your custom domain
 
 ```sh
 # SSL code
-ssl_certificate /etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem;
+cert_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/fullchain.pem"
+key_path = "/etc/letsencrypt/live/<YOUR-DOMAIN-NAME>/privkey.pem"
 ```
 
-Run the Let's encrypt initialization script to generate the SSL/TLS certificates. The process is the following:
-
-- Create a dummy certificate
-- Start Nginx
-- Delete the dummy certificate
-- Request the real certificates
-
-Change the directory to the location where the `init-letsencrypt.sh` is located.
+Run the Let's Encrypt script to generate the SSL/TLS certificates.
 
 ```sh
-cd docker/full-node
-```
-
-Run the script by executing the command and providing the arguments to `EMAIL` and `DOMAINS`:
-
-```sh
-EMAIL="<VALID EMAIL>" DOMAINS="<DOMAIN WITH CORRECT DNS RECORDS>" ./init-letsencrypt.sh
+curl https://get.fleek.network/lets_encrypt | bash
 ```
 
 💡 This will only work you've followed the previous steps and confirmed that the DNS records are correct. Also, if multiple domains are provided, the certificates will be stored under the first one.
 
-If successful, you should get a long response (we replaced the long text with `...`) with the following:
+If successful, you should get a response that is similar to:
 
 ```sh
-...
-
 Successfully received certificate.
 Certificate is saved at: /etc/letsencrypt/live/fleek-network-node.fleek.xyz/fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/fleek-network-node.fleek.xyz/privkey.pem
@@ -123,7 +104,7 @@ If you like Certbot, please consider supporting our work by:
 2023/01/25 18:56:34 [notice] 17#17: signal process started
 ```
 
-Do a health check anywhere in the web to confirm
+Do a health check anywhere on the web to confirm
 
 ```sh
 curl https://<YOUR DOMAIN NAME>/ping
