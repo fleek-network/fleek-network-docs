@@ -72,8 +72,6 @@ If you like Certbot, please consider supporting our work by:
  * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
  * Donating to EFF:                    https://eff.org/donate-le
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-### Reloading nginx ...
-2023/01/25 18:56:34 [notice] 17#17: signal process started
 ```
 
 The process should create `~/.ursa/proxy/config.toml` with the required domain name customization.
