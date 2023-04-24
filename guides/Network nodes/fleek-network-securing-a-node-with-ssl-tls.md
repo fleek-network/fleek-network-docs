@@ -59,19 +59,6 @@ To follow the guide, you will need the following:
 
  <CheckoutCommitWarning />
 
-## Quick Video
-
-⚠️ Nginx is being replaced by ursa-proxy, meaning that the video is only relevant if you're running the original proposed setup
-
-A walkthrough video is provided as a quick reference for the users, we try to keep it simple and would suggest the text guide version to get more detailed information. 
-
-The video content is stored in our Fleek Network [playlist](https://www.youtube.com/watch?v=uAFIDu3UBvw&list=PL3v9ZaTBrN9GEQ2NmS5xc6YH0E2df5VTn) on the Fleek XYZ [Youtube channel](https://www.youtube.com/@fleekxyz).
-
-<YoutubePlayer
-  title="Securing a node with SSL/TLS"
-  videoId="LvnIHH5hnr8"
-/>
-
 ## What are SSL/TLS certificates?
 
 An SSL Certificate is a file that is stored on a web server that represents the content of an encrypted key. A certificate file only contains information that is relevant to authenticate a service. Some of the properties of the file include a key pair (a public and private key that work together to establish an encrypted connection), the issuer of the certificate, and the associated subdomains.
