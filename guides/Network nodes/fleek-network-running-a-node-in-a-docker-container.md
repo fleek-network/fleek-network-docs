@@ -379,21 +379,7 @@ If all goes well, the output should be similar to:
 Or, you might find familiar,
 
 ```sh
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:17 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:22 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:27 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:32 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:37 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:42 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:47 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:52 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:57 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:02 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:07 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:12 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:17 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:22 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
-nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:27 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+
 ```
 
 A few points to notice are the listener port number and hostname 👀. As described in the [Run the Docker container](#run-the-docker-container), the container listener port number is exposed to your host's port number.
@@ -566,9 +552,9 @@ Also, by using Docker compose it'll be easier to persist the configuration files
 
 ### Running a stack with Docker compose
 
-We have defined a Stack 🕸 that can be useful for running and monitoring; At time of writing, this is declared in a docker compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
+We have defined a Stack 🕸 that can be useful for running and monitoring; At the time of writing, this is declared in a docker compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
 
-There you'll find specified all the configuration options, such as the ones we've discussed in the previous topics about the host, port bindings, bind mount, etc. You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). 
+There you'll find specified all the configuration options, such as the ones we've discussed in the previous topics about the host, port bindings, bind mount, etc. You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and the ursa-proxy.
 
 Also, the docker compose file can be customized to your preference, Docker will detect any changes recreating the container if and when necessary.
 
@@ -584,8 +570,6 @@ make compose-build
 
 ```sh
 certbot uses an image, skipping
-nginx uses an image, skipping
-nginxexporter uses an image, skipping
 prometheus uses an image, skipping
 grafana uses an image, skipping
 ```
@@ -600,13 +584,13 @@ In the project root, execute the docker compose command by providing the `docker
 docker compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
 ```
 
-For our use-case, here's how it'll look like:
+For our use case, here's how it'll look like:
 
 ```sh
 docker compose -f docker/full-node/docker-compose.yml up
 ```
 
-Where for stopping, you have option `down`:
+Where for stopping, you have the option `down`:
 
 ```sh
 docker compose -f docker/full-node/docker-compose.yml down
@@ -623,93 +607,6 @@ If you'd like to use some of the points available in the guide, such as to [exec
   ursa:
     container_name: ursa-cli
     ...
-```
-
-At time of writing, you'll find that the output presents errors. The setup we have is based on our staging server use-case, which can be used as an example for yours.
-
-```sh
-nginx_1          | 2023/01/06 13:38:44 [emerg] 10#10: open() "/etc/letsencrypt/options-ssl-nginx.conf" failed (2: No such file or directory) in /etc/nginx/conf.d/app.conf:52
-nginxexporter_1  | time="2023-01-06T13:48:07Z" level=error msg="Error scraping nginx: Error scraping nginx: Get http://nginx:80/stub_status: dial tcp: lookup nginx on 127.0.0.11:53: no such host" source="nginx_exporter.go:171"
-```
-
-To mitigate this issue, you'll have to run a script from the directory `docker/full-node` of the Ursa project.
-
-Start by changing the directory to:
-
-```sh
-cd ./docker/full-node
-```
-
-The command you'll be running needs to be prefixed by a list of custom domain names
-
-```sh
-DOMAINS="<YOUR-CUSTOM-DOMAIN-NAME-1> <YOUR-CUSTOM-DOMAIN-NAME-2>" ./init-letsencrypt.sh
-```
-
-Here's a practical example,
-
-```sh
-DOMAINS="my-fleek-network-node.dev www.my-fleek-network-node.dev" ./init-letsencrypt.sh
-```
-
-If you haven't set up the domain correctly, you'd get
-
-```sh
-Certbot failed to authenticate some domains (authenticator: webroot). The Certificate Authority reported these problems:
-  Domain: my-fleek-network-node.dev
-  Type:   unauthorized
-  Detail: 2001:4860:4802:32::15: Invalid response from https://www.foobar.dev/.well-known/acme-challenge/3UrSvBmgSNsymLKA20wGKJfxQq_utTKlsTLxltTGNQ4: 403
-
-Hint: The Certificate Authority failed to download the temporary challenge files created by Certbot. Ensure that the listed domains serve their content from the provided --webroot-path/-w and that files created there can be downloaded from the internet.
-```
-
- 💡 We'll provide a guide with instructions about how to set up the custom domains.
-
-### Disabling SSL for testing
-
-⚠️ A secure connection is mandatory, the following instructions are available for testing purposes only!
-
-As many of you might not have a custom domain and are just looking around to see what Fleek Network is about, a way around would be to disable SSL for testing, which means that the communication is none secure.
-To learn how to secure the Node, find our guide [Securing a Node with SSL/TLS](fleek-network-securing-a-node-with-ssl-tls).
-
-Open and edit the file `docker/full-node/data/nginx/app.conf` and make the content the following:
-
-```sh
-proxy_cache_path /cache keys_zone=nodecache:100m levels=1:2 inactive=31536000s max_size=10g use_temp_path=off;
-
-server {
-    listen 80;
-    listen [::]:80;
-    server_name node.ursa.earth www.node.ursa.earth;
-
-    location /stub_status {
-      stub_status;
-    }
-
-    proxy_redirect          off;
-    client_max_body_size    10m;
-    client_body_buffer_size 128k;
-    proxy_connect_timeout   90;
-    proxy_send_timeout      90;
-    proxy_read_timeout      90;
-    proxy_buffers           32 128k;
-
-    location / {
-      add_header content-type  application/vnd.ipld.raw;
-      add_header content-type  application/vnd.ipld.car;
-      add_header content-type  application/octet-stream;
-      add_header cache-control public,max-age=31536000,immutable;
-
-      proxy_cache nodecache;
-      proxy_cache_valid 200 31536000s;
-      add_header X-Proxy-Cache $upstream_cache_status;
-      proxy_cache_methods GET HEAD POST;
-      proxy_cache_key "$request_uri|$request_body";
-      client_max_body_size 1G;
-
-      proxy_pass http://ursa:4069;
-    }
-}
 ```
 
 Want to secure your node? We have a brief guide on [Securing a Node with SSL/TLS](fleek-network-securing-a-node-with-ssl-tls).

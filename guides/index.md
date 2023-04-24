@@ -1,5 +1,5 @@
 ---
-title: Introducing guides
+title: Introduction
 sidebar_position: 1
 tags:
 - Guides
