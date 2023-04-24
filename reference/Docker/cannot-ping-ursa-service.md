@@ -15,15 +15,6 @@ tags:
 - ping
 - troubleshoot
 ---
-<!-- 
-    1  curl localhost/ping
-    2  apt-get install curl
-    3  apt-get update
-    4  curl localhost/ping
-    5  apt-get install curl
-    6  curl localhost/ping
-    7  curl http://localhost:4069/ping
-    8  history -->
 
 Make sure that the Docker container for Ursa is running. If you run the recommended Docker Stack e.g. have used the assisted installer or followed the [running a node in a docker container](../../guides/Network%20nodes/fleek-network-running-a-node-in-a-docker-container) then you should be familiar with the commands.
 
@@ -65,7 +56,7 @@ If you do, you can see the logs at anytime by:
 docker compose -f ./docker/full-node/docker-compose.yml logs -f
 ```
 
-From your host, you should have attempted to ping the Stack's Nginx proxy service, expecting the response `pong`. 
+From your host, you should have attempted to ping the Stack's Ursa-proxy (reverse proxy), expecting the response `pong`. 
 
 ```sh
 curl http://localhost/ping
@@ -74,7 +65,6 @@ curl http://localhost/ping
 If you haven't then, you need to troubleshoot and figure out why you're not getting the response `pong`.
 
 Check the Docker container status and logs to ensure that the `ursa` service, is indeed running.
-
 
 Is the `ursa` container listed, healthy and running?
 
@@ -96,10 +86,9 @@ Ping the port `4069`, as described in the guide [node healthchecks](../../guides
 curl -s http://localhost:4069/ping | grep 'pong'
 ```
 
-If the Ursa started a node process in the container, as is indeed running, you should get the response `pong`.
+If the Ursa CLI started a node process in the container, and is running, you should get the response `pong`.
 
-
-Confirm that Docker container Nginx service is running, by executing.
+Confirm that Docker container Ursa-proxy service is running, by executing.
 
 ```sh
 docker ps -a
