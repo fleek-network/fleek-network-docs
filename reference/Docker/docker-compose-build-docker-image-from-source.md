@@ -32,7 +32,7 @@ You'll find:
     image: ghcr.io/fleek-network/ursa:latest
 ```
 
-Remove `build` and replace `image` with:
+Change it, to include the missing "build" to look like the following:
 
 ```sh
   ursa:
