@@ -46,8 +46,8 @@ We'll look into:
       - The host machine `.ursa` configuration directory to the container
       - A host machine directory to keep the Lets Encrypt TLS certificates, e.g. `~/fleek-network/ursa/data/certbot`
     - Update the port numbers
+- Create the Ursa-proxy configuration file
 - Generate the TLS certifications
-- Create the configuration for the Ursa-proxy
 - Do a health check
 
 ### Setup the Ursa proxy
@@ -76,7 +76,7 @@ git pull origin main
 
 2) Update the Docker compose file
 
-Open the `./data/full-node/docker-compose.yml` in your favorite text editor.
+Open the `./docker/full-node/docker-compose.yml` in your favorite text editor.
 
 Locate the NGINX service under `services`. It should be similar to:
 
@@ -195,3 +195,214 @@ services:
     depends_on:
       - certbot
 ```
+
+### Create the Ursa-proxy configuration file
+
+We're going to assume that you're running the Docker stack with a system administrative user, such as a sudoer or root. This means that the `.ursa` directory will be located at:
+
+```sh
+/root/.ursa
+```
+
+If you have changed the way you run Docker and containers, such as we have described in [Securing the Ursa files](../Network%20nodes/fleek-network-securing-the-ursa-files), then that'll be located at `$HOME/.ursa`.
+
+For the case where the directory does not exist, you can create it:
+
+```
+mkdir /root/.ursa
+```
+
+Create the proxy directory where the config file for ursa-proxy will be:
+
+```
+mkdir /root/.ursa/proxy
+```
+
+Create the Ursa proxy `config.toml`:
+
+```
+touch /root/.ursa/proxy/config.toml
+```
+
+Put the following content in the `config.toml`:
+
+```
+# Server without TLS.
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:80"
+serve_dir_path = ".well-known"
+
+# Server with TLS
+[[server]]
+proxy_pass = "127.0.0.1:4069"
+listen_addr = "0.0.0.0:443"
+
+[server.tls]
+cert_path = "/etc/letsencrypt/live/YOUR-DOMAIN/fullchain.pem"
+key_path = "/etc/letsencrypt/live/YOUR-DOMAIN/privkey.pem"
+
+# Admin service.
+# You can omit this section as this is the default.
+[admin]
+addr = "0.0.0.0:8881"
+```
+
+Find and replace `YOUR-DOMAIN` with your domain name. That'll be the values for the property `cert_path` and `key_path`, e.g. let's say that your domain name is `node.foobar.com`, you'd replace `YOUR-DOMAIN` to have:
+
+```
+[server.tls]
+cert_path = "/etc/letsencrypt/live/node.foobar.com/fullchain.pem"
+key_path = "/etc/letsencrypt/live/node.foobar.com/privkey.pem"
+```
+
+### Generate the TLS Certificates
+
+Change the directory to where the Ursa project is located, e.g. by default `~/fleek-network/ursa`.
+
+```
+cd ~/fleek-network/ursa
+```
+
+1) Close any processes running on port 80
+
+Find the PID of processes
+
+```
+lsof -i :80
+```
+
+If the port 80 is in use, you'll get a table similar to:
+
+```
+COMMAND PID   USER   FD   TYPE  DEVICE  SIZE/OFF  NODE NAME
+foobar  88493 root   11u  IPv4  6545735      0t0  TCP  *:http (LISTEN)
+```
+
+Stop the process by name of PID
+
+```
+kill -9 <PID>
+```
+
+💡 Replace <PID> with the numerical value that corresponds to the process
+
+For example, given the table result the PID is 88493
+
+```
+kill -9 88493
+```
+
+To complete, confirm there aren't any processes running on port 80 by running the command again
+
+```
+lsof -i :80
+```
+
+The response should be empty!
+
+3) Stop the Docker stack
+
+```
+docker compose -f ./docker/full-node/docker-compose.yml down
+```
+
+4) Confirm that the domain name is pointing to the server's public IP address
+
+We are assuming that you have your domain name pointing to the server public IP address since you are migrating NGINX to Ursa-proxy. But if you're at the same time changing the domain name address that points to your server, or haven't done it, you have to open the domain name registrar dashboard and update the record type A records and set the domain name to respond with the server public IP Address.
+
+For example, let's say that your domain name is `node.example.com` and your server's public IP address is `181.196.118.156`, this is how it'd look hypothetically:
+
+| Type        | Host                 | Answer            | TTL         |
+| ----------- | -------------------- | ----------------- | ----------- |
+| A           | node.example.com     | 181.196.118.156   | 300         |
+
+
+Once you have [set up the DNS records](#how-to-set-up-the-dns-settings-for-a-node-server), verify the records are set correctly, for that you can easily run `dig` CLI or a website like [mxtoolbox](https://mxtoolbox.com/)](https://mxtoolbox.com/).
+
+For our example, we're going to use the [dig](https://en.wikipedia.org/wiki/Dig_(command)) CLI.
+
+💡 If you don't have `dig` installed, you can use your operating system package manager to install it, e.g. in Ubuntu you can run `apt-get install dig`
+
+```sh
+dig node.example.com +nostats +nocomments +nocmd
+```
+
+In the response, we get the IP address 181.196.118.156, as declared in the domain name registrar dashboard. Be aware that DNS propagation may take some time, if you need help troubleshooting check our reference [DNS troubleshooting](../../reference/DNS/domain-name-system-nameserver-troubleshooting). 
+
+⚠️ Your server DNS resolver, should get the correct data otherwise the certification process will fail!
+
+```sh
+;node.example.com.      IN	A
+node.example.com.		484 IN	A	181.196.118.156
+```
+
+There are many other tools you can use to verify the DNS records, feel free to pick your favorite!
+
+5) Create the certificates
+
+Execute the command which will start a standalone web server on port 80 of your host.
+
+💡 Find and replace `<YOUR-VALID-EMAIL-ADDRESS>` and `<YOUR-VALID-DOMAIN-NAME>` with your email address and domain name. The email address is for administration purposes by [Let's Encrypt org](https://letsencrypt.org/), we don't store any of your data.
+
+We're using backslashes "\" to break the lines to make it easier to read, you can ignore them.
+
+```sh
+docker compose -f ./docker/full-node/docker-compose.yml \
+  -p 80:80 \
+  --rm --entrypoint "\
+  certbot certonly \
+    --standalone \
+    --preferred-challenges http \
+    --email <YOUR-VALID-EMAIL-ADDRESS> \
+    --domain <YOUR-VALID-DOMAIN-NAME> \
+    --rsa-key-size 4096 \
+    --agree-tos -n" certbot
+```
+
+For example, let's say that your email address is `skywalker@example.com` and `node.example.com`, this is what it'd look like:
+
+```sh
+docker compose -f ./docker/full-node/docker-compose.yml \
+  -p 80:80 \
+  --rm --entrypoint "\
+  certbot certonly \
+    --standalone \
+    --preferred-challenges http \
+    --email skywalker@example.com \
+    --domain node.example.com \
+    --rsa-key-size 4096 \
+    --agree-tos -n" certbot
+```
+
+Once executed and if all goes well, you should get a "success" message similar to:
+
+```sh
+Domains: node.example.com
+Creating full-node_certbot_run ... done
+Generating a RSA private key
+...........................................++++
+......................................................................................................................................................................................................++++
+writing new private key to '/etc/letsencrypt/live/node.example.com/privkey.pem'
+-----
+
+Creating full-node_certbot_run ... done
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for node.example.com
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/node.example.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/node.example.com/privkey.pem
+This certificate expires on 2023-04-25.
+These files will be updated when the certificate renews.
+
+NEXT STEPS:
+- The certificate will need to be renewed before it expires. Certbot can automatically renew the certificate in the background, but you may need to take steps to enable that functionality. See https://certbot.org/renewal-setup for instructions.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+```
+
+💡 Notice the "Successfully received certificate", where it's saved at "/etc/letsencrypt/live/node.example.com", the "This certificate expires on 2023-04-25" and any other details you might find interesting.
