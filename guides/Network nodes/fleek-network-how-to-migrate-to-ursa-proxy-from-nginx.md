@@ -406,3 +406,43 @@ If you like Certbot, please consider supporting our work by:
 ```
 
 💡 Notice the "Successfully received certificate", where it's saved at "/etc/letsencrypt/live/node.example.com", the "This certificate expires on 2023-04-25" and any other details you might find interesting.
+
+### Quick health check
+
+The working directory should be the Ursa project source code location, e.g. by default `~/fleek-network/ursa`.
+
+```
+cd ~/fleek-network/ursa
+```
+
+1) Start the Docker Stack services by running the Docker compose command
+
+```sh
+docker compose -f ./docker/full-node/docker-compose.yml up
+```
+
+2) Run a health check
+
+As instructed in the [guide](fleek-network-node-health-check-guide), we can do a quick health check by making `cURL` requests to our server and reading the response. There's the option to get the response body that should be text `pong` or get some HTTP Headers.
+
+```sh
+curl -w "\n" https://<YOUR DOMAIN NAME>/ping
+```
+
+For our example, we have the domain `node.domain.com` and this is how the `cURL` request would look like:
+
+```sh
+curl -w "\n" https://node.domain.com/ping
+```
+
+A successful response should be `pong`
+
+```sh
+pong
+```
+
+Use the flag `-I` to get the HTTP Headers. To learn more read the guide [here](fleek-network-node-health-check-guide).
+
+You can do these tests from any remote location that is not your server or local machine and the health check should pass, as the port should be publicly available to any service on the internet.
+
+✨ If everything looks good, you have successfully migrated to the Ursa-proxy from NGINX.
