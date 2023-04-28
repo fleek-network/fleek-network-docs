@@ -21,7 +21,7 @@ import Author from '@site/src/components/Author';
 
 ![](./assets/fleek-network-migrate-to-ursa-proxy-from-nginx.png?202304271224)
 
-## Introduction
+## Introduction
 
 Many actors are free to communicate with your server, as Fleek Network encourages participation, but this comes with challenges, in terms of security, network resource availability, etc. To have a bit of control over the connections, a reverse proxy helps prevent users from connecting to the server processes directly, reducing the number of entry points and actions within the system.
 
@@ -31,7 +31,7 @@ We came up with the Ursa proxy, as a solution to replace NGINX, to provide us wi
 
 In the following guide, we'll provide instructions to migrate from NGINX to the Ursa proxy.
 
-## Docker stack
+## Docker stack
 
 On earlier versions of our Docker stack, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, required during the SSL/TLS certbot certification process to secure the domain name, relied on.
 
@@ -62,7 +62,7 @@ cd ~/fleek-network/ursa
 
 💡 Make sure you type the correct location of where you've saved the Ursa project source code
 
-1) Pull the latest version of the source code
+#### 1) Pull the latest version of the source code
 
 Switch to the main branch
 
@@ -78,7 +78,7 @@ git pull origin main
 
 ⚠️ If this fails, due to any of the possible several reasons, e.g. handling staged or local changes, having to discard changes, or saving changes, check the [git documentation](https://git-scm.com/doc) to learn the basics.
 
-2) Update the Docker compose file
+#### 2) Update the Docker compose file
 
 Open the `./docker/full-node/docker-compose.yml` in your favorite text editor.
 
@@ -132,7 +132,7 @@ ursa-proxy:
     dockerfile: Dockerfile-proxy
 ```
 
-3) Bind the host directories to the container
+#### 3) Bind the host directories to the container
 
 Replace the `ursa-proxy.volumes`, or what was the `nginx.volumes` from:
 
@@ -152,7 +152,7 @@ volumes:
   - ./data/certbot/conf:/etc/letsencrypt
 ```
 
-4) Update the port numbers
+#### 4) Update the port numbers
 
 Replace the port numbers from:
 
@@ -176,7 +176,7 @@ expose:
 
 💡 We have the `ports` bound to the host machine (HOST:CONTAINER), and the `expose` which defines which "exposes" ports to other services in the Docker network only
 
-5) How the ursa-proxy configuration should look like
+#### 5) How the ursa-proxy configuration should look like
 
 At this stage, the changes you've made for `ursa-proxy` should look like the following:
 
@@ -260,7 +260,7 @@ cert_path = "/etc/letsencrypt/live/node.domain.com/fullchain.pem"
 key_path = "/etc/letsencrypt/live/node.domain.com/privkey.pem"
 ```
 
-#### Generate the TLS Certificates
+### Generate the TLS Certificates
 
 Change the directory to where the Ursa project is located, e.g. by default `~/fleek-network/ursa`.
 
@@ -268,7 +268,7 @@ Change the directory to where the Ursa project is located, e.g. by default `~/fl
 cd ~/fleek-network/ursa
 ```
 
-1) Close any processes running on port 80
+#### 1) Close any processes running on port 80
 
 Find the PID of processes
 
@@ -305,13 +305,13 @@ lsof -i :80
 
 The response should be empty!
 
-3) Stop the Docker stack
+#### 2) Stop the Docker stack
 
 ```
 docker compose -f ./docker/full-node/docker-compose.yml down
 ```
 
-4) Confirm that the domain name is pointing to the server's public IP address
+#### 3) Confirm that the domain name is pointing to the server's public IP address
 
 We are assuming that you have your domain name pointing to the server public IP address since you are migrating NGINX to Ursa-proxy. But if you're at the same time changing the domain name address that points to your server, or haven't done it, you have to open the domain name registrar dashboard and update the record type A records and set the domain name to respond with the server public IP Address.
 
@@ -343,7 +343,7 @@ node.example.com.		484 IN	A	181.196.118.156
 
 There are many other tools you can use to verify the DNS records, feel free to pick your favorite!
 
-5) Create the certificates
+#### 4) Create the certificates
 
 Execute the command which will start a standalone web server on port 80 of your host.
 
@@ -411,7 +411,7 @@ If you like Certbot, please consider supporting our work by:
 
 💡 Notice the "Successfully received certificate", where it's saved at "/etc/letsencrypt/live/node.example.com", the "This certificate expires on 2023-04-25" and any other details you might find interesting.
 
-#### Quick health check
+### Quick health check
 
 The working directory should be the Ursa project source code location, e.g. by default `~/fleek-network/ursa`.
 
@@ -419,13 +419,13 @@ The working directory should be the Ursa project source code location, e.g. by d
 cd ~/fleek-network/ursa
 ```
 
-1) Start the Docker Stack services by running the Docker compose command
+#### 1) Start the Docker Stack services by running the Docker compose command
 
 ```sh
 docker compose -f ./docker/full-node/docker-compose.yml up
 ```
 
-2) Run a health check
+#### 2) Run a health check
 
 As instructed in the [guide](fleek-network-node-health-check-guide), we can do a quick health check by making `cURL` requests to our server and reading the response. There's the option to get the response body that should be text `pong` or get some HTTP Headers.
 
@@ -453,7 +453,7 @@ You can do these tests from any remote location that is not your server or local
 
 ## Native
 
-On earlier versions of our Native setup, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, required during the SSL/TLS certbot certification process to secure the domain name, that the process relied on.
+On earlier versions of our Native setup, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, required during the SSL/TLS Certbot certification process to secure the domain name, that the process relied on.
 
 Since the introduction of Ursa-proxy in our Ursa repository, and the related support added from [Ursa-proxy](https://github.com/fleek-network/get.fleek.network/commit/0afa813ab74eaf15d50ad126d0534bbe0a14aed9) configuration in the assisted installer that the Ursa-proxy is now the default reverse proxy in the Native setup.
 
@@ -478,7 +478,7 @@ Change the working directory to where you have saved the Ursa repository, e.g. b
 cd ~/fleek-network/ursa
 ```
 
-1) Pull the latest version of the source code
+#### 1) Pull the latest version of the source code
 
 Switch to the main branch
 
@@ -494,13 +494,13 @@ git pull origin main
 
 ⚠️ If this fails, due to any of the possible several reasons, e.g. handling staged or local changes, having to discard changes, or saving changes, check the [git documentation](https://git-scm.com/doc) to learn the basics.
 
-2) Build the Ursa proxy from source
+### Build the Ursa proxy from source
 
 The Ursa proxy is available as a [crate](https://github.com/fleek-network/ursa/tree/main/crates/ursa-proxy) in the source repository. You'll have to build from source every time a new update is available to have an executable. Also, create the configuration file, [systemd](https://en.wikipedia.org/wiki/Systemd) service, etc. This can take some time to get right, for this reason, we provide an install script to automate the processes.
 
 You have two options! Either build from source by running the install script or do it manually by following the instructions.
 
-Option 1) Run the Ursa proxy install script
+#### 1) Run the Ursa proxy install script
 
 ```
 curl https://get.fleek.network/install_ursa_proxy | bash
@@ -508,9 +508,9 @@ curl https://get.fleek.network/install_ursa_proxy | bash
 
 ✨ Once completed you can move on to the next step! You are not required to follow the option 2 instructions to install it manually.
 
-Option 2) Manual setup
+#### Manual setup
 
-Run the install command
+#### 1) Run the install command
 
 ```
 cargo install --path crates/ursa-proxy
@@ -536,7 +536,7 @@ You should get a response similar to
 ursa-proxy x.x.x
 ```
 
-Create a Systemd service for the Ursa proxy
+#### 2) Create a Systemd service for the Ursa proxy
 
 ```
 touch /etc/systemd/system/ursa-proxy.service
@@ -605,13 +605,13 @@ sudo systemctl daemon-reload
 
 ✨ The service was built and set up as a Systemd service!
 
-3) Create the Ursa proxy configuration
+### Create the Ursa proxy configuration
 
 The Ursa proxy requires a configuration where the certificate's path is declared, among other properties such as the proxy pass and listener address, etc.
 
 ⚠️ Warning, we're assuming that you run Ursa with an administrative account such as `sudoer` user, for this reason, `.ursa` is assumed to be in `/root` as follows `/root/.ursa`. If you have changed file permissions and setup, use the correct path.
 
-Create the proxy directory where the config file for ursa-proxy will be:
+#### 1) Create the proxy directory where the config file for ursa-proxy will be:
 
 ```
 mkdir -p /root/.ursa/proxy
@@ -619,7 +619,7 @@ mkdir -p /root/.ursa/proxy
 
 💡 If you don't have permissions, use `sudo` e.g. `sudo mkdir -p /root/.ursa/proxy`
 
-Create the Ursa proxy `config.toml`:
+#### 2) Create the Ursa proxy `config.toml`:
 
 ```
 touch /root/.ursa/proxy/config.toml
@@ -657,7 +657,7 @@ cert_path = "/etc/letsencrypt/live/node.domain.com/fullchain.pem"
 key_path = "/etc/letsencrypt/live/node.domain.com/privkey.pem"
 ```
 
-4) Generate the TLS Certificates
+### Generate the TLS Certificates
 
 Change the directory to where the Ursa project is located, e.g. by default `~/fleek-network/ursa`.
 
@@ -665,7 +665,7 @@ Change the directory to where the Ursa project is located, e.g. by default `~/fl
 cd ~/fleek-network/ursa
 ```
 
-5) Close any processes running on port 80
+#### 1) Close any processes running on port 80
 
 Find the PID of processes
 
@@ -702,7 +702,7 @@ lsof -i :80
 
 The response should be empty!
 
-6) Confirm that the domain name is pointing to the server's public IP address
+#### 2) Confirm that the domain name is pointing to the server's public IP address
 
 We are assuming that you have your domain name pointing to the server public IP address since you are migrating NGINX to Ursa-proxy. But if you're at the same time changing the domain name address that points to your server, or haven't done it, you have to open the domain name registrar dashboard and update the record type A records and set the domain name to respond with the server public IP Address.
 
@@ -734,7 +734,7 @@ node.example.com.		484 IN	A	181.196.118.156
 
 There are many other tools you can use to verify the DNS records, feel free to pick your favorite!
 
-7) Create the certificates
+#### 3) Create the certificates
 
 Execute the command which will start a standalone web server on port 80 of your host.
 
@@ -796,7 +796,7 @@ If you like Certbot, please consider supporting our work by:
 
 💡 Notice the "Successfully received certificate", where it's saved at "/etc/letsencrypt/live/node.example.com", the "This certificate expires on 2023-04-25" and any other details you might find interesting.
 
-8) Start the Ursa proxy
+#### 4) Start the Ursa proxy
 
 ```sh
 sudo systemctl start ursa-proxy
@@ -808,7 +808,7 @@ If the ursa-proxy was already running, you could reload the TLS Configuration on
 curl -X POST 0.0.0.0:8881/reload-tls-config
 ```
 
-#### Quick health check
+### Quick health check
 
 The working directory should be the Ursa project source code location, e.g. by default `~/fleek-network/ursa`.
 
@@ -816,7 +816,7 @@ The working directory should be the Ursa project source code location, e.g. by d
 cd ~/fleek-network/ursa
 ```
 
-1) Start the Ursa and Ursa-proxy services, if not already running
+#### 1) Check Ursa and Ursa Proxy services status
 
 You can check the current status by running the command for `ursa.service`
 
@@ -850,7 +850,9 @@ Notice that the response status above, says that it's active
 Active: active (running) since Fri 2023-04-28 12:38:54 UTC; 5h 22min ago
 ```
 
-If required, start the service(s) by running:
+#### 2) Start the Ursa and Ursa-proxy services
+
+If the status of the services are not running you start the service(s) by running:
 
 ```
 sudo systemctl start ursa
@@ -862,7 +864,7 @@ sudo systemctl start ursa-proxy
 
 If you run the `status` command from then on, it should be `active (running)`.
 
-2) Run a health check
+#### 3) Run a health check
 
 As instructed in the [guide](fleek-network-node-health-check-guide), we can do a quick health check by making `cURL` requests to our server and reading the response. There's the option to get the response body that should be text `pong` or get some HTTP Headers.
 
@@ -888,7 +890,7 @@ You can do these tests from any remote location that is not your server or local
 
 ✨ If everything looks good, you have successfully migrated to the Ursa-proxy from NGINX.
 
-#### Clear NGINX
+### Clear NGINX
 
 We'll assume that your use case is the Fleek Network node and that the NGINX server only has the node setup and no other services or sites. If that's the case, you'd want to uninstall and purge NGINX.
 
