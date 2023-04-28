@@ -2,8 +2,8 @@
 template: post
 draft: false
 hide_title: true
-title: 'Fleek Network: Managing the key store'
-slug: fleek-network-managing-the-key-store
+title: How to migrate to Ursa proxy from NGINX
+slug: how-to-migrate-to-ursa-proxy-from-nginx
 image: ./assets/fleek-network-migrate-to-ursa-proxy-from-nginx.png?202304271224
 date: 2023-04-27T23:00:00Z
 canonical: ''
@@ -17,13 +17,15 @@ tags:
 - nginx
 ---
 
+import Author from '@site/src/components/Author';
+
 ![](./assets/fleek-network-migrate-to-ursa-proxy-from-nginx.png?202304271224)
 
 ## Introduction
 
 Many actors are free to communicate with your server, as Fleek Network encourages participation, but this comes with challenges, in terms of security, network resource availability, etc. To have a bit of control over the connections, a reverse proxy helps prevent users from connecting to the server processes directly, reducing the number of entry points and actions within the system.
 
-On early builds, an NGINX service was included in the stack, fulfilling requirements and integrations simplicity. On the other hand, NGINX is a big project that offers features that are suitable for a wide range of use cases, which are not necessarily important for our goals.
+On early builds, an NGINX service was included in the stack, fulfilling requirements and integrations simplicity. On the other hand, NGINX is a big project that offers features that are suitable for a wide range of use cases, which are not necessarily important for our goals, or particular use case.
 
 We came up with the Ursa proxy, as a solution to replace NGINX, to provide us with a higher degree of control and customization to fit our service needs, such as mimicking the caching that NGINX does, SSL/TSL Certification, port mapping, etc.
 
@@ -206,7 +208,7 @@ We're going to assume that you're running the Docker stack with a system adminis
 /root/.ursa
 ```
 
-If you have changed the way you run Docker and containers, such as we have described in [Securing the Ursa files](../Network%20nodes/fleek-network-securing-the-ursa-files), then that'll be located at `$HOME/.ursa`.
+If you have changed the way you run Docker and containers, such as we have described in [Securing the Ursa files](./securing-the-ursa-files), then that'll be located at `$HOME/.ursa`.
 
 For the case where the directory does not exist, you can create it:
 
@@ -274,7 +276,7 @@ Find the PID of processes
 lsof -i :80
 ```
 
-If the port 80 is in use, you'll get a table similar to:
+If port 80 is in use, you'll get a table similar to:
 
 ```
 COMMAND PID   USER   FD   TYPE  DEVICE  SIZE/OFF  NODE NAME
@@ -287,7 +289,7 @@ Stop the process by name of PID
 kill -9 <PID>
 ```
 
-💡 Replace <PID> with the numerical value that corresponds to the process
+💡 Replace `<PID>` with the numerical value that corresponds to the process
 
 For example, given the table result the PID is 88493
 
@@ -684,7 +686,7 @@ Stop the process by name of PID
 kill -9 <PID>
 ```
 
-💡 Replace <PID> with the numerical value that corresponds to the process
+💡 Replace `<PID>` with the numerical value that corresponds to the process
 
 For example, given the table result the PID is 88493
 
@@ -942,4 +944,21 @@ Reload NGINX
 sudo systemctl reload nginx
 ```
 
-⚠️ Bear in mind that the Lets Encrypt certbot process requires the port 80 to be free, otherwise the it'll fail if you wish to autorenew or create new certificates
+⚠️ Bear in mind that the Lets Encrypt Certbot process requires port 80 to be free, otherwise it'll fail if you wish to auto-renew or create new certificates
+
+## Conclusion
+
+Fleek Network processes don't have to be fully exposed to the world, to prevent some of the concerns in that regard and networking security, we have a reverse proxy to offer us a bit of control. A reverse proxy helps prevent users from connecting to the server processes directly, reducing the number of entry points and interactions from external actors.
+
+On early builds, the NGINX Service was included as a Docker Service, or as a service in your host operating system. As we build the project, there is a need to provide better control and customization which lead to building our reverse proxy implementation that mimics some of the features offered by NGINX with a smaller footprint.
+
+The guide illustrates the steps required to migrate to Ursa proxy from NGINX in either Docker Stack or Native.
+
+Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

@@ -26,6 +26,7 @@ import Author from '@site/src/components/Author';
 ![](./assets/fleek-network-managing-the-keystore.png?202301021625)
 
 ## Introduction
+
 Fleek Network incentivizes participation by rewarding its node providers. A node is identifiable by an identity, which the reward mechanism uses to identify the node to reward it! 
 
 We'll use the term identity to describe the key store declared in the configuration file, in our case a [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail). Remember to keep this file secret 🙏!
