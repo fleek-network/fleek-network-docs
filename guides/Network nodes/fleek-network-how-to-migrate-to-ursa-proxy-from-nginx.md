@@ -498,15 +498,15 @@ git pull origin main
 
 The Ursa proxy is available as a [crate](https://github.com/fleek-network/ursa/tree/main/crates/ursa-proxy) in the source repository. You'll have to build from source every time a new update is available to have an executable. Also, create the configuration file, [systemd](https://en.wikipedia.org/wiki/Systemd) service, etc. This can take some time to get right, for this reason, we provide an install script to automate the processes.
 
-You have two options! Either build from source by running the install script or do it manually by following the instructions.
+You have two options! Either build from the source by running the install script or do it manually by following the instructions.
 
-#### 1) Run the Ursa proxy install script
+#### Run the Ursa proxy install script
 
 ```
 curl https://get.fleek.network/install_ursa_proxy | bash
 ```
 
-✨ Once completed you can move on to the next step! You are not required to follow the option 2 instructions to install it manually.
+✨ Once completed you can move on to the next step! You are not required to follow the manual setup installation instructions.
 
 #### Manual setup
 
@@ -665,6 +665,18 @@ Change the directory to where the Ursa project is located, e.g. by default `~/fl
 cd ~/fleek-network/ursa
 ```
 
+Then, you have two options! Either run the Lets Encrypt install script we provide to automate the process for you or follow the instructions in the guide.
+
+#### Run the Lets Encrypt install script
+
+```
+curl https://get.fleek.network/lets_encrypt | bash
+```
+
+✨ Once completed you can move on to the next step! You are not required to follow the steps to install the TLS Certificates manually.
+
+#### Manual
+
 #### 1) Close any processes running on port 80
 
 Find the PID of processes
@@ -673,7 +685,7 @@ Find the PID of processes
 lsof -i :80
 ```
 
-If the port 80 is in use, you'll get a table similar to:
+If port 80 is in use, you'll get a table similar to:
 
 ```
 COMMAND PID   USER   FD   TYPE  DEVICE  SIZE/OFF  NODE NAME
