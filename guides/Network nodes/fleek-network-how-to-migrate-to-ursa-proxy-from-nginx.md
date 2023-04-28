@@ -31,7 +31,7 @@ In the following guide, we'll provide instructions to migrate from NGINX to the 
 
 ## Docker stack
 
-On earlier versions of our Docker stack, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, used during the SSL/TLS certbot certification process to secure the domain name.
+On earlier versions of our Docker stack, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, required during the SSL/TLS certbot certification process to secure the domain name, relied on.
 
 Since the Docker stack [Ursa-proxy](https://github.com/fleek-network/ursa/commit/258af75d5ad2e28f85fca908edbcb8062d927d3b) changes, and the related support added from [Ursa-proxy](https://github.com/fleek-network/get.fleek.network/commit/0afa813ab74eaf15d50ad126d0534bbe0a14aed9) configuration in the assisted installer that the Ursa-proxy is now the default reverse proxy in the Docker stack.
 
@@ -446,3 +446,21 @@ Use the flag `-I` to get the HTTP Headers. To learn more read the guide [here](f
 You can do these tests from any remote location that is not your server or local machine and the health check should pass, as the port should be publicly available to any service on the internet.
 
 ✨ If everything looks good, you have successfully migrated to the Ursa-proxy from NGINX.
+
+## Native
+
+On earlier versions of our Native setup, an NGINX service was included, as the reverse proxy for the Ursa service. Plus, required during the SSL/TLS certbot certification process to secure the domain name, that the process relied on.
+
+Since the introduction of Ursa-proxy in our Ursa repository, and the related support added from [Ursa-proxy](https://github.com/fleek-network/get.fleek.network/commit/0afa813ab74eaf15d50ad126d0534bbe0a14aed9) configuration in the assisted installer that the Ursa-proxy is now the default reverse proxy in the Native setup.
+
+If you have set up a node before these features, you'll have NGINX declared and stored in your file system.
+
+We'll look into:
+- Setup the Ursa-proxy
+  - Pull the latest from source repository
+  - Remove the NGINX configuration files
+  - Create the `.ursa` proxy configuration directory
+  - Create the certificates directories
+  - Create a systemd service
+- Generate the TLS certifications
+- Do a health check
