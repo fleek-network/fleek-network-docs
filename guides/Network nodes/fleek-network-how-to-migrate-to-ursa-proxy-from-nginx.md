@@ -352,7 +352,7 @@ Execute the command which will start a standalone web server on port 80 of your 
 We're using backslashes "\" to break the lines to make it easier to read, you can ignore them.
 
 ```sh
-docker compose -f ./docker/full-node/docker-compose.yml \
+docker compose -f ./docker/full-node/docker-compose.yml run \
   -p 80:80 \
   --rm --entrypoint "\
   certbot certonly \
@@ -367,7 +367,7 @@ docker compose -f ./docker/full-node/docker-compose.yml \
 For example, let's say that your email address is `skywalker@example.com` and `node.example.com`, this is what it'd look like:
 
 ```sh
-docker compose -f ./docker/full-node/docker-compose.yml \
+docker compose -f ./docker/full-node/docker-compose.yml run \
   -p 80:80 \
   --rm --entrypoint "\
   certbot certonly \
