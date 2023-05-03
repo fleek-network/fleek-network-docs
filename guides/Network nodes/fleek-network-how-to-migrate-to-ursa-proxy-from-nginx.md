@@ -233,13 +233,13 @@ Put the following content in the `config.toml`:
 ```
 # Server without TLS.
 [[server]]
-proxy_pass = "127.0.0.1:4069"
+proxy_pass = "full-node-ursa-1:4069"
 listen_addr = "0.0.0.0:80"
 serve_dir_path = ".well-known"
 
 # Server with TLS
 [[server]]
-proxy_pass = "127.0.0.1:4069"
+proxy_pass = "full-node-ursa-1:4069"
 listen_addr = "0.0.0.0:443"
 
 [server.tls]
