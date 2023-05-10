@@ -24,7 +24,7 @@ error trying to connect: dns error: failed to lookup address information: Tempor
 
 This problem is due to changes in Docker naming services, as the hostname we use on the latest version of our Lets Encrypt script names the Docker Stack services under the latest versions.
 
-💡 If you don't want to upgrade Docker, then you have to modify the `~/.ursa/proxy/config.toml`, find and replace the service name from `full-node-ursa-1` to `full-node_ursa-proxy_1`. Followed by restarting the Docker stack. In the future, if you upgrade Docker, you'll have to revert it! For this reason, you are advised to upgrade Docker to avoid confusion.
+💡 If you don't want to upgrade Docker, then you have to modify the `~/.ursa/proxy/config.toml`, find and replace the service name from `full-node-ursa-1` to `full-node_ursa_1`. Followed by restarting the Docker stack. In the future, if you upgrade Docker, you'll have to revert it! For this reason, you are advised to upgrade Docker to avoid confusion.
 
 We're going to use Ubuntu as an example of what is required to do. Change to the required command suitable to your preferred package manager or setup to follow along. Alternatively, you might find it best to follow the official documentation [here](https://docs.docker.com/engine/install/ubuntu/).
 
