@@ -208,6 +208,8 @@ We're going to assume that you're running the Docker stack with a system adminis
 /root/.ursa
 ```
 
+⚠️ Update Docker, you should run version >= 23. Check the version by running `docker version`
+
 If you have changed the way you run Docker and containers, such as we have described in [Securing the Ursa files](./securing-the-ursa-files), then that'll be located at `$HOME/.ursa`.
 
 For the case where the directory does not exist, you can create it:
@@ -251,6 +253,8 @@ key_path = "/etc/letsencrypt/live/YOUR-DOMAIN/privkey.pem"
 [admin]
 addr = "0.0.0.0:8881"
 ```
+
+⚠️ Make sure that you have updated Docker, otherwise the `config.toml` settings above won't work! You should run Docker >= 23
 
 Find and replace `YOUR-DOMAIN` with your domain name. That'll be the values for the property `cert_path` and `key_path`, e.g. let's say that your domain name is `node.domain.com`, you'd replace `YOUR-DOMAIN` to have:
 
@@ -672,6 +676,8 @@ Then, you have two options! Either run the Lets Encrypt install script we provid
 ```
 curl https://get.fleek.network/lets_encrypt | bash
 ```
+
+⚠️ Update Docker, you should run version >= 23. Check the version by running `docker version`
 
 ✨ Once completed you can move on to the next step! You are not required to follow the steps to install the TLS Certificates manually.
 
