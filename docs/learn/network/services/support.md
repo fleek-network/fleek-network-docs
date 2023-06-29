@@ -1,9 +1,8 @@
 ---
-title: support
-slug: support
+title: Support
 tags:
-  - support
+  - Support
 sidebarCollapsible: false
 ---
 
-TODO: support
+TODO: Support

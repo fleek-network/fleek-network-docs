@@ -1,9 +1,8 @@
 ---
-title: interface
-slug: interface
+title: Interface
 tags:
-  - interface
+  - Interface
 sidebarCollapsible: false
 ---
 
-TODO: interface
+TODO: Interface

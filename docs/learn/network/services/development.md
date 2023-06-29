@@ -1,8 +1,7 @@
 ---
-title: development
-slug: development
+title: Development
 tags:
-  - development
+  - Development
 sidebarCollapsible: false
 ---
 

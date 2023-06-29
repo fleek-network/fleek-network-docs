@@ -1,8 +1,8 @@
 ---
-title: dynamic service loader
+title: Dynamic service loader
 tags:
-  - dynamic service loader
+  - Dynamic service loader
 sidebarCollapsible: false
 ---
 
-TODO: dynamic service loader
+TODO: Dynamic service loader
