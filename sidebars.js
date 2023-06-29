@@ -74,15 +74,20 @@ const sidebars = {
       label: 'Build',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'build/index',
+      },
       items: [
-        {
-          type: 'category',
-          label: 'Requirements',
-          items: [
-            'build/requirements/linux-server',
-            'build/requirements/specs',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Requirements',
+        //   items: [
+        //     'build/requirements/linux-server',
+        //     'build/requirements/specs',
+        //   ],
+        // },
+        'build/requirements',
         {
           type: 'category',
           label: 'Install',
