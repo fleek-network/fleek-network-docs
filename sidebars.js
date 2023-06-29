@@ -38,6 +38,7 @@ const sidebars = {
               collapsed: true,
               collapsible: true,
               items: [
+                'learn/network/overview/architecture',
                 'learn/network/overview/introduction',
                 'learn/network/overview/application-layer',
                 'learn/network/overview/benchmarks',
@@ -45,7 +46,6 @@ const sidebars = {
                 'learn/network/overview/client-libraries',
                 'learn/network/overview/epoch-synchronizer',
                 'learn/network/overview/handshake',
-                'learn/network/overview/node-distribution-map',
               ],
             },
             {
