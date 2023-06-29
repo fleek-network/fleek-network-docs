@@ -22,8 +22,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Learn',
-      collapsed: false,
-      collapsible: false,
+      collapsed: true,
+      collapsible: true,
       items: [
         'learn/about',
         'learn/how-it-works',
@@ -32,21 +32,20 @@ const sidebars = {
           type: 'category',
           label: 'Network',
           items: [
-            'learn/network/overview',
-            'learn/network/benchmarks',
-            'learn/network/node-distribution-map',
-            'learn/network/application-layer',
-            'learn/network/blockstore',
-            'learn/network/client-libraries',
-            'learn/network/epoch-synchronizer',
-            'learn/network/handshake',
             {
               type: 'category',
-              label: 'Services',
+              label: 'Overview',
+              collapsed: true,
+              collapsible: true,
               items: [
-                'learn/network/services/dynamic-service-loader',
-                'learn/network/services/development',
-                'learn/network/services/support',
+                'learn/network/overview/introduction',
+                'learn/network/overview/application-layer',
+                'learn/network/overview/benchmarks',
+                'learn/network/overview/blockstore',
+                'learn/network/overview/client-libraries',
+                'learn/network/overview/epoch-synchronizer',
+                'learn/network/overview/handshake',
+                'learn/network/overview/node-distribution-map',
               ],
             },
             {
@@ -59,18 +58,55 @@ const sidebars = {
             'learn/ports',
           ],
         },
+        {
+          type: 'category',
+          label: 'Services',
+          items: [
+            'learn/network/services/dynamic-service-loader',
+            'learn/network/services/development',
+            'learn/network/services/support',
+          ],
+        },
       ],
     },
     {
       type: 'category',
       label: 'Build',
+      collapsed: true,
+      collapsible: true,
       items: [
         {
-          type: 'doc',
-          id: 'build/index',
+          type: 'category',
+          label: 'Requirements',
+          items: [
+            'build/requirements/linux-server',
+            'build/requirements/specs',
+          ],
         },
+        {
+          type: 'category',
+          label: 'Install',
+          items: [
+            'build/install/wizard',
+            'build/install/manually',
+          ],
+        },
+        'build/configuration',
+        'build/diagnostics',
       ],
     },
+    {
+      type: 'category',
+      label: 'Develop',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'develop/client',
+        'develop/service-development',
+        'develop/json-rpc',
+      ],
+    },
+    'contribute',
   ],
 };
 

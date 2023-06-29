@@ -1,6 +1,5 @@
 ---
-title: contribute
-slug: contribute
+title: Contribute
 tags:
   - contribute
 ---
