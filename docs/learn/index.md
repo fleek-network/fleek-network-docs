@@ -1,8 +1,9 @@
 ---
-title: About
-slug: about
+title: Learn about Fleek Network
+slug: learn-about-fleek-network
 tags:
   - about
+  - learn
   - fleek network
   - whitepaper
 ---

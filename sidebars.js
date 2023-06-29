@@ -24,8 +24,11 @@ const sidebars = {
       label: 'Learn',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'learn/index',
+      },
       items: [
-        'learn/about',
         'learn/how-it-works',
         'learn/tokenomics',
         {
