@@ -82,14 +82,6 @@ const sidebars = {
         id: 'build/index',
       },
       items: [
-        // {
-        //   type: 'category',
-        //   label: 'Requirements',
-        //   items: [
-        //     'build/requirements/linux-server',
-        //     'build/requirements/specs',
-        //   ],
-        // },
         'build/requirements',
         {
           type: 'category',

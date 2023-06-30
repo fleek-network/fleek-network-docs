@@ -1,6 +1,6 @@
 ---
-title: Build
-slug: build
+title: Build a node
+slug: build-a-node
 tags:
   - build
 ---
