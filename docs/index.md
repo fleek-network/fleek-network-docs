@@ -14,6 +14,11 @@ tags:
 - Fleek Network
 ---
 
+:::info
+In the past few months we expanded our initial CDN research into a full decentralized Edge Network. Most of that work is now done, and we have a new draft whitepaper and Github repo that we will release publicly this July, and a testnet for the decentralized edge network that will launch in August. [Read our milestone/roadmap update](https://blog.fleek.network/post/fleek-network-milestones-update/) for the full details. Expect updated documentation and node upgrade guides soon! Stay tuned to our [Discord](https://discord.gg/fleekxyz) for updates.
+:::
+
+
 Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
 
 A Fleek Network node can be built and run on your local machine. Our docs provide you with the resources to help you.
