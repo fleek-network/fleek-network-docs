@@ -8,6 +8,10 @@ sidebarCollapsible: false
 
 This section provides the requirements for the server specifications on which the Fleek Network Node can be installed and run.
 
+:::caution warning
+Only 64 bits distributions are supported. Do not try to install it on a 32 bits operating system!
+:::
+
 # Server
 ---
 
@@ -17,7 +21,10 @@ The Fleek Network node binary is only supported by a Linux server. Currently, we
 - Fedora
 - CentOS
 
-💡 Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
+:::tip
+Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
+:::
+
 
 Because of the use of Linux containerization technology, other operating systems, such as FreeBSD, OpenBSD, MacOS, Windows and others are not supported.
 
