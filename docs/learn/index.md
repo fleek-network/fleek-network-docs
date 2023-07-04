@@ -8,6 +8,8 @@ tags:
   - whitepaper
 ---
 
-Fleek Network is a Decentralized Edge Platform that accelerates the development and execution of highly-performant Web Services. A network where dApps, Services, Web3 protocols, amongst others, can enable the decentralization of the stack it's built on without compromising the cost, complexity and user experience.
+Fleek Network is a decentralized edge platform optimized to facilitate the deployment and running of highly-performant web services, such as CDN, Serverless functions, amongst others.
+
+We'll take a brief look into [how it works](how-it-works), [why does it exist](why-does-it-exist), and the [services](services) to mention a few.
 
 For a deeper dive into Fleek Network, read the white paper available [here](/todo:whitepaper).

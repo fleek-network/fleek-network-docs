@@ -30,6 +30,7 @@ const sidebars = {
       },
       items: [
         'learn/how-it-works',
+        'learn/why-does-it-exist',
         'learn/tokenomics',
         {
           type: 'category',
