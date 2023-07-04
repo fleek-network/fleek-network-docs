@@ -100,6 +100,10 @@ const sidebars = {
       label: 'Develop',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'develop/index',
+      },
       items: [
         'develop/client',
         'develop/service-development',

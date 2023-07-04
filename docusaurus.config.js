@@ -33,6 +33,12 @@ const commonNavbarItems = [{
   label: 'Reference',
   position: 'left',
   activeBasePath: 'reference',
+},
+{
+  to: 'develop',
+  label: 'Develop',
+  position: 'left',
+  activeBasePath: 'develop',
 }];
 
 const commonDiscord = 'https://discord.gg/fleekxyz';
@@ -211,6 +217,18 @@ const config = {
           id: 'reference',
           path: 'reference',
           routeBasePath: '/reference',
+          // `undefined` to auto-generate
+          sidebarPath: undefined,
+          ...commonDocsOptions,
+        }),
+      ],
+      [
+        'content-docs',
+        /** @type {import('@docusaurus/plugin-content-docs').Options} */
+        ({
+          id: 'develop',
+          path: 'develop',
+          routeBasePath: '/develop',
           // `undefined` to auto-generate
           sidebarPath: undefined,
           ...commonDocsOptions,
