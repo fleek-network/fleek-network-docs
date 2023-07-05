@@ -1,9 +1,12 @@
 ---
-title: Build a node
-slug: build-a-node
+title: Overview
+slug: overview
+hide_title: true
 tags:
   - build
 ---
+
+## Overview
 
 This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a Node operator.
 

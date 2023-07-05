@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Overview
+title: About
 sidebarCollapsible: false
 sidebar_position: 1
 date: 2023-06-29T09:00:00.000+00:00
@@ -18,11 +18,9 @@ tags:
 
 Fleek Network is an open-source Edge Computing Platform to accelerate the development and execution of decentralized Web Services.
 
-Fleek Network is a platform for Apps, Protocols and Service builders looking to achieve decentralization without sacrificing cost and user experience — a robust solution for a broad range of use cases, including Content Delivery and Serverless functions.
-
 The system builds on a distributed network of Nodes, where services run within a fair and incentivized ecosystem constituted by an open community of developers and operators who hold and control their private identities.
 
-You can run a Node or build a Service without permission. Alternatively, become a client for any of the supported services.
+You can run a Node or build a Service without permission. In contrast, consume any Fleek Network computational resources provided by services on demand.
 
 :::info
 The Fleek Network's documentation is organized as follows:

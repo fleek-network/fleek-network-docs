@@ -24,11 +24,8 @@ const sidebars = {
       label: 'Learn',
       collapsed: true,
       collapsible: true,
-      link: {
-        type: 'doc',
-        id: 'learn/index',
-      },
       items: [
+        'learn/index',
         'learn/how-it-works',
         'learn/why-does-it-exist',
         'learn/tokenomics',
@@ -78,11 +75,8 @@ const sidebars = {
       label: 'Build',
       collapsed: true,
       collapsible: true,
-      link: {
-        type: 'doc',
-        id: 'build/index',
-      },
       items: [
+        'build/index',
         'build/requirements',
         {
           type: 'category',
@@ -101,17 +95,15 @@ const sidebars = {
       label: 'Develop',
       collapsed: true,
       collapsible: true,
-      link: {
-        type: 'doc',
-        id: 'develop/index',
-      },
       items: [
+        'develop/index',
         'develop/client',
         'develop/service-development',
         'develop/json-rpc',
       ],
     },
     'contribute',
+    'whitepaper',
   ],
 };
 
