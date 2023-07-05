@@ -26,8 +26,8 @@ const sidebars = {
       collapsible: true,
       items: [
         'learn/index',
+        'learn/why-it-exists',
         'learn/how-it-works',
-        'learn/why-does-it-exist',
         'learn/tokenomics',
         {
           type: 'category',

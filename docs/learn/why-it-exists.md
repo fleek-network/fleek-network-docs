@@ -1,8 +1,8 @@
 ---
-title: Why does it exist?
-slug: why-does-it-exist
+title: Why it exists?
+slug: why-it-exists
 tags:
-  - why-does-it-exist
+  - why-it-exists
 sidebarCollapsible: false
 ---
 
@@ -10,7 +10,7 @@ The demand for content delivery and computation is skyrocketing, and due to the 
 
 Cloud Providers have a central infrastructure giving immense control to obscure authorities that can influence computations, block access to data, and even manipulate it.
 
-On the other hand, Cloud Providers depend on costly infrastructure that requires a significant number of resources. Traditionally these are dispersed geographically but more commonly located in convenient regions for the businesses; that is, a resolver might only find a resourceful node close to you sometimes.
+On the other hand, Cloud Providers depend on costly infrastructure that requires a significant number of resources. Traditionally, these are dispersed geographically but more commonly located in convenient regions for the businesses; that is, a resolver might only find a resourceful node close to you sometimes.
 
 In contrast, it'd be extremely difficult to compete as a provider due to the corporative establishment that dominates the internet. Fairer economic incentives have a growing interest from computer resource providers and related communities.
 
