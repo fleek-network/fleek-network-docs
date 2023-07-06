@@ -6,6 +6,28 @@ tags:
 sidebarCollapsible: false
 ---
 
+## A decentralized internet
+
+The original vision for the Internet was to build a network where everyone could participate, access and share information. But this was compromised after individuals and organizations found ways to trap and monetize information gathered from users.
+
+Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A Decentralized Web, which's often referred to as Web 3, where the trend is to build services that do not require a central authority.
+
+A Decentralized Web envisions a world where services are powered by the community.
+
+## Open-source development
+
+When a central server stores data, the client has to fetch it every time he needs it. On an Edge Network, the data is closer to where it'll be used.
+
+Similarly, if a decentralized system uses a few seconds of computation time daily from thousands of servers, there's a high chance to pass unnoticed. The same can't be expected when dealing with traditional Cloud Providers, due to availability, cost, orchestration, etc.
+
+On decentralization, we achieve resilience, as it doesn't die when one company goes out of business. Plus, the process of incremental improvement of a protocol, and transparency of open-source development, can have it refined into something impossible to displace. As achieved by the protocols: POP3/SMTP, TCP/IP, DNS, Bitcoin, etc.
+
+The underlying assumption is that you can't ever be finished with anything. However, as more time passes the more refined the product becomes and the less you need to change it.
+
+An essential part of a decentralized web is that companies, organizations and individuals choose to run applications using open protocols and data formats.
+
+## The next generation of Internet services
+
 The demand for content delivery and computation is skyrocketing, and due to the rise of AI, video, gaming, and other media content popularity, demand will keep going up. 
 
 Our society is turning obsessively digital, and most of our daily activities are digitally recorded. Technology is meddling with personal data and thoughts, culture and relationship with each other.
