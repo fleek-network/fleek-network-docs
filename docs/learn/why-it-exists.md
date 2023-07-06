@@ -14,7 +14,7 @@ Thankfully, the emerging movement to break free from centralization, and privacy
 
 A Decentralized Web envisions a world where services are powered by the community.
 
-## Open-source development
+## Open protocol
 
 When a central server stores data, the client has to fetch it every time he needs it. On an Edge Network, the data is closer to where it'll be used.
 
