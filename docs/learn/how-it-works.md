@@ -1,6 +1,7 @@
 ---
 title: How it works?
 slug: how-it-works
+hide_title: true
 tags:
   - how-it-works
 sidebarCollapsible: false
@@ -39,11 +40,9 @@ When an epoch ends, which is about 24 hours, the rewards from all submitted Deli
 
 A Delivery Acknowledgement is an end-user confirmation and proof that a Node sent a block of content successfully.
 
-Delivery Acknowledgements include metadata about the commodities consumed by a Node while executing a Service.
+It includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
 
-The metadata contained in the Delivery Acknowledgements is used when determining the reward attributed to a Node.
-
-Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol.
+Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol.
 
 ## Reputation
 
