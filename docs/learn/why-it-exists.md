@@ -28,7 +28,7 @@ An essential part of a decentralized web is that companies, organizations and in
 
 ## The next generation of Internet services
 
-The demand for content delivery and computation is skyrocketing, and due to the rise of AI, video, gaming, and other media content popularity, demand will keep going up. 
+The demand for content delivery and computation is skyrocketing, and due to the rise of AI/AR/VR, video, gaming, and other media content popularity, demand will keep going up.
 
 Our society is turning obsessively digital, and most of our daily activities are digitally recorded. Technology is meddling with personal data and thoughts, culture and relationship with each other.
 
@@ -40,5 +40,6 @@ In contrast, it'd be extremely difficult to compete as a provider due to the cor
 
 Most Web3 services have their client-facing interfaces hosted and delivered through centralized Cloud Providers, breaking the trust upfront and causing considerable disappointment to the end user.
 
-
 Since Decentralized Storage, Edge Computing and Peer-to-peer Networking technology are a reality, a decentralized content delivery network or Serverless functions, amongst others, are possible — helping achieve the goal of a fully decentralized Web experience.
+
+The next generation of Internet Services brings tremendous cost benefits, high availability, geographic distribution and betterment of the performance, load times and perceived user experience.
