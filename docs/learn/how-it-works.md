@@ -40,7 +40,12 @@ The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum
 
 Node operators stake FLK tokens to perform work on the network. In contrast, developers and clients use stablecoins in a fair exchange for the commodities and resources consumed on the network.
 
-A Node is a process that runs on a machine that provides resources to the Network. The resources are packaged as commodities, for instance, availability, bandwidth, and CPU. These commodities are exchanged fairly and pricing is decided by the ecosystem and network governance in USD.
+A Node is a process that runs on a machine that provides resources to the Network. The resources are packaged as commodities, for instance:
+- Availability
+- Bandwidth
+- CPU
+
+These commodities are exchanged fairly and pricing is decided by the ecosystem and network governance in USD.
 
 This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless, decentralized, and long-term sustainable environment.
 
@@ -52,9 +57,11 @@ When an epoch ends, which is about 24 hours, the rewards from all submitted Deli
 
 A Delivery Acknowledgement is an end-user confirmation and proof that a Node sent a block of content successfully.
 
-It includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
+The Delivery Acknowledgements are cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction.
 
-Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol.
+A Delivery Acknowledgement includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
+
+Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the Core Protocol.
 
 ## Reputation
 
