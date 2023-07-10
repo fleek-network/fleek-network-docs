@@ -13,7 +13,7 @@ It abstracts away the development complexities of Consensus, Cryptography, Stora
 
 It frees developers and teams to focus on what matters the most to reach business goals.
 
-## Abstraction
+## Abstraction
 
 Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
 
