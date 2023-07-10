@@ -21,6 +21,18 @@ The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum
 
 This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless, decentralized, and long-term sustainable environment.
 
+It's important to keep track of these components to ensure that the system is running fairly. The protocol holds the state for the following:
+- Token Balances
+- Staking details
+- The Node Reputation
+- Data on how much work a Node has performed in a given epoch
+
+As a decentralized Network, the state of these is replicated across all of the distributed Nodes in the Network by forming a Blockchain, in which Consensus on transactions transmutes to the final immutable state.
+
+## Consensus
+
+
+
 ## The Edge Network
 
 The community members host and operate the Network Nodes, which form the Edge Platform, and contribute to a decentralized network of Web Services. Some of the resources provided by the Network Nodes are:
