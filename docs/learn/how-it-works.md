@@ -76,51 +76,55 @@ The **Client** is a user that consumes data from the network; for instance:
 - A developer interested in using the CDN in an application
 - A media publisher wanting to accelerate access to media assets
 - A system administrator looking for instructions to troubleshoot the client library
-- A Solutions Architect looking for a quick overview of a cheaper service alternative
+- A Solutions Architect looking for a quick overview of an alternative service for a centralized providers
 - Instructions to install and use the client library
-- Etc
+- Others
 
-A client is a paying customer for service computations in the network, e.g. a CDN service customer who pays for bandwidth use, etc.
+A client is a paying customer for the commodities and resources consumed on the network, e.g. a CDN service customer who pays for bandwidth use, etc.
 
 This type of user can:
 
-- Top up the account
+- Top up the account to have enough credit to exchange for service
 - Check the balance
 - Check the cost(s) of the service(s)
 - Many others (relative to the service offering that might be of a third-party provider)
 
-The **Developer** is a type of user that applies knowledge that enables the business logic and end-to-end experience to the e**nd-user** through applications. Take, for example:
+The **Developer** is a knowledgeable user that enables the business logic and end-to-end experience to the **end-user** through applications or services. Take, for example:
 
+- Protocol development contributor
+- Service creator
 - Usage of the client library
 - Contributions to the client libraries and tools
 - The library method and parameters references
 - Versions and features support
-- Etc
+- Much more
 
-A developer is a knowledge user, often described as a builder who enables the end-to-end experience in the Fleek Network. A builder that can work at the Service provider level, protocol development, core contributor and, amongst others, at a higher level, such as providing support and integrations of services in applications or third-party systems.
+A developer is often described as a builder who enables the end-to-end experience in the Fleek Network. A builder that can work at the Service provider level, protocol development, core contributor and, amongst others, at a higher level, such as providing support and integrations of services in applications or third-party systems.
 
-An **End-user** is someone to who the data or computation output is ultimately delivered, among others:
+An **End-user** is someone to whom the data or computation output is ultimately delivered, among others:
 
 - Static assets, such as images on a website
 - Image optimization for a very particular size request
 - Server-side rendering
-- Can get the data through HTTP Gateway or RPC
-- Etc
+- Gets data through HTTP Gateway or RPC
+- Amongst others
 
-A **Node Operator** is a type of user close to a system administrator who builds, configures, installs or maintains a node(s) in a server. To mention a few use cases:
+A **Node Operator** is a kind of system administrator who builds, configures, installs or maintains a Node(s) in a server. To mention a few use cases:
 
 - Builds the Node binary from source-code
 - Updates the Node source-code
-- Executes the install wizard
+- Runs the installation wizard to setup a Node
 - Installs the Node manually
 - Configures the Node
 - Secures the server
-- Etc
+- Other cases
 
-The Fleek Network works as a distributed system of nodes where each node operates and contributes to the system’s overall health and functionality with computational resources by demand.
+The Fleek Network works as a distributed system of nodes where each node operates and contributes to the system’s overall health and functionality with computational resources by network operation demand.
 
-Nodes are set up to run on servers by operators, who are system administrators who build, configure, install and maintain the nodes in a server. Generally, a node is installed and runs on a computer or virtual private server (VPS) lent by a Cloud Service Provider — a server is where a Node runs and can be located anywhere in the world.
+Nodes are set up to run on servers by operators. Operators are system administrators who build, configure, install and maintain the nodes in a server. Generally, a node is installed and runs on a computer or virtual private server (VPS) lent by a Cloud Service Provider.
 
-The Node Operator is a critical system actor incentivised to manage one or many nodes, ultimately making the Fleek Network what’s about: a decentralised orchestration layer and infrastructure.
+A server is a computer machine where a Node runs and can be located anywhere in the world.
 
-Any individual can become a Node Operator by reading the documentation made available by the network core team and community.
+The Node Operator is a critical system actor that is incentivized to manage one or many nodes. Ultimately making the Fleek Network what is about, a decentralized orchestration layer and infrastructure.
+
+Any individual who's interested in learning can become a Node Operator by reading the documentation, or content made available by the Network Core team and Community.
