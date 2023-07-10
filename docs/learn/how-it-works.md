@@ -31,7 +31,13 @@ As a decentralized Network, the state of these is replicated across all of the d
 
 ## Consensus
 
+Narwhal and Bullshark, are high-performant mempool and consensus engines by Mysten Labs. The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering and Bullshark as the consensus engine.
 
+The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system.
+
+Bullshark is a zero networking overhead protocol that handles transactions that require total ordering, and synchronization of the transactions between Nodes and the global Network state.
+
+[WIP]
 
 ## The Edge Network
 
@@ -61,7 +67,7 @@ When an epoch ends, which is about 24 hours, the rewards from all submitted Deli
 
 ## Delivery Acknowledgements
 
-A Delivery Acknowledgement is an end-user confirmation and proof that a Node sent a block of content successfully.
+A Delivery Acknowledgement is a signed message by a client attesting that a node has successfully delivered a task to the client. These acknowledgments are instantly finalized locally and can not be reverted by the client.
 
 The Delivery Acknowledgements are cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction.
 
