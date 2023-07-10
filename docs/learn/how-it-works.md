@@ -7,7 +7,19 @@ tags:
 sidebarCollapsible: false
 ---
 
-The core of Fleek Network is a foundational layer that enables developers to build and deploy Edge Services efficiently. Abstracting the complexities of consensus, cryptography, storage and peer-to-peer networking, amongst others. It frees developers and teams to focus on what matters the most to reach their business goals.
+The Core of Fleek Network offers a foundational layer to enable developers to build and deploy Edge Services efficiently.
+
+It abstracts away the development complexities of Consensus, Cryptography, Storage and Peer-to-peer Networking, amongst others, in order to simplify things conceptually.
+
+It frees developers and teams to focus on what matters the most to reach business goals.
+
+## Abstraction
+
+Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
+
+The building blocks provide you with enough level of detail that the modern Developer Experience demands but with cryptographic, economical and security assurances for confident service development, amongst others.
+
+The Fleek Network implementation is open source and freely available for consultation and contribution when more detail or refinement is required by the community and other observers.
 
 ## The Edge Network
 
@@ -128,3 +140,16 @@ A server is a computer machine where a Node runs and can be located anywhere in 
 The Node Operator is a critical system actor that is incentivized to manage one or many nodes. Ultimately making the Fleek Network what is about, a decentralized orchestration layer and infrastructure.
 
 Any individual who's interested in learning can become a Node Operator by reading the documentation, or content made available by the Network Core team and Community.
+
+## Multi-Service support
+
+The Fleek Network provides a base layer as the foundation of many Services.
+
+The Core is simple, handling Proof-of-delivery and other Client-Node exchanges, such as user balance and rewards.
+
+Design to allow anyone to create and deploy a custom Service to the Network, without having to get permission. The protocol slashing mechanisms help deter malicious behavior and penalize dishonest participants while allowing the service, a modular unit, to operate at maximum availability and performance.
+
+Within a diverse ecosystem where Node Operators are free to choose which Services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
+
+## Modular architecture
+
