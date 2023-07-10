@@ -13,13 +13,13 @@ It abstracts away the development complexities of Consensus, Cryptography, Stora
 
 It frees developers and teams to focus on what matters the most to reach business goals.
 
-## Abstraction
+## Protocol
 
-Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
+The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing Cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
 
-The building blocks provide you with enough level of detail that the modern Developer Experience demands but with cryptographic, economical and security assurances for confident service development, amongst others.
+The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum for staking, payments, governance and other economic features.
 
-The Fleek Network implementation is open source and freely available for consultation and contribution when more detail or refinement is required by the community and other observers.
+This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless, decentralized, and long-term sustainable environment.
 
 ## The Edge Network
 
@@ -32,11 +32,7 @@ The community members host and operate the Network Nodes, which form the Edge Pl
 
 ## Incentives
 
-The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing Cloud providers by allowing anyone to offer computer resources in a fair exchange for FLK tokens. Including, secured information about who requested it on the network.
-
 Fleek Network issues FLK, an ERC-20 fungible token created using the Ethereum Blockchain.
-
-The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum for staking, payments, governance and other economic features.
 
 Node operators stake FLK tokens to perform work on the network. In contrast, developers and clients use stablecoins in a fair exchange for the commodities and resources consumed on the network.
 
@@ -46,8 +42,6 @@ A Node is a process that runs on a machine that provides resources to the Networ
 - CPU
 
 These commodities are exchanged fairly and pricing is decided by the ecosystem and network governance in USD.
-
-This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless, decentralized, and long-term sustainable environment.
 
 Service providers are rewarded for fulfilling cache requests per bandwidth and by sharing cached data with other peers – as an incentive for a shared economy – therefore the more bandwidth served, the more tokens received.
 
@@ -148,7 +142,7 @@ The Node Operator is a critical system actor that is incentivized to manage one 
 
 Any individual who's interested in learning can become a Node Operator by reading the documentation, or content made available by the Network Core team and Community.
 
-## Multi-Service support
+## Multi-Service Support
 
 The Fleek Network provides a base layer as the foundation of many Services.
 
@@ -157,6 +151,14 @@ The Core is simple, handling Proof-of-delivery and other Client-Node exchanges, 
 Design to allow anyone to create and deploy a custom Service to the Network, without having to get permission. The protocol slashing mechanisms help deter malicious behavior and penalize dishonest participants while allowing the service, a modular unit, to operate at maximum availability and performance.
 
 Within a diverse ecosystem where Node Operators are free to choose which Services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
+
+## Build blocks abstraction
+
+Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
+
+The building blocks provide you with enough level of detail that the modern Developer Experience demands but with cryptographic, economical and security assurances for confident service development, amongst others.
+
+The Fleek Network implementation is open source and freely available for consultation and contribution when more detail or refinement is required by the community and other observers.
 
 ## Modular architecture
 
