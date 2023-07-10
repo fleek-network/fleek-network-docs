@@ -63,7 +63,7 @@ const sidebars = {
           type: 'category',
           label: 'Services',
           items: [
-            'learn/network/services/dynamic-service-loader',
+            'learn/network/services/index',
             'learn/network/services/development',
             'learn/network/services/support',
           ],

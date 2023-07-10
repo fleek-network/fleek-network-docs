@@ -1,5 +1,5 @@
 ---
-title: Dynamic service loader
+title: Introduction
 tags:
   - Dynamic service loader
 sidebarCollapsible: false

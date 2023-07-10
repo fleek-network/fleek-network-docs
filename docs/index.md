@@ -25,9 +25,9 @@ You can run a Node or build a Service without permission. In contrast, consume a
 :::info
 The Fleek Network's documentation is organized as follows:
 
-[Documentation](documentation) brief breakdown of the Fleek Network.
+[Documentation](docs) brief breakdown of the Fleek Network.
 
-[Engineering](engineering) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
+[Engineering](blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
 
 The [Guides](guides) provide step-by-step instructions for performing specific tasks.
 

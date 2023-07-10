@@ -1,8 +1,10 @@
 ---
-title: develop
-slug: develop
+title: Introduction
+sidebar_position: 1
 tags:
-  - develop
+- Develop
+- Help
+- Fleek Network
 ---
 
-Developers can create and utilize a multitude of Edge Services that inherit cryptographic and economically secured infrastructure. On top of geographic coverage guarantees, predictable costs and performance across all services running on the network.
+TODO: Develop
