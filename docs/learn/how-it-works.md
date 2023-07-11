@@ -31,13 +31,18 @@ As a decentralized Network, the state of these is replicated across all of the d
 
 ## Consensus
 
-Narwhal and Bullshark, are high-performant mempool and consensus engines by Mysten Labs. The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering and Bullshark as the consensus engine.
+[Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering that requires total ordering (linear order) and Bullshark as the consensus engine.
 
-The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system.
+The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system. The protocol achieves reliable dissemination and storage of causal histories of transactions. Narwhal tolerates an asynchronous network and maintains high performance despite
+failures.
 
-Bullshark is a zero networking overhead protocol that handles transactions that require total ordering, and synchronization of the transactions between Nodes and the global Network state.
+Bullshark is a zero-message overhead consensus algorithm that handles transactions that require total ordering, and synchronization of the transactions between Nodes and the global Network state.
 
-[WIP]
+Where Narwhal ensures data is submitted to consensus, Bullshark sorts out the order of the data.
+
+:::info
+Total ordering is performed by a committee-based approach. The committee is formed from a subset of any valid staked Node at the end of every epoch (about 24 hours). The integrity is met due to the Node rotation that occurs at each period, reducing risks associated with Nodes being compromised and affecting the committee purity. In summary, a subset of Nodes forms a new committee at each Epoch, that does the transaction ordering of the workload computed and submitted by the remaining Nodes.
+:::
 
 ## The Edge Network
 
