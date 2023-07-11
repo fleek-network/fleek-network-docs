@@ -33,6 +33,10 @@ As a decentralized Network, the state of these is replicated across all of the d
 
 [Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering that requires total ordering (linear order) and Bullshark as the consensus engine.
 
+:::info
+The primary transactions being ordered by the Consensus algorithm is the batch of Delivery Acknowledgements stored in a local list of transactions before commitment to the blockchain (memory pool).
+:::
+
 The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system. The protocol achieves reliable dissemination and storage of causal histories of transactions. Narwhal tolerates an asynchronous network and maintains high performance despite
 failures.
 
@@ -72,13 +76,13 @@ When an epoch ends, which is about 24 hours, the rewards from all submitted Deli
 
 ## Delivery Acknowledgements
 
-A Delivery Acknowledgement is a signed message by a client attesting that a node has successfully delivered a task to the client. These acknowledgments are instantly finalized locally and can not be reverted by the client.
+A Delivery Acknowledgement is a signed message by a client attesting that a node has successfully delivered a task to the client. These acknowledgments are instantly finalized locally and irreversible by the client.
 
 The Delivery Acknowledgements are cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction.
 
 A Delivery Acknowledgement includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
 
-Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the Core Protocol.
+Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol and committee as described in the [Consensus](#consensus) section.
 
 ## Reputation
 
