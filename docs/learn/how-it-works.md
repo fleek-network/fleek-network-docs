@@ -19,7 +19,7 @@ When a client requests a Service, the protocol determines the best route to the 
 
 Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed. 
 
-The Acknowledgement Deliveries are stored locally in the participating node memory pools, rolled-up to the protocol consensus at the end of each Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
+The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus at the end of each Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
 
 ## Protocol
 
