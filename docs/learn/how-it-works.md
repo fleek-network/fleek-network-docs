@@ -13,13 +13,21 @@ It abstracts away the development complexities of Consensus, Cryptography, Stora
 
 It frees developers and teams to focus on what matters the most to reach business goals.
 
+## TLDR;
+
+When a client requests a Service, the protocol determines the best route to the nodes where the service replicas and workload allocates.
+
+Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed. 
+
+The Acknowledgement Deliveries are stored locally in the participating node memory pools, rolled-up to the protocol consensus at the end of each Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
+
 ## Protocol
 
 The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing Cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
 
 The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum for staking, payments, governance and other economic features.
 
-This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless, decentralized, and long-term sustainable environment.
+This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless decentralized, and long-term sustainable environment.
 
 It's important to keep track of these components to ensure that the system is running fairly. The protocol holds the state for the following:
 - Token Balances
@@ -33,7 +41,7 @@ As a decentralized Network, the state of these is replicated across all of the d
 
 [Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering that requires total ordering (linear order) and Bullshark as the consensus engine.
 
-:::info
+:::note
 The primary transactions being ordered by the Consensus algorithm is the batch of Delivery Acknowledgements stored in a local list of transactions before commitment to the blockchain (memory pool).
 :::
 
@@ -44,7 +52,7 @@ Bullshark is a zero-message overhead consensus algorithm that handles transactio
 
 Where Narwhal ensures data is submitted to consensus, Bullshark sorts out the order of the data.
 
-:::info
+:::tip Total ordering
 Total ordering is performed by a committee-based approach. The committee is formed from a subset of any valid staked Node at the end of every epoch (about 24 hours). The integrity is met due to the Node rotation that occurs at each period, reducing risks associated with Nodes being compromised and affecting the committee purity. In summary, a subset of Nodes forms a new committee at each Epoch, that does the transaction ordering of the workload computed and submitted by the remaining Nodes.
 :::
 
@@ -74,13 +82,17 @@ Service providers are rewarded for fulfilling cache requests per bandwidth and b
 
 When an epoch ends, which is about 24 hours, the rewards from all submitted Delivery Acknowledgements are distributed to the edge nodes.
 
-## Delivery Acknowledgements
+## Delivery Acknowledgements (SNARKs)
 
 A Delivery Acknowledgement is a signed message by a client attesting that a node has successfully delivered a task to the client. These acknowledgments are instantly finalized locally and irreversible by the client.
 
 The Delivery Acknowledgements are cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction.
 
 A Delivery Acknowledgement includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
+
+:::tip
+A Node provides the computational resources to the Network and keeps track of doings in a list of Delivery Acknowledgements, on which the rewards mechanism is based at the end of each Epoch (about 24 hours).
+:::
 
 Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol and committee as described in the [Consensus](#consensus) section.
 
@@ -189,3 +201,15 @@ The Fleek Network implementation is open source and freely available for consult
 
 ## Modular architecture
 
+A way to conceptualize the architecture of Fleek Network is to think about each Node as rollups. As described in the [Consensus](#consensus) section, a committee of a random selection of Nodes rolls-up state to the Core Protocol or chain state.
+
+The Core Network:
+
+- Bridges assets into and from L1
+- Processes Proof-of-Deliveries
+- Mint FLK Tokens as rewards for participants
+- Store and provide APIs for Node-to-Node reputation measurements
+- Slash Node runners based on slashing contract of opted-in services
+- The Network Node registry
+- Content registry and indexer
+- Epoch randomness
