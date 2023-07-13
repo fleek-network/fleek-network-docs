@@ -7,19 +7,13 @@ tags:
 sidebarCollapsible: false
 ---
 
-The Core of Fleek Network offers a foundational layer to enable developers to build and deploy Edge Services efficiently.
-
-It abstracts away the development complexities of Consensus, Cryptography, Storage and Peer-to-peer Networking, amongst others, in order to simplify things conceptually.
-
-It frees developers and teams to focus on what matters the most to reach business goals.
-
-## TLDR;
+## Overview
 
 When a client requests a Service, the protocol determines the best route to the nodes where the service replicas and workload allocates.
 
 Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed. 
 
-The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus at the end of each Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
+The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus consistently throughout the Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
 
 ## Protocol
 
@@ -27,7 +21,7 @@ The Fleek Network is designed to deliver computation cheaper, faster and more ef
 
 The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum for staking, payments, governance and other economic features.
 
-This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless decentralized, and long-term sustainable environment.
+This is achieved by a combination of SNARKs (Succinct Non-interactive Argument of Knowledge), Narwhal and Bullshark consensus, including other cryptographic and economic guarantees to achieve a trustless decentralized and long-term sustainable environment.
 
 It's important to keep track of these components to ensure that the system is running fairly. The protocol holds the state for the following:
 - Token Balances
@@ -58,12 +52,20 @@ Total ordering is performed by a committee-based approach. The committee is form
 
 ## The Edge Network
 
-The community members host and operate the Network Nodes, which form the Edge Platform, and contribute to a decentralized network of Web Services. Some of the resources provided by the Network Nodes are:
+Edge computing is about processing data at the closest point of interaction, while cloud computing is about processing data in a data center. 
+
+Instead of resolving requests in the cloud, where roundtrip times are noticeable due to latency, the processing of requests is done at your closest convenience, which means getting you a quicker response and a better user experience.
+
+Fleek Network's Edge computing is computing that's done at the speediest location to the user. Provided by Network Nodes that are favorably dispersed and operated by a diverse community.
+
+The community members host and operate the Network Nodes, which form the Edge Platform, and contribute to an autonomous and decentralized network of Web Services.
+
+Some of the resources provided by the Network Nodes are:
 
 - Disk Storage
 - Processing power (CPU Units)
 - Network bandwidth
-- Geographic distribution
+- Availability
 
 ## Incentives
 
@@ -201,8 +203,6 @@ The Fleek Network implementation is open source and freely available for consult
 
 ## Modular architecture
 
-A way to conceptualize the architecture of Fleek Network is to think about each Node as rollups. As described in the [Consensus](#consensus) section, a committee of a random selection of Nodes rolls-up state to the Core Protocol or chain state.
-
 The Core Network:
 
 - Bridges assets into and from L1
@@ -213,3 +213,54 @@ The Core Network:
 - The Network Node registry
 - Content registry and indexer
 - Epoch randomness
+
+[Draco](https://github.com/fleek-network/draco) is the repository name containing the Fleek multi-service Edge Network implementation.
+
+The project aims to provide a higher focus on engineering productivity from the get-go, an improvement over the original [Ursa](https://github.com/fleek-network/ursa) implementation, which was exclusively focused on CDN, one of many services Draco offers support.
+
+Some of the main differences from Ursa’s implementation are:
+
+- The dynamic service loading approach
+- Decoupling of the network's core from the service implementation
+- Higher-level architecture that makes it easier to maintain and within reach of external contributors.
+
+Draco’s development approach is more open, which allows the community to build services and also helps the core team work on other features or services in parallel.
+
+### Repository
+
+The repository contains the source code for the implementation of the Fleek Network and is located at https://github.com/fleek-network/draco, a private repository that will go public after the whitepaper announcement and roadmap.
+
+### Directory structure
+
+There are three top-level directories, namely `lib` , `core` and `services`.
+
+Lib - These are open-source libraries created to help tackle the project features and packaged with a friendly license in the Rust ecosystem (MIT, Apache).
+
+Core - The primary protocol implementation, where `node` crate contains the essential feature set or base functionality. Includes the `interfaces` crate, where the top-down specification of the project is located.
+
+Services - A Service is a business logic provider built with the SDK (Service Development Kit). A service is decoupled from the core of the network and loaded dynamically [1] during the runtime using FFI (foreigner function interface).
+
+```
+draco
+├── lib
+│   ├── affair
+│   ├── atomo
+│   └── blake3-tree
+├── core
+│   ├── node
+│   ├── interfaces
+│   ├── application
+│   ├── blockstore
+│   ├── consensus
+│   ├── handshake
+│   ├── identity
+│   ├── origin-arweave
+│   ├── origin-filecoin
+│   ├── origin-ipfs
+│   ├── pod
+│   ├── reputation
+│   ├── rpc
+│   └── sdk
+└── services
+    └── cdn
+```
