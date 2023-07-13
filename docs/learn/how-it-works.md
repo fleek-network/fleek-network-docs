@@ -272,6 +272,9 @@ In a nutshell, this is similar to the same idea, and we represent different unit
 
 ## Identity on the Fleek Network
 
+[WIP]
+[TODO]
+
 - Types of accounts
 - Public-key cryptography
 - Requesting resources
