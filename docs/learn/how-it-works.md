@@ -15,7 +15,7 @@ Once the computation is successful, the data streaming routes to the client. On-
 
 The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus consistently throughout the Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
 
-## Protocol
+## About the protocol
 
 The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing Cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
 
@@ -31,7 +31,7 @@ It's important to keep track of these components to ensure that the system is ru
 
 As a decentralized Network, the state of these is replicated across all of the distributed Nodes in the Network by forming a Blockchain, in which Consensus on transactions transmutes to the final immutable state.
 
-## Consensus
+## The Consensus algorithm
 
 [Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering that requires total ordering (linear order) and Bullshark as the consensus engine.
 
@@ -67,7 +67,7 @@ Some of the resources provided by the Network Nodes are:
 - Network bandwidth
 - Availability
 
-## Incentives
+## Incentives and rewards
 
 Fleek Network issues FLK, an ERC-20 fungible token created using the Ethereum Blockchain.
 
@@ -98,7 +98,7 @@ A Node provides the computational resources to the Network and keeps track of do
 
 Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol and committee as described in the [Consensus](#consensus) section.
 
-## Reputation
+## Reputation system
 
 The Fleek Network has a reputation system where Nodes rate each other. The ratings are collected timely and an aggregation algorithm calculates the overall rate for each Node at the end of every Epoch.
 
@@ -203,7 +203,7 @@ Design to allow anyone to create and deploy a custom Service to the Network, wit
 
 Within a diverse ecosystem where Node Operators are free to choose which Services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
 
-## Build blocks abstraction
+## Abstraction and build blocks
 
 Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
 
@@ -212,17 +212,6 @@ The building blocks provide you with enough level of detail that the modern Deve
 The Fleek Network implementation is open source and freely available for consultation and contribution when more detail or refinement is required by the community and other observers.
 
 ## Modular architecture
-
-The Core Network:
-
-- Bridges assets into and from L1
-- Processes Proof-of-Deliveries
-- Mint FLK Tokens as rewards for participants
-- Store and provide APIs for Node-to-Node reputation measurements
-- Slash Node runners based on slashing contract of opted-in services
-- The Network Node registry
-- Content registry and indexer
-- Epoch randomness
 
 [Draco](https://github.com/fleek-network/draco) is the repository name containing the Fleek multi-service Edge Network implementation.
 
@@ -274,3 +263,15 @@ draco
 └── services
     └── cdn
 ```
+
+### Interfaces
+
+The design pattern adopted for this software is highly inspired by the Object-Oriented model described by Alan Kay, which may be a bit different from OOP which grew to fame due to Java.
+
+In a nutshell, this is similar to the same idea, and we represent different units of computation and process as objects that communicate with each other by message passing.
+
+## Identity on the Fleek Network
+
+- Types of accounts
+- Public-key cryptography
+- Requesting resources
