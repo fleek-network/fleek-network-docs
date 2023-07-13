@@ -11,7 +11,11 @@ tags:
 
 ## Introduction
 
-Fleek Network is an Edge Computing Platform for Apps, Protocols and Service builders looking to achieve decentralization without sacrificing cost and user experience — a robust solution for a broad range of use cases, including Content Delivery and Serverless functions.
+The Core of Fleek Network offers a foundational layer to enable developers to build and deploy Edge Services efficiently.
+
+It abstracts away the development complexities of Consensus, Cryptography, Storage and Peer-to-peer Networking, amongst others, in order to simplify things conceptually.
+
+It frees developers and teams to focus on what matters the most to reach business goals.
 
 We'll take a brief look into [why it exists](why-it-exists), [how it works](how-it-works), and learn about [services](network/services), just to mention a few.
 
