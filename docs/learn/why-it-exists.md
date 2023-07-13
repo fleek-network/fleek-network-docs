@@ -29,7 +29,7 @@ An essential part of a decentralized web is that companies, organizations and in
 
 ## The next generation of Internet services
 
-The demand for content delivery and computation is skyrocketing, and due to the rise of AI/AR/VR, video, gaming, and other media content popularity, demand will keep going up.
+The demand for content delivery and computation is skyrocketing, and due to the rise of AR/VR, video, gaming, and other media content popularity, demand will keep going up.
 
 Our society is turning obsessively digital, and most of our daily activities are digitally recorded. Technology is meddling with personal data and thoughts, culture and relationship with each other.
 
