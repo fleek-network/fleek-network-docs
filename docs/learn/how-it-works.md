@@ -125,6 +125,10 @@ The Fleek Network is a system where actors play important roles, namely:
 - End-user
 - Node Operator
 
+Each of these users has a huge role on contributing and participating in the network. They make it possible and lively by requesting resources, through usage, payments or by simply being a plain member of the community.
+
+### Client
+
 The **Client** is a user that consumes data from the network; for instance:
 
 - A developer interested in using the CDN in an application
@@ -143,6 +147,8 @@ This type of user can:
 - Check the cost(s) of the service(s)
 - Many others (relative to the service offering that might be of a third-party provider)
 
+### Developer
+
 The **Developer** is a knowledgeable user that enables the business logic and end-to-end experience to the **end-user** through applications or services. Take, for example:
 
 - Protocol development contributor
@@ -155,6 +161,8 @@ The **Developer** is a knowledgeable user that enables the business logic and en
 
 A developer is often described as a builder who enables the end-to-end experience in the Fleek Network. A builder that can work at the Service provider level, protocol development, core contributor and, amongst others, at a higher level, such as providing support and integrations of services in applications or third-party systems.
 
+### End-user
+
 An **End-user** is someone to whom the data or computation output is ultimately delivered, among others:
 
 - Static assets, such as images on a website
@@ -162,6 +170,8 @@ An **End-user** is someone to whom the data or computation output is ultimately 
 - Server-side rendering
 - Gets data through HTTP Gateway or RPC
 - Amongst others
+
+### Node operator
 
 A **Node Operator** is a kind of system administrator who builds, configures, installs or maintains a Node(s) in a server. To mention a few use cases:
 
