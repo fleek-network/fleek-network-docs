@@ -272,9 +272,25 @@ In a nutshell, this is similar to the same idea, and we represent different unit
 
 ## Identity on the Fleek Network
 
-[WIP]
-[TODO]
+The identity on the Fleek Network is issued and controlled by individuals, it's not issued, managed or controlled by any central entity. An identity is created without permission from anyone and stored privately.
 
-- Types of accounts
-- Public-key cryptography
-- Requesting resources
+The types of Identities found in the Fleek Network are used for:
+- Node
+- Node Network
+- Account Owner is any actor holding a balance on Fleek Network
+
+The Public-key cryptography used in the network identities are the following curves:
+- BLS12-381 is a pairing-friendly elliptic curve construction from the BLS family
+- Ed25519 is the EdDSA signature scheme using SHA-512 (SHA-2) and Curve25519
+- Secp256k1 is the Elliptic Curve Digital Signature Algorithm (ECDSA) used by Bitcoin and Ethereum
+
+The identities are associated with the elliptic curves as follows:
+- A Node key is BLS12-381 which facilitates the consensus algorithm or persistence of state, resilience and fault tolerance. Has multi-signature support, the ability to aggregate many signatures into one used for consensus committee when signing certificates
+- A Node Networking key is Ed25519 used for the speed and performance of the network communication
+- Account Owner keys are based on secp256k1, which corresponds to an Ethereum Address
+
+Transactions can be signed by the Account Owner and Node identities.
+
+Node Networking with Narwhal used the Node Network key, as Ed25519 is much more efficient when dealing with a single signature instead of aggregated signatures.
+
+The Account Owner (secp256k1) is an Ethereum key the user has and uses on an external wallet. It's required to initially bridge assets from L2. Although, a node doesn't need this key on its server to function.
