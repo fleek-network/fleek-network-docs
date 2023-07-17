@@ -7,27 +7,33 @@ tags:
 sidebarCollapsible: false
 ---
 
+Many Web3 products rely on the conventional models of centralized cloud infrastructure, due to the lack of corresponding alternatives.
+
+Some of the most popular Web3 products rely on content delivery and edge computing provided by the monopolized cloud market. Unlike a decentralized system, the central opposite is more vulnerable to attacks, as data and computation can be easily manipulated to suit the monopoly's business goals.
+
+Meanwhile, blockchain technology has paved the way for a new era of decentralized cloud computing and data storage, offering a sustainable alternative to traditional centralized architectures.
+
+The Fleek Network provides the alternative, paving the way to a decentralized edge computing future that is secure, transparent and accessible to everybody.
+
 ## A decentralized internet
 
 The original vision for the Internet was to build a network where everyone could participate, access and share information. But this was compromised after individuals and organizations found ways to trap and monetize information gathered from users.
 
-Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A Decentralized Web, which's often referred to as Web 3, where the trend is to build services that do not require a central authority.
+Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A decentralized Web, which's often referred to as Web 3, where building services are free of central authorities.
 
 A Decentralized Web envisions a world where services are powered by the community.
 
 ## Open protocol
 
-When a central server stores data, the client has to fetch it every time he needs it. On an Edge Network, the data is closer to where it'll be used.
-
-Similarly, if a decentralized system uses a few seconds of computation time daily from thousands of servers, there's a high chance to pass unnoticed. The same can't be expected when dealing with traditional Cloud Providers, due to availability, cost, orchestration, etc.
-
-On decentralization, we achieve resilience, as it doesn't die when one company goes out of business. Plus, the process of incremental improvement of a protocol, and transparency of open-source development, can have it refined into something impossible to displace. As achieved by the protocols: POP3/SMTP, TCP/IP, DNS, Bitcoin, etc.
+On decentralization, we achieve resilience, a service shouldn't die when one company goes out of business. Plus, the process of incremental improvement of a protocol, and transparency of open-source development, can have it refined into something impossible to displace. As achieved by the protocols: POP3/SMTP, TCP/IP, DNS, Bitcoin, etc.
 
 The underlying assumption is that you can't ever be finished with anything. However, as more time passes the more refined the product becomes and the less you need to change it.
 
 An essential part of a decentralized web is that companies, organizations and individuals choose to run applications using open protocols and data formats.
 
 ## The next generation of Internet services
+
+Cloud computing has become essential for modern life, thanks to advancements in internet technology that make our lives easier.
 
 The demand for content delivery and computation is skyrocketing, and due to the rise of AR/VR, video, gaming, and other media content popularity, demand will keep going up.
 
