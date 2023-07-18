@@ -19,7 +19,7 @@ The Fleek Network provides the alternative, paving the way to a decentralized ed
 
 The original vision for the Internet was to build a network where everyone could participate, access and share information. But this was compromised after individuals and organizations found ways to trap and monetize information gathered from users.
 
-Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A decentralized Web, which's often referred to as Web 3, where building services are free of central authorities.
+Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A decentralized Web, which's often referred to as Web3, where building services are free of central authorities.
 
 A Decentralized Web envisions a world where services are powered by the community.
 
