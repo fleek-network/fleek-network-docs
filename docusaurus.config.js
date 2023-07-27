@@ -38,7 +38,7 @@ const commonNavbarItems = [{
 const commonDiscord = 'https://discord.gg/fleekxyz';
 const commonTwitter = 'https://twitter.com/fleek_net';
 const commonHome = 'https://fleek.network';
-const commonCompanyUrl = 'https://fleek.xyz';
+const commonCompanyUrl = 'https://fleek.network/';
 
 const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
