@@ -45,7 +45,7 @@ const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Fleek Network Docs',
-  tagline: 'Welcome to the docs of Fleek Network, a decentralized edge platform for building edge services.',
+  tagline: 'Welcome to the docs of Fleek Network, a decentralized edge platform for building web3 edge services.',
   url: 'https://docs.fleek.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
