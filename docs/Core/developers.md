@@ -16,16 +16,16 @@ tags:
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read our blog to stay up to date.](https://blog.fleek.network/)
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August, where full documentation for node runners and services will release.
 :::
 
-## Welcome developers, what is the current status of Fleek Network? ⚡
+## Developer in Fleek Network - Current State ⚡
 
-Currently we are working towards our next milestone: the **first early testnet in August 2023**.
+As a developer, you will be able to build or use services running on Fleek Network's decentralized edge infrastructure.
 
-As a developer, you will be able to build services after our initial testnet releases, and we publish our Service Development Kit (SDK). 
+This will be possible **after our initial Testnet rollouts in August, and after we publish our Service Development Kit (SDK) for service development**. Currently we are finalizing the core developments of the protocol and setting the foundations for the testnet release.
 
-## How can you start getting involved?
+## How can you Start Getting Involved Today?
 
 1. Get familiar with the project [with our Whitepaper](https://whitepaper.fleek.network).
 2. Review our open-source [codebase on Github](https://github.com/fleek-network/lightning/).

@@ -16,7 +16,7 @@ tags:
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read our blog to stay up to date.](https://blog.fleek.network/)
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August, where full documentation for node runners and services will release.
 :::
 
 Welcome to the services page, a brief overview of the concept of services, with use-case examples.

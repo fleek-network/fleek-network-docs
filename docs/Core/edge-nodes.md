@@ -15,21 +15,20 @@ tags:
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.  [Read our blog to stay up to date.](https://blog.fleek.network/)
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August, where full documentation for node runners and services will release.
 :::
 
-## Welcome node operators, what is the current status of Fleek Network? ⚡
-
-Currently we are working towards our next milestone: the **first early testnet in August 2023**.
+## Edge Nodes in Fleek Network - Current State ⚡
 
 As a node operator, you will be able to run edge nodes for this testnet and contribute resources like bandwidth, CPU, and GPU to power services as we test the network's capabilities.
 
-## How can you start getting involved?
+Currently we are working towards our next milestone: the **first early testnet in August 2023** - where we will begin onboarding node operators **to help conduct our different Testnet stages**.
+
+The node code on our Github is still experimental and the team is not incentivizing onboarding, but you are welcome to review and provide feedback at this stage regardless! **Once again, once we begin our Testnet, this will change and node operators will be involved**.
+
+## How can you start getting involved today?
 
 1. Get familiar with the project [with our Whitepaper](https://whitepaper.fleek.network).
 2. Review our open-source [codebase on Github](https://github.com/fleek-network/lightning/).
 3. Want to run a node? Join our community [in Discord to get updates when possible](https://discord.gg/fleekxyz).
 4. Or sign up to the newsletter on [our website](https://fleek.network/) for updates.
-
-**The node code on our Github is still experimental, but you are welcome to review and provide feedback at this stage** 
-
