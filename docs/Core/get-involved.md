@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Services
+title: Get Involved
 sidebarCollapsible: false
 sidebar_position: 1
 date: 2023-01-10T09:00:00.000+00:00
@@ -20,7 +20,7 @@ This documentation is currently placeholder as the team prepares for an early te
 :::
 
 
-**Welcome to Fleek Network Devs**! ⚡
+Welcome to Fleek Network Devs! ⚡
 
 ## What is the current status of Fleek Network?
 
