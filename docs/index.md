@@ -14,8 +14,6 @@ tags:
 - Fleek Network
 ---
 
-![](https://storage.fleek-internal.com/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/docs-banner.png)
-
 Welcome to the **documentation for Fleek Network**, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
 
 Fleek Network’s goal is to provide a platform based on a series of highly performant nodes that all Web3 protocols, middleware, services, and applications can benefit from, to further decentralize their stack without sacrificing cost, performance, complexity, or developer/end-user experience.

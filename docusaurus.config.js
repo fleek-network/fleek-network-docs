@@ -160,15 +160,6 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/fleek-network',
-              },
-            ],
-          },
         ],
         // copyright: `Copyright © ${new Date().getFullYear()} Fleek. All rights reserved.`,
         logo: {

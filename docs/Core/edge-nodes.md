@@ -18,7 +18,7 @@ tags:
 This documentation is currently placeholder as the team prepares for an early testnet release around the month of August, where full documentation for node runners and services will release.
 :::
 
-## Edge Nodes in Fleek Network - Current State ⚡
+## Edge Nodes in Fleek Network - Current State
 
 As a node operator, you will be able to run edge nodes for this testnet and contribute resources like bandwidth, CPU, and GPU to power services as the the network's capabilities are tested.
 

@@ -19,7 +19,7 @@ tags:
 This documentation is currently placeholder as the team prepares for an early testnet release around the month of August, where full documentation for node runners and services will release.
 :::
 
-## Developer in Fleek Network - Current State ⚡
+## Developer in Fleek Network - Current State
 
 As a developer, you will be able to build or use services running on Fleek Network's decentralized edge infrastructure.
 
