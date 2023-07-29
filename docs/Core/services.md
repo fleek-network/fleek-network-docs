@@ -36,9 +36,13 @@ Anyone can deploy services on the network, and any user/developer can interact/u
 
 **By deploying on Fleek Network** services, protocols and builders can rely on a shared orchestration/performance edge layer, instead of having to either compromise and utilize web2 infrastructure, or complicate their core protocols and attempt to build edge-network-like enhancements individually.
 
+***
+
 ## Ideas for Services & Use-cases
 
 These are some concepts that could explore and benefit from being built on a decentralized edge network like Fleek Network.
+
+***
 
 ## Web Services
 
