@@ -48,7 +48,11 @@ These are some concepts that could explore and benefit from being built on a dec
 
 ### Edge Functions
 
-Edge compute comes in many flavors, and Fleek Network can support many serverless or edge compute functions. For example, cheap compute for simple JavaScript functions, server-side-rendering, Lambda, Deno or Cloudflare Workers-like compute. Fleek Network could also perform deterministic computation, consensus-based computation, ZK-computation, EVM computation. The network is non-opinionated to allow developers to define their compute service fully.
+Edge compute comes in many flavors, and Fleek Network can support many serverless or edge compute functions. For example, cheap compute for simple JavaScript functions, Lambda, Deno or Cloudflare Workers-like compute. Fleek Network could also perform deterministic computation, consensus-based computation, ZK-computation, EVM computation. The network is non-opinionated to allow developers to define their compute service fully.
+
+### SSR/ISR
+
+One applied edge compute use-case that can be built is Server-side Rendering (SSR) or Incremental Static Regeneration Service (ISR) on top of a container/serverless engine. Given the granularity of the content verification with Fleek Network's hashing, the streaming of particular pieces of data for the purpose aforementioned could be optimized and parallelized across multiple nodes, chunking pages of static sites and regenerating only where needed.
 
 ### Hosting
 
