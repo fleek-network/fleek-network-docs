@@ -11,7 +11,8 @@ tags:
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. The roadmap defined at the moment is heavily focused on the first early testnet release.:::
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. The roadmap defined at the moment is heavily focused on the first early testnet release. [Read our blog to stay up to date.](https://blog.fleek.network/)
+:::
 
 ## Introduction
 

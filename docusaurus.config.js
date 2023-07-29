@@ -44,7 +44,7 @@ const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fleek Network Docs',
+  title: 'Fleek Network Docs | Decentralized Edge Platform',
   tagline: 'Welcome to the docs of Fleek Network, a decentralized edge platform for building web3 edge services.',
   url: 'https://docs.fleek.network',
   baseUrl: '/',
@@ -73,7 +73,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/docs',
+          routeBasePath: '/',
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsed: false,

@@ -42,7 +42,7 @@ git commit -m 'refactor: 💡 simplified markup for the address panel'
 
 Once you're done with your feat, chore, test, docs, or task:
 
-- Push to [remote origin](https://github.com/Psychedelic/DIP721)
+- Push to remote origin
 - Create a new PR targeting the base **main branch**, there might be cases where you need to target a different branch in accordance to your use-case
 - Use the naming convention described above, for example, PR named `test: some scenario` or `fix: scenario amend x`
 - On approval, make sure you have `rebased` to the latest in **main**, fixing any conflicts and preventing any regressions
