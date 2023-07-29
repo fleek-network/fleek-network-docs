@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Get Involved
+title: Developers
 sidebarCollapsible: false
 sidebar_position: 1
 date: 2023-01-10T09:00:00.000+00:00
@@ -19,10 +19,7 @@ tags:
 This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read our blog to stay up to date.](https://blog.fleek.network/)
 :::
 
-
-Welcome to Fleek Network Devs! ⚡
-
-## What is the current status of Fleek Network?
+## Welcome developers, what is the current status of Fleek Network? ⚡
 
 Currently we are working towards our next milestone: the **first early testnet in August 2023**.
 

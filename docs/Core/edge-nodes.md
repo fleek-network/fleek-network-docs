@@ -18,9 +18,7 @@ tags:
 This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.  [Read our blog to stay up to date.](https://blog.fleek.network/)
 :::
 
-Welcome to Fleek Network Node Operators! ⚡
-
-## What is the current status of Fleek Network?
+## Welcome node operators, what is the current status of Fleek Network? ⚡
 
 Currently we are working towards our next milestone: the **first early testnet in August 2023**.
 
