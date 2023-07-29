@@ -12,6 +12,6 @@ tags:
 - Whitepaper
 ---
 
-Fleek Network whitepapers are available on this page.
+Fleek Network whitepapers are available on this page:
 
-- [Fleek Network: A Decentralized Content and Application Delivery Network](https://fleek.network/fleek-network.pdf?202212011428)
+- [**Fleek Network: A Decentralized Edge Platform.**](https://fleek.network/whitepaper.pdf)
