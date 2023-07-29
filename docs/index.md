@@ -14,7 +14,7 @@ tags:
 - Fleek Network
 ---
 
-![](/static/img/documentation.png)
+![](https://storage.fleek-internal.com/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/documentation.png)
 
 :::info
 This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read the blog to stay up to date.](https://blog.fleek.network/)
