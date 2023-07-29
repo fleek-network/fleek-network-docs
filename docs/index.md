@@ -17,7 +17,7 @@ tags:
 ![](/static/img/documentation.png)
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read our blog to stay up to date.](https://blog.fleek.network/)
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change. [Read the blog to stay up to date.](https://blog.fleek.network/)
 :::
 
 Welcome to the documentation for Fleek Network, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
