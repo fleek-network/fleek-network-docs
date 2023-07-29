@@ -1,6 +1,7 @@
 ---
 draft: false
 title: Roadmap
+sidebar_position: 3
 date: 2023-01-10T09:00:00.000+00:00
 description: Fleek Network's high-level roadmap per stage. Devnet, Testnet, and Mainnet.
 category: Documentation
