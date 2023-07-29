@@ -2,7 +2,6 @@
 draft: false
 title: Roadmap
 date: 2023-01-10T09:00:00.000+00:00
-
 description: Fleek Network's high-level roadmap per stage. Devnet, Testnet, and Mainnet.
 category: Documentation
 keywords: [roadmap]
@@ -16,7 +15,7 @@ This documentation is currently placeholder as the team prepares for an early te
 
 ## Introduction
 
-Instead of restricting our network architecture/capabilities to a CDN service, we were able to rethink/redesign Fleek Network’s core to support a full decentralized edge platform upon which many edge services (ex. CDN, serverless functions, etc.) can be built. The new architecture separates each aspect of the network (blockchain <> edge infrastructure <> services) so that anyone can build new edge services on Fleek Network.
+Instead of restricting our network architecture/capabilities to a CDN service, we were able to rethink/redesign Fleek Network’s core to support a full decentralized edge platform upon which many edge services (ex. CDN, serverless functions, etc.) can be built. The new architecture separates each aspect of the network (blockchain - edge infrastructure - services) so that anyone can build new edge services on Fleek Network.
 
 Several milestones were completed towards our next early Testnet goal: the whitepaper was launched, our Github repo was published, and we published a batch of educational content and breakdowns on our blog.
 
