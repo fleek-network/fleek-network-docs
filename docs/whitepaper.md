@@ -6,6 +6,7 @@ description: Whitepaper
 category: Documentation
 keywords: [whitepaper]
 tags:
+- Edge Platform
 - CDN
 - Guide
 - Fleek Network

@@ -8,6 +8,7 @@ description: Welcome to the documentation site for Fleek Network, the decentrali
 category: Documentation
 keywords: [services, documentation, getting started]
 tags:
+- Edge Platform
 - CDN
 - Guide
 - Learn

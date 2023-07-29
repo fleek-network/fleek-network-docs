@@ -8,14 +8,15 @@ description: Welcome to the documentation site for Fleek Network, the decentrali
 category: Documentation
 keywords: [introduction, documentation, getting started]
 tags:
-- CDN
+- Edge Platform
 - Guide
 - Learn
 - Fleek Network
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.:::
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.
+:::
 
 Welcome to the documentation for Fleek Network, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
 
@@ -24,16 +25,4 @@ Fleek Network’s goal is to provide a platform based on a series of highly perf
 - Our whitepaper is the most recent source of information for Fleek Network. [You can find it here.](https://whitepaper.fleek.network/)
 - Need to know more about Fleek Network? Here's [Fleek Network's website.](https://fleek.network/)
 - Feedback? Enter our [Discord channel](https://discord.gg/fleekxyz) to have a direct line with our developers.
-- Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look
-
-
-Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
-
-A Fleek Network node can be built and run on your local machine. Our docs provide you with the resources to help you.
-
-- Interested in running a fully working Node? Read our [guides](/guides) to learn more about the services powering the Fleek Network, and how to set up a node or customize it for your needs.
-
-- Need a quick reference? Our [reference](/reference) section provides the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
-
-- Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network, etc.
-
+- Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look.
