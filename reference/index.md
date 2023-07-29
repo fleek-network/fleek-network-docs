@@ -8,7 +8,8 @@ tags:
 ---
 
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for references will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.:::
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for references will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.
+:::
 
 Our [Fleek Network](https://fleek.network) reference section will provide the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
 
