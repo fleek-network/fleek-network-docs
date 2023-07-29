@@ -33,6 +33,12 @@ const commonNavbarItems = [{
   label: 'Reference',
   position: 'left',
   activeBasePath: 'reference',
+},
+{
+  href: 'https://github.com/fleek-network/',
+  label: 'Github',
+  position: 'left',
+  target: '_blank',
 }];
 
 const commonDiscord = 'https://discord.gg/fleekxyz';
