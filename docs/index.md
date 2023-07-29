@@ -15,8 +15,16 @@ tags:
 ---
 
 :::info
-In the past few months we expanded our initial CDN research into a full decentralized Edge Network. Most of that work is now done, and we have a new draft whitepaper and Github repo that we will release publicly this July, and a testnet for the decentralized edge network that will launch in August. [Read our milestone/roadmap update](https://blog.fleek.network/post/fleek-network-milestones-update/) for the full details. Expect updated documentation and node upgrade guides soon! Stay tuned to our [Discord](https://discord.gg/fleekxyz) for updates.
-:::
+This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Full documentation for node runners and services will arrive in due time, near the aforementioned testnet release. Current open source code is highly experimental and may be subject to change.:::
+
+Welcome to the documentation for Fleek Network, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
+
+Fleek Network’s goal is to provide a platform based on a series of highly performant nodes that all Web3 protocols, middleware, services, and applications can benefit from, to further decentralize their stack without sacrificing cost, performance, complexity, or developer/end-user experience.
+
+- Our whitepaper is the most recent source of information for Fleek Network. [You can find it here.](https://whitepaper.fleek.network/)
+- Need to know more about Fleek Network? Here's [Fleek Network's website.](https://fleek.network/)
+- Feedback? Enter our [Discord channel](https://discord.gg/fleekxyz) to have a direct line with our developers.
+- Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look
 
 
 Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
