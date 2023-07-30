@@ -33,19 +33,25 @@ const commonNavbarItems = [{
   label: 'Reference',
   position: 'left',
   activeBasePath: 'reference',
+},
+{
+  href: 'https://github.com/fleek-network/',
+  label: 'Github',
+  position: 'left',
+  target: '_blank',
 }];
 
 const commonDiscord = 'https://discord.gg/fleekxyz';
 const commonTwitter = 'https://twitter.com/fleek_net';
 const commonHome = 'https://fleek.network';
-const commonCompanyUrl = 'https://fleek.xyz';
+const commonCompanyUrl = 'https://fleek.network/';
 
 const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fleek Network Docs',
-  tagline: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.',
+  title: 'Fleek Network Docs | Decentralized Edge Platform',
+  tagline: 'Welcome to the docs of Fleek Network, a decentralized edge platform for building web3 edge services.',
   url: 'https://docs.fleek.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -104,7 +110,7 @@ const config = {
     ({
       image: 'img/documentation.png',
       metadata:[{
-        description: 'Welcome to the docs of Fleek Network, a lightning fast and decentralized CDN built to supercharge web3.'}],      
+        description: 'Welcome to the docs of Fleek Network, a decentralized edge platform for building edge services.'}],      
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
@@ -151,15 +157,6 @@ const config = {
               {
                 label: 'Contact us',
                 href: commonDiscord,
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/fleek-network',
               },
             ],
           },
