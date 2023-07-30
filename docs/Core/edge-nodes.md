@@ -20,7 +20,7 @@ This documentation is currently placeholder as the team prepares for an early te
 
 ## Edge Nodes in Fleek Network - Current State
 
-As a node operator, you will be able to run edge nodes for this testnet and contribute resources like bandwidth, CPU, and GPU to power services as the the network's capabilities are tested.
+As a node operator, you will be able to run edge nodes for this testnet and contribute resources like bandwidth, CPU, and GPU to power services as the network's capabilities are tested.
 
 Currently we are working towards our next milestone: the **first early testnet in August 2023** - where onboarding node operators will begin **to help conduct our different Testnet stages**.
 
