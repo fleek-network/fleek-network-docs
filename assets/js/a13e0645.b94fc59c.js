@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[7136],{3120:e=>{e.exports=JSON.parse('{"label":"Codebase","permalink":"/docs/tags/codebase","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Open-source","title":"Open-source","description":"Fleek Network\'s codebase.","permalink":"/docs/Open-source"}]}')}}]);

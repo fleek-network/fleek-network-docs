@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[9513],{9748:e=>{e.exports=JSON.parse('{"label":"Whitepaper","permalink":"/docs/tags/whitepaper","allTagsPath":"/docs/tags","count":1,"items":[{"id":"whitepaper","title":"Whitepaper","description":"Fleek Network\'s whitepaper and codebase.","permalink":"/docs/whitepaper"}]}')}}]);

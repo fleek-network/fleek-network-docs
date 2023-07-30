@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[7645],{3034:e=>{e.exports=JSON.parse('{"label":"remove","permalink":"/reference/tags/remove","allTagsPath":"/reference/tags","count":1,"items":[{"id":"Assisted-installer/uninstalling","title":"Uninstalling","description":"Uninstalling","permalink":"/reference/Assisted-installer/uninstalling"}]}')}}]);

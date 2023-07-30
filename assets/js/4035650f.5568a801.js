@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[2260],{9438:e=>{e.exports=JSON.parse('{"label":"engineering","permalink":"/blog/tags/engineering","allTagsPath":"/blog/tags","count":2}')}}]);

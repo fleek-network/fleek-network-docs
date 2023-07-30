@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[6788],{1461:e=>{e.exports=JSON.parse('{"label":"Edge Network","permalink":"/docs/tags/edge-network","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Open-source","title":"Open-source","description":"Fleek Network\'s codebase.","permalink":"/docs/Open-source"}]}')}}]);
