@@ -18,4 +18,4 @@ Fleek Network's codebase and libraries are fully open-source, and reviews/feedba
 2. [**Review the Lightning core repository**](https://github.com/fleek-network/lightning/)
 3. [**Read our Contribution Guidelines**](https://github.com/fleek-network/lightning/blob/main/CONTRIBUTING.md)
 4. [**As well as our Code of Conduct**](https://github.com/fleek-network/lightning/blob/main/CODE_OF_CONDUCT.md)
-5. [**Ask questions to the team on Discord**](https://discord.gg/fleekxyz**)
+5. [**Ask questions to the team on Discord**](https://discord.gg/fleekxyz)
