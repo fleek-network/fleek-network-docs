@@ -14,7 +14,7 @@ tags:
 - Fleek Network
 ---
 :::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. Current open source code is highly experimental and may be subject to change.
+This documentation is currently placeholder as the team prepares for an initial testnet release around the end of August. Current open source code is highly experimental and may be subject to change.
 :::
 
 Welcome to the **documentation for Fleek Network**, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
