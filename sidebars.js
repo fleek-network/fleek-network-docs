@@ -28,7 +28,7 @@ const sidebars = {
         'learn/index',
         'learn/why-it-exists',
         'learn/how-it-works',
-        'learn/tokenomics',
+        'learn/token-and-economics',
         {
           type: 'category',
           label: 'Network',
