@@ -28,7 +28,6 @@ Our current roadmap on the road to an early teestnet stands as follows:
 
 ### August
 
-
 - Testnet Launch (initial phase of a multi-phased path to Mainnet)
 - Initial Edge Services (CDN and compute PoC services)
 - Service Development Kit (initial release)
