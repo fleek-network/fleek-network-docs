@@ -28,14 +28,14 @@ Our current roadmap on the road to an early teestnet stands as follows:
 
 ### August
 
-- Economics Paper (public release)
+
 - Testnet Launch (initial phase of a multi-phased path to Mainnet)
-- Initial Edge Services (CDN and JS VM PoC services)
+- Initial Edge Services (CDN and compute PoC services)
 - Service Development Kit (initial release)
 
-The initial phase of testnet will have two main purposes. First, to stress test the network’s general performance and operation with a decentralized network of node operators; Second is to test the first two POC services, which are the CDN (static and dynamic content acceleration) and a simple edge compute POC.
+The initial phase of testnet will have two main purposes. First, to stress test the network’s general performance and operation with a decentralized network of node operators with varying hardware; Second is to test the first two POC services, which are the CDN (static and dynamic content acceleration) and a simple edge compute POC.
 
-The second phase of the testnet which will happen either late August or early September (depending on when exactly the first testnet phase starts), will be to introduce the Service Development Kit (SDK) and test out people building new edge services on the test network.
+The second phase of the testnet which will happen in the first half of September (depending on when exactly the first testnet phase starts), will be to introduce the Service Development Kit (SDK) and test out people building new services on the test network.
 
 ## Mainnet
 
