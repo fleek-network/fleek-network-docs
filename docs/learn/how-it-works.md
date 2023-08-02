@@ -299,15 +299,13 @@ The identities are associated with the elliptic curves as follows:
 - A Node Networking key is Ed25519 used for the speed and performance of the network communications
 - Account Owner keys are based on secp256k1, which corresponds to an Ethereum Address
 
-Transactions can be signed by the Account Owner and Node identities.
+Transactions can be signed by the Account Owner—an Ethereum key (secp256k1) owned by the user on an external wallet and initially required to bridge assets from L2—and Node identities
 
-Node Networking with Narwhal utilizes the Node Network key, as Ed25519 is much more efficient when dealing with a single signature instead of aggregated signatures.
-
-The Account Owner (secp256k1) is an Ethereum key the user has and uses on an external wallet. It's required to initially bridge assets from L2. Although, a node doesn't need this key on its server to function.
+Node Networking with Narwhal utilizes the Node Network key (Ed25519) is much more efficient when dealing with a single signature instead of aggregated signatures.
 
 ## Content addressability and verifiability
 
-The way content is handled, stored and distributed defines how trustworthy's a protocol. Some of the primitives to achieve it has roots in immutability, verification, the Semantic Web and Linked Data.
+The way content is handled, stored and distributed defines how trustworthy's a protocol. Some of the primitives to achieve it has roots in immutability, verification, the semantic web and linked data.
 
 When you use Fleek Network, you either hint about data packed into a format called a Content Archive (CAR) or an existing CID of a CAR file, which hash addresses are unique and universally addressable. The network never stores data, only a cache layer to existing storage as origins. For example, on `HTTP PUT` we're just telling the network that there's some origin it should care about and cache.
 
