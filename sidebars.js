@@ -102,6 +102,7 @@ const sidebars = {
         'develop/json-rpc',
       ],
     },
+    'roadmap',
     'contribute',
     'whitepaper',
   ],
