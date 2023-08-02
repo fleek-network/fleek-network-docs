@@ -219,6 +219,10 @@ The Fleek Network implementation is open source and freely available for consult
 
 The project aims to provide a higher focus on engineering productivity from the get-go, an improvement over the original [Ursa](https://github.com/fleek-network/ursa) implementation, which was exclusively focused on CDN, one of many services Lightning offers support.
 
+:::info
+Lightning is the open-source Rust implementation of Fleek Network. The repository contains the source code for the implementation of Fleek Network at [https://github.com/fleek-network/lightning](https://github.com/fleek-network/lightning).
+:::
+
 Some of the main differences from Ursa’s implementation are:
 
 - The dynamic service loading approach
@@ -275,6 +279,10 @@ In a nutshell, this is similar to the same idea, and we represent different unit
 ## Identity on the Fleek Network
 
 The identity on the Fleek Network is issued and controlled by individuals, which means that there aren't any central entities that issue, manage or control it for you. An identity is created without permission from anyone, and stored securely and privately.
+
+:::caution
+Security is achieved by issuing users private cryptographic keys. Only the holder of the private key has access to sensitive information, such as an identity, which relates to reputation, rewards, etc. The security of the private key is the responsibility of the user. Unfortunately, Fleek Network is unable to help you regain access to your private key if you've lost or failed to secure it. The private keys are your responsibility.
+:::
 
 The types of Identities found in the Fleek Network are used for:
 - Node (for BFT DAG consensus)
