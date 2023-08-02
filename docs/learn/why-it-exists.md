@@ -44,6 +44,6 @@ In contrast, it'd be extremely difficult to compete as a provider due to the cor
 A considerable number of Web3 projects have services hosted and delivered through centralized Cloud Providers, breaking the trust upfront and causing considerable disappointment to the end user.
 :::
 
-Since Decentralized Storage, Edge Computing and Peer-to-peer Networking technology are a reality, a decentralized content delivery network or Serverless functions, amongst others, are possible—helping achieve the goal of a fully decentralized Web experience. 
+Since decentralized storage, edge computing and peer-to-peer networking technology are a reality, a decentralized content delivery network or Serverless functions, amongst others, are possible—helping achieve the goal of a fully decentralized Web experience. 
 
 The next generation of Internet Services brings tremendous cost benefits, high availability, geographic distribution and betterment of the performance, load times and perceived user experience.
