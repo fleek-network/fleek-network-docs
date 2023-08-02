@@ -10,11 +10,11 @@ sidebarCollapsible: false
 
 Many Web3 products rely on the conventional models of centralized cloud infrastructure, due to the lack of corresponding alternatives.
 
-Some of the most popular Web3 products rely on content delivery and edge computing provided by the monopolized cloud market. Unlike a decentralized system, the central opposite is more vulnerable to attacks, as data and computation can be easily manipulated to suit the monopoly's business goals.
+Some of the most popular Web3 products rely on content delivery and edge computing provided by the monopolized cloud market. Unlike a decentralized system, the opposite is more vulnerable to attacks, as computation and data can be easily manipulated to suit the monopoly's business goals.
 
 Meanwhile, blockchain technology has paved the way for a new era of decentralized cloud computing and data storage, offering a sustainable alternative to traditional centralized architectures.
 
-The Fleek Network provides the alternative, paving the way to a decentralized edge computing future that is secure, transparent and accessible to everybody.
+The Fleek Network provides the alternative, paving the way to a decentralized edge computing future that is secure, transparent and accessible to everybody in the world.
 
 ## A decentralized internet
 
@@ -22,7 +22,7 @@ The original vision for the Internet was to build a network where everyone could
 
 Thankfully, the emerging movement to break free from centralization, and privacy concerns, resembles the original vision of the Internet. A decentralized Web, which's often referred to as Web3, where building services are free of central authorities.
 
-A Decentralized Web envisions a world where services are powered by the community.
+A Decentralized Web envisions a world where services are powered and owned by the community.
 
 ## Open protocol
 
@@ -45,12 +45,12 @@ In contrast, it'd be extremely difficult to compete as a provider due to the cor
 A considerable number of Web3 projects have services hosted and delivered through centralized Cloud Providers, breaking the trust upfront and causing considerable disappointment to the end user.
 :::
 
-Since decentralized storage, edge computing and peer-to-peer networking technology are a reality, a decentralized content delivery network or Serverless functions, amongst others, are possible—helping achieve the goal of a fully decentralized Web experience. 
+Since decentralized storage, edge computing and peer-to-peer networking technology are a reality, a decentralized content delivery network or serverless functions, amongst others, are possible—helping achieve the goal of a fully decentralized web experience. 
 
-The next generation of Internet Services brings tremendous cost benefits, high availability, geographic distribution and betterment of the performance, load times and perceived user experience.
+The next generation of internet services brings tremendous cost benefits, high availability, geographic distribution and betterment of the performance, load times and perceived user experience.
 
 ## Motivation
 
-The Fleek Network team was motivated to create a decentralized Edge Platform due to the current infrastructure trends, user concerns and demands. The modern web has shifted from the cloud to the edge, which is a reflection of the internet's growing user base and the need for low latency for users worldwide.
+The Fleek Network team was motivated to create a decentralized Edge Platform due to the current infrastructure trends, user concerns and demands. The modern web is shifting from the cloud to the edge, which is a reflection of the internet's growing user base and the need for low latency for users worldwide.
 
 This development is a crucial and necessary step towards significantly enhancing the reliability, efficiency, and decentralization of Web3 applications and platforms, such as the next iteration of the Fleek platform.
