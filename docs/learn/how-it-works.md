@@ -305,9 +305,9 @@ Node Networking with Narwhal utilizes the Node Network key (Ed25519) is much mor
 
 ## Content addressability and verifiability
 
-The way content is handled, stored and distributed defines how trustworthy's a protocol. Some of the primitives to achieve it has roots in immutability, verification, the semantic web and linked data.
+The way content is distributed, handled and stored defines how trustworthy's a protocol. Some of the primitives to achieve it has roots in linked data, immutability, verification and the semantic web.
 
-When you use Fleek Network, you either hint about data packed into a format called a Content Archive (CAR) or an existing CID of a CAR file, which hash addresses are unique and universally addressable. The network never stores data, only a cache layer to existing storage as origins. For example, on `HTTP PUT` we're just telling the network that there's some origin it should care about and cache.
+On Fleek Network, you either hint about data packed into a format called a Content Archive (CAR) or an existing CID of a CAR file—which hash addresses are unique and universally addressable. The network never stores data, only a cache layer to existing storage as origins. For example, on `HTTP PUT` we're just telling the network that there's some origin it should care about and cache.
 
 Some of the principles that help us provide guarantees to end-users require a high ability for content verification, as a consequence, the immutability of files is critical to the system.
 
@@ -320,7 +320,7 @@ To emphasize, immutability means the state of not changing, or being unable to c
 Fleek Network deals with files in a manner where the content determines the address in which the user of the system can locate and verify it unquestionably. This is possible due to cryptography, in which the same data always produces the same hash deterministically.
 
 - A file whose content determines the hash, but is also impossible to invert it
-- We shouldn't be able to reconstruct the data from a hash
+- Unable to reconstruct data from a hash
 - It's unique, not two files produce the same file or content
 - Any change in the content should always generate a completely different hash
 
@@ -333,21 +333,20 @@ Content addressing is where we use a hash to access the content, and it allows u
 The entire network operates based on content addressing based on Blake3 hashing for efficient content identification and streaming verifiability.
 
 :::info
-It's also interesting to observe, that the CID is a sort of string-like binary that is human-friendlier in comparison to the underlying binary, which is way longer.
+The CID is a sort of string-like binary that is human-friendlier in comparison to the underlying binary, which is way longer.
 :::
 
 :::info
 Caching and deduplication are possible due to the immutability of content e.g. if content changes, let's say that an image has some new detail, the files share many of the same bytes. The amount of data we have to transfer to fetch is minimum, we'd only pull the difference. In today's web, we'd have to transfer both files in full, which is a worse path on resource allocation and performance.
 :::
 
-
 ### Hash functions
 
 The hash function for creating CIDs uses sha-256, but there is support for other hashing algorithms, such as sha1 (used by Git), sha2-256, sha3-255, blake2b-160, blake3, etc. Some older algorithms are proven not to be collision-free, so if algorithms can break, we have to switch the hash algorithm we use in the future! The problem with this switching of algorithms is the need to find a future-proof way of identifying the hash functions used to generate the hash, as well as the hash name.
 
-Multihash is a protocol that comes into play to provide us the valuable metadata for future-proofing. To explain it in simple terms: it is the composition where a hash is placed at the end, a prefix as a number to identify the algorithm used and a number to identify the hash name. Thereafter, we'd start raising some questions. Without it, how would we get the data back without the ability to identify how it was encoded? Some users could use cbor, protocol buffers, json, etc; and there might be plenty of good reasons why for those choices. Maybe it's a compact binary encoding that is very efficient for storage, easy to work with, etc.
+Multihash is a protocol that comes into play to provide us with valuable metadata for future-proofing. In an attempt to summarize it, it's the composition of a hash placed at the end, a prefix, as a number to identify the algorithm used, and a number, to identify the hash name. Therefore, we'd start raising some questions. Without it, how would we get the data back without the ability to identify how it was encoded? Some users could use cbor, protocol buffers, json, etc, and there might be plenty of good reasons why for those choices. Maybe it's a compact binary encoding that is very efficient for storage, easy to work with, etc.
 
-What's important is that it is the user's choice and why IPLD becomes useful for Fleek Network's use cases. A system for understanding and working with data that is made of a Data Model and Codecs, some tools for Linking, and then a handful of other Powerful Features that help us develop a decentralized application.
+What's important is that it is the user's choice and why IPLD becomes useful for Fleek Network's use cases. A system for understanding and working with data that is made of a data model, codecs, tools for linking, and then a handful of other powerful features that help us develop a decentralized application.
 
 ### Interplanetary linked data (IPLD)
 
@@ -364,16 +363,16 @@ These addressable and linkable data structures will allow us to do for data what
 The core of Fleek Network understands the IPLD CAR Content Addressable aRchive, which unpacks and traverses to cache individual files. The archive's content is hashed as Blake3, which Fleek Network uses to address all data coming and going into the network, regardless of their origin.
 
 :::caution warning
-Despite handling IPLD CAR files, it serves raw archive content to the client. In other words, if a request for a complete CAR came through a Gateway, the Gateway–as a client–would have to build the file from the streamed data before sending it to the end-user.
+Despite handling IPLD CAR files, it serves raw archive content to the client. In other words, if a request for a complete CAR came through a gateway, the gateway (as a client) would have to build the file from the streamed data before sending it as a response to the end user.
 :::
 
 :::info
-The ordering of blocks in a CAR is random, e.g. two different CAR files storing the same content. This causes need to traverse the archive (DAG-PB/UnixFS) to store the CAR blocks as individual content
+The ordering of blocks in a CAR is random, e.g. two different CAR files storing the same content. This causes the need to traverse the archive (DAG-PB/UnixFS) to store the CAR blocks as individual content.
 :::
 
 ### HTTP PUT Request Origin
 
-An **Origin** is a location where content originates from. In the context of Fleek Network, the origin has to be supported for data retrieval, some examples that should be supported are Arweave, Filecoin and IPFS. For example, a user of Fleek Network should have the data pinned for IPFS somewhere to have it cached by the Fleek Network CDN service on an `HTTP PUT` request.
+An **Origin** is a location where content originates from. In the context of Fleek Network, the origin has to be supported for the data retrieval to function, some examples of what will be supported are Arweave, Filecoin and IPFS. For instance, the first supported storage is IPFS and a user of Fleek Network should have the data pinned for IPFS somewhere to have it cached by the Fleek Network CDN service on an `HTTP PUT` request.
 
 :::info
 A Client-side library can provide helpers to upload to some origin, such as IPFS and call the `HTTP PUT` for the origin.
