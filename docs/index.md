@@ -36,6 +36,10 @@ The [Guides](guides) provide step-by-step instructions for performing specific t
 [Develop](develop) learning materials for development and contributions.
 :::
 
+## Roadmap
+
+We aim to bring computation to where demand is. You can find Fleek Network's Public [roadmap](docs/roadmap) here.
+
 ## Need help?
 
 Join the Fleek Network [Discord](https://discord.gg/fleekxyz) if you want to ask a question or require help.
