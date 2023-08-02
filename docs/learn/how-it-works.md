@@ -215,9 +215,9 @@ The Fleek Network implementation is open source and freely available for consult
 
 ## Modular architecture
 
-[Draco](https://github.com/fleek-network/draco) is the repository name containing the Fleek multi-service Edge Network implementation.
+[Lightning](https://github.com/fleek-network/lightning) is the repository name containing the Fleek multi-service Edge Network implementation.
 
-The project aims to provide a higher focus on engineering productivity from the get-go, an improvement over the original [Ursa](https://github.com/fleek-network/ursa) implementation, which was exclusively focused on CDN, one of many services Draco offers support.
+The project aims to provide a higher focus on engineering productivity from the get-go, an improvement over the original [Ursa](https://github.com/fleek-network/ursa) implementation, which was exclusively focused on CDN, one of many services Lightning offers support.
 
 Some of the main differences from Ursa’s implementation are:
 
@@ -225,11 +225,11 @@ Some of the main differences from Ursa’s implementation are:
 - Decoupling of the network's core from the service implementation
 - Higher-level architecture that makes it easier to maintain and within reach of external contributors.
 
-Draco’s development approach is more open, which allows the community to build services and also helps the core team work on other features or services in parallel.
+Lightning’s development approach is more open, which allows the community to build services and also helps the core team work on other features or services in parallel.
 
 ### Repository
 
-The repository contains the source code for the implementation of the Fleek Network and is located at https://github.com/fleek-network/draco, a private repository that will go public after the whitepaper announcement and roadmap.
+The repository contains the source code for the implementation of the Fleek Network and is located at https://github.com/fleek-network/lightning, a private repository that will go public after the whitepaper announcement and roadmap.
 
 ### Directory structure
 
