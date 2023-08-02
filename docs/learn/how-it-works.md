@@ -93,28 +93,28 @@ A Delivery Acknowledgement is a signed message by a client attesting that a node
 
 The Delivery Acknowledgements are cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction.
 
-A Delivery Acknowledgement includes metadata about the commodities consumed by a Node while executing a Service. Also contains metadata that is used to determine the reward attributed to a Node.
+A Delivery Acknowledgement includes metadata about the commodities consumed by a node while executing or running a service. Also contains metadata that is used to determine the reward attributed to a Node.
 
 :::tip
-A Node provides the computational resources to the Network and keeps track of doings in a list of Delivery Acknowledgements, on which the rewards mechanism is based at the end of each Epoch (about 24 hours).
+A Node provides the computational resources to the network and keeps track of doings in a list of Delivery Acknowledgements, on which the rewards mechanism is based at the end of each Epoch (about 24 hours).
 :::
 
-Finally, Delivery Acknowledgements are gathered and batched by Nodes before being submitted to the core protocol and committee as described in the [Consensus](#consensus) section.
+Finally, Delivery Acknowledgements are gathered and batched by nodes before being submitted to the core protocol and committee as described in the [consensus](#consensus) section.
 
 ## Reputation system
 
-The Fleek Network has a reputation system where Nodes rate each other. The ratings are collected timely and an aggregation algorithm calculates the overall rate for each Node at the end of every Epoch.
+The Fleek Network has a reputation system where nodes rate each other. The ratings are collected timely and an aggregation algorithm calculates the overall rate for each node at the end of every epoch.
 
-Any reputation system that depends on players attributing rates to each other can be exploited. For prevention, a custom version of the EigenTrust algorithm is used to reduce dishonest and incorrect measurements.
+Noteworthy, any reputation system that depends on players attributing rates to each other can be exploited. For prevention, a custom version of the EigenTrust algorithm is used to reduce dishonest and incorrect measurements.
 
-Some other procedures where a Node is rated are on the interactions between nodes while servicing. Meaning that a Node earns a rate per service interaction.
+Some other procedures where a node is rated are on the interactions between nodes while servicing. Meaning that a node earns a rate per service interaction.
 
-This information is replicated across the Network and cannot be tampered with and is a valuable and reliable source of knowledge for optimization tasks.
+The information is replicated across the network securely and cannot be tampered with and is a valuable and reliable source of knowledge for optimization tasks.
 
 A few optimization tasks include:
 
-- Optimizing the Network flow
-- Assigning services to Nodes
+- Optimizing the network flow
+- Assigning services to nodes
 - Determining proximity
 
 The reputation system is used to determine the service routing and work allocation.
@@ -128,18 +128,18 @@ The Fleek Network is a system where actors play important roles, namely:
 - End-user
 - Node Operator
 
-Each of these users has a huge role on contributing and participating in the network. They make it possible and lively by requesting resources, through usage, payments or by simply being a plain member of the community.
+Each of these users has a huge role in contributing and participating in the network. They make it possible and lively by requesting resources, through usage, payments or by simply being a plain member of the community.
 
 ### Client
 
-The **Client** is a user that consumes data from the network; for instance:
+The **Client** is a user that consumes data from the network, for instance:
 
 - A developer interested in using the CDN in an application
 - A media publisher wanting to accelerate access to media assets
 - A system administrator looking for instructions to troubleshoot the client library
 - A Solutions Architect looking for a quick overview of an alternative service for a centralized provider
 - Instructions to install and use the client library
-- Others
+- A Web developer looking to decentralize an API service
 
 A client is a paying customer for the commodities and resources consumed on the network, e.g. a CDN service customer who pays for bandwidth use, etc.
 
@@ -167,27 +167,27 @@ A developer is often described as a builder who enables the end-to-end experienc
 
 An **End-user** is someone to whom the data or computation output is ultimately delivered, among others:
 
-- Static assets, such as images on a website
-- Image optimization for a very particular size request
+- Static assets, such as images rendered on a website
+- Image optimization output for a very particular size request
 - Server-side rendering
-- Gets data through HTTP Gateway or RPC
+- Data response provided via HTTP Gateway or RPC
 
-The service outputs are for the **end-user**, but payment for the service is the responsibility of the **client** that manages the application/service the **end-user** interacts with.
+The service outputs are for the **end-user**, but payment for the service is the responsibility of the **client** that manages the application or service the **end-user** interacts with.
 
 ### Node operator
 
-A **Node Operator** is a kind of system administrator who builds, configures, installs or maintains a Node(s) in a server. To mention a few use cases:
+A **Node Operator** is a kind of system administrator who builds, configures, installs or maintains a node(s) in a server. To mention a few use cases:
 
-- Builds the Node binary from source-code
-- Updates the Node source-code
-- Runs the installation wizard to setup a Node
-- Installs the Node manually
-- Configures the Node
+- Builds the node binary from source-code
+- Updates the source-code repository, which node is built on
+- Runs the installation wizard to setup a node
+- Installs the node manually
+- Configures the node
 - Secures the server
 
 The Fleek Network works as a distributed system of nodes where each node operates and contributes to the system’s overall health and functionality with computational resources by network operation demand.
 
-Nodes are set up to run on servers by operators. Operators are system administrators who build, configure, install and maintain the nodes in a server. Generally, a node is installed and runs on a computer or virtual private server (VPS) lent by a Cloud Service Provider.
+Nodes are set up to run on servers by operators. Operators are system administrators who build, configure, install and maintain the nodes in a server. Generally, a node is installed and runs on a computer or virtual private server (VPS) lent by a cloud service provider.
 
 :::info
 A server is a computer machine where a Node runs and can be located anywhere in the world.
@@ -195,21 +195,21 @@ A server is a computer machine where a Node runs and can be located anywhere in 
 
 The Node Operator is a critical system actor that is incentivized to manage one or many nodes. Ultimately making the Fleek Network what is about, a decentralized orchestration layer and infrastructure.
 
-Any individual who's interested in learning can become a Node Operator by reading the documentation, or content made available by the Network Core team and Community.
+Any individual who's interested in learning can become a Node Operator by reading the documentation, or content made available by the network core team and community.
 
 ## Multi-Service Support
 
-The Fleek Network provides a base layer as the foundation of many Services. Simplicity at its Core, it handles Proof-of-delivery and other Client-Node exchanges, such as user balance and rewards.
+The Fleek Network provides a base layer as the foundation of many Services. Simplicity at its core, it handles Proof-of-delivery and other client-node exchanges, such as user balance and rewards.
 
-It's designed to allow anyone to create and deploy a custom Service to the Network, without the need for anyone's permission. The protocol slashing mechanisms help deter malicious behavior and penalize dishonest participants while allowing the service, a modular unit, to operate at maximum availability and performance.
+It's designed to allow anyone to create and deploy a custom service to the network, without the need for anyone's permission. The protocol slashing mechanisms help deter malicious behavior and penalize dishonest participants while allowing the service, a modular unit, to operate at maximum availability and performance.
 
-Within a diverse ecosystem where Node Operators are free to choose which Services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
+Within a diverse ecosystem where node operators are free to choose which services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
 
 ## Abstraction and build blocks
 
-Abstraction is conceptually useful in decentralized and distributed Web Service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
+Abstraction is conceptually useful in decentralized and distributed web service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
 
-The building blocks provide you with enough level of detail that the modern Developer Experience demands but with cryptographic, economical and security assurances for confident service development, amongst others.
+The building blocks provide you with enough level of detail that the modern developer experience demands but with cryptographic, economical and security assurances for confident service development, amongst others.
 
 The Fleek Network implementation is open source and freely available for consultation and contribution when more detail or refinement is required by the community and other observers.
 
