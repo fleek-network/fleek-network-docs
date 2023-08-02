@@ -48,3 +48,9 @@ A considerable number of Web3 projects have services hosted and delivered throug
 Since decentralized storage, edge computing and peer-to-peer networking technology are a reality, a decentralized content delivery network or Serverless functions, amongst others, are possible—helping achieve the goal of a fully decentralized Web experience. 
 
 The next generation of Internet Services brings tremendous cost benefits, high availability, geographic distribution and betterment of the performance, load times and perceived user experience.
+
+## Motivation
+
+The Fleek Network team was motivated to create a decentralized Edge Platform due to the current infrastructure trends, user concerns and demands. The modern web has shifted from the cloud to the edge, which is a reflection of the internet's growing user base and the need for low latency for users worldwide.
+
+This development is a crucial and necessary step towards significantly enhancing the reliability, efficiency, and decentralization of Web3 applications and platforms, such as the next iteration of the Fleek platform.
