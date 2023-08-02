@@ -3,7 +3,8 @@ title: Why it exists?
 slug: why-it-exists
 hide_title: true
 tags:
-  - why-it-exists
+  - permissionless
+  - decentralization
 sidebarCollapsible: false
 ---
 

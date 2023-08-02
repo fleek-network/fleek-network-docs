@@ -9,15 +9,15 @@ sidebarCollapsible: false
 
 ## Overview
 
-When a client requests a Service, the protocol determines the best route to the nodes where the service replicas and workload allocates.
+When a client requests a service, the protocol determines the best route to the nodes where the service replicas and workload allocates.
 
 Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed. 
 
 The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus consistently throughout the Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
 
-## About the protocol
+## The protocol
 
-The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing Cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
+The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
 
 The Fleek Network is a proof-of-stake protocol, that takes advantage of Ethereum for staking, payments, governance and other economic features.
 
@@ -29,22 +29,22 @@ It's important to keep track of these components to ensure that the system is ru
 - The Node Reputation
 - Data on how much work a Node has performed in a given epoch
 
-As a decentralized Network, the state of these is replicated across all of the distributed Nodes in the Network by forming a Blockchain, in which Consensus on transactions transmutes to the final immutable state.
+As a decentralized network, the state of these is replicated across all of the distributed nodes in the network by forming a blockchain, in which consensus on transactions transmutes to the final immutable state.
 
 ## The Consensus algorithm
 
-[Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering that requires total ordering (linear order) and Bullshark as the consensus engine.
+[Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering (as total ordering or linear order) and Bullshark as the consensus engine.
 
 :::note
-The primary transactions being ordered by the Consensus algorithm is the batch of Delivery Acknowledgements stored in a local list of transactions before commitment to the blockchain (memory pool).
+The primary transactions being ordered by the consensus algorithm is the batch of Delivery Acknowledgements stored in a local list of transactions before commitment to the blockchain (memory pool).
 :::
 
 The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system. The protocol achieves reliable dissemination and storage of causal histories of transactions. Narwhal tolerates an asynchronous network and maintains high performance despite
 failures.
 
-Bullshark is a zero-message overhead consensus algorithm that handles transactions that require total ordering, and synchronization of the transactions between Nodes and the global Network state.
+Bullshark is a zero-message overhead consensus algorithm that handles transactions that require total ordering (linear ordering), and synchronization of the transactions between nodes and the global network state.
 
-Where Narwhal ensures data is submitted to consensus, Bullshark sorts out the order of the data.
+To put it simply, where Narwhal ensures data is submitted to consensus, Bullshark sorts out the order of the data.
 
 :::tip Total ordering
 Total ordering is performed by a committee-based approach. The committee is formed from a subset of any valid staked Node at the end of every epoch (about 24 hours). The integrity is met due to the Node rotation that occurs at each period, reducing risks associated with Nodes being compromised and affecting the committee purity. In summary, a subset of Nodes forms a new committee at each Epoch, that does the transaction ordering of the workload computed and submitted by the remaining Nodes.
@@ -58,31 +58,32 @@ Instead of resolving requests in the cloud, where roundtrip times are noticeable
 
 Fleek Network's Edge computing is computing that's done at the speediest location to the user. Provided by Network Nodes that are favorably dispersed and operated by a diverse community.
 
-The community members host and operate the Network Nodes, which form the Edge Platform, and contribute to an autonomous and decentralized network of Web Services.
+The community members host and operate the Network Nodes, which form the Edge Platform, and contribute to an autonomous and decentralized network of web services.
 
-Some of the resources provided by the Network Nodes are:
+Some of the resources provided by the network nodes are:
 
 - Disk Storage
 - Processing power (CPU Units)
 - Network bandwidth
-- Availability
+
+The Edge Network aims to provide computational resources where a user most needs them.
 
 ## Incentives and rewards
 
-Fleek Network issues FLK–an ERC-20 fungible token created using the Ethereum Blockchain–which Node operators stake to perform work on the network. In contrast, developers and clients use stablecoins in a fair exchange for the commodities and resources consumed on the network.
+Fleek Network issues FLK–an ERC-20 fungible token created using the Ethereum Blockchain–which Node operators must stake to perform work on the network. On the other hand, developers and clients use stablecoins in a fair exchange for the commodities and resources consumed on the network.
 
 :::caution warning
-A Node Operator has to stake FLK to have a Node participate in the Network. A stakeless Node cannot participate, as there would be no way to punish them for malicious behavior.
+A Node Operator has to stake FLK to have a node participate in the Network. A node without FLK staken is referred to as a stakeless node. A stakeless node cannot contribute or participate in the network, as there would be no way to punish them for malicious behavior. Thus, all fully operational nodes in the network, without exception, have a stake.
 :::
 
-A Node is a process that runs on a machine that provides resources to the Network. The resources are packaged as commodities, for instance:
-- Availability
+A node is a process that runs on a machine that provides resources to the network. The resources are packaged as commodities. For instance:
+- Availability / Up-time
 - Bandwidth
 - CPU
 
-These commodities are exchanged fairly and pricing is decided by the ecosystem and network governance in USD.
+These commodities are exchanged fairly and pricing is decided by the ecosystem and network governance. To ensure a stable and predictable income stream, the rewards awarded to Node Operators are predetermined at a stable rate (USD).
 
-Service providers are rewarded for fulfilling cache requests per bandwidth and by sharing cached data with other peers – as an incentive for a shared economy–therefore the more bandwidth served, the more tokens received.
+Service providers are rewarded in many ways, for instance, by fulfilling cache requests per bandwidth, and sharing cached data with other peers–as an incentive for a shared economy, therefore the more bandwidth served, the more tokens received.
 
 When an epoch ends, which is about 24 hours, the rewards from all submitted Delivery Acknowledgements are distributed to the edge nodes.
 
