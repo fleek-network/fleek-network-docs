@@ -57,3 +57,15 @@ The distribution of these rewards among the stakeholders is detailed in the foll
 | Fleek Foundation  |           0%         |
 | Node Operator     |          80%         |
 | Service builder   |          20%         |
+
+## Network Fees
+
+Although the Fleek Network does not charge any transaction fees, it is crucial to establish a balanced system that promotes fairness, quality and responsibility among service providers. As a result, a Service Builder is required to pay a one-time deployment fee when deploying a service on the network.
+
+Service Builders are encouraged to optimize their services as much as possible because the cost of deployment is determined by various factors related to the service being introduced, including its size, complexity, and resource consumption on the hosting nodes. This system ensures that the cost associated with deployment promotes efficiency and fairness among service providers.
+
+:::info
+Some networks use "gas" as a measurement for fees, which represents the amount of computational work and resources needed to start the service. In the Fleek Network, the fee is indicative of the amount of computational labor and resources necessary to initiate the service, that can help prevent malicious actors and services.
+:::
+
+The fee for service updates is typically smaller than the initial deployment fee, as long the service retains the original functionality. On the other hand, ones that alter the service's primary functionality or require significant resource adjustments are considered new service deployments.
