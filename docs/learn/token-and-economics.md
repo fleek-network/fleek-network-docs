@@ -91,3 +91,14 @@ Some networks use "gas" as a measurement for fees, which represents the amount o
 :::
 
 The fee for service updates is typically smaller than the initial deployment fee, as long the service retains the original functionality. On the other hand, ones that alter the service's primary functionality or require significant resource adjustments are considered new service deployments.
+
+## The transaction types
+
+In the protocol, most transactions are related to client top-ups, deposits, service deliveries, staking and rewards. The transaction types are described as following:
+
+- Deposit
+- Stake
+- Unstake
+- Stake-lock
+- Delivery Acknowledgment
+- Proof of Misbehaviour
