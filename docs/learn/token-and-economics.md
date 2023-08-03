@@ -23,6 +23,24 @@ The token and economy model starts with a fixed inflation rate, which after the 
 
 Fleek Network has a utility token named FLK, an ERC-20 token issued on Ethereum (L1). The Fleek Network interacts with it as native to the protocol. The token intent is user accessibility and familiarity, making the interactions in the system as frictionless as possible. This is achieved via a Proof-of-Consensus bridge that facilitates entry and exit from Fleek Network—a Zero Knowledge Proof (ZKP) bridge that enables token retrieval.
 
+## Stable token for payments
+
+The primary income for Account Holders is derived from a set of stable cryptocurrencies, which are easily tradable and highly liquid. For example, Node Operators receive rewards from stable coins (USD rate), ensuring a stable and predictable income stream. Note, that the network employs an inflationary mechanism, providing additional rewards for stakeholders via the minting of FLK tokens.
+
+## Multiple equilibrium game and stages of exploration
+
+We are dealing with a multi-equilibrium game, where there is a stable token for payments (USD rated) that coexists with a utility token (FLK).
+
+The network protocol operates through three determining stages to ensure a sustainable ecosystem. The first stage involves an incentivization effort that aims to encourage early adoption of the network. This is made possible through an inflationary policy that sets a static inflation rate, resulting in the highest block rewards during all stages.
+
+:::info
+The token-economics paper describes the stages as exploration or three stages of exploration.
+:::
+
+Following the initial phase, a more deliberate strategy is implemented regarding rewards for inflation. It emphasizes the network's utility increase while continuously rewarding node operators through the inflationary minting of new tokens. However, it is important to note that while the inflation rate becomes dynamic, it's ultimately constrained by either the protocol or its governance. This effectively sets a limit on the maximum inflation rate that can be implemented.
+
+Once the network reaches the maximum conditional utility, enters into stage three where payments made by users are significant enough to cover the costs of node operators and also provide a good profit. Indicating that the network's economy has matured and there is less dependence on inflationary rewards.
+
 ## A Proof-of-Stake layer
 
 A secure ledger of transactions is maintained for validation, request fulfillment and consensus. At every epoch (about 24 hours), a committee is formed from a subset of any valid staked node.
@@ -49,6 +67,10 @@ The total emitted FLK token rewards per epoch are distributed to the stakeholder
 - Fleek Foundation—although it has no percentage of the token inflation at the network launch (due to sufficient tokens in the initial allocation), the protocol distribution percentages can change through governance when deemed necessary.
 - Node Operators—critical to the network, is a system actor incentivized to manage one or many nodes, ultimately making form the Fleek Network by sharing resources in exchange for rewards.
 - Service builders—due to their valuable contribution to the development of innovative services, are entitled to a portion of emission rewards as royalties and incentives for continuous innovation.
+
+:::info
+The Fleek Foundation is a critical component that supports the development and growth of the protocol by participating in on-chain and off-chain governance, providing grants, and engaging with the community.
+:::
 
 The distribution of these rewards among the stakeholders is detailed in the following table:
 
