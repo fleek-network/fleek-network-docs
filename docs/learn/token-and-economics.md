@@ -94,7 +94,7 @@ The fee for service updates is typically smaller than the initial deployment fee
 
 ## The transaction types
 
-In the protocol, most transactions are related to client top-ups, deposits, service deliveries, staking and rewards. The transaction types are described as following:
+Most of the activities carried out in the protocol are centered around client top-ups, deposits, service deliveries, staking, and rewards. The activities generate the following transaction types in the ledger:
 
 - Deposit
 - Stake
@@ -102,3 +102,15 @@ In the protocol, most transactions are related to client top-ups, deposits, serv
 - Stake-lock
 - Delivery Acknowledgment
 - Proof of Misbehaviour
+
+### Deposit
+
+A cryptographic proof is generated every time tokens are deposited to the bridge contract (L1). Then, a user submits a transaction (**deposit** transaction type) specifying the token and amount to be deposited (stable coin or utility token). Once successfully verified by the Fleek Network protocol, the corresponding amount of the token is added to the user account balance.
+
+### Stake
+
+Staking is mandatory to operate. An account holder must transfer utility tokens (FLK) to the node stake record (FLK) to participate. The user submits a transaction (**Stake** transaction type) holding details about the node and token amount. To ensure that the transfer to the node's stake ledger is successful, the account must have sufficient funds. It is crucial to note that the total amount must correspond to the requirement set by the protocol governance, as failure to meet this requirement will cause the node to malfunction.
+
+### Unstake
+
+Un-staking is the operation to withdraw tokens from a node in the Fleek Network protocol. Once a transaction is successfully submitted, the amount is held for a protocol-defined locking period. The account holder does not have access to un-stake funds immediately after the withdrawal request. This mechanism exists to prevent node operators from un-staking preemptively, especially if they anticipate an upcoming slashing penalty. The locking period provides sufficient time for the resolution of any disputes or misbehaviors. Once this period elapses, the node operator can initiate a withdrawal of the un-staked amount. It is important to note that if the remaining stake in a node after un-staking falls below the minimum node stake, the node will stop receiving service requests.
