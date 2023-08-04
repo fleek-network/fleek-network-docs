@@ -13,7 +13,7 @@ sidebarCollapsible: false
 sidebar_position: 1
 ---
 
-The Fleek Network runs on an incentivized economy model that rewards node operators who provide resources that form the network, where end users pay for usage.
+The Fleek Network runs on an incentivized economy model that rewards node operators who provide resources that form the network.
 
 ## The genesis block
 
@@ -21,15 +21,15 @@ The token and economy model starts with a fixed inflation rate, which after the 
 
 ## The Utility Token
 
-Fleek Network has a utility token named FLK, an ERC-20 token issued on Ethereum (L1). The Fleek Network interacts with it as native to the protocol. The token intent is user accessibility and familiarity, making the interactions in the system as frictionless as possible. This is achieved via a Proof-of-Consensus bridge that facilitates entry and exit from Fleek Network—a Zero Knowledge Proof (ZKP) bridge that enables token retrieval.
+Fleek Network has a utility token named FLK, an ERC-20 token issued on Ethereum (L1). The Fleek Network interacts with it as native to the protocol, given that the token intent is user accessibility and familiarity, making the interactions in the system as frictionless as possible. To accomplish this, the network has a Proof-of-Consensus bridge that facilitates entry and exit from Fleek Network—a Zero Knowledge Proof (ZKP) bridge that enables token retrieval.
 
 ## Stable token for payments
 
-The primary income for Account Holders is derived from a set of stable cryptocurrencies, which are easily tradable and highly liquid. For example, Node Operators receive rewards from stable coins (USD rate), ensuring a stable and predictable income stream. Note, that the network employs an inflationary mechanism, providing additional rewards for stakeholders via the minting of FLK tokens.
+The primary income for Account Holders is derived from a set of stable cryptocurrencies, which are easily tradable and highly liquid. For example, node operators receive rewards from stable coins (USD rate), ensuring a stable and predictable income stream. Note, that the network employs an inflationary mechanism, providing additional rewards for stakeholders via the minting of FLK tokens.
 
 ## Multiple equilibrium game and stages of exploration
 
-We are dealing with a multi-equilibrium game, where there is a stable token for payments (USD rated) that coexists with a utility token (FLK).
+The Fleek Network engages with a multi-equilibrium game, where there is a stable coin for payments (USD rated) that coexists with a utility token (FLK). Essentially, we are striving for two things. Through the use of the utility token (FLK), we aim to attain equilibrium in the demand and supply of tokens, which is increased by emissions and dynamic inflation. Meanwhile, we also seek to achieve equilibrium for the stable coin by setting the appropriate price for resources, which will be managed by the governance.
 
 The network protocol operates through three determining stages to ensure a sustainable ecosystem. The first stage involves an incentivization effort that aims to encourage early adoption of the network. This is made possible through an inflationary policy that sets a static inflation rate, resulting in the highest block rewards during all stages.
 
