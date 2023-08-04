@@ -118,3 +118,15 @@ Un-staking is the operation to withdraw tokens from a node in the Fleek Network 
 :::caution
 It's important to note that if the remaining stake falls below the minimum requirement after un-staking, the node will no longer receive service requests.
 :::
+
+### Stake-Lock
+
+[WIP]
+
+### Delivery-Acknowledgment
+
+[WIP]
+
+### Proof of Misbehavior
+
+[WIP]
