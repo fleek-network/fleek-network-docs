@@ -113,4 +113,8 @@ Staking is mandatory to operate. An account holder must transfer utility tokens 
 
 ### Unstake
 
-Un-staking is the operation to withdraw tokens from a node in the Fleek Network protocol. Once a transaction is successfully submitted, the amount is held for a protocol-defined locking period. The account holder does not have access to un-stake funds immediately after the withdrawal request. This mechanism exists to prevent node operators from un-staking preemptively, especially if they anticipate an upcoming slashing penalty. The locking period provides sufficient time for the resolution of any disputes or misbehaviors. Once this period elapses, the node operator can initiate a withdrawal of the un-staked amount. It is important to note that if the remaining stake in a node after un-staking falls below the minimum node stake, the node will stop receiving service requests.
+Un-staking is the operation to withdraw tokens from a node in the Fleek Network protocol. Once a transaction is successfully submitted, the amount is held for a protocol-defined locking period. The account holder does not have access to un-stake funds immediately after the withdrawal request. This mechanism exists to prevent node operators from un-staking preemptively, especially if they anticipate an upcoming slashing penalty. The locking period provides sufficient time for the resolution of any disputes or misbehaviors. Once this period has ended, the node operator may request to withdraw the un-staked amount.
+
+:::caution
+It's important to note that if the remaining stake falls below the minimum requirement after un-staking, the node will no longer receive service requests.
+:::
