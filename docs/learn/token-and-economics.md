@@ -136,3 +136,27 @@ The nodes utilize these transaction types to claim rewards by submitting to the 
 ### Proof of Misbehavior
 
 A **Proof-of-Misbehavior** occurs when a client receives an inaccurate or faulty response from a node. When the transaction type is submitted by a client, the protocol ensures that any faulty nodes are penalized by reducing the number of tokens staked. In case a node's stake falls below the minimum required by the protocol, it will be suspended and won't be able to receive any service requests until the necessary amount is restored.
+
+## Token distribution
+
+The distribution of the tokens is detailed in the following table:
+
+| Stakeholder          |    Percentage (%)    |
+|----------------------|----------------------|
+| Community            |    60%               |
+| Early supporters     |    20%               |
+| Fleek Network team   |    20%               |
+
+
+The **Early supporters** are stakeholders who contributed to the project's initial funding phases or supported the project through other means.
+
+The **Community** has the largest share of the token allocation, which is further distributed granularly. It includes the **Foundation** 33% share (corresponding to 20% of the total). For **funding and support opportunities** (airdrop, bounties and grants) there's a 40% share (corresponding to 24% of the total). The **DAO** share is 17% (10% of the total) and 10% (6% of the total) is set aside for public sales and liquidity bootstrapping.
+
+The distribution of the token allocation in the community is detailed in the following table:
+
+| Community member                  |    Percentage (%)    |
+|-----------------------------------|----------------------|
+| Airdrop, bounties and grants      |    40%               |
+| DAO                               |    17%               |
+| Foundation                        |    33%               |
+| Public sales and liquidity        |    17%               |
