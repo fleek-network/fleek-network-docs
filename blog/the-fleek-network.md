@@ -117,7 +117,7 @@ Decentralize our entire stack! Today we start with an important piece in our sta
 | Bullshark     | 2     | E(6)     | yes    | during sync |
 
 
-Click [here](../docs/whitepaper) to find more information about the Fleek Network consensus.
+Click [here](/docs/whitepaper) to find more information about the Fleek Network consensus.
 
 > Decoupling data dissemination from metadata ordering is the key mechanism to allow scalable and high throughput consensus systems 
 > 
