@@ -121,7 +121,11 @@ It's important to note that if the remaining stake falls below the minimum requi
 
 ### Stake-Lock
 
-[WIP]
+By committing to a certain duration (protocol parameter), node operators boost their FLK inflation rewards through the use of a stake lock-up mechanism. The lock-up mechanism is different from the lock-in period that occurs during un-staking.
+
+:::note
+This particular action cannot be undone. This implies that a node operator who opts to stake-lock cannot withdraw that amount until the end of the stake-lock-in period.
+:::
 
 ### Delivery-Acknowledgment
 
