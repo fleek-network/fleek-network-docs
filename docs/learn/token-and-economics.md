@@ -135,4 +135,4 @@ The nodes utilize these transaction types to claim rewards by submitting to the 
 
 ### Proof of Misbehavior
 
-[WIP]
+A **Proof-of-Misbehavior** occurs when a client receives an inaccurate or faulty response from a node. When the transaction type is submitted by a client, the protocol ensures that any faulty nodes are penalized by reducing the number of tokens staked. In case a node's stake falls below the minimum required by the protocol, it will be suspended and won't be able to receive any service requests until the necessary amount is restored.
