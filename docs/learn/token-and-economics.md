@@ -141,11 +141,11 @@ A **Proof-of-Misbehavior** occurs when a client receives an inaccurate or faulty
 
 The distribution of the tokens is detailed in the following table:
 
-| Stakeholder          |    Percentage (%)    |
-|----------------------|----------------------|
-| Community            |    60%               |
-| Early supporters     |    20%               |
-| Fleek Network team   |    20%               |
+| Stakeholder             |    Percentage (%)    |
+|-------------------------|----------------------|
+| Community               |    60%               |
+| Early supporters        |    20%               |
+| Fleek Network team      |    20%               |
 
 
 The **Early supporters** are stakeholders who contributed to the project's initial funding phases or supported the project through other means.
@@ -154,9 +154,9 @@ The **Community** has the largest share of the token allocation, which is furthe
 
 The distribution of the token allocation in the community is detailed in the following table:
 
-| Community member                  |    Percentage (%)    |
-|-----------------------------------|----------------------|
-| Airdrop, bounties and grants      |    40%               |
-| DAO                               |    17%               |
-| Foundation                        |    33%               |
-| Public sales and liquidity        |    17%               |
+| Community member                    |    Percentage (%)    |
+|-------------------------------------|----------------------|
+| Airdrop, bounties and grants        |    40%               |
+| DAO                                 |    17%               |
+| Foundation                          |    33%               |
+| Public sales and liquidity          |    17%               |
