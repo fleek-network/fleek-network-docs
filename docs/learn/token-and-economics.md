@@ -129,7 +129,9 @@ This particular action cannot be undone. This implies that a node operator who o
 
 ### Delivery-Acknowledgment
 
-[WIP]
+A **Delivery Acknowledgement** is a transaction type that functions as a client receipt for a successful service from an edge node. It's cryptographically secured and tamper-proof, meaning that the transaction contains irrefutable details about all parts involved in the transaction. A Delivery Acknowledgement includes metadata about the commodities consumed by a node while executing or running a service. Also contains metadata that is used to determine the reward attributed to a Node.
+
+The nodes utilize these transaction types to claim rewards by submitting to the consensus in batch form. Upon successful submission, each Delivery Acknowledgment triggers a transfer of rewards from the reward pool to the respective node's balance at the end of each Epoch (about 24 hours). When clients earn stablecoins, they also receive newly minted FLK tokens in proportion to their revenue. Additionally, any reward boosts that apply based on the stake lock period are included in the payout.
 
 ### Proof of Misbehavior
 
