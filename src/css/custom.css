@@ -5,10 +5,10 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --ifm-font-family-base: 'IBM Plex Sans', sans-serif;  /* Set the default font to IBM Plex Sans */
+  --ifm-font-family-base: 'IBM Plex Mono', sans-serif;  /* Set the default font to IBM Plex Sans */
   --ifm-color-primary: #000;
   --ifm-color-primary-dark: #000033;
   --ifm-color-primary-darker: #001ac9;
