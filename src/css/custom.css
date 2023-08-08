@@ -21,7 +21,7 @@
 [data-theme='dark'] {
   --ifm-color-primary: #fff;
   --ifm-color-primary-dark: #98beff;
-  --ifm-color-primary-darker: #0073ff;
+  --ifm-color-primary-darker: #C9FF57;
   --ifm-color-primary-darkest: #0048f8;
   --ifm-color-primary-light: #001ac9;
   --ifm-color-primary-lighter: #000033;
@@ -50,7 +50,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background: radial-gradient(circle at 10% 30%, rgb(34, 38, 46), rgba(255, 255, 255, 0) 18%), radial-gradient(circle at 90% 50%, rgb(34, 38, 46), rgba(255, 255, 255, 0) 26%);
   z-index: -1;
 }
 
@@ -68,6 +67,12 @@ html[data-theme='dark'] {
   box-shadow: none;
 }
 
+.alert {
+  background: #1C1C1C;
+  border-left: 4px solid #C9FF57;
+  border-radius: 0px;
+}
+
 .DocSearch-Modal .DocSearch-Footer,
 .DocSearch .DocSearch-Button-Keys {
   display: none;
@@ -77,7 +82,7 @@ html[data-theme='dark'] {
 }
 .navbar__items .DocSearch-Button {
   width: 250px;
-  border-radius: 5px;
+  border-radius: 0px;
   border: 1px solid var(--ifm-toc-border-color);
   background: var(--docsearch-searchbox-focus-background);
 }
@@ -126,7 +131,7 @@ div[class*="docItemContainer"] {
     align-items: inherit;
   }
   .navbar__items .DocSearch-Button {
-    justify-content: center;
+    justify-content: flex-start;
   }
   [class^="sidebar_"] .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
     padding: 1rem 0;
@@ -241,14 +246,13 @@ input[class^="searchQueryInput_"] {
 
 article h1,
 .col article header > h2 {
-  /* background: linear-gradient(90deg, rgb(0, 115, 255), rgb(0, 250, 255)); */
-  background: linear-gradient(90deg, #888, #fff);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .pagination-nav__link {
-  background: var(--custom-color-gray-blue);
+  border-radius: 0px;
 }
 
 .main-wrapper .container {
@@ -301,7 +305,7 @@ blockquote {
   padding: 20px;
   background: #112;
   margin: 40px 5px;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 blockquote code {
@@ -319,7 +323,7 @@ blockquote:before {
   display: block;
   top: -5px;
   left: -5px;
-  border-radius: 8px;
+  border-radius: 0px;
   height: calc(100% + var(--margin)*2);
   width: calc(100% + var(--margin)*2);
   transform: translate(calc(0px - var(--margin)),calc(0px - var(--margin)));
@@ -359,7 +363,7 @@ blockquote:before {
   display: block;
   top: -5px;
   left: -5px;
-  border-radius: 8px;
+  border-radius: 0px;
   height: calc(100% + var(--margin)*2);
   width: calc(100% + var(--margin)*2);
   transform: translate(calc(0px - var(--margin)),calc(0px - var(--margin)));
@@ -385,7 +389,7 @@ blockquote:before {
   padding: 20px;
   background: #112;
   margin: 40px 5px;
-  border-radius: 8px;
+  border-radius: 0px;
   max-width: 420px;
   width: 100%;
 }
@@ -394,7 +398,6 @@ blockquote:before {
   flex-flow: column;
 }
 .author_card img {
-  border-radius: 50%;
   display: block;
   overflow: hidden;
   width: auto;

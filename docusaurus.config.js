@@ -116,6 +116,14 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+
+      head: {
+        attributes: {
+          rel: 'stylesheet',
+          href: '<link href="https://fonts.cdnfonts.com/css/ibm-plex-sans" rel="stylesheet">',
+        },
+      },
+
       navbar: {
         logo: {
           alt: 'Fleek',
