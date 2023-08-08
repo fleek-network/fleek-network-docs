@@ -117,13 +117,6 @@ const config = {
         respectPrefersColorScheme: false,
       },
 
-      head: {
-        attributes: {
-          rel: 'stylesheet',
-          href: 'https://fonts.cdnfonts.com/css/ibm-plex-sans',
-        },
-      },
-
       navbar: {
         logo: {
           alt: 'Fleek',
@@ -221,7 +214,7 @@ const config = {
           ...commonDocsOptions,
         }),
       ],
-    ],
+    ],    
 };
 
 module.exports = config;
