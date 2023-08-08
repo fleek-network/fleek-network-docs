@@ -13,6 +13,9 @@ tags:
 - Learn
 - Fleek Network
 ---
+
+![](./images/banner-pic.png)
+
 :::info
 This documentation is currently placeholder as the team prepares for an initial testnet release around the end of August. Current open source code is highly experimental and may be subject to change.
 :::

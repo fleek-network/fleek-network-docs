@@ -76,6 +76,14 @@ html[data-theme='dark'] {
   border-radius: 0px;
 }
 
+.alert a {
+  text-decoration: none;
+}
+
+.alert a:hover {
+  text-decoration: underline;
+}
+
 .DocSearch-Modal .DocSearch-Footer,
 .DocSearch .DocSearch-Button-Keys {
   display: none;
@@ -280,9 +288,7 @@ article h1,
   border-left-style: dashed;
 }
 
-.markdown img {
-  border-radius: 8px;
-}
+.markdown img
 
 .table-of-contents li a:hover {
   text-decoration: underline;
