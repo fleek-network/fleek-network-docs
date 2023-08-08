@@ -7,6 +7,16 @@
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'Atyp'; /* You can name it anything */
+  src: url('/src/fonts/AtypDisplay-Bold.woff2') format('woff2'),
+       url('/src/fonts/AtypDisplay-Medium.woff2') format('woff2'),
+       url('/src/fonts/AtypDisplay-Regular.woff2') format('woff2'),
+       url('/src/fonts/AtypDisplay-Semibold.woff2') format('woff2');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
 :root {
   --ifm-font-family-base: 'IBM Plex Mono', sans-serif;  /* Set the default font to IBM Plex Sans */
   --ifm-color-primary: #000;
@@ -18,6 +28,10 @@
   --ifm-color-primary-lightest: #ffffff;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Atyp', fallbackFont, sans-serif; /* 'fallbackFont' is the name of a fallback font in case 'YourCustomFontName' doesn't load. */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
