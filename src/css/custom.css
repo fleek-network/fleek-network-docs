@@ -9,10 +9,10 @@
 
 @font-face {
   font-family: 'Atyp'; /* You can name it anything */
-  src: url('/src/fonts/AtypDisplay-Bold.woff2') format('woff2'),
-       url('/src/fonts/AtypDisplay-Medium.woff2') format('woff2'),
-       url('/src/fonts/AtypDisplay-Regular.woff2') format('woff2'),
-       url('/src/fonts/AtypDisplay-Semibold.woff2') format('woff2');
+  src: url('/fonts/AtypDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/AtypDisplay-Medium.woff2') format('woff2'),
+       url('/fonts/AtypDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/AtypDisplay-Semibold.woff2') format('woff2');
   /* font-weight: normal;
   font-style: normal; */
 }
