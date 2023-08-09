@@ -159,4 +159,4 @@ The distribution of the token allocation in the community is detailed in the fol
 | Airdrop, bounties and grants        |    40%               |
 | DAO                                 |    17%               |
 | Foundation                          |    33%               |
-| Public sales and liquidity          |    17%               |
+| Public sales and liquidity          |    10%               |
