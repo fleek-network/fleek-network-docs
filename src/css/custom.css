@@ -31,7 +31,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Atyp', fallbackFont, sans-serif; /* 'fallbackFont' is the name of a fallback font in case 'YourCustomFontName' doesn't load. */
+  font-family: 'Atyp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
