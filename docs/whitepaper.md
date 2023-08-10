@@ -14,7 +14,7 @@ tags:
 
 The latest whitepaper is available on this page, and it describes the protocol architecture, general operation, and characteristics.
 
-- [**Read the Whitepaper**](https://whitepaper.fleek.network/)
+- [Read the Whitepaper](https://whitepaper.fleek.network/)
 
 ## Abstract
 

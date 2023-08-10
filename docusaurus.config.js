@@ -116,6 +116,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+
       navbar: {
         logo: {
           alt: 'Fleek',
@@ -213,7 +214,7 @@ const config = {
           ...commonDocsOptions,
         }),
       ],
-    ],
+    ],    
 };
 
 module.exports = config;
