@@ -24,7 +24,7 @@ Next will come the following milestone: our early Testnet.
 
 ## Current state: Road to Testnet
 
-Our current roadmap on the road to an early teestnet stands as follows:
+Our current roadmap on the road to an early testnet stands as follows:
 
 ### August
 
