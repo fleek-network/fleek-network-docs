@@ -28,15 +28,7 @@ const sidebars = {
         'learn/index',
         'learn/network',
         'learn/token-and-economics',
-        {
-          type: 'category',
-          label: 'Services',
-          items: [
-            'learn/network/services/index',
-            'learn/network/services/development',
-            'learn/network/services/support',
-          ],
-        },
+        'learn/services',
       ],
     },
     {
