@@ -3,18 +3,21 @@ draft: false
 title: About
 sidebarCollapsible: false
 sidebar_position: 1
-date: 2023-06-29T09:00:00.000+00:00
-description: TODO
 hide_title: true
+date: 2023-08-15T09:00:00.000+00:00
+description: Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
 category: Documentation
 keywords: [introduction, documentation, getting started]
 tags:
+- Edge Platform
 - Guide
 - Learn
 - Fleek Network
 ---
 
-## About Fleek Network
+![](./images/banner-pic.png)
+
+## About
 
 Fleek Network is an open-source Edge Computing Platform to accelerate the development and execution of decentralized Web Services.
 
