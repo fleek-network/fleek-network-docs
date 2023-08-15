@@ -15,7 +15,7 @@ The Core of Fleek Network offers a foundational layer to enable developers to bu
 
 In contrast, end users have access to network services on the edge, that provide different kinds of computation and data processing features.
 
-We'll take a brief look into [Why does it exist](#why-does-it-exist), [How does it work](#how-does-it-work), and learn about [services](/docs/learn/network/services), amongst other topics.
+We'll take a brief look into [Why does it exist](#why-does-it-exist), [How does it work](#how-does-it-work), and learn about [services](/docs/learn/services), amongst other topics.
 
 :::tip
 For a deep dive into Fleek Network, check the [whitepaper](/docs/whitepaper) section.
