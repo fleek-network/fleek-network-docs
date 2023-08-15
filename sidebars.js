@@ -26,39 +26,8 @@ const sidebars = {
       collapsible: true,
       items: [
         'learn/index',
-        'learn/why-it-exists',
-        'learn/how-it-works',
+        'learn/network',
         'learn/token-and-economics',
-        {
-          type: 'category',
-          label: 'Network',
-          items: [
-            {
-              type: 'category',
-              label: 'Overview',
-              collapsed: true,
-              collapsible: true,
-              items: [
-                'learn/network/overview/architecture',
-                'learn/network/overview/introduction',
-                'learn/network/overview/application-layer',
-                'learn/network/overview/benchmarks',
-                'learn/network/overview/blockstore',
-                'learn/network/overview/client-libraries',
-                'learn/network/overview/epoch-synchronizer',
-                'learn/network/overview/handshake',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'RPC',
-              items: [
-                'learn/network/rpc/interface',
-              ],
-            },
-            'learn/ports',
-          ],
-        },
         {
           type: 'category',
           label: 'Services',

@@ -1,6 +1,7 @@
 ---
 title: Token and economics
 slug: token-and-economics
+hide_title: true
 tags:
   - tokenomics
   - token
@@ -12,6 +13,8 @@ tags:
 sidebarCollapsible: false
 sidebar_position: 1
 ---
+
+## Overview
 
 The Fleek Network runs on an incentivized economy model that rewards node operators who provide resources that form the network.
 

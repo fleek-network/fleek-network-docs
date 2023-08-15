@@ -1,21 +1,14 @@
 ---
-title: How it works?
-slug: how-it-works
+title: The Network
+slug: the-network
 hide_title: true
 tags:
-  - how-it-works
+  - permissionless
+  - decentralization
 sidebarCollapsible: false
 ---
 
-## Overview
-
-When a client requests a service, the protocol determines the best route to the nodes where the service replicas and workload allocates.
-
-Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed. 
-
-The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled-up to the protocol consensus consistently throughout the Epoch. This agreement forms by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
-
-## The protocol
+## Protocol
 
 The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
 
@@ -377,3 +370,33 @@ An **Origin** is a location where content originates from. In the context of Fle
 :::info
 A Client-side library can provide helpers to upload to some origin, such as IPFS and call the `HTTP PUT` for the origin.
 :::
+
+## Binary process
+
+TODO: Describe the binary and originating process at system level
+
+### Ports
+
+The Node process requires the following ports:
+
+- RPC (port 4069)
+- Narwhal
+    - Primary (port 8000)
+    - Worker (port 8001)
+    - Mempool (port 8002)
+
+There’s a single worker at the protocol level. In the future, if a node is allowed to run >1 worker, the ports can look like (worker#X):
+
+- Narwhal
+    - Worker (port 80X1)
+    - Mempool (or 80X2)
+
+:::caution required
+The ports should be freed before launching the node process. Any blockers or firewalls should be configured to enable the ports.
+:::
+
+### RPC Interface
+
+TODO: RPC Interface
+
+
