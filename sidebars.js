@@ -103,7 +103,17 @@ const sidebars = {
       ],
     },
     'roadmap',
-    'contribute',
+    {
+      type: 'category',
+      label: 'Open-source',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Open-source/code-of-conduct',
+        'Open-source/contributing',
+        'Open-source/repositories',
+      ],
+    },
     'whitepaper',
   ],
 };
