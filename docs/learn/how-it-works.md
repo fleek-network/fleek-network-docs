@@ -295,8 +295,8 @@ The Public-key cryptography used in the network identities are the following cur
 - Secp256k1 is the Elliptic Curve Digital Signature Algorithm (ECDSA) used by Bitcoin and Ethereum
 
 The identities are associated with the elliptic curves as follows:
-- A Node key is BLS12-381 which facilitates the consensus algorithm or persistence of state, resilience and fault tolerance. Has multi-signature support, the ability to aggregate many signatures into one used for consensus committee when signing certificates
-- A Node Networking key is Ed25519 used for the speed and performance of the network communications
+- A Node key (ConsensusPublicKey) is BLS12-381 which facilitates the consensus algorithm or persistence of state, resilience and fault tolerance. Has multi-signature support, the ability to aggregate many signatures into one used for consensus committee when signing certificates
+- A Node Networking key (NodePublicKey) is Ed25519 used for the speed and performance of the network communications
 - Account Owner keys are based on secp256k1, which corresponds to an Ethereum Address
 
 Transactions can be signed by the Account Owner—an Ethereum key (secp256k1) owned by the user on an external wallet and initially required to bridge assets from L2—and Node identities
