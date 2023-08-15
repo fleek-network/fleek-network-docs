@@ -1,21 +1,19 @@
 ---
-draft: false
 title: Whitepaper
-date: 2023-01-10T09:00:00.000+00:00
-description: Fleek Network's whitepaper and codebase.
-category: Documentation
-keywords: [whitepaper]
+slug: whitepaper
+hide_title: true
 tags:
-- Edge Platform
-- CDN
-- Fleek Network
-- Whitepaper
+  - fleek network
+  - whitepaper
+  - download
 ---
 
-The latest whitepaper is available on this page, and it describes the protocol architecture, general operation, and characteristics.
+This section provides in-depth documentation and materials about the Fleek Network technology stack.
 
-- [Read the Whitepaper](https://whitepaper.fleek.network/)
+## Whitepaper
 
-## Abstract
+The whitepaper outlines the technology that makes the Fleek Network Edge Computing Platform possible. It illustrates the foundation that makes it possible to reimagine the user experience for Decentralized Web Services and how to develop a fairer economy and ecosystem in collaboration with humans.
 
-Fleek Network is a decentralized edge platform optimized to facilitate the deployment and running of performant web services (CDN, serverless functions, etc.). Fleek Network’s globally distributed and autonomously controlled network of edge nodes allows developers to frictionlessly create and utilize a multitude of edge services. These services inherit cryptographically and economically secured infrastructure, node and geographic coverage guarantees, stable and predictable costs, and consistent quality and performance across all services running on the network. Fleek Network’s goal is to provide a platform that all Web3 protocols, middleware, services, and applications can benefit from to further decentralize their stack without sacrificing cost, performance, complexity, or developer/end-user experience. 
+
+<!-- TODO: whitepaper link -->
+<!-- [Download Whitepaper (English/EN)](todo:whitepaper) -->

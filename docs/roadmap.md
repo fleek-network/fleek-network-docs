@@ -10,21 +10,9 @@ tags:
 - Fleek Network
 ---
 
-:::info
-This documentation is currently placeholder as the team prepares for an early testnet release around the month of August. The roadmap defined at the moment is heavily focused on the first early testnet release. [Read the blog to stay up to date.](https://blog.fleek.network/)
-:::
-
-## Introduction
-
-Instead of restricting our network architecture/capabilities to a CDN service, Fleek Network's core was redesigned to support a full decentralized edge platform upon which many edge services (ex. CDN, serverless functions, etc.) can be built. The new architecture separates each aspect of the network (blockchain - edge infrastructure - services) so that anyone can build new edge services on Fleek Network.
-
-Several milestones were completed towards our next early Testnet goal: the whitepaper was launched, and the Github repo was published.
-
-Next will come the following milestone: our early Testnet.
-
 ## Current state: Road to Testnet
 
-Our current roadmap on the road to an early testnet stands as follows:
+Our current roadmap on the road to an early teestnet stands as follows:
 
 ### August
 

@@ -1,30 +1,49 @@
 ---
 draft: false
-title: Home
+title: About
 sidebarCollapsible: false
 sidebar_position: 1
-date: 2023-01-10T09:00:00.000+00:00
-description: Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
+date: 2023-06-29T09:00:00.000+00:00
+description: TODO
+hide_title: true
 category: Documentation
 keywords: [introduction, documentation, getting started]
 tags:
-- Edge Platform
 - Guide
 - Learn
 - Fleek Network
 ---
 
-![](./images/banner-pic.png)
+## About Fleek Network
+
+Fleek Network is an open-source Edge Computing Platform to accelerate the development and execution of decentralized Web Services.
+
+The system builds on a distributed network of Nodes, where services run within a fair and incentivized ecosystem constituted by an open community of developers and operators. Who can freely operate Nodes or build services without the need for approval or permission. Or simply, consume Fleek Network resources on demand provided by the services running on the Edge.
+
+Applications, platforms and protocols build and utilize decentralized services on Fleek Network to optimize performance and reduce dependency on centralized cloud providers. Developers can build faster and launch better products by offloading parts of the stack to the Edge to focus on core features.
 
 :::info
-This documentation is currently placeholder as the team prepares for an initial testnet release around the end of August. Current open source code is highly experimental and may be subject to change.
+The Fleek Network's documentation is organized as follows:
+
+[Documentation](docs) brief breakdown of the Fleek Network.
+
+[Engineering](blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
+
+[Guides](guides) provide step-by-step instructions for performing specific tasks.
+
+[Reference](reference) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
+
+[Develop](develop) learning materials for development and contributions.
 :::
 
-Welcome to the **documentation for Fleek Network**, a decentralized edge platform optimized to facilitate the deployment and running of performant web services.
+## Roadmap
 
-Fleek Network’s goal is to provide a platform based on a series of highly performant nodes that all Web3 protocols, middleware, services, and applications can benefit from, to further decentralize their stack without sacrificing cost, performance, complexity, or developer/end-user experience.
+We aim to bring computation to where demand is. You can find Fleek Network's public [roadmap](docs/roadmap) here.
 
-- Our whitepaper is the most recent source of information for Fleek Network. [You can find it here.](https://whitepaper.fleek.network/)
-- Need to know more about Fleek Network? Here's [Fleek Network's website.](https://fleek.network/)
-- Feedback? Enter our [Discord channel](https://discord.gg/fleekxyz) to have a direct line with our developers.
-- Would like to find a bit more from our developers? The [engineering blog](/blog) offers a deeper look.
+## Need help?
+
+Be part of a community! Join the Fleek Network [Discord](https://discord.gg/fleekxyz) if you want to ask a question, require help or exchange ideas.
+
+## Found an issue?
+
+Issues can be reported in the correspondent repositories [here](https://github.com/fleek-network) and any other reports by messaging us on [Discord](https://discord.gg/fleekxyz).
