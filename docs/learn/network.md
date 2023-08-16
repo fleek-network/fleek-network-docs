@@ -373,7 +373,7 @@ A Client-side library can provide helpers to upload to some origin, such as IPFS
 
 ## Binary process
 
-The Fleek Network binary process is the program that's been compiled down to machine code that the computer's processor can understand and execute. The project source code repository from which the binary is compiled is called [Lightning](https://github.com/fleek-network/lightning). When a node operator runs a node, it means that the binary process is launched in the node operator's computer. It runs as a separate instance in memory, with its own set of resources and permissions.The Fleek Network binary is an essential component that contributes to the network formation, distribution and decentralization. It runs on a supported Linux operating system, enabling users to run a wide variety of computing services and perform complex tasks.
+The Fleek Network binary process is the program that's been compiled down to machine code that the computer's processor can understand and execute. The project source code repository from which the binary is compiled is called [Lightning](https://github.com/fleek-network/lightning). Most node operators set up the nodes by running the install wizard, others do it manually. When a node operator runs a node, it means that the binary process is launched in the node operator's computer. It runs as a separate instance in memory, with its own set of resources and permissions. The Fleek Network binary is an essential component that contributes to the network formation, distribution and decentralization. It runs on a supported Linux operating system, enabling users to run a wide variety of computing services and perform complex tasks.
 
 ### Ports
 
