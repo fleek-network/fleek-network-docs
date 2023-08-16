@@ -373,11 +373,11 @@ A Client-side library can provide helpers to upload to some origin, such as IPFS
 
 ## Binary process
 
-TODO: Describe the binary and originating process at system level
+The Fleek Network binary process is the program that's been compiled down to machine code that the computer's processor can understand and execute. The project source code repository from which the binary is compiled is called [Lightning](https://github.com/fleek-network/lightning). When a node operator runs a node, it means that the binary process is launched in the node operator's computer. It runs as a separate instance in memory, with its own set of resources and permissions.The Fleek Network binary is an essential component that contributes to the network formation, distribution and decentralization. It runs on a supported Linux operating system, enabling users to run a wide variety of computing services and perform complex tasks.
 
 ### Ports
 
-The Node process requires the following ports:
+Amongst other resources, ports play the role of managing and organizing network traffic. The ports initiate and terminate network connections crucial for the node to operate in the Fleek Network. The operating system should have the ports enabled and open for the node to run successfully. The Node process requires the following ports:
 
 - RPC (port 4069)
 - Narwhal
