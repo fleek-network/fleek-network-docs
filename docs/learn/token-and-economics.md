@@ -52,6 +52,10 @@ A secure ledger of transactions is maintained for validation, request fulfillmen
 
 Node Operators are incentivized to lock the FLK token staked to boost the rewards to counter inflation. As otherwise, the inflationary economic model would pose a sustainability challenge—as node operation exodus would occur based on inflation rate drops. With the opt-in lock feature, committing to the network long-term, results in boosted rewards given the token's longevity.
 
+:::note
+It is worth noting that a node can still receive rewards through emissions, even if it is not locked.
+:::
+
 Node Operators have the option to participate and lock their staked amount for a maximum of four years, maximizing potential rewards.
 
 Time-locking is a way to increase revenue for Node Operators without causing inflation to rise beyond the targeted inflation rate. 
@@ -61,9 +65,11 @@ So Node Operators looking to boost revenue should consider time-locking as a via
 
 ## The Reward distribution
 
-To encourage long-term participation, several reward mechanisms were implemented that impact the way nodes are awarded and distributed.
+The Fleek Network implements various reward mechanisms to encourage commitment and a sustainable ecosystem, which affect the way rewards are distributed.
 
-As described in the [economic model sustainability measures](#economic-model-sustainability-measures), a node operator who chooses to opt-in and lock the tokens staked for a given period boosts the emission of token rewards. The time-lock period plays a role in the total distribution of awards across the network, as the minted token distribution mechanism to entitled nodes is based on.
+In the [Stable token for payments](#stable-token-for-payments) section, we have discussed that the node operators are guaranteed a stable source of income through the use of stablecoins. This system ensures that the rewards earned by the operators directly reflect the amount of service they have provided to end-users.
+
+Meanwhile, in the [economic model sustainability measures](#economic-model-sustainability-measures), we describe that a node operator who chooses to opt-in and lock the tokens staked for a given period boosts the emission of token rewards. The time-lock period plays a role in the total distribution of awards across the network, as the minted token distribution mechanism to entitled nodes is based on.
 
 The total emitted FLK token rewards per epoch are distributed to the stakeholders in the network, such as:
 
