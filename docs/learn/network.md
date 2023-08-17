@@ -395,8 +395,8 @@ There’s a single worker at the protocol level. In the future, if a node is all
 The ports should be freed before launching the node process. Any blockers or firewalls should be configured to enable the ports.
 :::
 
-### RPC Interface
+### JSON-RPC Interface
 
-TODO: RPC Interface
+A JSON-RPC (JavaScript Object Notation Remote Procedure Call) is a protocol that enables communication between client and server applications. The [Fleek Network JSON-RPC](https://fleek-network.github.io/lightning/api-documentation/?202308171515) API enables JSON-RPC interaction with Fleek Network Node.
 
-
+Fleek Network JSON-RPC API reference documentation is available at [https://fleek-network.github.io/lightning/api-documentation](https://fleek-network.github.io/lightning/api-documentation).
