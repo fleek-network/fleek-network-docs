@@ -40,3 +40,7 @@ The Handshake component is the entry point to external communications with a nod
 ## Service geographic distribution
 
 The network takes care of infrastructure coverage, scalability, and incentivizing edge nodes to run services. It employs a range of algorithms to assign edge nodes in each geographic region to handle the work for each service, guaranteeing the most efficient route. Additionally, when a service experiences a surge in demand and scales up, any unused services are automatically downscaled. By dynamically allocating resources, it eliminates unnecessary resource usage and allows efficient garbage collection. All of this is achieved while maintaining optimal levels of trust, security, infrastructure coverage, and performance guarantees.
+
+## Resources as commodities
+
+The hardware resources used by a service are packaged and measured as commodities. Includes things like bandwidth and CPU, along with their respective commodities such as GB(s) and CPU cycles. [Delivery Acknowledgements](/docs/learn/network#delivery-acknowledgements-snarks) detail the commodities used by a node during service execution. The data is used to reward the node based on the current pricing of those commodities set by the network governance.
