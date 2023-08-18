@@ -36,3 +36,7 @@ A commitment ensures clients receive the correct work output that is being reque
 ## Handshake
 
 The Handshake component is the entry point to external communications with a node. It enables clients to establish an encrypted communication session with the node and interact with services over a secure transport layer (TLS+TCP or QUIC). On establishing a client and node connection, public keys are exchanged and a lane is negotiated for the session. A Handshake is required for a client to access and interact with a service.
+
+## Service geographic distribution
+
+The network takes care of infrastructure coverage, scalability, and incentivizing edge nodes to run services. It employs a range of algorithms to assign edge nodes in each geographic region to handle the work for each service, guaranteeing the most efficient route. Additionally, when a service experiences a surge in demand and scales up, any unused services are automatically downscaled. By dynamically allocating resources, it eliminates unnecessary resource usage and allows efficient garbage collection. All of this is achieved while maintaining optimal levels of trust, security, infrastructure coverage, and performance guarantees.
