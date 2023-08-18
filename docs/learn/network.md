@@ -3,8 +3,16 @@ title: The Network
 slug: the-network
 hide_title: true
 tags:
+  - protocol
+  - architecture
   - permissionless
   - decentralization
+  - consensus
+  - algorithms
+  - SNARKs
+  - rpc
+  - reputation
+  - ports
 sidebarCollapsible: false
 ---
 
