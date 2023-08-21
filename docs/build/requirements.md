@@ -9,7 +9,7 @@ sidebarCollapsible: false
 This section provides the requirements for the server specifications on which the Fleek Network Node can be installed and run.
 
 :::caution warning
-Only 64 bits distributions are supported. Do not try to install it on a 32 bits operating system!
+Only 64-bits distributions are supported. Do not try to install it on a 32-bits operating system!
 :::
 
 # Server
