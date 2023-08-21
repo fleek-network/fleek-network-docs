@@ -35,4 +35,4 @@ If you don’t have a server or a spare machine, keep reading as we'll give you 
 
 The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).
 
-A minimum of 8 GB of memory is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
+A minimum of 32 GB of memory is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
