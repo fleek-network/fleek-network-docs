@@ -23,9 +23,82 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
+This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
+
 ## Assisted installer
 
-TODO: assisted installer / wizard
+The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
+
+
+### Run the script for a quick install
+
+Copy and paste it to the server host terminal and execute it to launch the assisted installation process, as follows:
+
+```sh
+curl https://get.fleek.network | bash
+```
+
+On success, you should be greeted by the following welcome screen:
+
+```sh
+⭐️ Fleek Network Lightning CLI installer ⭐️
+
+            zeeeeee-
+            z$$$$$$"
+          d$$$$$$"
+          d$$$$$P
+        d$$$$$P
+        $$$$$$"
+      .$$$$$$"
+    .$$$$$$"
+    4$$$$$$$$$$$$$"
+  z$$$$$$$$$$$$$"
+  """""""3$$$$$"
+        z$$$$P
+        d$$$$"
+      .$$$$$"
+    z$$$$$"
+    z$$$$P
+  d$$$$$$$$$$"
+  *******$$$"
+      .$$$"
+      .$$"
+    4$P"
+    z$"
+  zP
+  z"
+/
+
+★★★★★★★★★ 🌍 Website https://fleek.network
+★★★★★★★★★ 📚 Documentation https://docs.fleek.network
+★★★★★★★★★ 💾 Git repository https://github.com/fleek-network/lightning
+★★★★★★★★★ 🤖 Discord https://discord.gg/fleekxyz
+★★★★★★★★★ 🐤 Twitter https://twitter.com/fleek_net
+★★★★★★★★★ 🎨 Ascii art by https://www.asciiart.eu
+```
+
+Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
+
+### About the process
+
+The installation process is open source and transparent. The source is available in the [get.fleek.network](https://get.fleek.network) or the origin repository [here](https://github.com/fleek-network/get.fleek.network).
+
+:::info
+"Get Fleek Network" is an attempt to make our software more accessible. By providing scripts to automate the installation process of our software, we believe that it can help improve the onboarding experience of our users.
+:::
+
+The installer assists the node operator by automating the Lightning CLI build from the open-source code and setting up the system service. A node operator should use the assisted installer to ease onboarding, reduce repetition,
+
+At a high level, the installer will:
+- Install required dependencies, e.g. rust toolchain
+- Pull the source code from the origin [repository](https://github.com/fleek-network/lightning)
+- Build the binary, e.g. a `lightning CLI` (lgtn) is compiled from source-code
+- Setup a [Systemd](https://en.wikipedia.org/wiki/Systemd) service named lightning
+- Start the Fleek network via the lightning service
+
+:::tip
+Remember that if you use the assisted installer, you won't have to do the [manual installation](#manual-installation) process as described in the next section. On success, the assisted installer should provide the same result as following the manual instructions.
+:::
 
 ## Manual installation
 
