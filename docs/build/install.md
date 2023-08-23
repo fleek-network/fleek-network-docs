@@ -21,14 +21,15 @@ tags:
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
+import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
+import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
 ## Assisted installer
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
-
 
 ### Run the script for a quick install
 
@@ -123,7 +124,9 @@ Visit the [Rust website](https://www.rust-lang.org/) getting started guide, to f
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-> [curl](https://curl.se/) is an application that is generally available in most OS, if missing install it. Find more [here](https://curl.se/).
+:::tip
+[curl](https://curl.se/) is an application that is generally available in most OS, if missing install it. Find more [here](https://curl.se/).
+:::
 
 Alternatively, if you have installed Rust in the past, you may want to update it 👌.
 
@@ -150,8 +153,9 @@ Current installation options:
 3) Cancel installation
 ```
 
-
-> Once complete 👍, you'll have to restart your current shell or reload the "PATH" environment variable to include Cargo's bin directory `$HOME/.cargo/bin`. This is required to let you use "cargo" command globally.
+:::tip
+Once complete, you'll have to restart your current shell or reload the "PATH" environment variable to include Cargo's bin directory `$HOME/.cargo/bin`. This is required to let you use "cargo" command globally.
+:::
 
 To configure your current shell, run:
 
@@ -199,7 +203,9 @@ Make sure you have Rustup set to the desired toolchain as default if required �
 rustup default <TOOLCHAIN-LIST-NAME>
 ```
 
-> Rust compillation are long and compiler caching can help speed things up immensively. The Lightning CLI project can use to reduce the perceived compilation times down.
+:::tip
+Rust compilation is long and compiler caching can help speed things up immensely. The Lightning CLI project can be used to reduce the perceived compilation times.
+:::
 
 [Sccache](https://docs.rs/crate/sccache/latest
 ) is a ccache-like compiler caching tool. It is used as a compiler wrapper and avoids compilation when possible. This is optional, but recommended!
@@ -243,9 +249,9 @@ Ensure the compiler version is 3+
 protoc --version
 ```
 
-## Installing Lightning CLI
+### Installing Lightning CLI
 
-If you haven't already 🙄, clone the Fleek Network's Lightning repository to your machine.
+If you haven't already, clone the Fleek Network's Lightning repository to your machine.
 
 <GitCloneOptions />
 
@@ -307,8 +313,9 @@ The installation process can take some time 🥱, as it compiles the application
    Installed package `lightning v0.1.0 (/crates/lightning)` (executable `lightning`)
 ```
 
-> Once Rust generates the binary you can find it in the Cargo bin directory.
-On mac and linux, this is located at `$HOME/.cargo/bin` and on Windows `%USERPROFILE%\.cargo\bin`. If `lightning` is unavailable as a command, it's very likely that you need to add the Cargo bin directory to your operating system `PATH` environment variable. 🤨 There are plenty of articles explaining how to do it in most operating systems, a matter of using a web search engine.
+:::tip
+Once Rust generates the binary you can find it in the Cargo bin directory. On mac and linux, this is located at `$HOME/.cargo/bin` and on Windows `%USERPROFILE%\.cargo\bin`. If the lightning `lgtn` is unavailable as a command, you likely need to add the Cargo bin directory to your operating system `PATH` environment variable. 🤨 There are plenty of articles explaining how to do it in most operating systems, a matter of using a web search engine.
+:::
 
 Run the lightning `help` command as a checkup:
 
@@ -330,9 +337,11 @@ Options:
   -V, --version              Print version
 ```
 
-⚠️ Beware that your output might differ a bit, as [Lightning](https://github.com/fleek-network/lightning) is in constant development. Note that you'll have to "re-install" every time you want to pull updates from the source repository, as the update at the time of writing is done manually and not automatically.
+:::caution
+Beware that your output might differ a bit, as [Lightning](https://github.com/fleek-network/lightning) is in constant development. Note that you'll have to "re-install" every time you want to pull updates from the source repository, as the update at the time of writing is done manually and not automatically.
+:::
 
-Great 👌! You have successfully installed all the required packages, libraries and have compiled and installed lightning.
+Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning.
 
 <!-- TODO: To learn more about Fleek Network and lightning, check our [Getting started guide](fleek-network-getting-started-guide). -->
 

@@ -380,7 +380,7 @@ blockquote:before {
   opacity: 0.9;
   transform: scale(1.03);
 }
-.author_card div:before {
+/* .author_card div:before {
   content: "";
   position: absolute;
   display: block;
@@ -395,7 +395,7 @@ blockquote:before {
   background: linear-gradient(to right, #001ac9, #0073ff, #fff, #00faff);
   width: calc(100% + 10px);
   height: calc(100% + 10px);
-}
+} */
 .author_card span, .author_card a {
   font-size: 16px;
   line-height: 1.4;
@@ -408,13 +408,13 @@ blockquote:before {
   gap: 1rem;
   height: auto;
   position: relative;
-  border: none;
   padding: 20px;
-  background: #112;
+  background: #1C1C1C;
   margin: 40px 5px;
   border-radius: 0px;
   max-width: 420px;
   width: 100%;
+  border: 1px solid var(--ifm-color-primary-darker);
 }
 .author_card > div > div {
   display: flex;
