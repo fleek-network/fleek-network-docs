@@ -1,7 +1,7 @@
 ---
-title: Manual installation
+title: Install
 hide_title: true
-slug: manual installation
+slug: Install
 date: 2023-08-21T23:00:00Z
 canonical: ''
 description: The Fleek Network Lightning CLI installation walkthrough
@@ -14,6 +14,8 @@ tags:
 - Rust dependencies
 - compile
 - build
+- wizard
+- manual
 ---
 
 <!--
@@ -21,11 +23,15 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
-## Introduction
+## Assisted installer
 
-The following guide 🎓 will walk through the Rust and dependencies installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install) or [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) and picking a popular distro like Ubuntu. The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
+TODO: assisted installer / wizard
 
-## Prerequisites
+## Manual installation
+
+The following section will walk through the Rust and dependencies installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install) or [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) and picking a popular distro like Ubuntu. The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
+
+### Prerequisites
 
 To follow the guide, you will need the following:
 
@@ -36,7 +42,7 @@ You're required to have some experience with the command-line interface and have
 
 If you don't have Git installed, learn more about it and the instructions by reading the [Git documentation](https://git-scm.com/book/en/v2).
 
-## Install Rust with Rustup tool
+### Install Rust with Rustup tool
 
 Visit the [Rust website](https://www.rust-lang.org/) getting started guide, to find, copy and run the [Rustup tool](https://rustup.rs/) for installation and version management.
 
@@ -94,7 +100,7 @@ Here's the output we got (beware that our version might differ to yours, it's ex
 cargo 1.65.0 (4bc8f24d3 2022-10-20)
 ```
 
-## Lightning installer rust dependencies
+### Lightning installer rust dependencies
 
 Rustup subcommands deal with [toolchains](https://rust-lang.github.io/rustup/concepts/toolchains.html), a collection of programs required to compile a Rust application.
 
@@ -129,7 +135,7 @@ rustup default <TOOLCHAIN-LIST-NAME>
 cargo install sccache
 ```
 
-## Linux Ubuntu dependencies
+### Linux Ubuntu dependencies
 
 On Linux Ubuntu (our choice as the Linux distro example), start by updating the package information in the source list and then upgrade all the installed packages with the latest versions (⚠️ do the equivalent for your Linux distro), as follows:
 
