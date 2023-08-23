@@ -39,14 +39,7 @@ const sidebars = {
       items: [
         'build/index',
         'build/requirements',
-        {
-          type: 'category',
-          label: 'Install',
-          items: [
-            'build/install/wizard',
-            'build/install/manually',
-          ],
-        },
+        'build/install',
         'build/configuration',
         'build/diagnostics',
       ],
