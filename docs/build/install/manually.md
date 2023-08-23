@@ -4,7 +4,6 @@ hide_title: true
 slug: manual installation
 date: 2023-08-21T23:00:00Z
 canonical: ''
-description: A Rust installation walkthrough to help compile and run Lightning CLI
 description: The Fleek Network Lightning CLI installation walkthrough
 category: Tutorial
 tags:
