@@ -76,6 +76,11 @@ On success, you should be greeted by the following welcome screen:
 ★★★★★★★★★ 🤖 Discord https://discord.gg/fleekxyz
 ★★★★★★★★★ 🐤 Twitter https://twitter.com/fleek_net
 ★★★★★★★★★ 🎨 Ascii art by https://www.asciiart.eu
+
+
+...
+
+Remaining output omitted for brevity, you'll not see this text line
 ```
 
 Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
