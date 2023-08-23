@@ -18,13 +18,10 @@ Only 64-bits distributions are supported. Do not try to install it on a 32-bits 
 The Fleek Network node binary is only supported by a Linux server. Currently, we are only providing support for the following distros:
 - Debian
 - Ubuntu
-- Fedora
-- CentOS
 
 :::tip
-Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
+Support for other OS will be made available soon, e.g. CentOS and Fedora. Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
 :::
-
 
 Because of the use of Linux containerization technology, other operating systems, such as FreeBSD, OpenBSD, MacOS, Windows and others are not supported.
 
