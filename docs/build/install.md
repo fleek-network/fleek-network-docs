@@ -85,6 +85,8 @@ Remaining output omitted for brevity, you'll not see this text line
 
 Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
 
+Once the installation is complete, do a health check! Check the section [Healthcheck](#healthcheck) to learn how to do a node health checkup.
+
 ### About the process
 
 The installation process is open source and transparent. The source is available in the [get.fleek.network](https://get.fleek.network) or the origin repository [here](https://github.com/fleek-network/get.fleek.network).
@@ -346,7 +348,36 @@ Options:
 Beware that your output might differ a bit, as [Lightning](https://github.com/fleek-network/lightning) is in constant development. Note that you'll have to "re-install" every time you want to pull updates from the source repository, as the update at the time of writing is done manually and not automatically.
 :::
 
-Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning.
+Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Healthcheck](#healthcheck) to learn how to do a node health checkup.
+
+## Healthcheck
+
+To do a health status of a Fleek Network node we can use the JSON RPC interface via the command line.
+
+:::tip
+We're going to use cURL, make sure that you have it installed otherwise install it in your operating system.
+:::
+
+We'll send a request to the JSON RPC `flk_ping` method. Execute the following command:
+
+```sh
+$ curl -X POST -H "Content-Type: application/json" -d '{
+      "jsonrpc": "2.0",
+      "method": "flk_ping",
+      "params": [],
+      "id": 1
+    }' http://127.0.0.1:4069/rpc/v0
+```
+
+If the request is successful, you should get the result `pong` as follows:
+
+```sh
+{
+  "jsonrpc": "2.0",
+  "result": "pong",
+  "id": 1
+}
+```
 
 <!-- TODO: To learn more about Fleek Network and lightning, check our [Getting started guide](fleek-network-getting-started-guide). -->
 
