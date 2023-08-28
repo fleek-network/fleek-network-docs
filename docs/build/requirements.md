@@ -1,10 +1,13 @@
 ---
 title: Requirements
+hide_title: true
 tags:
   - requirements
   - server
 sidebarCollapsible: false
 ---
+
+## Requirements
 
 This section provides the requirements for the server specifications on which the Fleek Network Node can be installed and run.
 
@@ -12,7 +15,7 @@ This section provides the requirements for the server specifications on which th
 Only 64-bits distributions are supported. Do not try to install it on a 32-bits operating system!
 :::
 
-# Server
+## Server
 ---
 
 The Fleek Network node binary is only supported by a Linux server. Currently, we are only providing support for the following distros:
@@ -27,7 +30,7 @@ Because of the use of Linux containerization technology, other operating systems
 
 If you don’t have a server or a spare machine, keep reading as we'll give you some hints on how to rent one, although we are not affiliated with any provider.
 
-# Specs
+## Specs
 ---
 
 The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).

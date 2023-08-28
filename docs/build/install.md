@@ -31,6 +31,34 @@ This section describes how to install the Fleek Network Lightning on supported o
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
 
+### Prerequesites
+
+To start, you must have an administrative account, such as **root** or **sudoer**. This will allow us to install or required dependencies and libraries. We recommend using a **sudoer** user account. Thus, if you're logged in as **root** you can create a new user and add to the **sudo** group by running:
+
+```sh
+adduser <USERNAME>
+```
+
+:::tip
+For our example, we'll be using the name `lgtn` but you can pick whichever you'd like.
+:::
+
+```sh
+adduser lgtn
+```
+
+After completing the `adduser` steps, execute the `usermod` to add the `user` to the **sudo** group, as follows:
+
+```sh
+usermod -aG sudo lgtn
+```
+
+Finally, switch to the new **user** by using the command:
+
+```sh
+su lgtn
+```
+
 ### Run the script for a quick install
 
 Copy and paste it to the server host terminal and execute it to launch the assisted installation process, as follows:
@@ -77,7 +105,6 @@ On success, you should be greeted by the following welcome screen:
 ★★★★★★★★★ 🐤 Twitter https://twitter.com/fleek_net
 ★★★★★★★★★ 🎨 Ascii art by https://www.asciiart.eu
 
-
 ...
 
 Remaining output omitted for brevity, you'll not see this text line
@@ -85,7 +112,7 @@ Remaining output omitted for brevity, you'll not see this text line
 
 Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
 
-Once the installation is complete, do a health check! Check the section [Healthcheck](#healthcheck) to learn how to do a node health checkup.
+Once the installation is complete, do a health check! Check the section [Health Check](#health-check) to learn how to do a node health checkup.
 
 ### About the process
 
@@ -110,7 +137,7 @@ Remember that if you use the assisted installer, you won't have to do the [manua
 
 ## Manual installation
 
-The following section will walk through the Rust and dependencies installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install) or [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) and picking a popular distro like Ubuntu. The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
+The following section will walk through the dependencies and Rust installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install), reading the [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) or picking another [supported distro](/docs/build/requirements#server). The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
 
 ### Prerequisites
 
@@ -348,11 +375,11 @@ Options:
 Beware that your output might differ a bit, as [Lightning](https://github.com/fleek-network/lightning) is in constant development. Note that you'll have to "re-install" every time you want to pull updates from the source repository, as the update at the time of writing is done manually and not automatically.
 :::
 
-Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Healthcheck](#healthcheck) to learn how to do a node health checkup.
+Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Health Check](#health-check) to learn how to do a node health checkup.
 
-## Healthcheck
+## Health Check
 
-To do a health status of a Fleek Network node we can use the JSON RPC interface via the command line.
+A health check is a special API endpoint that's used to validate the status of a service. To do a health check of a Fleek Network node use the JSON RPC interface via the command line.
 
 :::tip
 We're going to use cURL, make sure that you have it installed otherwise install it in your operating system.
