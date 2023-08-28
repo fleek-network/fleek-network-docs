@@ -139,6 +139,10 @@ Remember that if you use the assisted installer, you won't have to do the [manua
 
 The following section will walk through the dependencies and Rust installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install), reading the [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) or picking another [supported distro](/docs/build/requirements#server). The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
 
+:::tip
+We're only supporting Linux operating system (server edition). Find the list of supported OS [here](/docs/build/requirements#server).
+:::
+
 ### Prerequisites
 
 To follow the guide, you will need the following:
@@ -149,6 +153,32 @@ To follow the guide, you will need the following:
 You're required to have some experience with the command-line interface and have Git installed; Also, you should be happy to troubleshoot, since versions might differ from the time of writing and reading. Most times, a simple web search provides the best answers.
 
 If you don't have Git installed, learn more about it and the instructions by reading the [Git documentation](https://git-scm.com/book/en/v2).
+
+### Create a user
+
+We recommend creating a `non-root` user with administrative privileges. It'll allow us to install any system requirements.
+
+You can create a new user and add to the **sudo** group by running:
+
+:::tip
+For our example, we'll be using the name `lgtn` but you can pick whichever you'd like. If you already have a **sudoer** account, you can skip this step.
+:::
+
+```sh
+adduser lgtn
+```
+
+After completing the `adduser` steps, execute the `usermod` to add the `user` to the **sudo** group, as follows:
+
+```sh
+usermod -aG sudo lgtn
+```
+
+Finally, switch to the new **user** by using the command:
+
+```sh
+su lgtn
+```
 
 ### Install Rust with Rustup tool
 
@@ -241,23 +271,18 @@ rustup default <TOOLCHAIN-LIST-NAME>
 Rust compilation is long and compiler caching can help speed things up immensely. The Lightning CLI project can be used to reduce the perceived compilation times.
 :::
 
-[Sccache](https://docs.rs/crate/sccache/latest
-) is a ccache-like compiler caching tool. It is used as a compiler wrapper and avoids compilation when possible. This is optional, but recommended!
+### Linux dependencies
 
-```sh
-cargo install sccache
-```
-
-### Linux Ubuntu dependencies
-
-On Linux Ubuntu (our choice as the Linux distro example), start by updating the package information in the source list and then upgrade all the installed packages with the latest versions (⚠️ do the equivalent for your Linux distro), as follows:
+On Linux (we'll stick with Ubuntu as the Linux distro example), start by updating the package information in the source list and then upgrade all the installed packages with the latest versions (do the equivalent for your Linux distro), as follows:
 
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-💡 You can optionally pass the `y` flag to skip any user prompts e.g. `sudo apt-get update -y` to any remaining apt-get commands.
+:::tip
+You can optionally pass the `y` flag to skip any user prompts e.g. `sudo apt-get update -y` to any remaining apt-get commands.
+:::
 
 Install the build-essentials packages, necessary for compiling general software and for our use-case Lightning CLI.
 
@@ -265,7 +290,7 @@ Install the build-essentials packages, necessary for compiling general software 
 sudo apt-get install build-essential
 ```
 
-Followed by the required tools required to compile the application ([cmake](https://cmake.org/), [clang](https://clang.llvm.org/), [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/) and [libssl-dev ](https://packages.debian.org/sid/libssl-dev)).
+Followed by the required tools to compile the application ([cmake](https://cmake.org/), [clang](https://clang.llvm.org/), [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/) and [libssl-dev ](https://packages.debian.org/sid/libssl-dev)).
 
 ```sh
 sudo apt-get install build-essential cmake clang pkg-config libssl-dev gcc-multilib
@@ -289,17 +314,15 @@ If you haven't already, clone the Fleek Network's Lightning repository to your m
 
 <GitCloneOptions />
 
-💡 Optionally, you can pass a directory name at the end of the commands (as the last argument), otherwise defaults to the repository name and for our case the name is `lightning`. Note that you don't have to use `<` or `>` when naming, it's just illustrative.
+When git clone completes 👍, `change directory` to the project directory e.g. we cloned to the default name `~/fleek-network/lightning`:
 
 ```sh
-git clone https://github.com/fleek-network/lightning.git <DIRECTORY-NAME>
+cd ~/fleek-network/lightning
 ```
 
-When git clone completes 👍, `change directory` to the project directory e.g. we cloned to the default name `lightning`:
-
-```sh
-cd lightning
-```
+:::note
+The `~/fleek-network/lightning` or `$HOME/fleek-network/lightning` directory is the default or recommended location to store the repository. If you like to follow conventions, then is best to stick with the recommendation, to avoid confusion and make it easier to follow our documentation.
+:::
 
 If you list (`ls`) the files in the directory, it should be similar to:
 
@@ -324,7 +347,9 @@ If you list (`ls`) the files in the directory, it should be similar to:
 
 At this point, you should be able to run the `install` command successfully.
 
-🙄 If you already had Rust installed, or the project before, and skipped instructions directly here, there might be case where you get errors. So, make sure to clear your work directory:
+:::caution
+If you already had Rust installed, or the project before, and skipped instructions directly here, there might be case where you get errors. So, make sure to clear your work directory:
+:::
 
 ```sh
 cargo clean
@@ -334,12 +359,16 @@ cargo update
 Start the `install` process by running the command:
 
 ```sh
-cargo +stable build
+cargo build
 ```
 
-The installation process can take some time 🥱, as it compiles the application binary for us.
+:::tip
+At the time of writing, Fleek Network lightning is under development, thus we're using the `cargo build` command. Alternatively, you're recommended to use the `+stable`, e.g. `cargo +stable build`.
+:::
 
-🌈 Here's the output when successful!
+The installation process is long, as it compiles the application binary for us from the source code.
+
+🌈 Here's the output when successful! Note, that the output might differ slightly from time of writting.
 
 ```sh
     Finished release [optimized] target(s) in 11m 22s
@@ -348,13 +377,21 @@ The installation process can take some time 🥱, as it compiles the application
 ```
 
 :::tip
-Once Rust generates the binary you can find it in the Cargo bin directory. On mac and linux, this is located at `$HOME/.cargo/bin` and on Windows `%USERPROFILE%\.cargo\bin`. If the lightning `lgtn` is unavailable as a command, you likely need to add the Cargo bin directory to your operating system `PATH` environment variable. 🤨 There are plenty of articles explaining how to do it in most operating systems, a matter of using a web search engine.
+Once Rust generates the binary `lightning-node`, you can find it in the project root `target` directory. Depending on the usage of `+stable` flag, the binary should be located at `~/fleek-network/lightning/target/debug/lightning-node` or `~/fleek-network/lightning/target/release/lightning-node`.
 :::
 
-Run the lightning `help` command as a checkup:
+You can create an `lgtn` symbolic link to `/usr/local/bin` to make it available globally.
 
 ```sh
-Usage: lgtnn [OPTIONS] <COMMAND>
+sudo ln -s "$HOME/fleek-network/lightning/target/debug/lightning-node" /usr/local/bin/lgtn
+```
+
+After completing, you'll have the ability to type `lgtn` to execute the binary anywhere for your user account. Other users might find it better to copy or create an `alias` instead.
+
+Run the `lgtn help` sub-command as a checkup:
+
+```sh
+Usage: lightning-node [OPTIONS] <COMMAND>
 
 Commands:
   run           Start the node
@@ -375,7 +412,111 @@ Options:
 Beware that your output might differ a bit, as [Lightning](https://github.com/fleek-network/lightning) is in constant development. Note that you'll have to "re-install" every time you want to pull updates from the source repository, as the update at the time of writing is done manually and not automatically.
 :::
 
+### Key generator
+
+Before starting the node, you should generate a public and private key.
+
+```sh
+lgtn keys generate
+```
+
+The keys will be generated and placed under the system directory `~/.lightning/keystore`. The `private` key is the user's responsibility and no one else can generate or recover it for you, including Fleek Network or any team member. Your keys, your responsibility!
+
+### Start the node
+
+To start the node, you should execute the sub-command `run`. Noteworthy that while it launches the node, you're recommended to setup a systemd service to run it for a long period.
+
+```sh
+lgtn run
+```
+
 Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Health Check](#health-check) to learn how to do a node health checkup.
+
+### Systemd Service Setup
+
+Create a new Systemd service file:
+
+```sh
+sudo touch /etc/systemd/system/lightning.service
+```
+
+Open the file and put the following content:
+
+```sh
+[Unit]
+Description=Fleek Network Node lightning service
+
+[Service]
+User=lgtn
+Type=simple
+MemoryHigh=32G
+RestartSec=15s
+Restart=always
+ExecStart=lgtn -c /home/lgtn/lightning.toml run
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+
+[Install]
+WantedBy=multi-user.target
+```
+
+:::caution
+Notice that we're using `lgnt` as the username. If you have a different custom username change it accordingly. Beware that we've recommended using a `non-root` user, as described in the section [create a user](#create-a-user).
+:::
+
+Change the file permissions for the service:
+
+```sh
+sudo chmod 644 /etc/systemd/system/lightning.service
+```
+
+Reload the Systemctl daemon by executing the command:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Enable the service for starting up on system boot:
+
+```sh
+sudo systemctl enable lightning.service
+```
+
+Start the service by:
+
+```sh
+systemctl start lightning.service
+```
+
+Stop the service by:
+
+```sh
+systemctl stop lightning.service
+```
+
+Restart the service by:
+
+```sh
+systemctl restart lightning.service
+```
+
+Chec the service status by:
+
+```sh
+systemctl status lightning.service
+```
+
+You can watch the Node output by running the command:
+
+```sh
+tail -f /var/log/lightning/output.log
+```
+
+You can watch the Node diagnostics or errors by running the command:
+
+```sh
+tail -f /var/log/lightning/diagnostic.log
+```
 
 ## Health Check
 
