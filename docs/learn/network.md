@@ -40,8 +40,7 @@ As a decentralized network, the state of these is replicated across all of the d
 The primary transactions being ordered by the consensus algorithm is the batch of Delivery Acknowledgements stored in a local list of transactions before commitment to the blockchain (memory pool).
 :::
 
-The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system. The protocol achieves reliable dissemination and storage of causal histories of transactions. Narwhal tolerates an asynchronous network and maintains high performance despite
-failures.
+The Narwhal algorithm is based on the separation between the dissemination and transaction ordering to achieve high throughput in the blockchain system. The protocol achieves reliable dissemination and storage of causal histories of transactions. Narwhal tolerates an asynchronous network and maintains high performance despite failures.
 
 Bullshark is a zero-message overhead consensus algorithm that handles transactions that require total ordering (linear ordering), and synchronization of the transactions between nodes and the global network state.
 
