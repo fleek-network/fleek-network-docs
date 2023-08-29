@@ -27,6 +27,7 @@ const sidebars = {
       items: [
         'learn/index',
         'learn/network',
+        'learn/delivery-acknowledgements',
         'learn/token-and-economics',
         'learn/services',
       ],
@@ -40,22 +41,24 @@ const sidebars = {
         'build/index',
         'build/requirements',
         'build/install',
-        'build/configuration',
-        'build/diagnostics',
+        // TODO: Disabled `build/configuration` and `build/diagnostics` sidebar category
+        // 'build/configuration',
+        // 'build/diagnostics',
       ],
     },
-    {
-      type: 'category',
-      label: 'Develop',
-      collapsed: true,
-      collapsible: true,
-      items: [
-        'develop/index',
-        'develop/client',
-        'develop/service-development',
-        'develop/json-rpc',
-      ],
-    },
+    // TODO: Disabled `develop` sidebar category
+    // {
+    //   type: 'category',
+    //   label: 'Develop',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   items: [
+    //     'develop/index',
+    //     'develop/client',
+    //     'develop/service-development',
+    //     'develop/json-rpc',
+    //   ],
+    // },
     'roadmap',
     {
       type: 'category',
