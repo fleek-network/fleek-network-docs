@@ -63,7 +63,7 @@ The process ensures that nodes get paid for work performed and clients get the r
 
 The entire network operates based on content addressing based on Blake3 hashing for efficient content identification and streaming verifiability.
 
-Learn more about it in the [Content Addressing](/docs/learn/network#content-addressing) section.
+Learn more about it in the [Content Addressing](/docs/learn/the-network#content-addressing) section.
 
 ## Customisation
 
