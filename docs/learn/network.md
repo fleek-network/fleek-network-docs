@@ -102,6 +102,8 @@ A Node provides the computational resources to the network and keeps track of do
 
 Finally, Delivery Acknowledgements are gathered and batched by nodes before being submitted to the core protocol and committee as described in the [consensus](#consensus) section.
 
+To learn more, visit the section [Delivery Acknowledgements](/docs/learn/delivery-acknowledgements).
+
 ## Reputation system
 
 The Fleek Network has a reputation system where nodes rate each other. The ratings are collected timely and an aggregation algorithm calculates the overall rate for each node at the end of every epoch.
