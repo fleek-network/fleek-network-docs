@@ -33,6 +33,25 @@ The assisted installer is a script written in [Bash](https://en.wikipedia.org/wi
 
 ### Prerequesites
 
+- A basic knowledge of command line interface (CLI)
+- A [supported](/docs/build/requirements#server) Linux server
+
+### Connect to your server
+
+Connect to the Linux server where the Node's going to be installed via SSH by opening a shell session there.
+
+If you have set up a public SSH key for the machine, connecting to the server should be as simple as:
+
+```sh
+ssh <USERNAME>@<REMOTE_HOST>
+```
+
+:::info
+Check the cloud provider for instructions to understand how to setup an ssh connection and connect to it remotely. Some other users might have local access to a [supported](/docs/build/requirements#server) Linux server. To keep this guide short, we'll assume you've rented a VPS from a cloud provider.
+:::
+
+### Create a user
+
 To start, you must have an administrative account, such as **root** or **sudoer**. This will allow us to install or required dependencies and libraries. We recommend using a **sudoer** user account. Thus, if you're logged in as **root** you can create a new user and add to the **sudo** group by running:
 
 ```sh
@@ -112,6 +131,23 @@ Remaining output omitted for brevity, you'll not see this text line
 
 Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
 
+After creating the service file, you should reload the Systemd process, to apply the newly created service. You can do this by executing:
+
+
+After creating the service, launch the service by executing the following command:
+
+```sh
+systemctl start lightning.service
+```
+
+:::tip
+To learn more about Systemctl commands, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
+:::
+
+:::tip
+Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](#analyzing-log-messages).
+:::
+
 Once the installation is complete, do a health check! Check the section [Health Check](#health-check) to learn how to do a node health checkup.
 
 ### About the process
@@ -127,9 +163,9 @@ The installer assists the node operator by automating the Lightning CLI build fr
 At a high level, the installer will:
 - Install required dependencies, e.g. rust toolchain
 - Pull the source code from the origin [repository](https://github.com/fleek-network/lightning)
-- Build the binary, e.g. a `lightning CLI` (lgtn) is compiled from source-code
+- Build the binary, e.g. a `lightning CLI` (lgtn) is compiled from source code
 - Setup a [Systemd](https://en.wikipedia.org/wiki/Systemd) service named lightning
-- Start the Fleek network via the lightning service
+- Provide instructions to launch, stop the Fleek network via the Systemd lightning service
 
 :::tip
 Remember that if you use the assisted installer, you won't have to do the [manual installation](#manual-installation) process as described in the next section. On success, the assisted installer should provide the same result as following the manual instructions.
@@ -470,13 +506,13 @@ Change the file permissions for the service:
 sudo chmod 644 /etc/systemd/system/lightning.service
 ```
 
-Reload the Systemctl daemon by executing the command:
+After creating the service file, you should reload the Systemd process, to apply the newly created service. You can do this by executing:
 
 ```sh
 sudo systemctl daemon-reload
 ```
 
-Enable the service for starting up on system boot:
+To start the service at boot, use the enable command:
 
 ```sh
 sudo systemctl enable lightning.service
@@ -488,35 +524,11 @@ Start the service by:
 systemctl start lightning.service
 ```
 
-Stop the service by:
+:::tip
+Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](#analyzing-log-messages).
+:::
 
-```sh
-systemctl stop lightning.service
-```
-
-Restart the service by:
-
-```sh
-systemctl restart lightning.service
-```
-
-Chec the service status by:
-
-```sh
-systemctl status lightning.service
-```
-
-You can watch the Node output by running the command:
-
-```sh
-tail -f /var/log/lightning/output.log
-```
-
-You can watch the Node diagnostics or errors by running the command:
-
-```sh
-tail -f /var/log/lightning/diagnostic.log
-```
+To learn more, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
 
 ## Health Check
 
@@ -545,6 +557,76 @@ If the request is successful, you should get the result `pong` as follows:
   "result": "pong",
   "id": 1
 }
+```
+
+## Use Systemctl to manage Systemd Service
+
+Learn how to enable, disable, start, stop the Systemd Service for Fleek Network. The service is set up by the [Assisted installer](#assisted-installer) (automatically), or manually (optional) as described in [Manual installation](#manual-installation).
+
+Reload the Systemctl daemon by executing the command:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Enable the service for starting up on system boot:
+
+```sh
+sudo systemctl enable lightning.service
+```
+
+:::caution
+You shouldn't prefix the systemctl command with **sudo** when start/stop/status the service.
+:::
+
+Start the service by:
+
+```sh
+systemctl start lightning
+```
+
+:::tip
+When naming the service, the *.service can be omitted. For this reason the command can be typed as follows:
+
+```sh
+systemctl start lightning
+```
+:::
+
+Stop the service by:
+
+```sh
+systemctl stop lightning
+```
+
+Restart the service by:
+
+```sh
+systemctl restart lightning
+```
+
+Check the service status by:
+
+```sh
+systemctl status lightning.service
+```
+
+## Analyzing Log Messages
+
+The service logs provide a timeline of events for the Lightning service that is valuable for troubleshooting when encountering issues. When issues arise, analyzing log files is the first thing a node operator needs to do.
+
+To have the log message files (output.log and diagnostic.log), these have to be set up. If you have installed the Node via the [Assisted installer](#assisted-installer), the logs are set up for you automatically.
+
+You can watch the Node output by running the command:
+
+```sh
+tail -f /var/log/lightning/output.log
+```
+
+You can watch the Node diagnostics or errors by running the command:
+
+```sh
+tail -f /var/log/lightning/diagnostic.log
 ```
 
 <!-- TODO: To learn more about Fleek Network and lightning, check our [Getting started guide](fleek-network-getting-started-guide). -->
