@@ -1,21 +1,28 @@
 ---
+draft: false
 title: Services
-slug: services
 hide_title: true
-tags:
-  - services
-  - cdn
-  - development
-  - sdk
-  - toolkit
 sidebarCollapsible: false
+date: 2023-01-10T09:00:00.000+00:00
+description: A Fleek Network Service is a modular application that runs on nodes and allows users to perform well-defined functions or some specific tasks. Services are scalable and performant due to edge computation and networking features provided by the core principles of the network.
+category: Documentation
+keywords: [services, documentation, getting started]
+tags:
+- Edge Platform
+- CDN
+- Guide
+- Learn
+- services
+- development
+- sdk
+- toolkit
 ---
 
 ## Overview 
 
 A Fleek Network Service is a modular application that runs on nodes and allows users to perform well-defined functions or some specific tasks. Services are scalable and performant due to edge computation and networking features provided by the core principles of the network.
 
-As a permissionless system, services are built by developers who're free to build and deploy them to run on the decentralized edge platform. Applications can be of any kind but are generally described as web services. These are cryptographically secure and run within a fair economically incentivized model. The services are hosted in user-managed resources and are highly available to customers and end-users in exchange for rewards.
+As a permissionless system, services are built by developers who are free to build and deploy them to run on the decentralized edge platform. Applications can be of any kind but are generally described as web services. These are cryptographically secure and run within a fair economically incentivized model. The services are hosted in user-managed resources and are highly available to customers and end-users in exchange for rewards.
 
 A Service Development Toolkit (SDK) facilitates access to core APIs and resources for developers. Services run in a sandboxed environment (unable to access the host's processes, hardware and kernel directly) and are restricted to specific features such as cryptography, networking and storage. The service implementation source code is fully managed by the author(s), owner(s) and development team(s).
 
@@ -44,3 +51,84 @@ The network takes care of infrastructure coverage, scalability, and incentivizin
 ## Resources as commodities
 
 The hardware resources used by a service are packaged and measured as commodities. Includes things like bandwidth and CPU, along with their respective commodities such as GB(s) and CPU cycles. [Delivery Acknowledgements](/docs/learn/the-network#delivery-acknowledgements-snarks) detail the commodities used by a node during service execution. The data is used to reward the node based on the current pricing of those commodities set by the network governance.
+
+## Use-cases
+
+Building on Fleek Network's Decentralized Edge Infrastructure unlocks various opportunities and advantages for Service builders, that empower them to implement most of the following concepts.
+
+### Web Services
+
+#### Edge Functions
+
+Edge computing comes in many flavors, and Fleek Network can support many serverless or edge computing functions. For example, low-cost computation for JavaScript functions, Lambda, runtimes or Cloudflare Workers-like computing. Can also perform deterministic computation, consensus-based computation, ZK-computation, and EVM computation. The network is non-opinionated and enables developers to refine their computing service in great detail.
+
+#### SSR/ISR
+
+One applied edge compute use-case that can be built is Server-side Rendering (SSR) or Incremental Static Regeneration Service (ISR) on top of a container/serverless engine. Given the granularity of content verification within the core's hashing, streaming of particular pieces of data can be optimized and parallelized across multiple nodes. Such as chunking pages of static sites and regenerating only where needed.
+
+#### Hosting
+
+Web3 apps are generally composed of a backend and a frontend stack. The backends are considerably decentralized but often have the client-side facing interface hosted into a central cloud provider. Given the desirability of content delivery acceleration services for a snappy user experience, that end customers demand. The Fleek Network takes a big step forward on this topic, as services can leverage the block store and content addressability (IPFS) for an application host provider.
+
+As we have today with user stories like S3 or Netlify, a service can use Fleek Network as a storage layer for static sites. Similarly, a CDN or SSR can complement static site hosting by accelerating and dynamically computing user needs. In consequence, the reward mechanism would distribute rewards fairly to every actor in the computation and fulfillment of paying customers for these requests, e.g. service builder, node operator, etc.
+
+#### CDN
+
+A decentralized CDN is a big missing piece in the Web3 infra stack. Every protocol, middleware, service, and app can benefit from content acceleration. Today most projects use popular CDNs in front of their stacks for optimization and performance improvement e.g. availability and latency. A decentralized CDN built on Fleek Network can gain great notoriety in the blockchain and Web3 development communities, due to its benefits and principles, without sacrificing performance and cost of integration.
+
+
+The dCDN service can cache content based on the user request and popularity, and put in the speediest location based on the network reputation system, computation and routing response timings. Conceptually similar to a traditional CDN, but abstracting the geo-location that is usually specified by user-selected zones.
+
+:::tip
+While the network does not possess a specific concept of geography, it gains an implicit understanding of geographical proximity through the data it collects on latency and hop counts between nodes, which is a part of the reputation system.
+:::
+
+Learn more about how Fleek Network behaves by reading the [whitepaper](/docs/whitepaper).
+
+#### Container Orchestration
+
+A decentralized orchestration service built on a content-addressable edge network can bring benefits in performance and delivery. A service could utilize the native content-addressing and Blake3 hashing and verified data streaming to partition large container image files and serve them at scale in a multi-region environment.
+
+Fleek Network can act as a p2p CDN, serving container chunks in a parallelized, verified, and performant way–without sacrificing decentralization. Similar to concepts that can be found in Docker image hosting, Docker Swarm clustering, etc.
+
+#### CRDT Databases
+
+Database services in a decentralized edge platform with a content addressable core can benefit from the network's data deduplication and integrity characteristics.
+
+Particularly a CRDT database service could be built to converge data from multiple edge locations replicas. Given all data is content-addressed, unique content hashes allow for easy differentiation and verification as the data is replicated.
+
+### Web3 Services 
+
+#### Blockchain Snapshots
+
+Interchain synchronization of a full-node history is CPU-intensive. Can take hours, days or weeks depending on blockchain technology. On Fleek Network's core, the internal blockchain is based on content addressability which stores snapshots of the state HEAD. It utilizes decentralized content acceleration for node entire-state synchronization for higher speed.
+
+A service can be built that does a similar process for any chain. By automating snapshot storage timely and in-synchronization to the chain HEAD. It can deliver an entire state to a node rapidly.
+
+#### Decentralized IPFS Pinning
+
+All content on the Fleek Network is content addressed and referred to by the CID, which mapping of the CID to the origin is stored in perpetuity. Coupled with the built-in file system interlinked to decentralized storage protocols such as Arweave and Filecoin, an IPFS pinning service can be built. A pinning service for IPFS that provides the user experience we are accustomed to, but using decentralized infrastructure, which today's IPFS pinning services fail to offer.
+
+Worth mentioning that an IPFS pinning service as such, would be cheaper and provide better availability, performance and security guarantees. For example, as the network stores the CID-to-origin mapping in perpetuity, even if an IPFS file is lost it can be easily retrieved if there's at least one origin.
+
+#### VM's (EVM, zkVM's, etc.)
+
+A service to deploy a virtual machine, such as many zk-VMs, or the EVM can be built and deployed to Fleek Network. It can provide compute in the zk-VM and provide the zk-SNARK from the node, proving the correctness of the response. In addition, the network routing can ensure that the zk-VM computation is happening in the closest proximity to the client based on latency and other network factors.
+
+#### Ephemeral Rollups
+
+If you wanted a short lived rollup for something like an NFT mint event or a game/event, you could use Fleek Network to build/utilize a service that allows you to spawn ephemeral rollups that users could interact with for a certain amount of time (ex. mint window or game/event duration), and after that time elapses, the service could rollup the results to your smart contract.
+
+This could help users avoid gas wars/high fees while providing instant finality during the duration of the event. And since the rollups would be running on the decentralized edge, they would be fault resistant and highly performant. 
+
+#### Proof Generation
+
+With the rise of SNARKs/STARKs and the growing demand for performant and cost efficient proof generation, there could be compelling advantages to generating these proofs on the edge (closer to end users) in a decentralized way. 
+
+As an example, a hypothetical Groth16 service can read the setup parameters as files (using the file system) and generate a proof based on user specified public parameters.  Support for other proving technologies can be built/utilized as separate services.
+
+#### Alternative Sequencers
+
+In the era of L2s, most use a centralized sequencer to post transactions to the L1s settlement contracts. These L2 networks cope with this layer of centralization by providing an alternate route around the sequencer by posting the transactions manually to the settlement contracts. The problem is, there is a reduction in block speeds users are accustomed to on an L2 and are then stuck with the L1s finalization times.
+
+In Fleek Network a developer could provide a service that offers a decentralized alternative to an L2s sequencers that batches and posts them to the L1s settlement contract. This could then achieve L2 settlement times while still offering a decentralized path. Another benefit of this service is it could enable the end user to not need the L2 specific gas token to submit these transactions.
