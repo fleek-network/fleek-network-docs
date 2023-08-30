@@ -19,6 +19,8 @@ To claim the reward and other fees, nodes can add received Delivery Acknowledgem
 
 The amounts deducted from all clients during an epoch, move to a payout pool which is distributed fairly to node [account owners](network.md#identity-on-the-fleek-network) based on the work performed in the epoch.
 
+For a more in-depth dive into Delivery Acknowledgements-related topics, it's advised to read the [whitepaper](/docs/whitepaper). Also, a holistic version of [the Network](/docs/learn/the-network) is available on our documentation site.
+
 ## SNARKs (Non-interactive zero-knowledge proofs)
 
 SNARKs is an acronym that stands for Succinct Non-interactive Argument of Knowledge. A SNARK is a cryptographic proof that allows one party to prove to another that it knows a secret without revealing the secret itself. 
@@ -59,12 +61,14 @@ As a consequence of malicious behavior, the committee has the node slashed by th
 The process ensures that nodes get paid for work performed and clients get the requests fulfilled. It helps achieve decentralization and trustworthiness as the process applies to any sort of client-server communication, such as Gateways. Also, considering the impact this might have on the network, a node encryption key response has a small impact performance of 300 milliseconds (0.3ms) of latency.
 :::
 
-## Request Verifiability
+## Content and Streaming Verifiability
 
-The entire network operates based on content addressing based on Blake3 hashing for efficient content identification and streaming verifiability.
+A Delivery Acknowledgement message signing is deterministic, completely dependent on its inputs and the sequence of the instructions fulfilled which are strictly validated.
+
+Thus, the entire network operates based on content addressing based on Blake3 hashing for efficient content identification and streaming verifiability. This ensures that the hash being requested is the one being served.
 
 Learn more about it in the [Content Addressing](/docs/learn/the-network#content-addressing) section.
 
-## Customisation
+## Delivery Acknowledgement Customisation
 
-A Service can have a custom configuration to specify how the Delivery Acknowledgements should work. Patterns and conventions should be expected to emerge from Service developement best practices.
+A Service can have a custom configuration to specify how Delivery Acknowledgements should behave or work. Patterns and conventions should be expected to emerge from the Service builder community and best practices.
