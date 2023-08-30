@@ -77,7 +77,7 @@ As we have today with user stories like S3 or Netlify, a service can use Fleek N
 A decentralized CDN is a big missing piece in the Web3 infra stack. Every protocol, middleware, service, and app can benefit from content acceleration. Today most projects use popular CDNs in front of their stacks for optimization and performance improvement e.g. availability and latency. A decentralized CDN built on Fleek Network can gain great notoriety in the blockchain and Web3 development communities, due to its benefits and principles, without sacrificing performance and cost of integration.
 
 
-The dCDN service can cache content based on the user request and popularity, and put in the speediest location based on the network reputation system, computation and routing response timings. Conceptually similar to a traditional CDN, but abstracting the geo-location that is usually specified by user-selected zones.
+The dCDN service can cache content based on the user request and popularity, and put it in the speediest location based on the network reputation system, computation and routing response timings. Conceptually similar to a traditional CDN, but abstracting the geo-location that is usually specified by user-selected zones.
 
 :::tip
 While the network does not possess a specific concept of geography, it gains an implicit understanding of geographical proximity through the data it collects on latency and hop counts between nodes, which is a part of the reputation system.
@@ -113,22 +113,25 @@ Worth mentioning that an IPFS pinning service as such, would be cheaper and prov
 
 #### VM's (EVM, zkVM's, etc.)
 
-A service to deploy a virtual machine, such as many zk-VMs, or the EVM can be built and deployed to Fleek Network. It can provide compute in the zk-VM and provide the zk-SNARK from the node, proving the correctness of the response. In addition, the network routing can ensure that the zk-VM computation is happening in the closest proximity to the client based on latency and other network factors.
+A service that deploys a virtual machine, such as many zk-VMs, or the EVM can be built and deployed to Fleek Network. It can provide compute in the zk-VM and provide the zk-SNARK from the node, proving the correctness of the response. In addition, the network routing can ensure that the zk-VM computation is happening in the closest proximity to the client based on latency and other network factors.
 
 #### Ephemeral Rollups
 
-If you wanted a short lived rollup for something like an NFT mint event or a game/event, you could use Fleek Network to build/utilize a service that allows you to spawn ephemeral rollups that users could interact with for a certain amount of time (ex. mint window or game/event duration), and after that time elapses, the service could rollup the results to your smart contract.
+The Fleek Network can be utilized as a short-term service platform for a variety of applications or side-chaining that compute state and roll it up to a smart contract. An NFT minting or game event that occurs during a short period, can roll up state to a smart contract after the event time elapses.
 
-This could help users avoid gas wars/high fees while providing instant finality during the duration of the event. And since the rollups would be running on the decentralized edge, they would be fault resistant and highly performant. 
+To help users mitigate gas costs and feeds while providing instant finality throughout an event. Consequently, roll-ups would run on a decentralized network, that is fault-resistant and highly performant.
 
 #### Proof Generation
 
-With the rise of SNARKs/STARKs and the growing demand for performant and cost efficient proof generation, there could be compelling advantages to generating these proofs on the edge (closer to end users) in a decentralized way. 
+As a result of the rise of Zero-Knowledge proofs (SNARKs, STARKs) for performance and cost-efficient proof generation, there are benefits for computing them closer to end-users and in a decentralized manner which Fleek Network Edge Network entails.
 
-As an example, a hypothetical Groth16 service can read the setup parameters as files (using the file system) and generate a proof based on user specified public parameters.  Support for other proving technologies can be built/utilized as separate services.
+For example, a hypothetical [Groth16](https://eprint.iacr.org/2016/260.pdf) service can read parameters from configuration files in a file system and generate a proof based on public user custom parameters.
 
 #### Alternative Sequencers
 
-In the era of L2s, most use a centralized sequencer to post transactions to the L1s settlement contracts. These L2 networks cope with this layer of centralization by providing an alternate route around the sequencer by posting the transactions manually to the settlement contracts. The problem is, there is a reduction in block speeds users are accustomed to on an L2 and are then stuck with the L1s finalization times.
+As encountered by most sequencers that post transactions to Layer-1 settlement contracts (which are mostly done over centralized processes), Layer-2 networks bypass these by posting them manually.
+This causes long finalization times and a reduction in block speeds on Layer-1, which is contrary to what users are familiar with and find ordinary on Layer-2.
 
-In Fleek Network a developer could provide a service that offers a decentralized alternative to an L2s sequencers that batches and posts them to the L1s settlement contract. This could then achieve L2 settlement times while still offering a decentralized path. Another benefit of this service is it could enable the end user to not need the L2 specific gas token to submit these transactions.
+In Fleek Network, a service builder can offer an alternative to a Layer-2 sequencer, that is decentralized and more reliable by batching and posting to Layer-1 settlement contracts. With equivalent Layer-2 settlement times.
+
+An additional benefit can be enabling end-user gasless transaction submissions by disregarding a Layer-2 gas token to submit transactions to Layer-1.
