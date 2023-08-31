@@ -39,7 +39,7 @@ The Fleek Network's documentation is organized as follows:
 
 [Guides](guides) provide step-by-step instructions for performing specific tasks.
 
-[Reference](reference) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
+[References](references) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
 :::
 
 ## Roadmap
