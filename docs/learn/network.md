@@ -16,6 +16,11 @@ tags:
 sidebarCollapsible: false
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Protocol
 
 The Fleek Network is designed to deliver computation cheaper, faster and more efficiently than existing cloud providers by allowing anyone to offer computer resources for rewards. Including, secured information about who requested it on the network.
@@ -409,3 +414,10 @@ The ports should be freed before launching the node process. Any blockers or fir
 A JSON-RPC (JavaScript Object Notation Remote Procedure Call) is a protocol that enables communication between client and server applications. The [Fleek Network JSON-RPC](https://fleek-network.github.io/lightning/api-documentation/?202308171515) API enables JSON-RPC interaction with Fleek Network Node.
 
 Fleek Network JSON-RPC API reference documentation is available at [https://fleek-network.github.io/lightning/api-documentation](https://fleek-network.github.io/lightning/api-documentation).
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

@@ -25,6 +25,11 @@ The system builds on a distributed network of Nodes, where services run within a
 
 Applications, platforms and protocols build and utilize decentralized services on Fleek Network to optimize performance and reduce dependency on centralized cloud providers. Developers can build faster and launch better products by offloading parts of the stack to the Edge to focus on core features.
 
+:::tip
+To participate in the [Alpha Testnet](/docs/roadmap), you can begin by setting up and running nodes.
+Proceed to the [build](/docs/build/overview) section for an overview of the server [requirements](/docs/build/requirements) and instructions to [install](/docs/build/install) a Fleek Network node.
+:::
+
 :::info
 The Fleek Network's documentation is organized as follows:
 

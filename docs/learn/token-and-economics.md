@@ -14,6 +14,11 @@ sidebarCollapsible: false
 sidebar_position: 1
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Overview
 
 The Fleek Network runs on an incentivized economy model that rewards node operators who provide resources that form the network.
@@ -169,3 +174,10 @@ The distribution of the token allocation in the community is detailed in the fol
 | DAO                                 |    17%               |
 | Foundation                          |    33%               |
 | Public sales and liquidity          |    10%               |
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

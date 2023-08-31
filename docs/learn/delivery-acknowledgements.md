@@ -7,6 +7,11 @@ tags:
 sidebarCollapsible: false
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Overview
 
 When a client signs a message, it creates a Delivery Acknowledgement that confirms a successful service computation delivery by a node. This [process](#node-vs-client-process-flow) ensures the immutability and integrity of the message (the client cannot change or reverse it) and also includes metadata about the commodities consumed by the node during the service execution. This metadata helps in calculating the reward that the node will receive.
@@ -72,3 +77,10 @@ Learn more about it in the [Content Addressing](/docs/learn/the-network#content-
 ## Delivery Acknowledgement Customisation
 
 A Service can have a custom configuration to specify how Delivery Acknowledgements should behave or work. Patterns and conventions should be expected to emerge from the Service builder community and best practices.
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

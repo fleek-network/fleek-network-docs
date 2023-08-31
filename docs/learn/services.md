@@ -18,6 +18,11 @@ tags:
 - toolkit
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Overview 
 
 A Fleek Network Service is a modular application that runs on nodes and allows users to perform well-defined functions or some specific tasks. Services are scalable and performant due to edge computation and networking features provided by the core principles of the network.
@@ -135,3 +140,10 @@ This causes long finalization times and a reduction in block speeds on Layer-1, 
 In Fleek Network, a service builder can offer an alternative to a Layer-2 sequencer, that is decentralized and more reliable by batching and posting to Layer-1 settlement contracts. With equivalent Layer-2 settlement times.
 
 An additional benefit can be enabling end-user gasless transaction submissions by disregarding a Layer-2 gas token to submit transactions to Layer-1.
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>

@@ -7,6 +7,11 @@ tags:
 sidebarCollapsible: false
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Requirements
 
 This section provides the requirements for the server specifications on which the Fleek Network Node can be installed and run.
@@ -36,3 +41,10 @@ If you don’t have a server or a spare machine, keep reading as we'll give you 
 The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).
 
 A minimum of 32 GB of memory is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
