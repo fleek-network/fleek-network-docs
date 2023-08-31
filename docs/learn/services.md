@@ -61,7 +61,7 @@ The hardware resources used by a service are packaged and measured as commoditie
 
 Building on Fleek Network's Decentralized Edge Infrastructure unlocks various opportunities and advantages for Service builders, that empower them to implement most of the following concepts.
 
-### Web Services
+### Traditional Services
 
 #### Edge Functions
 
