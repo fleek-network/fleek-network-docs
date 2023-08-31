@@ -29,10 +29,10 @@ const commonNavbarItems = [{
   activeBasePath: 'guides',
 },
 {
-  to: 'reference',
-  label: 'Reference',
+  to: 'references',
+  label: 'References',
   position: 'left',
-  activeBasePath: 'reference',
+  activeBasePath: 'references',
 },
 {
   href: 'https://github.com/fleek-network/',
@@ -206,9 +206,9 @@ const config = {
         'content-docs',
         /** @type {import('@docusaurus/plugin-content-docs').Options} */
         ({
-          id: 'reference',
-          path: 'reference',
-          routeBasePath: '/reference',
+          id: 'references',
+          path: 'references',
+          routeBasePath: '/references',
           // `undefined` to auto-generate
           sidebarPath: undefined,
           ...commonDocsOptions,
