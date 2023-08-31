@@ -6,6 +6,11 @@ tags:
   - build
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Overview
 
 This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a Node operator.
@@ -31,3 +36,11 @@ Amongst others, the use cases we try to cover are:
 While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a PR in any of our repositories.
 
 **Ready?** Start by checking the [Server requirements](/docs/build/requirements)
+
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
