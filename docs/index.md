@@ -15,11 +15,9 @@ tags:
 - Fleek Network
 ---
 
-import ImgBannerDocs from '@site/static/img/banner-docs.png?202309041422';
+import ImgBannerDocs from '@site/static/img/banner-docs.png?202309041511';
 
-<img src={ImgBannerDocs} />
-
-## About
+<img className="banner" src={ImgBannerDocs} />
 
 Fleek Network is an open-source Edge Computing Platform to accelerate the development and execution of decentralized Web Services.
 

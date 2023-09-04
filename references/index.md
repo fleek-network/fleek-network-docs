@@ -7,9 +7,9 @@ tags:
 - Help
 ---
 
-import ImgBannerReferences from '@site/static/img/banner-references.png?202309041422';
+import ImgBannerReferences from '@site/static/img/banner-references.png?202309041511';
 
-<img src={ImgBannerReferences} />
+<img className="banner" src={ImgBannerReferences} />
 
 Our [Fleek Network](https://fleek.network) reference section will provide the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
 
