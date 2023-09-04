@@ -12,6 +12,11 @@ tags:
 - Clean
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
 ## Remove symLink
 
 To remove a symbolic link, use either the rm or unlink command followed by the name of the symlink as an argument. Here's an example with `unlink`:
@@ -93,3 +98,10 @@ To uninstall rustc, rustup and cargo run the following command:
 ```sh
 rustup self uninstall
 ```
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
