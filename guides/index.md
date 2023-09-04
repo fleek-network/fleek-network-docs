@@ -8,9 +8,9 @@ tags:
 - Fleek Network
 ---
 
-import ImgBannerGuides from '@site/static/img/banner-guides.png?202309041422';
+import ImgBannerGuides from '@site/static/img/banner-guides.png?202309041511';
 
-<img src={ImgBannerGuides} />
+<img className="banner" src={ImgBannerGuides} />
 
 The guides provide step-by-step instructions and descriptions to help understand how and why you'd have to do or execute certain commands or processes.
 
