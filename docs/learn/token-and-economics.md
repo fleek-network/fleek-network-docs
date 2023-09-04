@@ -155,25 +155,29 @@ A **Proof-of-Misbehavior** occurs when a client receives an inaccurate or faulty
 
 The distribution of the tokens is detailed in the following table:
 
-| Stakeholder             |    Percentage (%)    |
-|-------------------------|----------------------|
-| Community               |    60%               |
-| Early supporters        |    20%               |
-| Fleek Network team      |    20%               |
+| Stakeholder                             |    Percentage (%)    |
+|-----------------------------------------|----------------------|
+| Community                               |    66%               |
+| Core Contributors (current and future)  |    17%               |
+| Backers/Node operators                  |    17%               |
+| Total                                   |   100%               |
 
 
 The **Early supporters** are stakeholders who contributed to the project's initial funding phases or supported the project through other means.
 
-The **Community** has the largest share of the token allocation, which is further distributed granularly. It includes the **Foundation** 33% share (corresponding to 20% of the total). For **funding and support opportunities** (airdrop, bounties and grants) there's a 40% share (corresponding to 24% of the total). The **DAO** share is 17% (10% of the total) and 10% (6% of the total) is set aside for public sales and liquidity bootstrapping.
+The **Community** has the largest share of the token allocation, which is further distributed granularly. It includes the **Foundation** 10% share. For **funding and support opportunities** (airdrop, bounties and grants) there's a 20% share. The **DAO** share is 10%. We have 5% that is set aside for public sales and liquidity bootstrapping and 1% is allocated for the pre-mainnet community.
 
 The distribution of the token allocation in the community is detailed in the following table:
 
-| Community member                    |    Percentage (%)    |
-|-------------------------------------|----------------------|
-| Airdrop, bounties and grants        |    40%               |
-| DAO                                 |    17%               |
-| Foundation                          |    33%               |
-| Public sales and liquidity          |    10%               |
+| Community member                        |    Percentage (%)    |
+|-----------------------------------------|----------------------|
+| Staking and rewards                     |   20%                |
+| Ecosystem funds (Airdrop, grants, etc)  |   20%                |
+| DAO                                     |   10%                |
+| Foundation                              |   10%                |
+| Protocol Owned Liquidity                |    5%                |
+| Pre-Mainnet Community                   |    1%                |
+| Total                                   |   66%                |
 
 <Author
     name="Helder Oliveira"
