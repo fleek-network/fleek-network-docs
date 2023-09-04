@@ -11,6 +11,8 @@ import ImgBannerReferences from '@site/static/img/banner-references.png?20230904
 
 <img className="banner" src={ImgBannerReferences} />
 
-Our [Fleek Network](https://fleek.network) reference section will provide the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
+The references provide concise instructions to interface with the system, broken down into commands or small pieces for quick reference.
 
-A reference describes the instructions to interface with the system, it's broken down into commands or small pieces as a quick reference. This differs from our [Guides](guides) who take the pieces and put them together, instructing how and why you’d use those parts.
+It differs from [Guides](/guides) which is more descriptive or verbose when providing instructions and how-to's.
+
+To start, find references by consulting the available categories to locate the appropriate content on the sidebar. Our references are also available as a result when using the search feature located at the very top of the documentation site.
