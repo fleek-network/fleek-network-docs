@@ -1,10 +1,15 @@
 ---
 title: About references
+hide_title: true
 sidebar_position: 1
 tags:
 - References
 - Help
 ---
+
+import ImgBannerReferences from '@site/static/img/banner-references.png?202309041422';
+
+<img src={ImgBannerReferences} />
 
 Our [Fleek Network](https://fleek.network) reference section will provide the reference materials for Fleek Network command-line interfaces (CLIs) and application programming interfaces (APIs) for managing the resources.
 

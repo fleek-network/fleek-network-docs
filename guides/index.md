@@ -1,12 +1,16 @@
 ---
 title: About guides
-hide_title: false
+hide_title: true
 sidebar_position: 1
 tags:
 - Guides
 - Help
 - Fleek Network
 ---
+
+import ImgBannerGuides from '@site/static/img/banner-guides.png?202309041422';
+
+<img src={ImgBannerGuides} />
 
 The guides provide step-by-step instructions and descriptions to help understand how and why you'd have to do or execute certain commands or processes.
 
