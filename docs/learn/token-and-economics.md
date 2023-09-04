@@ -18,10 +18,13 @@ sidebar_position: 1
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
+import DisclaimerOnDraft from '../../guides/partials/_disclaimer-on-draft.mdx';
 
 ## Overview
 
 The Fleek Network runs on an incentivized economy model that rewards node operators who provide resources that form the network.
+
+<DisclaimerOnDraft />
 
 ## The genesis block
 
