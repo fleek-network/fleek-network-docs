@@ -1,5 +1,6 @@
 ---
 title: Uninstall Lightning CLI
+slug: uninstall-lightning-cli
 hide_title: true
 tags:
 - References

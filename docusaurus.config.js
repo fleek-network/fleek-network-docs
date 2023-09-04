@@ -211,6 +211,8 @@ const config = {
           routeBasePath: '/references',
           // `undefined` to auto-generate
           sidebarPath: undefined,
+          sidebarCollapsed: false,
+          sidebarCollapsible: false,
           ...commonDocsOptions,
         }),
       ],
