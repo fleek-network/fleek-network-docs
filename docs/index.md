@@ -15,7 +15,9 @@ tags:
 - Fleek Network
 ---
 
-![](./images/banner-pic.png)
+import ImgBannerDocs from '@site/static/img/banner-docs.png?202309041422';
+
+<img src={ImgBannerDocs} />
 
 ## About
 
