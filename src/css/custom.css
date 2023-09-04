@@ -292,7 +292,9 @@ article h1,
 .col article[itemprop="blogPost"] .markdown:not(#post-content) p img {
   display: none;
 } 
-
+.markdown > h2 {
+  margin-top: 0;
+}
 .markdown li a,
 .markdown p a {
   color: var(--ifm-color-primary-darker);
@@ -447,4 +449,8 @@ blockquote:before {
     width: 80px;
     height: 80px;
   }
+}
+
+.container .banner {
+  margin-bottom: 1rem;
 }
