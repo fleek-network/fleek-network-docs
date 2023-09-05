@@ -57,7 +57,7 @@ Disable the lightning service
 systemctl disable lightning.service
 ```
 
-If you have used the recommended procedures in the [install](docs/node/install) documentation you'll have to remove the Systemd unit (file that defines the service).
+If you have used the recommended procedures in the [install](/docs/node/install) documentation you'll have to remove the Systemd unit (file that defines the service).
 
 ```sh
 rm /etc/systemd/system/lightning.service

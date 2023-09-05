@@ -52,7 +52,7 @@ Applications, platforms and protocols build and utilize decentralized services o
 
 Developers can build faster and launch better products by offloading parts of the development stack to the edge to focus on core features for the value proposition of the services being developed.
 
-To get started, install a Network Node in a [supported](docs/node/requirements) Linux server, such as Debian or Ubuntu (latest) by utilizing our simple [assisted installer](docs/node/install#assisted-installer) to help onboard as quickly as possible.
+To get started, install a Network Node in a [supported](/docs/node/requirements) Linux server, such as Debian or Ubuntu (latest) by utilizing our simple [assisted installer](/docs/node/install#assisted-installer) to help onboard as quickly as possible.
 
 :::tip
 Our network is open to everyone, so you're more than welcome to join us anytime without any restrictions, permission or formalities. We'd be happy to have you as part of our community!
@@ -85,7 +85,7 @@ A Fleek Network node can be built and run on your machine. It’s an [open-sourc
 The project is written with Rust, a general-purpose programming language that you need to have installed in advance to be able to follow the current guide.
 
 :::tip
-To set up Rust, packages and library dependencies can be tricky. The quickest is to visit the [rustup.rs](https://rustup.rs/). Alternatively, if you haven't already, the build section has a [manual installation](docs/node/install#manual-installation) document to help.
+To set up Rust, packages and library dependencies can be tricky. The quickest is to visit the [rustup.rs](https://rustup.rs/). Alternatively, if you haven't already, the build section has a [manual installation](/docs/node/install#manual-installation) document to help.
 :::
 
 ### Clone the source code
@@ -187,7 +187,7 @@ lgtn run
 It's highly recommend to use systemd to manage the Fleek Network service for node operators. Systemd is a system and service manager for Linux operating systems that provides a consistent way to manage system services across various distributions.
 :::
 
-Learn how to create a new Systemd service in the [manual installation](docs/node/install#manual-installation) document.
+Learn how to create a new Systemd service in the [manual installation](/docs/node/install#manual-installation) document.
 
 ### Health check
 
@@ -233,7 +233,7 @@ Which response should return the key `result` with value `pong`:
 
 While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we'll provide some guides and references to help you manage your network node server!
 
-To avoid having to go through all the steps manually, we recommend reading our [assisted installer](docs/node/install#assisted-installer) document for quick onboarding.
+To avoid having to go through all the steps manually, we recommend reading our [assisted installer](/docs/node/install#assisted-installer) document for quick onboarding.
 
 ## Conclusion
 
