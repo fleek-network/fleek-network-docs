@@ -32,4 +32,4 @@ When approved, you will be notified in the **#access-approved** channel on Disco
 
 - All announcements for node operators will be sent to **#node-announcements**
 - You can ask for help in **#troubleshooting**, or chat with the team in the **#node-operators** channel
-- Every Friday at 2 pm EST, we will conduct Node Community Calls in **#node-stage**
+- Every Friday at 3 pm EST, we will conduct Node Community Calls in **#node-stage**
