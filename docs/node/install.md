@@ -462,6 +462,24 @@ lgtn keys generate
 
 The keys will be generated and placed under the system directory `~/.lightning/keystore`. The `private` key is the user's responsibility and no one else can generate or recover it for you, including Fleek Network or any team member. Your keys, your responsibility!
 
+### Set testnet in config.toml
+
+Set the testnet attribute to `true` in the `config.toml` lcated in the path `~/.lightning/config.toml`.
+
+```sh
+[application]
+db_path = "~/.lightning/data/app_data"
+mode = "Prod"
+storage = "RocksDb"
+testnet = true
+
+...
+```
+
+:::tip
+The configuration file should have more content, which was omitted here to keep it short and to the point. You're interested in the `testnet` property name only.
+:::
+
 ### Start the node
 
 :::caution Warning
