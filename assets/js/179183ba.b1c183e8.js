@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[6601],{655:e=>{e.exports=JSON.parse('{"label":"protocol","permalink":"/docs/tags/protocol","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/network","title":"The Network","description":"\x3c!--","permalink":"/docs/learn/the-network"}]}')}}]);

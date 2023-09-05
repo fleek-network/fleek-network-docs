@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[2931],{8807:e=>{e.exports=JSON.parse('{"label":"repositories","permalink":"/docs/tags/repositories","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Open-source/repositories","title":"Repositories","description":"Repositories","permalink":"/docs/Open-source/repositories"}]}')}}]);

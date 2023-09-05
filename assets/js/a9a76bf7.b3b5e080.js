@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[4356],{8826:n=>{n.exports=JSON.parse('{"label":"onboarding","permalink":"/docs/tags/onboarding","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/testnet-onboarding","title":"Testnet onboarding","description":"Testnet Onboarding","permalink":"/docs/node/testnet-onboarding"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[6310],{2560:e=>{e.exports=JSON.parse('{"label":"pledge","permalink":"/docs/tags/pledge","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Open-source/code-of-conduct","title":"Code of Conduct","description":"Contributor Covenant Code of Conduct","permalink":"/docs/Open-source/code-of-conduct"}]}')}}]);

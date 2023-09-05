@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[4508],{8581:t=>{t.exports=JSON.parse('{"label":"contribute","permalink":"/docs/tags/contribute","allTagsPath":"/docs/tags","count":1,"items":[{"id":"contribute","title":"Contribute","description":"TODO: contribute","permalink":"/docs/contribute"}]}')}}]);
