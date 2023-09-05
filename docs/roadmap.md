@@ -12,25 +12,41 @@ tags:
 
 ## Introduction
 
-Instead of restricting our network architecture/capabilities to a CDN service, Fleek Network's core was redesigned to support a full decentralized edge platform upon which many edge services (ex. CDN, serverless functions, etc.) can be built. The new architecture separates each aspect of the network (blockchain - edge infrastructure - services) so that anyone can build new edge services on Fleek Network.
+Instead of restricting our network architecture/capabilities to a CDN service, Fleek Network's core was redesigned to support a fully decentralized edge platform upon which many edge services e.g. CDN, serverless functions, amongst others, can be built. The new architecture separates each aspect of the network (blockchain - edge infrastructure - services) so that anyone can build new edge services on Fleek Network.
 
-Several milestones were completed towards our next early Testnet goal: the whitepaper was launched, and the Github repo was published.
+Several milestones were completed toward our next early Testnet goal: the whitepaper was launched, and the Github repo was published. 
 
-Next will come the following milestone: our early Testnet.
+For a complete description of our testnet plans, road to mainnet, and testnet participation initiatives, read the following [blog post](https://blog.fleek.network/post/fleek-network-testnet-plans/).
 
 ## Current state: Road to Testnet
 
-Our current roadmap on the road to an early testnet stands as follows:
+Our current roadmap on the road to an early testnet stands as follows, currently in **Phase {0}*:
 
-### August
+### Phases 0 to 5
 
-- Testnet Launch (initial phase of a multi-phased path to Mainnet)
-- Initial Edge Services (CDN and compute PoC services)
-- Service Development Kit (initial release)
+Fleek Network will utilize a multi-phase approach to rolling out mainnet. The current high-level plan, set out below, depends on a variety of factors and may change in response to development timelines and/or data/feedback collected throughout the different phases.
 
-The initial phase of testnet will have two main purposes. First, to stress test the network’s general performance and operation with a decentralized network of node operators with varying hardware; Second is to test the first two POC services, which are the CDN (static and dynamic content acceleration) and a simple edge compute POC.
+- **Phase 0 (September 5th): Node Rollout**
+    - Initial network and node testing (performance, hardware specs, clustering, costs, metrics, etc.)
+- **Phase 1 (mid-late September): SDK/Service Rollout**
+    - Introduce the SDK and test the building and utilizing of services on the network, as well as some optimizations based on Phase 0.
+- **Phase 2 (October):** **Initial Economics Rollout**
+    - Introduce and test a more concrete version of the economic algorithm, including staking, pricing, and other elements/situations using test (valueless) tokens, as well as some optimizations based on Phase 1.
+- **Phase 3 (November): Layer 2 Contracts Rollout**
+    - Introduce a test version of the aspects of the protocol that will live on an Ethereum L2 (staking, deposit and token contracts, communication between L2/FN, etc).
+- **Phase 4 (December):** **Final Rollout**
+    - Introduce the final form of the first generation of the network, based on all data/feedback and optimizations throughout all the phases, and allow testing of what a realistic mainnet environment will be like.
+- **Phase 5 (Q1 2024):** **Mainnet Launch**
 
-The second phase of the testnet which will happen in the first half of September (depending on when exactly the first testnet phase starts), will be to introduce the Service Development Kit (SDK) and test out people building new services on the test network.
+The goals for all stages involve completing and revising the following:
+
+- Network performance
+- Hardware/node specs
+- Sandboxing of services
+- Packaging and pricing of initial network resources/commodities
+- Parameters related to the FLK token
+- Security testing/auditing
+- Criteria for allocation of pre-mainnet community tokens
 
 ## Mainnet
 
