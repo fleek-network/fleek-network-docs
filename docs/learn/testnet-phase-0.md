@@ -15,7 +15,7 @@ sidebarCollapsible: false
     
   a) To get onboarded, go to the `Fleek Network Nodes` section and follow the instructions in the **#access-guide** channel
 
-2. Go to [Install](https://docs.fleek.network/docs/build/install), and follow the instructions to install the node via the manual/assisted installer. Click [here](https://docs.fleek.network/docs/build/requirements) for specific hardware requirements.
+2. Go to [Install](https://docs.fleek.networkdocs/node/install), and follow the instructions to install the node via the manual/assisted installer. Click [here](https://docs.fleek.networkdocs/node/requirements) for specific hardware requirements.
 
 3. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
 
