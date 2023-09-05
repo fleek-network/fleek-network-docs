@@ -464,6 +464,10 @@ The keys will be generated and placed under the system directory `~/.lightning/k
 
 ### Start the node
 
+:::caution Warning
+To participate in the [alpha Testnet](/docs/roadmap), you have to through the onboarding process. Make sure you request access by following the [onboarding instructions](/docs/node/testnet-onboarding). If you fail to enable your node for testnet, it'll not run!
+:::
+
 To start the node, you should execute the sub-command `run`. Noteworthy that while it launches the node, you're recommended to setup a systemd service to run it for a long period.
 
 ```sh
