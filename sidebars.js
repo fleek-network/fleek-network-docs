@@ -30,6 +30,7 @@ const sidebars = {
         'learn/delivery-acknowledgements',
         'learn/token-and-economics',
         'learn/services',
+        'learn/developers',
       ],
     },
     {
