@@ -30,7 +30,6 @@ const sidebars = {
         'learn/delivery-acknowledgements',
         'learn/token-and-economics',
         'learn/services',
-        'learn/testnet-phase-0',
       ],
     },
     {
@@ -41,6 +40,7 @@ const sidebars = {
       items: [
         'node/index',
         'node/requirements',
+        'node/testnet-onboarding',
         'node/install',
         // TODO: Disabled `node/configuration` and `node/diagnostics` sidebar category
         // 'node/configuration',

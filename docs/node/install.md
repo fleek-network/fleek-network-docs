@@ -27,6 +27,10 @@ import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
+:::caution Warning
+If you'd like to participate in the [alpha Testnet](/docs/roadmap), you have to go through the onboarding process. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to proceed and [install](/docs/node/install) a network node successfully.
+:::
+
 ## Assisted installer
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
