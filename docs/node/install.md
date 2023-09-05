@@ -34,7 +34,7 @@ The assisted installer is a script written in [Bash](https://en.wikipedia.org/wi
 ### Prerequesites
 
 - A basic knowledge of command line interface (CLI)
-- A [supported](/docs/build/requirements#server) Linux server
+- A [supported](docs/node/requirements#server) Linux server
 
 ### Connect to your server
 
@@ -47,7 +47,7 @@ ssh <USERNAME>@<REMOTE_HOST>
 ```
 
 :::info
-Check the cloud provider for instructions to understand how to setup an ssh connection and connect to it remotely. Some other users might have local access to a [supported](/docs/build/requirements#server) Linux server. To keep this guide short, we'll assume you've rented a VPS from a cloud provider.
+Check the cloud provider for instructions to understand how to setup an ssh connection and connect to it remotely. Some other users might have local access to a [supported](docs/node/requirements#server) Linux server. To keep this guide short, we'll assume you've rented a VPS from a cloud provider.
 :::
 
 ### Create a user
@@ -129,7 +129,7 @@ On success, you should be greeted by the following welcome screen:
 Remaining output omitted for brevity, you'll not see this text line
 ```
 
-Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/build/requirements).
+Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](docs/node/requirements).
 
 After creating the service file, you should reload the Systemd process, to apply the newly created service. You can do this by executing:
 
@@ -173,10 +173,10 @@ Remember that if you use the assisted installer, you won't have to do the [manua
 
 ## Manual installation
 
-The following section will walk through the dependencies and Rust installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install), reading the [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) or picking another [supported distro](/docs/build/requirements#server). The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
+The following section will walk through the dependencies and Rust installation process for Linux. If you're on Windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install), reading the [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) or picking another [supported distro](docs/node/requirements#server). The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
 
 :::tip
-We're only supporting Linux operating system (server edition). Find the list of supported OS [here](/docs/build/requirements#server).
+We're only supporting Linux operating system (server edition). Find the list of supported OS [here](docs/node/requirements#server).
 :::
 
 ### Prerequisites

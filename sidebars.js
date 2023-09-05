@@ -35,16 +35,16 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Build',
+      label: 'Node',
       collapsed: true,
       collapsible: true,
       items: [
-        'build/index',
-        'build/requirements',
-        'build/install',
-        // TODO: Disabled `build/configuration` and `build/diagnostics` sidebar category
-        // 'build/configuration',
-        // 'build/diagnostics',
+        'node/index',
+        'node/requirements',
+        'node/install',
+        // TODO: Disabled `node/configuration` and `node/diagnostics` sidebar category
+        // 'node/configuration',
+        // 'node/diagnostics',
       ],
     },
     // TODO: Disabled `develop` sidebar category

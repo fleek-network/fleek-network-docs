@@ -27,7 +27,7 @@ Applications, platforms and protocols build and utilize decentralized services o
 
 :::tip
 To participate in the [Alpha Testnet](/docs/roadmap), you can begin by setting up and running nodes.
-Proceed to the [build](/docs/build/overview) section for an overview of the server [requirements](/docs/build/requirements) and instructions to [install](/docs/build/install) a Fleek Network node.
+Proceed to the [build](docs/node/overview) section for an overview of the server [requirements](docs/node/requirements) and instructions to [install](docs/node/install) a Fleek Network node.
 :::
 
 :::info
