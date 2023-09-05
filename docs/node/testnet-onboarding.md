@@ -1,25 +1,28 @@
 ---
-title: Testnet Phase {0}
-slug: testnet-phase-0
+title: Testnet onboarding
+slug: testnet-onboarding
 hide_title: true
 tags:
   - testnet
+  - onboarding
   - phases
   - getting started
 sidebarCollapsible: false
 ---
 
-## Getting started
+## Testnet Onboarding
 
 1. Join our [Discord](https://discord.gg/fleekxyz) server
     
   a) To get onboarded, go to the `Fleek Network Nodes` section and follow the instructions in the **#access-guide** channel
 
-2. Go to [Install](https://docs.fleek.networkdocs/node/install), and follow the instructions to install the node via the manual/assisted installer. Click [here](https://docs.fleek.networkdocs/node/requirements) for specific hardware requirements.
+2. Learn about the [required server specifications](/docs/node/requirements) on which the Fleek Network Node can be installed and run.
 
-3. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
+3. Follow the [instructions](/docs/node/install) to install the node via the [assisted installer](/docs/node/install#assisted-installer) (easy) or [manually](/docs/node/install#manual-installation) (advanced).
 
-4. The team will review your application, allowing-listing your node if approved
+4. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
+
+5. The team will review your application, allowing-listing your node if approved
 
 :::info
 When approved, you will be notified in the **#access-approved** channel on Discord and given the Node Operator role.

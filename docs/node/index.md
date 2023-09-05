@@ -15,6 +15,10 @@ import Author from '@site/src/components/Author';
 
 This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a Node operator.
 
+:::tip
+To participate in the [alpha Testnet](/docs/roadmap), you can begin by setting up and running nodes. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to [install](/docs/node/install) a network node successfully.
+:::
+
 # Node operator
 ---
 
