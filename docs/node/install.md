@@ -514,7 +514,7 @@ Type=simple
 MemoryHigh=32G
 RestartSec=15s
 Restart=always
-ExecStart=lgtn -c /home/lgtn/lightning.toml run
+ExecStart=lgtn run
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
