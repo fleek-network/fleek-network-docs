@@ -501,6 +501,10 @@ To start the node, you should execute the sub-command `run`. Noteworthy that whi
 lgtn run
 ```
 
+:::caution WARNING
+We recommend setting up the process as a systemd service, as it's a long-running process. Instructions to setup a systemd service are available in the section [Systemd Service Setup](#systemd-service-setup).
+:::
+
 Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Health Check](#health-check) to learn how to do a node health checkup.
 
 ### Systemd Service Setup
@@ -532,7 +536,7 @@ WantedBy=multi-user.target
 ```
 
 :::caution
-Notice that we're using `lgnt` as the username. If you have a different custom username change it accordingly. Beware that we've recommended using a `non-root` user, as described in the section [create a user](#create-a-user).
+Notice that we're using `lgnt` as the username. If you have a different custom username change it accordingly. Beware that we've recommended using a `non-root` user, as described in the section [create a user](#create-a-user-1).
 :::
 
 Change the file permissions for the service:
@@ -566,7 +570,11 @@ sudo touch /var/log/lightning/output.log
 sudo touch /var/log/lightning/diagnostic.log
 ```
 
-We're assuming that you've [created a new user](#create-a-user-1) and can start the service operating without **sudo**. Start the service by:
+:::caution WARNING
+We're assuming that you've [created a new user](#create-a-user-1) and can start the service operating without **sudo**.
+:::
+
+Start the service by:
 
 ```sh
 systemctl start lightning.service
