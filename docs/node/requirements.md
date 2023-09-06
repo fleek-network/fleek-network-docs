@@ -11,6 +11,7 @@ sidebarCollapsible: false
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
+import Ports from '../../guides/partials/_ports.mdx';
 
 ## Requirements
 
@@ -34,6 +35,10 @@ Support for other OS will be made available soon, e.g. CentOS and Fedora. Any co
 Because of the use of Linux containerization technology, other operating systems, such as FreeBSD, OpenBSD, MacOS, Windows and others are not supported.
 
 If you don’t have a server or a spare machine, keep reading as we'll give you some hints on how to rent one, although we are not affiliated with any provider.
+
+## Ports
+
+<Ports />
 
 ## Specs
 ---

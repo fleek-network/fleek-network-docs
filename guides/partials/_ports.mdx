@@ -1,0 +1,21 @@
+Amongst other resources, ports play the role of managing and organizing network traffic. The ports initiate and terminate network connections crucial for the node to operate in the Fleek Network. The operating system should have the ports enabled and open for the node to run successfully.
+
+The Node process requires the following ports:
+
+- RPC (port 4069)
+- Pool (4200)
+- Handshake (6969)
+- Narwhal
+    - Primary (port 18000)
+    - Worker (port 18101)
+    - Mempool (port 18102)
+
+There’s a single worker at the protocol level. In the future, if a node is allowed to run >1 worker, the ports can look like (worker#X):
+
+- Narwhal
+    - Worker (port 18X01)
+    - Mempool (or 18X02)
+
+:::caution required
+The ports should be freed before launching the node process. Any blockers or firewalls should be configured to enable the ports.
+:::
