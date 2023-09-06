@@ -15,6 +15,14 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
+:::tip
+Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
+
+```sh
+curl -sS https://get.fleek.network/update | bash
+```
+:::
+
 ## Switch to the installation user
 
 Switch to the username you've used throughout the installation process.
