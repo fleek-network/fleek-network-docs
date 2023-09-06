@@ -77,7 +77,7 @@ The Fleek Network lightning config directory is where the configuration, keystor
 Make sure to backup any sensitive data, such as the keystore (private keys), as you won't be able to recover the keys by any other means. If you have any funds associated with it, it'll be lost forever. The Fleek Network team or anyone else will not be able to help recover keys. Your keys, your responsibility.
 :::
 
-Alternatively, instead of removing, you can move the files to a custom directory name such as`.lightning.backupDATESTAMP`, e.g. the example below we've used the date `2023-09-06-1205` as that was the time this text was written:
+Alternatively, instead of deleting you can move the files to a custom directory name such as`.lightning.backupDATESTAMP`, e.g. the example below we've used the date `2023-09-06-1205` as that was the time this text was written:
 
 ```sh
 mv ~/.lightning ~/.lightning.backup202309061205
