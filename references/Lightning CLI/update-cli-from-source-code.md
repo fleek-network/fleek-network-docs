@@ -74,7 +74,7 @@ cargo +stable build --release
 Start by removing the existing one:
 
 ```sh
-sudo rm -f "/usr/local/bin/lgtn
+sudo rm -f "/usr/local/bin/lgtn"
 ```
 
 Create a new symlink that links the new build binary to `/usr/local/bin/lgtn`, as follows:
