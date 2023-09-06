@@ -69,7 +69,7 @@ To build the binary from the source code, we execute the cargo build command:
 cargo +stable build --release
 ```
 
-### Update the symlink
+## Update the symlink
 
 Start by removing the existing one:
 
@@ -77,7 +77,7 @@ Start by removing the existing one:
 sudo rm -f "/usr/local/bin/lgtn
 ```
 
-Create a new symlink which links the new build binary to `/usr/local/bin/lgtn`, as follows:
+Create a new symlink that links the new build binary to `/usr/local/bin/lgtn`, as follows:
 
 ```sh
 sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
