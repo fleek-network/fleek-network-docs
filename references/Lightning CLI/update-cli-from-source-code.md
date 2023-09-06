@@ -15,7 +15,7 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
-## Switch to the installation user
+## Switch to the installation user
 
 Switch to the username you've used throughout the installation process.
 
@@ -29,7 +29,7 @@ For example, if you used the username `lgtn` it'll look like the following comma
 su lgtn
 ```
 
-## Change directory to the source code
+## Change directory to the source code
 
 If you have installed it via the recommended process or instructions, then the default location where the [source code](https://github.com/fleek-network/lightning) is stored is `~/fleek-network/lightning`.
 
@@ -61,9 +61,9 @@ To build the binary from the source code, we execute the cargo build command:
 cargo +stable build --release
 ```
 
-### Restart the service
+## Restart the service
 
-Once the cargo build process completes, you have to restart the service, as follows:
+Once the cargo build process is completed, you have to restart the service. We're assuming you are using non-root user as [recommended](/docs/node/install#create-a-user), you won't use **sudo** to start the service. The command will look as follows:
 
 ```sh
 systemctl restart lightning
@@ -73,7 +73,7 @@ systemctl restart lightning
 If you have installed the Fleek Network lightning manually, the [installation instructions](/docs/node/install#systemd-service-setup) recommended setting up a systemd service for the Fleek Network process. If you haven't, you're advised to check the instructions provided.
 :::
 
-### Health checkup
+## Health checkup
 
 Do a quick health check by running:
 
