@@ -22,7 +22,7 @@ sidebarCollapsible: false
 
 4. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
 
-5. The team will review your application, allowing-listing your node if approved
+5. The team will review your application, allowing/listing your node if approved
 
 :::info
 When approved, you will be notified in the **#access-approved** channel on Discord and given the Node Operator role.
@@ -33,3 +33,21 @@ When approved, you will be notified in the **#access-approved** channel on Disco
 - All announcements for node operators will be sent to **#node-announcements**
 - You can ask for help in **#troubleshooting**, or chat with the team in the **#node-operators** channel
 - Every Friday at 3 pm EST, we will conduct Node Community Calls in **#node-stage**
+
+## Node whitelist verification
+
+You might find it useful to run the following command to verify the status of the node whitelist status–since a node throws an error if not whitelisted, this can be verified by looking at and monitoring the `diagnostic.log` file manually, otherwise, use the method shared here.
+
+1) Connect to the server terminal where the node is installed
+
+2) Switch to the user account that was used to set up the node as recommended in the [installation guide](/docs/node/install#create-a-user)
+
+3) Execute the following command
+
+```sh
+curl -sS https://get.fleek.network/whitelist | bash
+```
+
+:::tip
+The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/install#analyzing-log-messages).
+:::
