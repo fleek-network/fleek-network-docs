@@ -69,6 +69,20 @@ To build the binary from the source code, we execute the cargo build command:
 cargo +stable build --release
 ```
 
+### Update the symlink
+
+Start by removing the existing one:
+
+```sh
+sudo rm -f "/usr/local/bin/lgtn
+```
+
+Create a new symlink which links the new build binary to `/usr/local/bin/lgtn`, as follows:
+
+```sh
+sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
+```
+
 ## Restart the service
 
 Once the cargo build process is completed, you have to restart the service. We're assuming you are using non-root user as [recommended](/docs/node/install#create-a-user), you won't use **sudo** to start the service. The command will look as follows:
