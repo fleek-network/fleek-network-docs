@@ -24,7 +24,7 @@ error: linking with `cc` failed: exit status: 1
 error: could not compile `fleek-service-ping-example` (lib) due to previous error
 ```
 
-## Install `gcc`:
+## Install `gcc`:
 
 ```sh
 sudo apt-get install gcc
@@ -36,7 +36,7 @@ sudo apt-get install gcc
 sudo apt-get update
 ```
 
-## Remove previous installation files
+## Remove previous installation files
 
 You can re-run the installation process. If you are using the assisted installer, it'll complain that the source code directory already exists. Since you've probably cloned the source code repository locally, you'll have to remove it manually. If you need help, find the instructions in the [reference](/references/Lightning%20CLI/uninstall-lightning-cli).
 
