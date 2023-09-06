@@ -51,3 +51,7 @@ curl -sS https://get.fleek.network/whitelist | bash
 :::tip
 The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/install#analyzing-log-messages).
 :::
+
+:::warning
+We are going to be whitlisting in waves at the beginning of every epoch. Epochs are currently 30 mins (as for this period of testnet). If you have [updated the binary](/references/Lightning%20CLI/update-cli-from-source-code), run the node that you applied with. While your not whitelisted your node will be checking every 5 minutes and will start when whitelisted.
+:::
