@@ -333,8 +333,17 @@ sudo apt-get install build-essential
 Followed by the required tools to compile the application ([cmake](https://cmake.org/), [clang](https://clang.llvm.org/), [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/) and [libssl-dev ](https://packages.debian.org/sid/libssl-dev)).
 
 ```sh
-sudo apt-get install build-essential cmake clang pkg-config libssl-dev gcc-multilib
+sudo apt-get install cmake clang pkg-config libssl-dev gcc-multilib
 ```
+
+:::tip
+For Debian, you should install `gcc`, as follows:
+
+```sh
+sudo apt-get install gcc
+sudo apt-get update
+```
+:::
 
 Now install the [Protobufer Compiler](https://grpc.io/docs/protoc-installation/).
 
