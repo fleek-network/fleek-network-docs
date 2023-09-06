@@ -553,7 +553,20 @@ To start the service at boot, use the enable command:
 sudo systemctl enable lightning.service
 ```
 
-Start the service by:
+Create the directory where the log message will be stored, as follows:
+
+```sh
+sudo mkdir -p /var/log/lightning
+```
+
+You may want to create empty placeholders for the stdout and stderr log files:
+
+```sh
+sudo touch /var/log/lightning/output.log
+sudo touch /var/log/lightning/diagnostic.log
+```
+
+We're assuming that you've [created a new user](#create-a-user-1) and can start the service operating without **sudo**. Start the service by:
 
 ```sh
 systemctl start lightning.service
