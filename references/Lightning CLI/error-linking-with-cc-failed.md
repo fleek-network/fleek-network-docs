@@ -15,6 +15,12 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
+## Check if CPU is supported
+
+```sh
+uname -i
+```
+
 :::caution WARNING
 Given the [CPU requirements](https://docs.fleek.network/docs/node/requirements/#specs), currently we're mainly supporting `GenuineIntel` and there have been reports of failure to build the binary on `AMD`. The `ARM64`` is a different architecture, thus not supported. Any contribution or feedback to provide support is appreciated. Feel free to let us know on our [Discord channel](https://discord.gg/fleekxyz).
 :::
