@@ -44,7 +44,7 @@ The default install location is `$HOME/fleek-network/lightning`. If you have sel
 To disable the Fleek Network Lightning Systemd's service, start by stopping the service.
 
 ```sh
-systemctl stop lightning.service
+sudo systemctl stop lightning.service
 ```
 
 :::tip
@@ -54,7 +54,7 @@ You can replace `lightning.service` by `lightning`.
 Disable the lightning service
 
 ```sh
-systemctl disable lightning.service
+sudo systemctl disable lightning.service
 ```
 
 If you have used the recommended procedures in the [install](/docs/node/install) documentation you'll have to remove the Systemd unit (file that defines the service).
@@ -66,7 +66,7 @@ rm /etc/systemd/system/lightning.service
 Reload the Systemd service daemon
 
 ```sh
-systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
 ## Clear the lightning config directory

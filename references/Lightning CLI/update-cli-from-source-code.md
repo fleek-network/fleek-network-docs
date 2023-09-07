@@ -156,7 +156,7 @@ rm -rf ~/.lightning/data
 Once the cargo build process is completed, you have to restart the service. We're assuming you are using non-root user as [recommended](/docs/node/install#create-a-user), you won't use **sudo** to start the service. The command will look as follows:
 
 ```sh
-systemctl restart lightning
+sudo systemctl restart lightning
 ```
 
 :::tip

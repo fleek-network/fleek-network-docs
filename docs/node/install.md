@@ -143,7 +143,7 @@ After creating the service file, you should reload the Systemd process, to apply
 After creating the service, launch the service by executing the following command:
 
 ```sh
-systemctl start lightning.service
+sudo systemctl start lightning.service
 ```
 
 :::tip
@@ -585,7 +585,7 @@ We're assuming that you've [created a new user](#create-a-user-1) and can start 
 Start the service by:
 
 ```sh
-systemctl start lightning.service
+sudo systemctl start lightning.service
 ```
 
 :::tip
@@ -648,33 +648,33 @@ You shouldn't prefix the systemctl command with **sudo** when start/stop/status 
 Start the service by:
 
 ```sh
-systemctl start lightning
+sudo systemctl start lightning
 ```
 
 :::tip
 When naming the service, the *.service can be omitted. For this reason the command can be typed as follows:
 
 ```sh
-systemctl start lightning
+sudo systemctl start lightning
 ```
 :::
 
 Stop the service by:
 
 ```sh
-systemctl stop lightning
+sudo systemctl stop lightning
 ```
 
 Restart the service by:
 
 ```sh
-systemctl restart lightning
+sudo systemctl restart lightning
 ```
 
 Check the service status by:
 
 ```sh
-systemctl status lightning.service
+sudo systemctl status lightning.service
 ```
 
 ## Analyzing Log Messages
