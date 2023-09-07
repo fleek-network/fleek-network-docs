@@ -83,6 +83,39 @@ Create a new symlink that links the new build binary to `/usr/local/bin/lgtn`, a
 sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
 ```
 
+## Update the systemd service unit
+
+Open and edit the `/etc/systemd/system/lightning.service` file.
+
+
+1) Replace `<YOUR-USERNAME>` with the username. For example, in the [documentation](/docs/node/install#create-a-user) we use the username `lgtn`.
+
+2) Make sure that the `ExecStart` is set correctly
+
+```sh
+[Unit]
+Description=Fleek Network Node lightning service
+
+[Service]
+User=<YOUR-USERNAME>
+Type=simple
+MemoryHigh=32G
+RestartSec=15s
+Restart=always
+ExecStart=lgtn run
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+
+[Install]
+WantedBy=multi-user.target
+```
+
+When complete make sure the file is saved. Followed by a systemctl daemon reload:
+
+```sh
+sudo systemctl daemon-reload
+```
+
 ## Restart the service
 
 Once the cargo build process is completed, you have to restart the service. We're assuming you are using non-root user as [recommended](/docs/node/install#create-a-user), you won't use **sudo** to start the service. The command will look as follows:
