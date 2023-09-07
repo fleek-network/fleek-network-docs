@@ -78,11 +78,7 @@ usermod -aG sudo lgtn
 
 Finally, switch to the new **user** by using the command:
 
-```sh
-su lgtn
-```
-
-Change directory to the new user's home
+Change the directory to the new user's home, as follows:
 
 ```sh
 cd /home/lgtn
@@ -220,10 +216,16 @@ After completing the `adduser` steps, execute the `usermod` to add the `user` to
 usermod -aG sudo lgtn
 ```
 
-Finally, switch to the new **user** by using the command:
+Switch to the new **user** by using the command:
 
 ```sh
 su lgtn
+```
+
+Change the directory to the new user's home, as follows:
+
+```sh
+cd /home/lgtn
 ```
 
 ### Install Rust with Rustup tool
