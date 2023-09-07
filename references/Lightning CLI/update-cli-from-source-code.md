@@ -46,10 +46,18 @@ cd ~/fleek-network/lightning
 ```
 
 :::tip
-Notice that we use `~`, which refers to `$HOME`. You must use the username used for the installation process. For example, on [Ubuntu](/docs/node/requirements#server) if you used the username `lgtn`, the pathname for `$HOME` is `/home/lgtn`.
+Notice that we use `~`, which refers to `$HOME`. You must use the username used for the installation process. For example, on [Ubuntu](/docs/node/requirements#server) if you use the username `lgtn`, the pathname for `$HOME` is `/home/lgtn`.
 :::
 
 ## Pull the latest changes
+
+Before make sure that you stash or clear any changes you may have in the working directory, as otherwise, `git` will let you know about local changes–if you'd like to learn more about it read the [git stash document](https://git-scm.com/docs/git-stash).
+
+A quick way to clean is to `stash` the changes, for example:
+
+```sh
+git stash 
+```
 
 To pull the latest changes use the `git pull` command, as follows:
 
