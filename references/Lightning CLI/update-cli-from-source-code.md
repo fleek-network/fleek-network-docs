@@ -49,6 +49,18 @@ cd ~/fleek-network/lightning
 Notice that we use `~`, which refers to `$HOME`. You must use the username used for the installation process. For example, on [Ubuntu](/docs/node/requirements#server) if you use the username `lgtn`, the pathname for `$HOME` is `/home/lgtn`.
 :::
 
+## Checkout to branch
+
+Make sure that you are checked in to the correct branch. For the current testnet phase that'd be `testnet-alpha-0`. If you use any other branch name, your node will not function correctly. Use the branch name `testnet-alpha-0`.
+
+```sh
+git checkout testnet-alpha-0
+```
+
+:::tip
+We try to update our documentation promptly but sometimes are a bit behind on any changes we might make in real-time. If you find any typos, such as the wrong branch name, help us by letting us know! Find us in Fleek Network section of our [Discord](https://discord.gg/fleekxyz).
+:::
+
 ## Pull the latest changes
 
 Before make sure that you stash or clear any changes you may have in the working directory, as otherwise, `git` will let you know about local changes–if you'd like to learn more about it read the [git stash document](https://git-scm.com/docs/git-stash).
@@ -59,10 +71,19 @@ A quick way to clean is to `stash` the changes, for example:
 git stash 
 ```
 
+
 To pull the latest changes use the `git pull` command, as follows:
 
 ```sh
 git pull origin testnet-alpha-0
+```
+
+Alternatively, to have to stash and pull, you can reset the repository to the origin.
+
+```sh
+git fetch origin testnet-alpha-0
+git reset --hard origin/testnet-alpha-0
+git clean -f
 ```
 
 :::tip
