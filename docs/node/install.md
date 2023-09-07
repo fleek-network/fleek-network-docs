@@ -642,13 +642,13 @@ sudo systemctl enable lightning.service
 ```
 
 :::caution
-You shouldn't prefix the systemctl command with **sudo** when start/stop/status the service.
+You shouldn't have prefix the systemctl command with **sudo** when start/stop/status the service. Due to some VPS providers modifying the operating system, we had to present the examples prefixed with sudo for the wider audience. If you'd like to learn more about controlling Systemd services as a `user` check the reference [Systemd user-service](/references/Systemd/user-service).
 :::
 
 Start the service by:
 
 ```sh
-sudo systemctl start lightning
+sudo systemctl start lightning.service
 ```
 
 :::tip
