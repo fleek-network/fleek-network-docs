@@ -97,9 +97,6 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        googleTagManager: {
-          containerId: 'GTM-PC422SF',
-        },
       }),
     ],
   ],
@@ -187,6 +184,12 @@ const config = {
       },
     }),
     plugins: [
+      [
+        '@docusaurus/plugin-google-tag-manager',
+        {
+          containerId: 'GTM-PC422SF',
+        },
+      ],
       [
         'content-docs',
         /** @type {import('@docusaurus/plugin-content-docs').Options} */
