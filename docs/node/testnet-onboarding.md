@@ -22,6 +22,11 @@ sidebarCollapsible: false
 
 4. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
 
+:::caution Important
+Live information should be checked in the Fleek Network 
+[node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) Discord channel. Due to the number of requests and to improve the onboarding experience, the channel or forms might have offline periods. Check the [node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) for live updates, please!
+:::
+
 5. The team will review your application, allowing/listing your node if approved
 
 :::info
