@@ -97,9 +97,8 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: {
-          trackingID: 'GTM-PC422SF',
-          anonymizeIP: true,
+        googleTagManager: {
+          containerId: 'GTM-PC422SF',
         },
       }),
     ],
