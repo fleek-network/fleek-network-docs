@@ -1,6 +1,6 @@
 ---
 title: User service
-slug: user service
+slug: user-service
 hide_title: true
 tags:
 - references
