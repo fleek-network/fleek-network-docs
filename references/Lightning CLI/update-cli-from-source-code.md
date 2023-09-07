@@ -145,6 +145,12 @@ When complete make sure the file is saved. Followed by a systemctl daemon reload
 sudo systemctl daemon-reload
 ```
 
+## Clear the data
+
+```sh
+rm -rf ~/.lightning/data
+```
+
 ## Restart the service
 
 Once the cargo build process is completed, you have to restart the service. We're assuming you are using non-root user as [recommended](/docs/node/install#create-a-user), you won't use **sudo** to start the service. The command will look as follows:
