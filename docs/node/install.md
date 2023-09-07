@@ -82,6 +82,12 @@ Finally, switch to the new **user** by using the command:
 su lgtn
 ```
 
+Change directory to the new user's home
+
+```sh
+cd /home/lgtn
+```
+
 ### Run the script for a quick install
 
 Copy and paste it to the server host terminal and execute it to launch the assisted installation process, as follows:
