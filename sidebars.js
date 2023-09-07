@@ -43,6 +43,7 @@ const sidebars = {
         'node/requirements',
         'node/testnet-onboarding',
         'node/install',
+        'node/health-check',
         // TODO: Disabled `node/configuration` and `node/diagnostics` sidebar category
         // 'node/configuration',
         // 'node/diagnostics',

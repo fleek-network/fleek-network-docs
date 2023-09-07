@@ -615,6 +615,8 @@ If the request is successful, you should get the result `pong` as follows:
 }
 ```
 
+To learn more about health checkups, read the section [Health-check](/docs/node/health-check)
+
 ## Use Systemctl to manage Systemd Service
 
 Learn how to enable, disable, start, stop the Systemd Service for Fleek Network. The service is set up by the [Assisted installer](#assisted-installer) (automatically), or manually (optional) as described in [Manual installation](#manual-installation).
