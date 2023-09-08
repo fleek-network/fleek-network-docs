@@ -15,7 +15,7 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
-## Check if CPU is supported
+## Check if CPU is supported
 
 ```sh
 uname -i
