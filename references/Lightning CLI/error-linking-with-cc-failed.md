@@ -34,16 +34,16 @@ error: linking with `cc` failed: exit status: 1
 error: could not compile `fleek-service-ping-example` (lib) due to previous error
 ```
 
-## Install `gcc`:
-
-```sh
-sudo apt-get install gcc
-```
-
 ## Update
 
 ```sh
 sudo apt-get update
+```
+
+## Install `gcc`:
+
+```sh
+sudo apt-get install gcc
 ```
 
 ## Remove previous installation files
