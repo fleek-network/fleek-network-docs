@@ -24,6 +24,7 @@ tags:
 import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
+import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
@@ -58,31 +59,8 @@ Check the cloud provider for instructions to understand how to setup an ssh conn
 
 To start, you must have an administrative account, such as **root** or **sudoer**. This will allow us to install or required dependencies and libraries. We recommend using a **sudoer** user account. Thus, if you're logged in as **root** you can create a new user and add to the **sudo** group by running:
 
-```sh
-adduser <USERNAME>
-```
 
-:::tip
-For our example, we'll be using the name `lgtn` but you can pick whichever you'd like.
-:::
-
-```sh
-adduser lgtn
-```
-
-After completing the `adduser` steps, execute the `usermod` to add the `user` to the **sudo** group, as follows:
-
-```sh
-usermod -aG sudo lgtn
-```
-
-Finally, switch to the new **user** by using the command:
-
-Change the directory to the new user's home, as follows:
-
-```sh
-cd /home/lgtn
-```
+<CreateAUser />
 
 ### Run the script for a quick install
 
@@ -198,35 +176,7 @@ If you don't have Git installed, learn more about it and the instructions by rea
 
 ### Create a user
 
-We recommend creating a `non-root` user with administrative privileges. It'll allow us to install any system requirements.
-
-You can create a new user and add to the **sudo** group by running:
-
-:::tip
-For our example, we'll be using the name `lgtn` but you can pick whichever you'd like. If you already have a **sudoer** account, you can skip this step.
-:::
-
-```sh
-adduser lgtn
-```
-
-After completing the `adduser` steps, execute the `usermod` to add the `user` to the **sudo** group, as follows:
-
-```sh
-usermod -aG sudo lgtn
-```
-
-Switch to the new **user** by using the command:
-
-```sh
-su lgtn
-```
-
-Change the directory to the new user's home, as follows:
-
-```sh
-cd /home/lgtn
-```
+<CreateAUser />
 
 ### Install Rust with Rustup tool
 

@@ -1,0 +1,29 @@
+We recommend creating a `non-root` user with administrative privileges. It'll allow us to install any system requirements.
+
+You can create a new user and add to the **sudo** group by running:
+
+:::tip
+For our example, we'll be using the name `lgtn` but you can pick whichever you'd like. If you already have a **sudoer** account, you can skip this step.
+:::
+
+```sh
+adduser lgtn
+```
+
+After completing the `adduser` steps, execute the `usermod` to add the `user` to the **sudo** group, as follows:
+
+```sh
+usermod -aG sudo lgtn
+```
+
+Switch to the new **user** by using the command:
+
+```sh
+su lgtn
+```
+
+Change the directory to the new user's home, as follows:
+
+```sh
+cd /home/lgtn
+```
