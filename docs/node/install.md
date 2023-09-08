@@ -298,8 +298,8 @@ sudo apt-get install cmake clang pkg-config libssl-dev gcc-multilib
 For Debian, you should install `gcc`, as follows:
 
 ```sh
-sudo apt-get install gcc
 sudo apt-get update
+sudo apt-get install gcc
 ```
 :::
 
