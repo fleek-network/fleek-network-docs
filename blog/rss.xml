@@ -4,7 +4,7 @@
         <title>Fleek Network Docs | Decentralized Edge Platform Blog</title>
         <link>https://docs.fleek.network/blog</link>
         <description>Fleek Network Docs | Decentralized Edge Platform Blog</description>
-        <lastBuildDate>Thu, 07 Sep 2023 19:09:04 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Sep 2023 09:47:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <title><![CDATA[Bloom Filters and Cuckoo Filters for Cache Summarization]]></title>
             <link>https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization</link>
             <guid>bloom-and-cuckoo-filters-for-cache-summarization</guid>
-            <pubDate>Thu, 07 Sep 2023 19:09:04 GMT</pubDate>
+            <pubDate>Fri, 08 Sep 2023 09:47:33 GMT</pubDate>
             <description><![CDATA[Summary of our experiment informing whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters.]]></description>
             <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/bloom-79da0db687b4fb2060758838b9c44513.png" width="1200" height="628" class="img_ev3q"></p><p>Disclaimer: This is not a general comparison between Bloom filters and Cuckoo filters. This blog post summarizes some of the experiments we conducted to decide whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters, for a specific use case.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="background">Background<a class="hash-link" href="#background" title="Direct link to heading">​</a></h2><p>Nodes on Fleek Network currently use Counting Bloom filters to summarize their cached content. These cache summaries are exchanged with other nodes in order to facilitate content routing.</p><p>If a particular node does not store a requested piece of content, it can use the Bloom filters that it received from its peers to check if a peer stores the requested content.</p><p>We are using Counting Bloom filters rather than regular Bloom filters because we need to be able to remove elements from the filter to support cache eviction.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="bloom-filters">Bloom Filters<a class="hash-link" href="#bloom-filters" title="Direct link to heading">​</a></h2><p>A Bloom filter is a space-efficient probabilistic data structure that can be used to perform approximate set membership queries.
 The answer to an approximate set membership query is not <code>no</code> or <code>yes,</code> but rather <code>no</code> or <code>probably.</code> This <code>probably</code> is quantified with the false positive rate.  </p><p>One of the convenient features of Bloom filters is that they can be configured to have a specific false positive rate.
