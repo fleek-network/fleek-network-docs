@@ -134,6 +134,7 @@ Restart=always
 ExecStart=lgtn run
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
+Environment=/var/tmp
 
 [Install]
 WantedBy=multi-user.target
