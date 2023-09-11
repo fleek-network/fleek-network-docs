@@ -14,6 +14,7 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
+import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx'
 
 :::tip
 Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
@@ -111,6 +112,10 @@ Create a new symlink that links the new build binary to `/usr/local/bin/lgtn`, a
 ```sh
 sudo ln -s ~/fleek-network/lightning/target/release/lightning-node /usr/local/bin/lgtn
 ```
+
+## Set user path in config.toml
+
+<SetUserPathInConfigToml />
 
 ## Update the systemd service unit
 
