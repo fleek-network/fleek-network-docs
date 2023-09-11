@@ -1,0 +1,59 @@
+You should be following the [create a user](/docs/node/install#create-a-user-1) recommendation. For our example, we have the username `lgtn`.
+
+:::tip
+If you have chosen a different username, replace `lgtn` by the correct username you have selected.
+:::
+
+In the `config.toml` you'll find some and more of the following:
+
+```toml
+[BLANK]
+
+[application]
+db_path = "~/.lightning/data/app_db"
+
+[consensus]
+store_path = "~/.lightning/data/narwhal_store"
+
+[fsstore]
+root = "~/.lightning/blockstore"
+
+[resolver]
+store_path = "~/.lightning/data/resolver_store"
+
+[signer]
+consensus_key_path = "~/.lightning/keystore/consensus.pem"
+node_key_path = "~/.lightning/keystore/node.pem"
+```
+
+Find and replace all instances of `~` in the config file `/home/lgtn/.lightning/config.toml`. Here's an example using `sed`:
+
+```sh
+sed -i "s|~/.lightning|/home/lgtn/.lightning|g" "/home/lgtn/.lightning/config.toml"
+```
+
+:::caution
+The `config.toml` example below is a shorter version of what you'll encounter, yours might look different. We do this to keep the guide simple to read. Do not copy and replace with the version demonstrated here.
+:::
+
+Once changed, all the instances of `~/` should be replaced by your user path e.g. `/home/lgtn/`. For our example, the output would look like the following:
+
+```toml
+[BLANK]
+
+[application]
+db_path = "/home/lgtn/.lightning/data/app_db"
+
+[consensus]
+store_path = "/home/lgtn/.lightning/data/narwhal_store"
+
+[fsstore]
+root = "/home/lgtn/.lightning/blockstore"
+
+[resolver]
+store_path = "/home/lgtn/.lightning/data/resolver_store"
+
+[signer]
+consensus_key_path = "/home/lgtn/.lightning/keystore/consensus.pem"
+node_key_path = "/home/lgtn/.lightning/keystore/node.pem"
+```

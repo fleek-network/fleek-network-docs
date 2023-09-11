@@ -25,6 +25,7 @@ import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warnin
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
+import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx'
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
@@ -428,6 +429,10 @@ lgtn keys generate
 ```
 
 The keys will be generated and placed under the system directory `~/.lightning/keystore`. The `private` key is the user's responsibility and no one else can generate or recover it for you, including Fleek Network or any team member. Your keys, your responsibility!
+
+### Set user path in config.toml
+
+<SetUserPathInConfigToml />
 
 ### Set testnet in config.toml
 
