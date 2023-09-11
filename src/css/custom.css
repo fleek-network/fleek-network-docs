@@ -284,14 +284,7 @@ article h1,
   max-width: 1440px;
   padding: 0;
 }
-/* 
-.col article.itemprop .markdown:not(#post-content) p img {
-  display: none;
-}  */
 
-.col article[itemprop="blogPost"] .markdown:not(#post-content) p img {
-  display: none;
-} 
 .markdown > h2 {
   margin-top: 0;
 }
@@ -322,41 +315,6 @@ article h1,
 
 .blog-wrapper aside nav {
   border-right: 1px dashed var(--ifm-toc-border-color);
-}
-
-blockquote {
-  position: relative;
-  border: none;
-  padding: 20px;
-  background: #112;
-  margin: 40px 5px;
-  border-radius: 0px;
-}
-
-blockquote code {
-  color: #f76ec3;
-}
-
-blockquote a {
-  font-weight: bold;
-  color: #eee;
-}
-
-blockquote:before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -5px;
-  left: -5px;
-  border-radius: 0px;
-  height: calc(100% + var(--margin)*2);
-  width: calc(100% + var(--margin)*2);
-  transform: translate(calc(0px - var(--margin)),calc(0px - var(--margin)));
-  z-index: -2;
-  transition: background .5s ease;
-  background: linear-gradient(to right, #001ac9, #0073ff, #fff, #00faff);
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
 }
 
 .menu__link::first-letter {

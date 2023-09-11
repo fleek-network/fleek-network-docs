@@ -15,8 +15,6 @@ tags:
   - content routing
 ---
 
-![](./assets/bloom-cuckoo/bloom.png?202301181528)
-
 Disclaimer: This is not a general comparison between Bloom filters and Cuckoo filters. This blog post summarizes some of the experiments we conducted to decide whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters, for a specific use case.
 
 <!--truncate-->
