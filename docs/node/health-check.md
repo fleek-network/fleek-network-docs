@@ -18,7 +18,7 @@ import Author from '@site/src/components/Author';
 A script is available to do and provide a health check overview:
 
 ```sh
-curl https://get.fleek.network/healthcheck | bash
+curl -sS https://get.fleek.network/healthcheck | bash
 ```
 
 ## Overview
