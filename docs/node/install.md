@@ -25,7 +25,8 @@ import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warnin
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
-import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx'
+import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
+import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
@@ -490,7 +491,7 @@ Type=simple
 MemoryHigh=32G
 RestartSec=15s
 Restart=always
-ExecStart=lgtn run
+ExecStart=lgtn -c /home/lgtn/.lightning/config.toml run
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
@@ -501,6 +502,8 @@ WantedBy=multi-user.target
 :::caution
 Notice that we're using `lgnt` as the username. If you have a different custom username change it accordingly. Beware that we've recommended using a `non-root` user, as described in the section [create a user](#create-a-user-1).
 :::
+
+<NoteExecStartFlagCConfigPath />
 
 Change the file permissions for the service:
 

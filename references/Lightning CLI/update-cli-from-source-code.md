@@ -14,7 +14,8 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
-import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx'
+import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
+import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
 
 :::tip
 Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
@@ -136,7 +137,7 @@ Type=simple
 MemoryHigh=32G
 RestartSec=15s
 Restart=always
-ExecStart=lgtn run
+ExecStart=lgtn -c /home/lgtn/.lightning/config.toml run
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 Environment=/var/tmp
@@ -144,6 +145,8 @@ Environment=/var/tmp
 [Install]
 WantedBy=multi-user.target
 ```
+
+<NoteExecStartFlagCConfigPath />
 
 When complete make sure the file is saved. Followed by a systemctl daemon reload:
 

@@ -1,0 +1,3 @@
+:::note
+The flag `-c` in the `lightning.service` **ExecStart**, is to provide the toml configuration file path e.g. defaults to `~/.lightning/config.toml`. This is to avoid the path being determined dynamically (given path base ~ or $HOME), as users might control the systemctl service as a **user** or **sudoer**. For example, a **sudoer** would have the **configuration** set to `/root/.lightning/config.toml` or `/home/username/.lightning/config.toml` depending on using **sudo** which might cause some confusion to some users.
+:::
