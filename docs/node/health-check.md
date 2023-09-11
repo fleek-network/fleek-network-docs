@@ -13,6 +13,14 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
+## TL;DR: Run the command
+
+A script is available to do and provide a health check overview:
+
+```sh
+curl https://get.fleek.network/healthcheck | bash
+```
+
 ## Overview
 
 In network applications, a health check is a process of verifying the overall health and availability of a service. It usually involves sending a request to a specific endpoint of a service and receiving a response indicating the status. The response includes information about the status of the service, or any errors or warnings if not healthy. This helps developers, node operators, and system administrators identify and resolve issues that may affect the network, node performance and availability.
