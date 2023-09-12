@@ -120,7 +120,7 @@ For our demo, we have assumed **root** user to **sudoer** user named **lgtn**, t
 sudo mv /root/.lightning /home/lgtn/
 ```
 
-### 2) Move the `/root/fleek-network` directory from one user to the other
+### 2) Move the `/root/fleek-network` directory from one user to the other
 
 ```sh
 sudo mv /root/fleek-network /home/lgtn/
