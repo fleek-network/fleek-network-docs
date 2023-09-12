@@ -1,12 +1,13 @@
 ---
-title: User service
-slug: user-service
+title: Shutting down persistance
+slug: shutting-down-persistance
 hide_title: true
 tags:
-- references
-- help
-- user service
-- unit
+- reference
+- shutdown
+- frozen
+- idle
+- service error
 - systemctl
 - systemd
 ---
