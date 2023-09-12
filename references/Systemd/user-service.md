@@ -28,7 +28,7 @@ systemctl --user list-unit-files
 
 It should return a list of unit files.
 
-## Put the service unit in the user service
+## Put the service unit in the user service
 
 Create the Systemd user units directory:
 
