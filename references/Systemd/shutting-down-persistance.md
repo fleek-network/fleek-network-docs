@@ -73,7 +73,7 @@ sudo systemctl start lightning
 You can watch the log output of the service by running:
 
 ```sh
-tailf -f /var/log/lightning/output.log
+tail -f /var/log/lightning/output.log
 ```
 
 The output should be similar to:
@@ -86,7 +86,7 @@ The output should be similar to:
 Alternatively, you can watch the diagnostic.log
 
 ```sh
-tailf -f /var/log/lightning/diagnostic.log
+tail -f /var/log/lightning/diagnostic.log
 ```
 
 <Author
