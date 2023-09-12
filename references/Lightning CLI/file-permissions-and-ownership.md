@@ -44,7 +44,7 @@ Learn more about [file permissions](https://www.linuxfoundation.org/blog/blog/cl
 
 To learn more about file permission on Linux, read the [Understanding Linux File Permissions](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-understanding-linux-file-permissions).
 
-## Using sudo to delegate permissions
+## Using sudo to delegate permissions
 
 Consider file ownership and permissions to understand where the keystore is located. Take close attention when executing commands as an admin–with or without **super user** (root) or **sudo**.
 
