@@ -21,6 +21,8 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
+import CreateAUser from '../../guides/partials/_create-a-user.mdx';
+
 
 ## Introduction
 
@@ -58,6 +60,26 @@ When using a Systemd service to run a process, it operates comparably to running
 :::
 
 If you have followed the installation recommendations, find the systemd service unit in the location `/etc/systemd/system/lightning.service` (we are using Ubuntu Linux as an example to keep it short).
+
+Make sure that you have set up a [Systemd unit service](/docs/node/install#systemd-service-setup), as recommended during the installation as this guide assumes you have one setup.
+
+## Stop the service
+
+Before we proceed with any changes required for the migration, you'll have to stop the `lightning.service`.
+
+```sh
+systemctl stop lightning
+```
+
+:::note
+For this guide, we are assuming that you are migrating ownership from **root** to a **sudoer** user. If not, you might be required to elevate privileges as **sudo**** where required. For example, `sudo systemctl stop lightning`.
+:::
+
+## Create a user
+
+<CreateAUser />
+
+
 
 ## Next steps
 
