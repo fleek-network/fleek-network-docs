@@ -1,6 +1,6 @@
 ---
 title: File permissions and Ownership
-slug: file-permissions-and-owernship
+slug: file-permissions-and-ownership
 hide_title: true
 tags:
 - ownership
@@ -13,6 +13,7 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
+import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
 ## Ownership
 
@@ -88,43 +89,7 @@ To learn more about the user $HOME directory read the wikipedia [Home directory]
 
 ## Set the locations of the user paths
 
-In the `/home/<USERNAME>/.lightning/config.toml` you'll find some and more of the following:
-
-```toml
-[BLANK]
-
-[application]
-db_path = "~/.lightning/data/app_db"
-
-[consensus]
-store_path = "~/.lightning/data/narwhal_store"
-
-[fsstore]
-root = "~/.lightning/blockstore"
-
-[resolver]
-store_path = "~/.lightning/data/resolver_store"
-
-[signer]
-consensus_key_path = "~/.lightning/keystore/consensus.pem"
-node_key_path = "~/.lightning/keystore/node.pem"
-```
-
-:::tip
-The configuration properties and values presented above are a shorter version of what you'll find on your **configuration.toml**. We keep it short to make it easier to follow, do not copy and paste.
-:::
-
-Find and replace all instances of ~ in the config file `/home/<USERNAME>/.lightning/config.toml`. 
-
-Here's an example of how to do it using **sed**:
-
-```sh
-sed -i "s|~/.lightning|/home/<USERNAME>/.lightning|g" "/home/<USERNAME>/.lightning/config.toml"
-```
-
-:::tip
-Replace the `<USERNAME>` with your username. For example, if you have followed the recommendation to [create a user](/docs/node/install#create-a-user) it would look like `/home/lgtn/.lightning/config.toml` for the username **lgtn**.
-:::
+<FindAndReplaceConfigWithUserPaths />
 
 ## Set the configuration flag -c on the service unit file
 
