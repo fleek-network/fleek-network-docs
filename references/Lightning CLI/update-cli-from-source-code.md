@@ -16,6 +16,7 @@ tags:
 import Author from '@site/src/components/Author';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
 import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
+import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
 :::tip
 Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
@@ -165,6 +166,10 @@ Depending on how you control the system, this might need **sudo**.
 ```sh
 sudo rm -rf ~/.lightning/data
 ```
+
+## Update the `config.toml` with user home path
+
+<FindAndReplaceConfigWithUserPaths />
 
 ## Restart the service
 
