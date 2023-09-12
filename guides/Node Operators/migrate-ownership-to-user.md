@@ -76,7 +76,9 @@ systemctl stop lightning
 For this guide, we are assuming that you are migrating ownership from **root** to a **sudoer** user. If not, you might be required to elevate privileges as **sudo**** where required. For example, `sudo systemctl stop lightning`.
 :::
 
-### Clear the .lightning data
+## Clear the .lightning data
+
+Run the following command to clear the `/root/.lightning/data`, as it can be quite large and we don't need to move it.
 
 ```sh
 sudo rm -rf /root/.lightning/data
