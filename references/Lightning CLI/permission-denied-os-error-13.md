@@ -11,13 +11,38 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 
-Regarding the introduction of writing to /tmp (although I'd suggest sticking with stdout/stderr or flag this as seems only meaningful for troubleshooting). I decided to take a look at the file permissions of /tmp on the default DO Ubuntu 22.x which is drwxr-xr-x.  According to what's documented, it should be 1777. This is because writing to /tmp regardless of the comment on standards, should be widely accessible. For this reason, I've introduced a step in the installer as a test to change /tmp to what's supposed to be default (we shouldn't mess with user choice, though).
+## Ownership and file permissions
 
-During testnet the Lightning binary process is required to write to `/tmp`. The `/tmp` directory is used to store temporary DB checkpoints when synch state. For the users who're following the recommended Systemd unit service, to control the Fleek Network service via systemctl, it should not be mistaken with the stdout/stderr `/var/log/lightning/output.log` and `/var/log/lightning/diagnostic.log` log files declared in the service file.
+When running the Lightning CLI, the user who's in control can delegate to **root** via **sudo**. Depending on how the Fleek Networking Lightning CLI was installed, this might cause some confusion, which is better explained by reading the reference [Keys not found](/references/Lightning%20CLI/keys-not-found), which illustrates a situation where a user gets an error message about the wrong location of a system path (keystore).
 
-Users are recommended to use systemctl to manage the service as a non-admin user. The use of **sudo** or **root** causes permissions issues, as we see in the output below:
+## Override the TMPDIR
 
+The Fleek Network Lightning process requires writing to a temporary directory. As the process requires permissions, this might fail as demonstrated by some of the output logs we have below.
+
+a) A permission denied error message
+
+```sh
+Permission denied (os error 13)
 ```
+
+b) Rust panic error message which includes a permission denied
+
+```sh
+thread 'main' panicked at 'called Result::unwrap() on an Err value: Os { code: 13, kind: PermissionDenied, message: "Permission denied" }', core/node/src/cli.rs:181:18
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+thread 'main' panicked at 'called Result::unwrap() on an Err value: Os { code: 13, kind: PermissionDenied, message: "Permission denied" }', core/node/src/cli.rs:181:18
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+thread 'main' panicked at 'called Result::unwrap() on an Err value: Os { code: 13, kind: PermissionDenied, message: "Permission denied" }', core/node/src/cli.rs:181:18
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+thread 'main' panicked at 'called Result::unwrap() on an Err value: Os { code: 13, kind: PermissionDenied, message: "Permission denied" }', core/node/src/cli.rs:181:18
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+thread 'main' panicked at 'called Result::unwrap() on an Err value: Os { code: 13, kind: PermissionDenied, message: "Permission denied" }', core/node/src/cli.rs:181:18
+note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
+```
+
+c) A trace showing the path where this has failed
+
+```sh
 [00007fcbe168e764] openat(AT_FDCWD, "/tmp/lightning.log", O_WRONLY|O_CREAT|O_APPEND|O_CLOEXEC, 0666) = -1 EACCES (Permission denied)
 [00007fcbe168ea6f] write(2, "thread '", 8thread ') = 8
 [00007fcbe168ea6f] write(2, "main", 4main)  = 4
@@ -26,7 +51,25 @@ Users are recommended to use systemctl to manage the service as a non-admin user
 [00007fcbe168ea6f] write(2, "', ", 3', )   = 3
 ```
 
+:::tip
 The `/tmp` directory should have wide permissions for all applications, but to mitigate any permission issues the user can override the system environment `TMPDIR`. For example, the `installer` and `update` scripts override `TMPDIR` environment variable to `/var/tmp` setting it in the service unit `Environment=`.
+:::
+
+The Lightning CLI process is aware of the environment variable TMPDIR, which the operators can override as discussed in the reference for [Update the System service unit](/references/Lightning%20CLI/update-cli-from-source-code/#update-the-systemd-service-unit).
+
+In short, it requires you to include an `Environment=` value of `TMPDIR=/var/tmp` as follows:
+
+```sh
+[Service]
+...
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+Environment=TMPDIR=/var/tmp
+```
+
+:::caution attention
+The `/etc/systemd/system/lightning.service` service unit file presented here is a shorter version for simplicity. Do not replace your service unit file with the shorter content version presented here.
+:::
 
 <Author
     name="Helder Oliveira"
