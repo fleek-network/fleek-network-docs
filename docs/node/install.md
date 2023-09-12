@@ -59,9 +59,6 @@ Check the cloud provider for instructions to understand how to setup an ssh conn
 
 ### Create a user
 
-To start, you must have an administrative account, such as **root** or **sudoer**. This will allow us to install or required dependencies and libraries. We recommend using a **sudoer** user account. Thus, if you're logged in as **root** you can create a new user and add to the **sudo** group by running:
-
-
 <CreateAUser />
 
 ### Run the script for a quick install
