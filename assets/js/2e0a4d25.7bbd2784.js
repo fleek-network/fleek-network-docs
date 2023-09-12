@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[8132],{9073:e=>{e.exports=JSON.parse('{"label":"systemctl","permalink":"/references/tags/systemctl","allTagsPath":"/references/tags","count":1,"items":[{"id":"Systemd/user-service","title":"User service","description":"\x3c!--","permalink":"/references/Systemd/user-service"}]}')}}]);
