@@ -22,7 +22,9 @@ uname -i
 ```
 
 :::caution WARNING
-Given the [CPU requirements](https://docs.fleek.network/docs/node/requirements/#specs), currently we're mainly supporting `GenuineIntel` and there have been reports of failure to build the binary on `AMD`. The `ARM64`` is a different architecture, thus not supported. Any contribution or feedback to provide support is appreciated. Feel free to let us know on our [Discord channel](https://discord.gg/fleekxyz).
+Given the [CPU requirements](https://docs.fleek.network/docs/node/requirements/#specs), currently we're mainly supporting `GenuineIntel` and there have been reports of failure to build the binary on `AMD`. The `ARM64`` is a different architecture, thus not supported, but there has been some community contributions in that regard, find it [here](/references/Lightning%20CLI/build-on-arm64).
+
+Any contribution or feedback to provide support is appreciated. Feel free to let us know on our [Discord channel](https://discord.gg/fleekxyz).
 :::
 
 ## Linking with cc error
