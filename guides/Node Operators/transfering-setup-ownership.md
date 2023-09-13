@@ -24,6 +24,16 @@ import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
 
+## TL;DR
+
+The step-by-step instructions provided in the guide should be simple to follow. But the process is also available as an automated script from our [get.fleek.network]](https://github.com/fleek-network/get.fleek.network) if you are familiar.
+
+To use the automated script execute the following command in your server terminal and follow the instructions:
+
+```sh
+curl -sS https://get.fleek.network/transfer_system_user_setup_ownership | bash
+```
+
 ## Introduction
 
 Our Lightning CLI and Node process is run by a user, that has some sort of permissions–some users run it as a super user (root) which is questionable as root privileges are not a necessary good. We'll look into how to create a user to manage and control the Fleek Network Lightning CLI and Systemd unit service. Also, presents the concept of file permissions and ownership which is crucial in preventing private or sensitive data from being exposed to dodgy actors.
