@@ -8,6 +8,12 @@ tags:
 - fix
 ---
 
+<!--
+  The following import is intentional (see partial <CheckoutCommitWarning />)
+-->
+import Author from '@site/src/components/Author';
+
+
 ## Building on the ARM64 (aarch64) 
 
 ARM64 platform has its own specifics, and currently consists of requiring `gcc`:
@@ -76,3 +82,11 @@ Options:
   -h, --help                 Print help
   -V, --version              Print version
 ```
+
+<Author
+    name="Road aka @road"
+    image="https://github.com/ryssroad.png"
+    title="Community member"
+    url="https://github.com/ryssroad"
+    communityMember="true"
+/>
