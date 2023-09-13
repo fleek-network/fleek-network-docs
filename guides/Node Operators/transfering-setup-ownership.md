@@ -2,14 +2,13 @@
 template: post
 draft: false
 hide_title: true
-title: Migrate ownership of node setup to user
-slug: migrate-ownership-of-node-setup-to-user
+title: Transfering setup ownership
+slug: transfering-setup-ownership
 date: 2023-09-12T23:00:00.000+00:00
-description: A step-by-step guide to migrate the ownership of the Fleek Network Lightning CLI and service setup
+description: A step-by-step guide to transfer the ownership of the Fleek Network Lightning CLI and service setup
 category: Tutorial
 tags:
-- migration
-- migrate
+- transfer
 - ownership
 - guide
 - setup
