@@ -224,7 +224,7 @@ The target base path is `/root` and we know that we've moved the source code dir
 Unlink the symlink:
 
 ```sh
-sudo unlink lgtn
+sudo unlink /usr/local/bin/lgtn
 ```
 
 Create the symlink:
