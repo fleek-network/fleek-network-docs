@@ -35,7 +35,7 @@ To use the automated script execute the following command in your server termina
 curl -sS https://get.fleek.network/transfer_system_user_setup_ownership | bash
 ```
 
-If you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
+We try to make the auomated scripts as useful as possible, but it's impossible to fit every single use-case. So, if you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
 :::
 
 ## Introduction
