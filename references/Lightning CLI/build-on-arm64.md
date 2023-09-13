@@ -1,3 +1,15 @@
+---
+title: Error building on ARM64
+slug: error-building-on-arm64
+hide_title: true
+tags:
+- references
+- help
+- update
+- upgrade
+- fix
+---
+
 Building on the ARM64 (aarch64) platform has its own specifics, and currently consists of the following:
 
 Install prerequisites
