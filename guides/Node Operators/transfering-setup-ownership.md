@@ -26,13 +26,17 @@ import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-r
 
 ## TL;DR
 
-The step-by-step instructions provided in the guide should be simple to follow. But the process is also available as an automated script from our [get.fleek.network]](https://github.com/fleek-network/get.fleek.network) if you are familiar.
+:::tip
+The step-by-step instructions provided in the guide should be simple to follow, but the process is also available as an automated script from our familiar [get.fleek.network](https://github.com/fleek-network/get.fleek.network) tool.
 
 To use the automated script execute the following command in your server terminal and follow the instructions:
 
 ```sh
 curl -sS https://get.fleek.network/transfer_system_user_setup_ownership | bash
 ```
+
+If you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
+:::
 
 ## Introduction
 
