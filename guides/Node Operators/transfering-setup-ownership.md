@@ -189,7 +189,7 @@ whoami
 For our demo, we'll assume that you understand that **lgtn** is the user we opted in for our demo.
 :::
 
-## The lgtn symbolic link (symlink)
+## The lgtn symbolic link (symlink)
 
 We have the symbolic link that links the binary built from the source code, to the alias **lgtn** that's set under the `/usr/local/bin/lgtn` pathname.
 
