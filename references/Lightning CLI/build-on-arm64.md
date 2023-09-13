@@ -5,8 +5,6 @@ hide_title: true
 tags:
 - references
 - help
-- update
-- upgrade
 - fix
 ---
 
