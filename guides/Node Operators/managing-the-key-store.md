@@ -3,7 +3,7 @@ hide_title: true
 title: Managing the keystore
 slug: managing-the-keystore
 date: 2023-11-14T12:00:00Z
-description: The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any supported system you’re migrating to.
+description: The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any supported system you’re migrating to
 category: Tutorial
 tags:
 - guide
@@ -26,6 +26,10 @@ At time of writing the rewards mechanism hasn't yet been introduced, read the [t
 We'll use the term identity to describe the key store declared in the configuration, in our case [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) files. The content of the PEM files and the file itself should be kept secret.
 
 The key store is in the file system and the location is defined in the Fleek Network `~/.lightning/config.toml`, as a private key stored in an identity named PEM file (by default `consensus.pem` and `node.pem`). It's essential to understand this, as you may want to copy the identity to a new server setup, to persist the identity accross to the new server setup.
+
+:::caution
+Security is achieved by issuing users private cryptographic keys. Only the holder of the private key has access to sensitive information, such as an identity, which relates to reputation, rewards, etc. The security of the private key is the responsibility of the user. Unfortunately, Fleek Network is unable to help you regain access to your private key if you've lost or failed to secure it. The private keys are your responsibility.
+:::
 
 The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any [supported system](/docs/node/requirements#server) you're migrating to.
 
@@ -191,6 +195,38 @@ In this guide, we are interested in the `[signer]` section settings for the `con
 The identity is a text description for the Keystore and at the time of writing we have not yet implemented multiple identity management via the CLI. Thereupon, the identity value serves to find the filename match in the `keystore_path`. This might change as we progress with development. Check the [Identity selection](#identity-selection) to learn more about it!
 :::
 
+### Type of keys
+
+There are three types of keys related to the identity of a node and the account ownership. The keys are based in public-key cryptography, or asymmetric cryptography where each key pair consists of a public key and a corresponding private key. The keys are described in the section [identity on the Fleek Network](docs/learn/the-network/#identity-on-the-fleek-network) as follows:
+
+-  A Node key (ConsensusPublicKey) is [BLS12-381](https://electriccoin.co/blog/new-snark-curve/) which facilitates the consensus algorithm or persistence of state, resilience and fault tolerance. Has multi-signature support, the ability to aggregate many signatures into one used for consensus committee when signing certificates
+
+- A Node Networking key (NodePublicKey) is [Ed25519](https://en.wikipedia.org/wiki/EdDSA) used for the speed and performance of the network communications
+
+- Account Owner keys are based on [secp256k1](https://www.secg.org/sec2-v2.pdf), which corresponds to an Ethereum Address
+
+For instance, a public key is open to anybody to see and it represents a unique node identifier in the Fleek Network, a bit like a passport number. On the other hand, the private key is secret and the operator is responsible to store it privately.
+
+The Fleek Network relies on cryptography, thus the Fleek Network team and anybody can access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identify a node or send rewards to the address without jeopardizing identity security.
+
+To learn more about the identities on the Fleek Network [here](docs/learn/the-network/#identity-on-the-fleek-network).
+
+### Key privacy
+
+If you don’t keep your private keys secret, you'll have your node compromised.
+
+Here are a few examples of what you should not do:
+- Share the `$HOME/.lightning/keystore` directory file content publicly
+- Track the `$HOME/.lightning/keystore` directory files in a version control repository e.g. git
+- Have poor "rights" permissions in UNIX systems e.g. everyone can read, delete, modify `$HOME/.lightning`
+- Allow anyone to access the node provider physically without any access control to the operating and file systems e.g. a VPS provider
+- Get rid of a hard drive unformatted or blind erased by selling to somebody or dumping in the bin, which contains `$HOME/.lightning/keystore`
+
+There are many other ways of getting compromised, but hopefully, the ones put above give you a good starter into the subject.
+
+Remember, the node provider is the only one responsible when managing the key store. Neither Fleek Network nor the most sophisticated AI system presently can compromise the cryptography in use to help you out. You are fully responsible for securing and retaining your private keys.
+
+
 ### Identity selection
 
 Multiple identity management is yet to be implemented but in any case, some users might find it trivial to keep multiple identities and switch between them referencing them by name. The following section is not advocating this approach but sharing some approaches that can help certain use-cases.
@@ -243,6 +279,14 @@ The PEM files can be named as you wish, but by default we like to keep it sound 
 :::
 
 ## Conclusion
+
+We've walked through most basics of where the configuration file is located, the configuration settings we use to set up and run the node, the different configuration sections we have, and most importantly the identity section.
+
+Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
+
+In the future, we'll introduce more advanced topics that will help you improve the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
+
+While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
