@@ -366,6 +366,58 @@ If you use cloud storage to store your sensitive data, encryption should be your
 
 Remember that the security of the private key is the responsibility of the user. Unfortunately, the Fleek Network team and any others are unable to help regain access to private key if lost or failed to secure them. The private keys are the user responsibility. The Fleek Network team doesn't endorse any methods of encryption and storage, the methods described here are for educational purposes only.
 
+## Loading keys on runtime
+
+As described in the section [configuration files](#configuration-file) the default location of the `.lightning` system configuration directory is `$HOME/.lightning`.
+
+The `$HOME/.lightning/config.toml` holds the information of where the Lightning CLI node process should pull the keystore pem files. The location of the pem files can be placed anywhere the node process has permissions to read.
+
+When unarchiving the backup files, the keystore directory or pem files should be placed in the directory declared in the `$HOME/.lightning/config.toml`. That is if the location is the one specified on the runtime–the command declared to launch and run the lightning service, that has the optional `-c` configuration flag that takes any custom location which overrides the default `$HOME/.lightning/config.toml`.
+
+:::caution
+On runtime, the Lightning service can have specified a configuration file in any readable location. If a configuration pathname isn't passed, it'll default to the `$HOME/.lightning/config.toml`. It's important to understand this to avoid confusion.
+
+The service that starts with:
+
+```sh
+lgtn -c /root/custom-configuration.toml run
+```
+
+Can have complete different settings from any of the following:
+
+```sh
+lgtn -c /home/lgtn/.lightning/config.toml run
+```
+
+```sh
+lgtn -c ~/.lightning/config.toml run
+```
+
+```sh
+lgtn run
+```
+
+Due to the fact that any of the fails above might contain different settings declared in the file body.
+:::
+
+For instance, we can imagine a scenario where our service is started with the command:
+
+```sh
+lgtn -c /home/lgtn/.lightning/config.toml run
+```
+
+Where the `keystore` is placed under the parent directory `/home/lgtn/.lightning/`. Resulting in the configuration file have the following settings for the hypotetical username `lgtn`:
+
+```sh
+[signer]
+consensus_key_path = "/home/lgtn/.lightning/keystore/consensus.pem"
+node_key_path = "/home/lgtn/.lightning/keystore/node.pem"
+```
+
+:::tip
+On the [install instructions](/docs/node/install) provided by the documentation, a [Systemd service unit](/docs/node/Install/#systemd-service-setup) is recommended to allow the user control the Lightning service via systemctl. The Systemd service unit file should contain the recommended usage of `-c` configuration. If you have followed the recommendations it should be familiar.
+:::
+
 ## Conclusion
 
 We've walked through most basics of where the configuration file is located, the configuration settings we use to set up and run the node, the different configuration sections we have, and most importantly the identity section.
