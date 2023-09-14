@@ -278,11 +278,101 @@ Consensus Public Key: s36g09qQzaaOJxi0UZDRCXj3HUUWjaGiYrQV6Ylo9Ih6jMvrnxM5s1OpBn
 The PEM files can be named as you wish, but by default we like to keep it sound to avoid confusion and make it as clear as possible.
 :::
 
+## Backing up the keystore
+
+When dealing with Fleek Network it's crucial to always be aware of the identity. You should backup private keys in case the unexpected happens, as it's impossible to recover the identity in any other way, including the core team, any other person or system.
+
+Backing up your keystore pem files are crucial to ensure the safety and accessibility of your identity on the Fleek Network. For example, if your `$HOME/.lightning` is deleted you'll still be able to restore it if you have backed it up properly.
+
+There are many ways to make identity backups, each with its own benefits and drawbacks. At risk of oversimplifying, we'll focus on a simple manual approach to expose some of the principles you should be have awareness.
+
+:::caution
+The security is never stronger than its weakest link, and it is very likely that the weakest link is not the method itself. It's pointless to encrypt the backup archive with sophisticated methods when the passphrase is weak or of an easy guess.
+:::
+
+None of the methods described here are being endorsed by the Fleek Network team use the knowledge provided here for educational purposes only and at your own risk.
+
+### Lower security
+
+If you opt for the lowest level of security, you can use zip and unzip. The man page of zip described the encryption algorithm used to be weaker than PGP.
+
+To zip and encrypto the `$HOME/.lightning/keystore` directory run:
+
+```sh
+# It'll prompt for password (remember)
+zip --encrypt -r keystore.zip.enc $HOME/.lightning/keystore
+```
+
+To unzip and decrypt the `keystore.zip.enc`, you'd run:
+
+```sh
+# It'll prompt for password (recall)
+unzip keystore.zip.enc -d $HOME/.lightning/keystore
+```
+
+:::tip
+We provide the unzip destiny target to the flag `-d`. The unzip process outputs the files onto the desired location `$HOME/.lightning/keystore`, thus overriding any contents. If you have any files in the destiny target directory it'll be overriden, effectively replacing with the output of the unzipped directory content, so make sure you backup any files as required.
+:::
+
+### Higher security
+
+Create a `Tar` archive, which will contain the target directory, files and the Tar stores all of the relative paths in the tarball itself.
+
+Create a `tarbar` by executing:
+
+```sh
+tar -cf "keystore.tar" $HOME/.lightning/keystore
+```
+
+The `keystore.tar` should be in the current work directory.
+
+Use `gpg` with the [symmetric option](ttps://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with assymetric `gpg`, it's similar but it's not signed with your public key or such.
+
+The encryption command is:
+
+```sh
+sudo gpg -a --symmetric --cipher-algo AES256 keystore.tar
+```
+
+The `keystore.tar.asc` should be in the current work directory.
+
+To decrypt the `keystore.tar.asc` file, enter:
+
+```sh
+sudo gpg -a --output keystore.tar --decrypt keystore.tar.asc
+```
+
+To extract the `keystore.tar` is simple, but be aware that it unarchives with the original directory structure, which might be a bit confusing. So, we'll create a new temporary directory for our example that will use to extract to.
+
+```sh
+mkdir $HOME/tar_keystore_extract
+```
+
+Now, run the command to extract to the target directory, as follows:
+
+```sh
+tar -xf keystore.tar -C $HOME/tar_keystore_extract
+```
+
+The `/home/<username>/.lightning/keystore` should be in the `tar_keystore_extract` directory where you'll find the PEM files.
+
+### Storage
+
+The backup archive should only be accessible by yourself. If you decided to store it in a cloud storage provider, be aware of increased security risks. Cloud storage is convenient, but it ultimately puts data into the hands of others. If you're not particularly concerned, or have confidence about the encryption of the files, then that's at your own risk. But it's recommended to store in a physical hard drive that remains disconnected from computers and network devices.
+
+:::caution
+If you use cloud storage to store your sensitive data, encryption should be your first line of defense. Encrypting files before uploading them to the cloud is crucial to reduce others from accessing information without your permissions and knowledge.
+:::
+
+Remember that the security of the private key is the responsibility of the user. Unfortunately, the Fleek Network team and any others are unable to help regain access to private key if lost or failed to secure them. The private keys are the user responsibility. The Fleek Network team doesn't endorse any methods of encryption and storage, the methods described here are for educational purposes only.
+
 ## Conclusion
 
 We've walked through most basics of where the configuration file is located, the configuration settings we use to set up and run the node, the different configuration sections we have, and most importantly the identity section.
 
 Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
+
+Separatily, at risk of oversimpliying provided an brief introduction into the backup of the keystore directory.
 
 In the future, we'll introduce more advanced topics that will help you improve the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
 
