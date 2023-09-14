@@ -193,7 +193,54 @@ The identity is a text description for the Keystore and at the time of writing w
 
 ### Identity selection
 
-[TODO]
+Multiple identity management is yet to be implemented but in any case, some users might find it trivial to keep multiple identities and switch between them referencing them by name. The following section is not advocating this approach but sharing some approaches that can help certain use-cases.
+
+Let's suppose that we've recently moved to a new server setup and copied our previous server keystore keys as `consensus.pem` and `node.pem` and renamed the `$HOME/.lightning/keystore/*.pem` to `$HOME/.lightning/keystore/new-*.pem`.
+
+:::tip
+We are using a wildcard `*` to reduce verbosity. The wildcard means as replacement for all the filenames encountered in the path and extension without having to name them individually as we know they are `consensus.pem` and `node.pem`.
+:::
+
+To illustrate this scenario, here's an example of how our `$HOME/.lightning/keystore` directory could look like:
+
+```sh
+.
+├── new-consensus.pem
+├── new-node.pem
+└── old-consensus.pem
+└── old-node.pem
+
+0 directories, 4 file
+```
+
+The `old-*.pem` files are the original key store and `new-*.pem` could correspond to the new identity created while setting up the node in the new server.
+
+Since we have `[signer]` set to the default values, in particular:
+
+```toml
+[signer]
+consensus_key_path = "/home/lgtn/.lightning/keystore/consensus.pem"
+node_key_path = "/home/lgtn/.lightning/keystore/node.pem"
+```
+
+We'd be required to change and switch to the preferred keys. The identity is switch to the provided values once the node is restarted. Thus, we can switch to any identity by changing the `[signer]` `consensus_key_path` and `node_key_path` pathname values anytime as long we restart the server successfully.
+
+To verify which keys are loaded by the Lightning CLI run the command:
+
+```sh
+lgtn keys show
+```
+
+You'd find the public keys in the output, which can be used for comparision and should be different everytime the configuration changes and reloaded. Here's an example of the output:
+
+```sh
+Node Public Key: RwPpr35H5AAfWwSDFxwYuJv5TA8PWUd2pdBg+UKsORc=
+Consensus Public Key: s36g09qQzaaOJxi0UZDRCXj3HUUWjaGiYrQV6Ylo9Ih6jMvrnxM5s1OpBnsEj5R1AVYcuxlnVR+oyEjgJ3WpI5LOHSN1Q6Zur33vka3IachBEIKIbsiXMJW16vu4n4bG
+```
+
+:::tip
+The PEM files can be named as you wish, but by default we like to keep it sound to avoid confusion and make it as clear as possible.
+:::
 
 ## Conclusion
 
