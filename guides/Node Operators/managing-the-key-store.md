@@ -292,7 +292,7 @@ The security is never stronger than its weakest link, and it is very likely that
 
 None of the methods described here are being endorsed by the Fleek Network team use the knowledge provided here for educational purposes only and at your own risk.
 
-### Lower security
+### Lower security
 
 If you opt for the lowest level of security, you can use zip and unzip. The man page of zip described the encryption algorithm used to be weaker than PGP.
 
