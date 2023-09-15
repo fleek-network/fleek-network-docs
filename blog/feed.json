@@ -10,7 +10,7 @@
             "url": "https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization",
             "title": "Bloom Filters and Cuckoo Filters for Cache Summarization",
             "summary": "Summary of our experiment informing whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters.",
-            "date_modified": "2023-09-15T13:32:53.000Z",
+            "date_modified": "2023-09-15T13:40:42.000Z",
             "author": {
                 "name": "Matthias Wright",
                 "url": "https://github.com/matthias-wright"
