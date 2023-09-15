@@ -139,7 +139,7 @@ tar -xf keystore.tar -C $HOME/tar_keystore_extract
 
 Locate the extracted files in `$HOME/tar_keystore_extract`, which should look like `$HOME/tar_keystore/home/<USERNAME>/.lightning/keystore`
 
-For a more in depth or step-by-step instructions read the guide [managing the keystore](/guides/Node%20Operators/managing-the-key-store).
+For a more in depth or step-by-step instructions read the guide [managing the keystore](/guides/Node%20Operators/managing-the-keystore).
 
 <Author
     name="Helder Oliveira"
