@@ -44,6 +44,10 @@ The Fleek Network node binary is only supported on CPUs that adhere to the x86_6
 
 A minimum of 32 GB of memory (RAM) is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
 
+:::note
+We're mainly supporting `GenuineIntel` and there have been reports of failure to build the binary on `AMD`. The `ARM64` is a different architecture, thus not supported, but there has been some community contributions in that regard, find it in the reference [error building on ARM64](/references/Lightning%20CLI/error-building-on-arm64).
+:::
+
 <Author
     name="Helder Oliveira"
     image="https://github.com/heldrida.png"
