@@ -4,11 +4,6 @@ on:
   push:
     branches: '*'
   workflow_dispatch:
-  workflow_run:
-    # Only trigger, when the PR title verification succeeds
-    workflows: ["Build verification", "PR title verification"]
-    types:
-      - completed
 
 jobs:
   deploy:
