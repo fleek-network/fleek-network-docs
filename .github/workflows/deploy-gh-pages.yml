@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - main
-
   workflow_dispatch:
+  workflow_run:
+    # Only trigger, when the build verification succeeds
+    workflows: ["Build verification"]
+    types:
+      - completed
 
 jobs:
   deploy:
