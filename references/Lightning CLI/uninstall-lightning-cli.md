@@ -12,9 +12,6 @@ tags:
 - Clean
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 ## Remove symLink

@@ -10,9 +10,6 @@ tags:
 - fix
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
 import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';

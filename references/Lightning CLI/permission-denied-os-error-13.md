@@ -6,9 +6,6 @@ tags:
 - permissions
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 ## Ownership and file permissions

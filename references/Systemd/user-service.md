@@ -11,9 +11,6 @@ tags:
 - systemd
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 A user should have the ability to run a Systemd user service unit without having to use `sudo` to control it.

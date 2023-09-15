@@ -9,9 +9,6 @@ tags:
 - file permissions
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 ## Node key does not exist

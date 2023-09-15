@@ -10,9 +10,6 @@ tags:
 - fix
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 ## Check if CPU is supported
