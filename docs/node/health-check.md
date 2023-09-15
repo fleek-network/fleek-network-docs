@@ -8,9 +8,6 @@ tags:
   - node status
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 
 ## TL;DR: Run the command

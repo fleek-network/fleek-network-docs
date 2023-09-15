@@ -18,10 +18,6 @@ tags:
 - manual
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
-import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';

@@ -16,9 +16,6 @@ tags:
 sidebarCollapsible: false
 ---
 
-<!--
-  The following import is intentional (see partial <CheckoutCommitWarning />)
--->
 import Author from '@site/src/components/Author';
 import Ports from '../../guides/partials/_ports.mdx';
 
