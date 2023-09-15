@@ -26,7 +26,7 @@ The Fleek Network node binary is only supported by a Linux server. Currently, we
 - Ubuntu (>= 20.04 LTS  )
 
 :::tip
-Support for other OS will be made available soon, e.g. CentOS and Fedora. Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
+Support for other OS will be made available soon, e.g. CentOS and Fedora. Feel free to test running on older versions, but we reduce the number of versions to ease support and keep instructions less verbose, which should be easily translatable to your preferred OS Distro and Version. Any contributions to provide support for your favorite distro are welcomed! Feel free to [open a PR](https://github.com/fleek-network) in our repositories.
 :::
 
 Because of the use of Linux containerization technology, other operating systems, such as FreeBSD, OpenBSD, MacOS, Windows and others are not supported.
