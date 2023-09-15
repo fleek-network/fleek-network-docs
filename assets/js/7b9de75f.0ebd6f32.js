@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[6353],{6378:e=>{e.exports=JSON.parse('{"label":"healthcheck","permalink":"/docs/tags/healthcheck","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/health-check","title":"Health check","description":"TL;DR: Run the command","permalink":"/docs/node/health-check"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[8747],{8270:e=>{e.exports=JSON.parse('{"label":"decentralization","permalink":"/docs/tags/decentralization","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/network","title":"The Network","description":"Protocol","permalink":"/docs/learn/the-network"}]}')}}]);

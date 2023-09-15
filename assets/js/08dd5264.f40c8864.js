@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[9267],{9692:e=>{e.exports=JSON.parse('{"label":"snarks","permalink":"/docs/tags/snarks","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/delivery-acknowledgements","title":"Delivery Acknowledgements","description":"\x3c!--","permalink":"/docs/learn/delivery-acknowledgements"}]}')}}]);
