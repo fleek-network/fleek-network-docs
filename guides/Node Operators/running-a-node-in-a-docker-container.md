@@ -1,8 +1,9 @@
 ---
-title: Running a node in a Docker container
+title: Running a node in Docker
 hide_title: true
-slug: fleek-network-running-a-node-in-a-docker-container
-date: 2022-12-05T23:00:00Z
+slug: running-a-node-in-docker
+image: ./assets/running-a-node-in-docker.png?202311181211
+date: 2023-09-18T17:00:00Z
 description: A guide on how to run Fleek Network's node in a Docker container
 category: Tutorial
 tags:
@@ -10,6 +11,8 @@ tags:
 - docker
 - container
 ---
+
+![Running a node in Docker](./assets/running-a-node-in-docker.png?202311181211)
 
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
@@ -21,8 +24,6 @@ import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 ## Introduction
 
 Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly and the following guide will provide you a quick reference to get you started with Docker. 
-
-**TL;DR** If you have Docker experience then you'll find ours [for the impatient](#for-the-impatient) more satisfying!
 
 Alternatively, if you need a deep dive into Docker, check the official getting started [here](https://docs.docker.com/get-started/).
 
@@ -39,7 +40,7 @@ To follow the guide, you will need the following:
 
 To follow the guide successfully, a good amount of memory and disk space is necessary to run Docker. The main reason for our use-case is that your host machine requires a generous amount of memory and disk space, for the containers.
 
-For this guide, we had 4vCPU, 32GB ram memory and 20 GB disk space. Find the latest requirements [here](/docs/node/requirements).
+For this guide, we used a server with the 4vCPU, 32GB ram memory and 20 GB disk space specifications. Learn more about the recommended specifications [here](/docs/node/requirements).
 
 ### Create a user
 
@@ -355,13 +356,13 @@ sudo docker logs -f lightning-cli
 
 ## Conclusion
 
-Containers are a way to have a self-contained environment that includes all necessary dependencies, libraries, software, etc, required to run an application 🍰.
+Containers are a way to have a self-contained environment that includes all necessary dependencies, libraries, software, amongst others required to run an application.
 
 Fleek Network's Lightning is developed with [Rust](https://www.rust-lang.org/), a general-purpose programming language, that requires several dependencies and libraries to compile the project. Some of these libraries are not installed by default and require some troubleshooting for the end user. [Docker](https://www.docker.com/) provides us with containers, self-containing all the required libraries for the purpose of running Lightning, our application.
 
 We guided you through the initial installation steps, and how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided lower-level commands, to help you understand other present or advanced use-cases, and also at higher level, offerring simple utility methods.
 
-While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories 🙏.
+While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
