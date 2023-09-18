@@ -82,7 +82,11 @@ At time of writing, this is how the project root looks like (e.g. use the [ls](h
 └── target
 ```
 
-### Install Docker on Ubuntu
+### Install Docker
+
+:::tip
+To keep our guide short, we're using Ubuntu Linux. You'll have to make the required tweaks for your preferred Linux Distro. Find the list of support operating systems [here](/docs/node/requirements#server).
+:::
 
 First, update the existing list of packages:
 
