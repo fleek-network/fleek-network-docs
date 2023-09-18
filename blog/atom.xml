@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.fleek.network/blog</id>
     <title>Fleek Network Docs | Decentralized Edge Platform Blog</title>
-    <updated>2023-09-18T11:24:40.000Z</updated>
+    <updated>2023-09-18T16:03:52.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.fleek.network/blog"/>
     <subtitle>Fleek Network Docs | Decentralized Edge Platform Blog</subtitle>
@@ -12,7 +12,7 @@
         <title type="html"><![CDATA[Bloom Filters and Cuckoo Filters for Cache Summarization]]></title>
         <id>https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization</id>
         <link href="https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization"/>
-        <updated>2023-09-18T11:24:40.000Z</updated>
+        <updated>2023-09-18T16:03:52.000Z</updated>
         <summary type="html"><![CDATA[Summary of our experiment informing whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters.]]></summary>
         <content type="html"><![CDATA[<p>Disclaimer: This is not a general comparison between Bloom filters and Cuckoo filters. This blog post summarizes some of the experiments we conducted to decide whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters, for a specific use case.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="background">Background<a href="#background" class="hash-link" aria-label="Direct link to Background" title="Direct link to Background">​</a></h2><p>Nodes on Fleek Network currently use Counting Bloom filters to summarize their cached content. These cache summaries are exchanged with other nodes in order to facilitate content routing.</p><p>If a particular node does not store a requested piece of content, it can use the Bloom filters that it received from its peers to check if a peer stores the requested content.</p><p>We are using Counting Bloom filters rather than regular Bloom filters because we need to be able to remove elements from the filter to support cache eviction.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="bloom-filters">Bloom Filters<a href="#bloom-filters" class="hash-link" aria-label="Direct link to Bloom Filters" title="Direct link to Bloom Filters">​</a></h2><p>A Bloom filter is a space-efficient probabilistic data structure that can be used to perform approximate set membership queries.
 The answer to an approximate set membership query is not <code>no</code> or <code>yes,</code> but rather <code>no</code> or <code>probably.</code> This <code>probably</code> is quantified with the false positive rate.  </p><p>One of the convenient features of Bloom filters is that they can be configured to have a specific false positive rate.
