@@ -189,10 +189,12 @@ touch Dockerfile
 Copy and paste to the Dockerfile the following content:
 
 ```sh
-FROM rust:1.72.0-slim-bookworm as builder
-RUN apt-get update && \
-  apt-get upgrade && \
-  apt-get -y install \
+FROM rust:latest as builder
+ARG PROFILE=release
+WORKDIR /lightning
+
+RUN apt-get update
+RUN apt-get install -y \
     build-essential \
     cmake \
     clang \
@@ -200,26 +202,38 @@ RUN apt-get update && \
     libssl-dev \
     gcc \
     protobuf-compiler
-WORKDIR /usr/lightning
-COPY . .
-RUN cargo +stable build --release
 
-FROM debian:bookworm-slim AS runtime
-RUN apt-get update && \
-  apt-get install -y \
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+    cargo install cargo-strip
+
+COPY . .
+ENV RUST_BACKTRACE=1
+
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+    --mount=type=cache,target=/lightning/target \
+    cargo build --profile $PROFILE --bin lightning-node \
+    && cargo strip \
+    && mv /lightning/target/release/lightning-node /lightning-node
+
+FROM ubuntu:latest
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update -yq && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     libssl-dev \
     ca-certificates
-WORKDIR /usr/lightning
-COPY --from=builder /usr/lightning/target/release/lightning-node lgtn
-CMD ["/usr/lightning/lgtn", "run"]
+
+# Get compiled binaries from builder's cargo install directory
+COPY --from=builder /lightning/target/release/lightning-node /usr/local/bin/lgtn
+
+ENTRYPOINT ["lgtn", "run"]
 ```
 
 ### Build the Docker image
 
-Build the image from a Dockerfile:
+Build the image named as `lightning` from our Dockerfile:
 
 ```sh
-docker build -t ursa -f ./Dockerfile .
+sudo docker build -t lightning -f ./Dockerfile .
 ```
 
 <!-- 
@@ -234,19 +248,30 @@ The build process takes awhile and you have to wait for completion.
 
 The output should be similar to:
 
-```
-[+] Building 11.1s (7/14)                                                                                                              docker:default
+```sh
+[+] Building 1.2s (16/16) FINISHED                                                                                                     docker:default
+ => [internal] load build definition from Dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 990B                                                                                                             0.0s
  => [internal] load .dockerignore                                                                                                                0.0s
  => => transferring context: 2B                                                                                                                  0.0s
- => [internal] load build definition from Dockerfile                                                                                             0.0s
- => => transferring dockerfile: 579B                                                                                                             0.0s
- => [internal] load metadata for docker.io/library/debian:bookworm-slim                                                                          1.2s
- => [internal] load metadata for docker.io/library/rust:1.72.0-slim-bookworm                                                                     1.2s
- => [builder 1/5] FROM docker.io/library/rust:1.72.0-slim-bookworm@sha256:583f7f3a34bf302d29e70e8ab9a2aab0f73338b54fde1e2f9f3c6ebc1b40e1db       9.9s
- => => resolve docker.io/library/rust:1.72.0-slim-bookworm@sha256:583f7f3a34bf302d29e70e8ab9a2aab0f73338b54fde1e2f9f3c6ebc1b40e1db               0.0s
- => => sha256:583f7f3a34bf302d29e70e8ab9a2aab0f73338b54fde1e2f9f3c6ebc1b40e1db 984B / 984B                                                       0.0s
- => => sha256:42926a35070e536daa04a51601cb1dc6aa7bbea2c841b3b14a70e90fa0e01beb 742B / 742B                                                       0.0s
- => => sha256:3d6a2e2da42cd1d1f4a7b74b2429c75773b665b9912503ccbcd6c65fc7e703dc 4.85kB / 4.85kB                                                   0.0s                                       0.0s
+ => [internal] load metadata for docker.io/library/debian:bullseye-slim                                                                          0.6s
+ => [internal] load metadata for docker.io/library/rust:latest                                                                                   0.9s
+ => [stage-1 1/3] FROM docker.io/library/debian:bullseye-slim@sha256:3bc5e94a0e8329c102203c3f5f26fd67835f0c81633dd6949de0557867a87fac            0.0s
+ => [builder 1/7] FROM docker.io/library/rust:latest@sha256:8a4ca3ca75afbc97bcf5362e9a694fe049d15734fbbaf82b8b7e224616c1254b                     0.0s
+ => [internal] load build context                                                                                                                0.3s
+ => => transferring context: 948.93kB                                                                                                            0.3s
+ => CACHED [stage-1 2/3] RUN DEBIAN_FRONTEND=noninteractive apt-get update -yq &&   DEBIAN_FRONTEND=noninteractive apt-get install -yq     libs  0.0s
+ => CACHED [builder 2/7] WORKDIR /lightning                                                                                                      0.0s
+ => CACHED [builder 3/7] RUN apt-get update                                                                                                      0.0s
+ => CACHED [builder 4/7] RUN apt-get install -y     build-essential     cmake     clang     pkg-config     libssl-dev     gcc     protobuf-comp  0.0s
+ => CACHED [builder 5/7] RUN --mount=type=cache,target=/usr/local/cargo/registry     cargo install cargo-strip                                   0.0s
+ => CACHED [builder 6/7] COPY . .                                                                                                                0.0s
+ => CACHED [builder 7/7] RUN --mount=type=cache,target=/usr/local/cargo/registry     --mount=type=cache,target=/lightning/target     cargo buil  0.0s
+ => CACHED [stage-1 3/3] COPY --from=builder /lightning/target/release/lightning-node /usr/local/bin/lgtn                                        0.0s
+ => exporting to image                                                                                                                           0.0s
+ => => exporting layers                                                                                                                          0.0s
+ => => writing image sha256:e8e5ed19f59c3cc6a9add5bdb578c464904e9789d5f386cc4af81044c062d998                                                     0.0s
+ => => naming to docker.io/library/lightning
  ```
 
 :::tip
@@ -257,6 +282,76 @@ The Docker image is only required to be built once and/or, when changes are pull
 If you don't update your source code and binary build often, you won't have the latest changes, which should happen frequently to take advandate of all the ongoing development. This is quite important to understand, as it causes confusion to some users. The Lightning application at time of writing does not update automatically.
 :::
 
+## Docker Container
+
+A container is what's originated from the image we discussed in the section [build the docker image](#build-the-docker-image), it is a runnable instance of an image. We can create, start, stop, move, or delete a container using the Docker API or CLI.
+
+Following up, we'll learn how to run the Docker container that includes our Lightning CLI program, built from our Dockerfile.
+
+Once the [Docker image](#build-the-docker-image) is ready, run the container based on the image `lightning`. Effectively running the Fleek Network Lighthing node process:
+
+```sh
+sudo docker run \
+  -p 4069:4069 \
+  -p 4200:4200 \
+  -p 6969:6969 \
+  -p 18000:18000 \
+  -p 18101:18101 \
+  -p 18102:18102 \
+  -v $HOME/.lightning/:/root/.lightning/:rw \
+  --name lightning-cli \
+  -it lightning
+```
+
+:::tip
+Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#create-the-docker-image).
+:::
+
+The output would look as the following, showing the error message "Node key does not exist. Use CLI to generate keys":
+
+```sh
+thread 'main' panicked at 'Node key does not exist. Use CLI to generate keys.', core/node/src/testnet_sync.rs:126:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+thread 'main' panicked at 'Node key does not exist. Use CLI to generate keys.', core/node/src/testnet_sync.rs:126:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+
+You'll have to generate the keys before launching the service.
+
+## Generate keys
+
+Execute the `keys generate` command on the container `lightning-cli`:
+
+```sh
+sudo docker exec -it lightning-cli lgtn keys generate
+```
+
+We've bound the host path `~/.lightning` into the container `/root/.lightning`.
+
+You can list the contents of the `~/.lightning`, where you should find the `config.toml` and `keystore`:
+
+```sh
+.
+..
+config.toml
+keystore
+```
+
+You only have to run the `keys generate` once from your host.
+
+Finaly, you can start the Fleek Network node by running the command:
+
+```sh
+sudo docker start lightning-cli
+```
+
+## Viewing logs
+
+To view the logs of a Docker container in real time, use the following command:
+
+```sh
+sudo docker logs -f lightning-cli
+```
 
 ## Conclusion
 
@@ -268,7 +363,7 @@ We guided you through the initial installation steps, and how to build a [Docker
 
 While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories 🙏.
 
-Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
 
 <Author
     name="Helder Oliveira"
