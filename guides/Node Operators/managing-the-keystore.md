@@ -1,8 +1,9 @@
 ---
-hide_title: true
 title: Managing the keystore
+hide_title: true
 slug: managing-the-keystore
 date: 2023-11-14T12:00:00Z
+image: ./assets/managing-the-keystore.png?202311181211
 description: The following will guide you through some of the fundamentals to help understand how to manage the key store at the very basics, and help you persist the key store identity, in any supported system you’re migrating to
 category: Tutorial
 tags:
@@ -12,6 +13,8 @@ tags:
 - private keys
 - keys
 ---
+
+![Managing the keystore](./assets/managing-the-keystore.png?202311181211)
 
 import Author from '@site/src/components/Author';
 

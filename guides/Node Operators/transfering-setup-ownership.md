@@ -4,6 +4,7 @@ draft: false
 hide_title: true
 title: Transfering setup ownership
 slug: transfering-setup-ownership
+image: ./assets/transfering-setup-ownership.png?202311181223
 date: 2023-09-12T23:00:00.000+00:00
 description: A step-by-step guide to transfer the ownership of the Fleek Network Lightning CLI and service setup
 category: Tutorial
@@ -15,6 +16,8 @@ tags:
 - configuration
 ---
 
+![Transfering setup ownership](./assets/transfering-setup-ownership.png?202311181211)
+
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
@@ -22,7 +25,6 @@ import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
-
 
 ## TL;DR
 

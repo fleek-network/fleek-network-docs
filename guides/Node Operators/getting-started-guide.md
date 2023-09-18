@@ -5,6 +5,7 @@ hide_title: true
 title: Getting Started
 slug: getting-started
 date: 2023-08-31T23:00:00.000+00:00
+image: ./assets/getting-started.png?202311181211
 canonical: ''
 description: A first look at what Fleek Network is, why it's important, and a simple tutorial of running and interacting with a node on your local machine!
 category: Tutorial
@@ -13,6 +14,8 @@ tags:
 - Guide
 - Getting Started
 ---
+
+![Getting started guide](./assets/getting-started.png?202311181211)
 
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
