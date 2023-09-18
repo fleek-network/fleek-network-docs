@@ -22,7 +22,7 @@ import GitCloneOptions from '../partials/_git-clone-options.mdx';
 
 ## Introduction
 
-For this guide, we’ll have a simple look into how Fleek Network works in its current development phase and briefly share some of the core concepts like spinning up a node and making a request to a service to put and retrieve a .car files from the network.
+For this guide, we’ll have a simple look into how Fleek Network works in its current development phase and briefly share some of the core concepts like spinning up a node.
 
 For those seeking advanced knowledge:
 
