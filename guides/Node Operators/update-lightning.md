@@ -1,9 +1,9 @@
 ---
-title: Update Lightning
+title: Updating Lightning
 hide_title: true
-slug: update-lightning
+slug: updating-lightning
 date: 2023-09-19T12:00:00.000+00:00
-image: ./assets/update-lightning.png?202309191740
+image: ./assets/updating-lightning.png?202309191740
 description: A step-by-step guide to update the Lightning CLI from source code and Service setup
 category: Tutorial
 tags:
@@ -14,7 +14,7 @@ tags:
 - configuration
 ---
 
-![Update Lightning](./assets/update-lightning.png?202309191740)
+![Update Lightning](./assets/updating-lightning.png?202309191740)
 
 import Author from '@site/src/components/Author';
 import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
