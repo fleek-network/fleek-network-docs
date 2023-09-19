@@ -479,7 +479,6 @@ Open the file and put the following content:
 Description=Fleek Network Node lightning service
 
 [Service]
-User=lgtn
 Type=simple
 MemoryHigh=32G
 RestartSec=15s
