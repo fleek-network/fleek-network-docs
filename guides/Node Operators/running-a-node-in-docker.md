@@ -303,7 +303,7 @@ sudo docker run \
   -p 18000:18000 \
   -p 18101:18101 \
   -p 18102:18102 \
-  -v $HOME/.lightning/:/root/.lightning/:rw \
+  --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
   --name lightning-cli \
   -it lightning
 ```
