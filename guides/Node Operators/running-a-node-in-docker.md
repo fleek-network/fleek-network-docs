@@ -216,14 +216,14 @@ ENV RUST_BACKTRACE=1
 
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
     --mount=type=cache,target=/lightning/target \
-    cargo build --profile $PROFILE --bin lightning-node \
-    && cargo strip \
-    && mv /lightning/target/release/lightning-node /lightning-node
+    cargo build --profile $PROFILE --bin lightning-node && \
+    cargo strip  && \
+    mv /lightning/target/release/lightning-node /lightning-node
 
 FROM ubuntu:latest
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update -yq && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq \
+RUN apt-get update -yq && \
+    apt-get install -yq \
     libssl-dev \
     ca-certificates
 
