@@ -107,6 +107,16 @@ The git pull command is used to fetch and merge changes from the remote reposito
 git pull origin main
 ```
 
+:::tip
+If you've made any changes in the local repository directory, clear them to prevent being blocked. As `git` is a `version control` program that looks for changes and will ask you to do something about it to prevent losing data. Most readers can disregard changes if not contributing to the development by simply [stashing](https://git-scm.com/docs/git-stash) or resetting the changes.
+
+A quick way to clean is to `stash` the changes, for example:
+
+```sh
+git stash 
+```
+:::
+
 You can check yourself, as follows:
 
 ```sh
@@ -118,6 +128,14 @@ Our output clearly describes what `origin` is tracking.
 ```sh
 origin	git@github.com:fleek-network/lightning.git (fetch)
 origin	git@github.com:fleek-network/lightning.git (push)
+```
+
+Alternatively, you can stash and pull, to reset the repository to the origin.
+
+```sh
+git fetch origin <BRANCH-NAME>
+git reset --hard origin/<BRANCH-NAME>
+git clean -f
 ```
 
 :::tip
@@ -163,9 +181,143 @@ Already up to date.
 
 A "already up to date" message means that you have the latest version of the source code and can proceed with compiling the binary process from the source code to override the `Lightning CLI` version you're on. You can also make any other setup changes that might find necessary. Some of the changes might be related to the recommended setup of Systemd Service that helps control the Fleek Network Lightning Node binary process, etc.
 
-### 
+## Build the binary from the source code
+
+We're assuming that your system setup hasn't changed, such as Rust toolchain still being installed and setup correctly in the system and any other required dependencies. If you have made changes to your system and need to revisit the setup instructions, check our install document [here](/docs/node/install).
+
+First, switch the user and change directory to the Lightning directory in your file system as described in [switch to installer username](#switch-to-installer-username) [change directory to the source code](#change-directory-to-the-source-code) sections.
+
+Recall the command from our install document or getting started guide? As you probably guessed, you need to execute the rust cargo build command. But firstly, we are going to cleand and update the Rust package manager, as follows:
+
+```sh
+cargo clean
+cargo update
+```
+
+Next, execute the build command to compile the Fleek Network Lightning CLI binary.
+
+```sh
+cargo +stable build --release
+```
+
+:::tip
+The build command uses the Rust compiler, which might take a while depending on how speedy the host machine is capable.
+:::
+
+Once the Rust compiler completes, the generated binary will be available in the source code project directory. 
+
+If you have stick with the default recommendation, that'll be at `~/fleek-network/lightning/target/release/lightning-node`.
+
+## Checkup the symlink setup
+
+During the original install and setup process, a symbolic link (symlink) was created linking the generated binary file located in `~/fleek-network/lightning/target/release/lightning-node` to `/usr/local/bin/lgtn`. By placing the symlink in the the default installation location of the user, the executable application is available globally as `lgtn`.
+
+
+You can see the full absolute path of the symlink and verify if setup correctly by running:
+
+```sh
+readlink -f <SYMLINK-NAME>
+```
+
+If you have followed the recommended name, the symbolink link should be called `lgtn`, short version for `lightning`.
+
+```sh
+readlink -f lgtn
+```
+
+Here's an example where we find the symlink `lgtn` pointing to the absolutely path where our source code and originated built binary is located, as described in the [build the binary from the source code](#build-the-binary-from-the-source-code) section.
+
+```sh
+/home/<USERNAME>/fleek-network/lightning/target/release/lightning-node
+```
+
+Alternatively, you can use the `ls` command to identify the symlink.
+
+```sh
+ls -la $(which lgtn)
+```
+
+If you find an error, it's very likely that a symlink is not setup. You can revisit the [installation](/docs/node/install) to learn, or execute the command to link the build binary to the user default install location:
+
+```sh
+sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
+```
+
+:::tip
+Make sure that the paths provided to the command `ln` are correct. If you are using customised pathnames or switched to a different username other then the one used for installation it has to change accordingly.
+:::
+
+## Systemd service
+
+It's highly recommend to use systemd to manage the Fleek Network service for node operators. Systemd is a system and service manager for Linux operating systems that provides a consistent way to manage system services across various distributions.
+
+### Verify the setup
+
+The recommended setup is to wrap the Lightning binary process as a Systemd service, as instructed in the [install](/docs/node/install) section.
+
+If you have followed the recommendations, you should have the service file called `ligthning.service` in the path `/etc/systemd/system/lightning.service`.
+
+The content of `lightning.service` should have some or more of the following properties and values:
+
+```
+[Unit]
+Description=Fleek Network Node lightning service
+
+[Service]
+Type=simple
+MemoryHigh=32G
+RestartSec=15s
+Restart=always
+ExecStart=lgtn -c /home/lgtn/.lightning/config.toml run
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+Environment=TMPDIR=/var/tmp
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Everytime the file is modified, the Systemd process should be reloaded. You can do this by executing:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+To learn more about how to create a Systemd service read the [manual installation](/docs/node/install#manual-installation) document that illustrates the steps required in greater detail.
+
+### Launching the node as a systemd service
+
+After completing all the steps and checkups mentioned throughout the guide,  you should have the Fleek Network Lightning Service ready to go.
+
+To launch the service, execute the following command:
+
+```sh
+sudo systemctl start lightning.service
+```
+
+To learn more about how to use Systemctl to manage the Lightning service, read the document [here](/docs/node/install#use-systemctl-to-manage-systemd-service).
+
+## Health check
+
+First, complete all the steps and checkups mentioned throught the guide and once the Node process is running perform a health check.
+
+To run a quick health checkup, send a GET request to `/health` endpoing of the RPC on [port](/docs/learn/ports) 4069.
+
+```sh
+curl -w "\p" localhost:4069/health
+```
+
+If successful, you should get the response `OK`, as follows:
+
+```sh
+OK
+```
+
+If you'd like to learn more about health check, visit the section [health check](/docs/node/health-check) of our documentation.
 
 ## Conclusion
+
+
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
 
