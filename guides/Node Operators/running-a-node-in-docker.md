@@ -227,7 +227,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -yq && \
     libssl-dev \
     ca-certificates
 
-# Get compiled binaries from builder's cargo install directory
 COPY --from=builder /lightning/target/release/lightning-node /usr/local/bin/lgtn
 
 ENTRYPOINT ["lgtn", "run"]
