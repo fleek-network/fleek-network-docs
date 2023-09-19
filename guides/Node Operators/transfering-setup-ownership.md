@@ -22,7 +22,6 @@ tags:
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
 import Author from '@site/src/components/Author';
-import GitCloneOptions from '../partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
