@@ -1,7 +1,7 @@
 ---
 title: Update Lightning
 hide_title: true
-slug: Update Lightning
+slug: update-lightning
 date: 2023-09-19T12:00:00.000+00:00
 description: A step-by-step guide to update the Lightning CLI from source code and Service setup
 category: Tutorial
