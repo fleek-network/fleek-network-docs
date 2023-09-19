@@ -317,7 +317,13 @@ If you'd like to learn more about health check, visit the section [health check]
 
 ## Conclusion
 
+The Fleek Network's Ursa CLI is in constant development, there are frequent changes that can introduce features, fixes, and performance improvements, but also breaking changes that in some cases require you to add, including new libraries or packages in your operating system.
 
+In the current phase of development, a proper software release cycle for the updates is still in development, thus we pick changes from the source repository to build the Lightning application.
+
+We have looked into how to pull the changes via Git, and discussed that contributions can introduce new requirements to the host operating system that leads to updates or changes in the documentation–mentioning how hard it is to keep in sync. Explained how to look into the contributions to understand the nature of the change and get hints about new features.
+
+To complete, provided a step-by-step walkthrough the install and setup process for the Fleek Network Lightning CLI and Systemd service.
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
 
