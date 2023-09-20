@@ -375,13 +375,13 @@ The installation process is long, as it compiles the application binary for us f
 ```
 
 :::tip
-Once Rust generates the binary `lightning-node`, you can find it in the project root `target` directory. Depending on the usage of `+stable` flag, the binary should be located at `~/fleek-network/lightning/target/debug/lightning-node` or `~/fleek-network/lightning/target/release/lightning-node`.
+Once Rust generates the binary `lightning-cli`, you can find it in the project root `target` directory. Depending on the usage of `+stable` flag, the binary should be located at `~/fleek-network/lightning/target/debug/lightning-cli` or `~/fleek-network/lightning/target/release/lightning-cli`.
 :::
 
 You can create an `lgtn` symbolic link to `/usr/local/bin` to make it available globally.
 
 ```sh
-sudo ln -s "$HOME/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
+sudo ln -s "$HOME/fleek-network/lightning/target/release/lightning-cli" /usr/local/bin/lgtn
 ```
 
 After completing, you'll have the ability to type `lgtn` to execute the binary anywhere for your user account. Other users might find it better to copy or create an `alias` instead.
@@ -389,7 +389,7 @@ After completing, you'll have the ability to type `lgtn` to execute the binary a
 Run the `lgtn help` sub-command as a checkup:
 
 ```sh
-Usage: lightning-node [OPTIONS] <COMMAND>
+Usage: lightning-cli [OPTIONS] <COMMAND>
 
 Commands:
   run           Start the node
