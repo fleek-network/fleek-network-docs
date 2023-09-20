@@ -361,12 +361,8 @@ cargo update
 Start the `install` process by running the command:
 
 ```sh
-cargo build
+cargo +stable build --release
 ```
-
-:::tip
-At the time of writing, Fleek Network lightning is under development, thus we're using the `cargo build` command. Alternatively, you're recommended to use the `+stable`, e.g. `cargo +stable build`.
-:::
 
 The installation process is long, as it compiles the application binary for us from the source code.
 
