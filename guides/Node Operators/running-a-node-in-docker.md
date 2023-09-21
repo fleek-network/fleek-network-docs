@@ -27,12 +27,47 @@ Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/ref
 
 Alternatively, if you need a deep dive into Docker, check the official getting started [here](https://docs.docker.com/get-started/).
 
+TL;DR If you have Docker experience then you'll find our [for the impatient](#for-the-impatient) sufficient to get started.
+
 ## Pre-requisites
 
 To follow the guide, you will need the following:
 
 - Familiarity with the command-line interface
 - Git
+
+## For the impatient 
+
+Building a Docker image requires some effort and some of our users might find it easier to pull our [latest image](https://github.com/fleek-network/lightning/pkgs/container/lightning) for quick access to Lightning CLI, which doesn't require them to build from source.
+
+:::tip
+The Docker Container image for Lightning is located at [https://github.com/fleek-network/lightning/pkgs/container/lightning](https://github.com/fleek-network/lightning/pkgs/container/lightning).
+:::
+
+### Pull and run prebuilt image
+
+You can pull the image and run the Docker container quickly by executing the command:
+
+```sh
+sudo docker run \
+    -p 4069:4069 \
+    -p 4200:4200 \
+    -p 6969:6969 \
+    -p 18000:18000 \
+    -p 18101:18101 \
+    -p 18102:18102 \
+    --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+    --name lightning-cli \
+    -it ghcr.io/fleek-network/lightning:latest
+```
+
+:::caution warning
+The Docker image is tied to a CPU architecture, make sure that you have verified the [required](/docs/node/requirements#specs) specifications to run the container successfully.
+:::
+
+:::tip
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+:::
 
 ## Setup
 
