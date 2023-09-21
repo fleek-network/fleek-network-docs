@@ -194,8 +194,8 @@ touch Dockerfile
 Copy and paste to the Dockerfile the following content:
 
 ```sh
-FROM rust:latest as builder
-WORKDIR /builder
+FROM rust:latest as build
+WORKDIR /build
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -213,19 +213,21 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
 COPY . .
 ENV RUST_BACKTRACE=1
 
+RUN mkdir -p /build/target/release
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
-    --mount=type=cache,target=/builder/target \
+    --mount=type=cache,target=/build/target \
     cargo build --profile release --bin lightning-cli && \
-    cargo strip
+    cargo strip && \
+    cp /build/target/release/lightning-cli /build
 
 FROM ubuntu:latest
 
-RUN apt-get update -yq && \
-    apt-get install -yq \
+RUN apt-get update && \
+    apt-get install -y \
     libssl-dev \
     ca-certificates
 
-COPY --from=builder /builder/target/release/lightning-cli /usr/local/bin/lgtn
+COPY --from=build /build/lightning-cli /usr/local/bin/lgtn
 
 ENTRYPOINT ["lgtn", "run"]
 ```
