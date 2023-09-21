@@ -44,9 +44,9 @@ Building a Docker image requires some effort and some of our users might find it
 The Docker Container image for Lightning is located at [https://github.com/fleek-network/lightning/pkgs/container/lightning](https://github.com/fleek-network/lightning/pkgs/container/lightning).
 :::
 
-### Pull and run prebuilt image
+### Pull and run image
 
-You can pull the image and run the Docker container quickly by executing the command:
+You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly. Run the command:
 
 ```sh
 sudo docker run \
