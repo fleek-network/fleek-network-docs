@@ -61,6 +61,8 @@ sudo docker run \
     -it ghcr.io/fleek-network/lightning:latest
 ```
 
+Keys have to be generated when launching the service. On Docker run, if the [keystore](/guides/Node%20Operators/managing-the-keystore) is not found, the keys are automatically generated and stored in the Docker host's `$HOME/.lightning/keystore` directory. To learn more about how to manage the keystore, visit the [managing keystore](/guides/Node%20Operators/managing-the-keystore) section.
+
 :::caution warning
 The Docker image is tied to a CPU architecture, make sure that you have verified the [required](/docs/node/requirements#specs) specifications to run the container successfully.
 :::
@@ -365,16 +367,19 @@ sudo docker run \
 Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#create-the-docker-image).
 :::
 
-The output would look as the following, showing the error message "Node key does not exist. Use CLI to generate keys":
+The output would look as the following, showing the error message "Node is not whitelisted" (this error message is due to the testnet phase that requires nodes to be whitelisted to run successfully):
 
 ```sh
-thread 'main' panicked at 'Node key does not exist. Use CLI to generate keys.', core/node/src/testnet_sync.rs:126:9
+thread 'main' panicked at 'Node is not whitelisted. Please join the Fleek Discord to get invited.', core/cli/src/testnet_sync.rs:45:9
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-thread 'main' panicked at 'Node key does not exist. Use CLI to generate keys.', core/node/src/testnet_sync.rs:126:9
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+/root/init: line 7:     7 Aborted                 (core dumped) lgtn run
 ```
 
-You'll have to generate the keys before launching the service.
+Keys have to be generated when launching the service. On Docker run, if the [keystore](/guides/Node%20Operators/managing-the-keystore) is not found, the keys are automatically generated and stored in the Docker host's `$HOME/.lightning/keystore` directory.
+
+:::tip
+Have in mind that the `$HOME/.lightning/config.toml` is where the keystore location paths are configured, which default value is in the user `$HOME` path. The users who customise or modify the default location, need to apply the required customisations. To learn more about how to manage the keystore, visit the [managing keystore](/guides/Node%20Operators/managing-the-keystore) section.
+:::
 
 ## Generate keys
 
