@@ -4,7 +4,7 @@ title: Services
 hide_title: true
 sidebarCollapsible: false
 date: 2023-01-10T09:00:00.000+00:00
-description: A Fleek Network Service is a modular application that runs on nodes and allows users to perform well-defined functions or some specific tasks. Services are scalable and performant due to edge computation and networking features provided by the core principles of the network.
+description: Discover Fleek Network Services, modular software powered with the enhanced scalability and performance of edge networks.
 category: Documentation
 keywords: [services, documentation, getting started]
 tags:
