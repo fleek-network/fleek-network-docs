@@ -1,6 +1,7 @@
 ---
 title: Requirements
 hide_title: true
+description: The requirements for the server specifications on which the Fleek Network Node can be installed and run.
 tags:
   - requirements
   - server
