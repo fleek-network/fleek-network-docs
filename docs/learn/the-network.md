@@ -10,7 +10,7 @@ tags:
   - decentralization
   - consensus
   - algorithms
-  - SNARKs
+  - snarks
   - rpc
   - reputation
   - ports
