@@ -21,6 +21,10 @@ For example, if you have followed the install document recommendations and have:
 - Switched to the user **lgtn**
 - Executed the installation process as **lgtn** 
 
+:::note
+The username can be anything, we are using the term **lgtn** as the example provided throughout our documentation. Select your username in accordance to your preferences.
+:::
+
 You'll find that it owns the following directories under the user home (/home/lgtn):
 
 ```sh
