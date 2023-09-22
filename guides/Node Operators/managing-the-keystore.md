@@ -418,7 +418,7 @@ node_key_path = "/home/lgtn/.lightning/keystore/node.pem"
 ```
 
 :::tip
-On the [install instructions](/docs/node/install) provided by the documentation, a [Systemd service unit](/docs/node/Install/#systemd-service-setup) is recommended to allow the user control the Lightning service via systemctl. The Systemd service unit file should contain the recommended usage of `-c` configuration. If you have followed the recommendations it should be familiar.
+On the [install instructions](/docs/node/install) provided by the documentation, a [Systemd service unit](/docs/node/install#systemd-service-setup) is recommended to allow the user control the Lightning service via systemctl. The Systemd service unit file should contain the recommended usage of `-c` configuration. If you have followed the recommendations it should be familiar.
 :::
 
 ## Conclusion
