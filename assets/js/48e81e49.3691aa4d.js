@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[173],{5121:e=>{e.exports=JSON.parse('{"label":"incentives","permalink":"/docs/tags/incentives","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/token-and-economics","title":"Token and economics","description":"Overview","permalink":"/docs/learn/token-and-economics"}]}')}}]);

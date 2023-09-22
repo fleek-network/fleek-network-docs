@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[1129],{9852:e=>{e.exports=JSON.parse('{"label":"SNARKs","permalink":"/docs/tags/snar-ks","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/network","title":"The Network","description":"Protocol","permalink":"/docs/learn/the-network"}]}')}}]);

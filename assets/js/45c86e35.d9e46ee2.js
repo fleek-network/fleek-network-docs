@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[9847],{2316:t=>{t.exports=JSON.parse('{"label":"about","permalink":"/docs/tags/about","allTagsPath":"/docs/tags","count":1,"items":[{"id":"learn/index","title":"Introduction","description":"Introduction","permalink":"/docs/learn/introduction"}]}')}}]);
