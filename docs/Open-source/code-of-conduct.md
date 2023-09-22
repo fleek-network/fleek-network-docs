@@ -8,7 +8,7 @@ keywords: [conduct,contributor]
 tags:
 - standards
 - pledge
-- contributor
+- contribute
 - code of conduct
 ---
 
