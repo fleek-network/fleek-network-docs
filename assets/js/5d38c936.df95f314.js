@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[9804],{9797:e=>{e.exports=JSON.parse('{"label":"Rust dependencies","permalink":"/docs/tags/rust-dependencies","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/install","title":"Install","description":"The Fleek Network Lightning CLI installation walkthrough","permalink":"/docs/node/Install"}]}')}}]);
