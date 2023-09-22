@@ -2,6 +2,7 @@
 title: Overview
 slug: overview
 hide_title: true
+description: Learn about server requirements, installation, configuration, and more. Become a Node Operator and contribute to the network's growth.  
 tags:
   - build
 ---
