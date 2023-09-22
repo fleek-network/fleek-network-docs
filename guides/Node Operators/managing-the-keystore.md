@@ -200,7 +200,7 @@ The identity is a text description for the Keystore and at the time of writing w
 
 ### Type of keys
 
-There are three types of keys related to the identity of a node and the account ownership. The keys are based in public-key cryptography, or asymmetric cryptography where each key pair consists of a public key and a corresponding private key. The keys are described in the section [identity on the Fleek Network](docs/learn/the-network/#identity-on-the-fleek-network) as follows:
+There are three types of keys related to the identity of a node and the account ownership. The keys are based in public-key cryptography, or asymmetric cryptography where each key pair consists of a public key and a corresponding private key. The keys are described in the section [identity on the Fleek Network](/docs/learn/the-network/#identity-on-the-fleek-network) as follows:
 
 -  A Node key (ConsensusPublicKey) is [BLS12-381](https://electriccoin.co/blog/new-snark-curve/) which facilitates the consensus algorithm or persistence of state, resilience and fault tolerance. Has multi-signature support, the ability to aggregate many signatures into one used for consensus committee when signing certificates
 
@@ -212,7 +212,7 @@ For instance, a public key is open to anybody to see and it represents a unique 
 
 The Fleek Network relies on cryptography, thus the Fleek Network team and anybody can access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identify a node or send rewards to the address without jeopardizing identity security.
 
-To learn more about the identities on the Fleek Network [here](docs/learn/the-network/#identity-on-the-fleek-network).
+To learn more about the identities on the Fleek Network [here](/docs/learn/the-network/#identity-on-the-fleek-network).
 
 ### Key privacy
 
