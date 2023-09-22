@@ -13,7 +13,7 @@ tags:
 - Guide
 - Learn
 - services
-- development
+- develop
 - sdk
 - toolkit
 ---
