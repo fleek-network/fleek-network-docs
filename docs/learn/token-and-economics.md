@@ -2,6 +2,7 @@
 title: Token and economics
 slug: token-and-economics
 hide_title: true
+description: Explore the preliminary breakdown of the Fleek Network's FLK token distribution, its integral role in node operations, the balance of economic incentives, and potential adjustments in pre-mainnet phases.
 tags:
   - tokenomics
   - token
