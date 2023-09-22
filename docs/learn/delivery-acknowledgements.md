@@ -2,6 +2,7 @@
 title: Delivery Acknowledgements
 slug: delivery-acknowledgements
 hide_title: true
+description: Dive into Fleek Network's Delivery Acknowledgements, immutable proofs of service delivery, and understand the role of SNARKs in them.
 tags:
   - snarks
 sidebarCollapsible: false
