@@ -32,18 +32,18 @@ To participate in the [alpha Testnet](/docs/roadmap), you can begin by setting u
 :::info
 The Fleek Network's documentation is organized as follows:
 
-[Documentation](docs) brief breakdown of the Fleek Network.
+[Documentation](/docs) brief breakdown of the Fleek Network.
 
-[Engineering](blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
+[Engineering](/blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
 
-[Guides](guides) provide step-by-step instructions for performing specific tasks.
+[Guides](/guides) provide step-by-step instructions for performing specific tasks.
 
-[References](references) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
+[References](/references) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
 :::
 
 ## Roadmap
 
-We aim to bring computation to where demand is. You can find Fleek Network's public [roadmap](docs/roadmap) here.
+We aim to bring computation to where demand is. You can find Fleek Network's public [roadmap](/docs/roadmap) here.
 
 ## Need help?
 
