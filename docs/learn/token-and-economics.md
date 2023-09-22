@@ -7,7 +7,6 @@ tags:
   - tokenomics
   - token
   - economics
-  - cryptoeconomics
   - rewards
   - awards
   - incentives
