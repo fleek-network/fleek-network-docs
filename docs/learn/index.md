@@ -2,6 +2,7 @@
 title: Introduction
 slug: introduction
 hide_title: true
+description: Introduction to Fleek Network, a decentralized edge network. Learn its purpose, operation, and approach towards a decentralized infrastructure layer.
 tags:
   - about
   - learn
