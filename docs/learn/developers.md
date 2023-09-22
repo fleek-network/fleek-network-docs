@@ -3,7 +3,7 @@ draft: false
 title: Developers
 sidebarCollapsible: false
 date: 2023-01-10T09:00:00.000+00:00
-description: Welcome to the documentation site for Fleek Network, the decentralized content and application layer built on established decentralized storage protocols combined with high-speed caching and an effective delivery layer.
+description: Join Fleek Network as a developer. Dive into our Whitepaper, Github, and SDK details. Stay updated with our newsletter and Discord community.
 category: Documentation
 keywords: [services, documentation, getting started]
 tags:
