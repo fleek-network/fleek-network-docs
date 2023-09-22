@@ -8,7 +8,7 @@ keywords: [contributing]
 tags:
 - git
 - repository
-- contributing
+- contribute
 - open source
 ---
 
