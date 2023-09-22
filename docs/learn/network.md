@@ -2,6 +2,7 @@
 title: The Network
 slug: the-network
 hide_title: true
+description: Explore Fleek Network’s core protocol, its architecture, and unique characteristics as a decentralized edge network.
 tags:
   - protocol
   - architecture
