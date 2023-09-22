@@ -2,6 +2,7 @@
 title: Testnet onboarding
 slug: testnet-onboarding
 hide_title: true
+description: Join Fleek's Testnet onboarding, follow Discord instructions to install and verify your node. Check live updates, attend community calls, and ensure node whitelist status. 
 tags:
   - testnet
   - onboarding
