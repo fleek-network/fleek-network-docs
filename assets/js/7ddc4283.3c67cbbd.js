@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[807],{5287:t=>{t.exports=JSON.parse('{"label":"contributing","permalink":"/docs/tags/contributing","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Open-source/contributing","title":"Contributing","description":"Contributing","permalink":"/docs/Open-source/contributing"}]}')}}]);
