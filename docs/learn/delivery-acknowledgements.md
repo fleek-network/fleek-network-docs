@@ -19,7 +19,7 @@ The Narwhal and Bullshark consensus primary transaction is the order of batched 
 
 To claim the reward and other fees, nodes can add received Delivery Acknowledgements to a local pool and periodically submit them in batches to reach a consensus. This process also ensures consistent updates to the client's balance in stablecoin.
 
-The amounts deducted from all clients during an epoch, move to a payout pool which is distributed fairly to node [account owners](network.md#identity-on-the-fleek-network) based on the work performed in the epoch.
+The amounts deducted from all clients during an epoch, move to a payout pool which is distributed fairly to node [account owners](/docs/learn/the-network#identity-on-the-fleek-network) based on the work performed in the epoch.
 
 For a more in-depth dive into Delivery Acknowledgements-related topics, it's advised to read the [whitepaper](/docs/whitepaper). Also, a holistic version of [the Network](/docs/learn/the-network) is available on our documentation site.
 

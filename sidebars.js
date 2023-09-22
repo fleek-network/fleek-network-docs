@@ -26,7 +26,7 @@ const sidebars = {
       collapsible: true,
       items: [
         'learn/index',
-        'learn/network',
+        'learn/the-network',
         'learn/delivery-acknowledgements',
         'learn/token-and-economics',
         'learn/services',
