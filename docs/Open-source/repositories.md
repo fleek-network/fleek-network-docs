@@ -7,7 +7,7 @@ description: Repositories
 category: Documentation
 keywords: [repositories]
 tags:
-- repositories
+- repository
 ---
 
 The Fleek Network's repositories contain a collection of source code, libraries, and other software artifacts that are used to build and maintain our products collaboratively.
