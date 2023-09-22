@@ -1,7 +1,7 @@
 ---
 title: Install
 hide_title: true
-slug: Install
+slug: install
 date: 2023-08-21T23:00:00Z
 canonical: ''
 description: The Fleek Network Lightning CLI installation walkthrough
