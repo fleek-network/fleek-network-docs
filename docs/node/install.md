@@ -127,7 +127,7 @@ To learn more about Systemctl commands, visit the section [Use Systemctl to mana
 Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
-Once the installation is complete, do a health check! Check the section [Health Check](#health-check) to learn how to do a node health checkup.
+Once the installation is complete, do a health check! Check the section [Health Check](/docs/node/health-check) to learn how to do a node health checkup.
 
 ### About the process
 
@@ -458,7 +458,7 @@ lgtn run
 We recommend setting up the process as a systemd service, as it's a long-running process. Instructions to setup a systemd service are available in the section [Systemd Service Setup](#systemd-service-setup).
 :::
 
-Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Health Check](#health-check) to learn how to do a node health checkup.
+Great! You have successfully installed all the required packages, and libraries and have compiled and installed lightning. Check the section [Health Check](/docs/node/health-check) to learn how to do a node health checkup.
 
 ### Systemd Service Setup
 
@@ -669,37 +669,6 @@ sudo systemctl enable docker-lightning.service
 ```
 
 Learn how to manage the Systemd Service by reading the section [manage systemd service](/docs/node/install#use-systemctl-to-manage-systemd-service).
-
-## Health Check
-
-A health check is a special API endpoint that's used to validate the status of a service. To do a health check of a Fleek Network node use the JSON RPC interface via the command line.
-
-:::tip
-We're going to use cURL, make sure that you have it installed otherwise install it in your operating system.
-:::
-
-We'll send a request to the JSON RPC `flk_ping` method. Execute the following command:
-
-```sh
-$ curl -X POST -H "Content-Type: application/json" -d '{
-      "jsonrpc": "2.0",
-      "method": "flk_ping",
-      "params": [],
-      "id": 1
-    }' http://127.0.0.1:4069/rpc/v0
-```
-
-If the request is successful, you should get the result `pong` as follows:
-
-```sh
-{
-  "jsonrpc": "2.0",
-  "result": "pong",
-  "id": 1
-}
-```
-
-To learn more about health checkups, read the section [Health-check](/docs/node/health-check)
 
 ## Use Systemctl to manage Systemd Service
 
