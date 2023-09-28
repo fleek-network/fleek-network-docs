@@ -55,7 +55,7 @@ curl -sS https://get.fleek.network/whitelist | bash
 ```
 
 :::tip
-The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/install#analyzing-log-messages).
+The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/analyzing-logs).
 :::
 
 :::warning

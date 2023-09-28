@@ -427,7 +427,7 @@ Or, the standard error:
 tail -f /var/log/lightning/diagnostic.log
 ```
 
-Learn more about how to [analyze log messages](/docs/node/install#analyzing-log-messages).
+Learn more about how to [analyze log messages](/docs/node/analyzing-logs).
 
 ## Conclusion
 

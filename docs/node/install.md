@@ -124,7 +124,7 @@ To learn more about Systemctl commands, visit the section [Use Systemctl to mana
 :::
 
 :::tip
-Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](#analyzing-log-messages).
+Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
 Once the installation is complete, do a health check! Check the section [Health Check](#health-check) to learn how to do a node health checkup.
@@ -536,7 +536,7 @@ sudo systemctl start lightning.service
 ```
 
 :::tip
-Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](#analyzing-log-messages).
+Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
 To learn more, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
@@ -792,26 +792,6 @@ If you have installed or setup the Service as a Docker Container, prefix the ser
 sudo systemctl status docker-lightning
 ```
 :::
-
-## Analyzing Log Messages
-
-The service logs provide a timeline of events for the Lightning service that is valuable for troubleshooting when encountering issues. When issues arise, analyzing log files is the first thing a node operator needs to do.
-
-To have the log message files (output.log and diagnostic.log), these have to be set up. If you have installed the Node via the [Assisted installer](#assisted-installer), the logs are set up for you automatically.
-
-You can watch the Node output by running the command:
-
-```sh
-tail -f /var/log/lightning/output.log
-```
-
-You can watch the Node diagnostics or errors by running the command:
-
-```sh
-tail -f /var/log/lightning/diagnostic.log
-```
-
-<!-- TODO: To learn more about Fleek Network and lightning, check our [Getting started guide](fleek-network-getting-started-guide). -->
 
 <Author
     name="Helder Oliveira"
