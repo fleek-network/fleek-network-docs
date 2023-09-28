@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[2501],{811:e=>{e.exports=JSON.parse('{"label":"systemd","permalink":"/docs/tags/systemd","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/systemd-service","title":"Systemd Service","description":"Systemd Service","permalink":"/docs/node/systemd-service"}]}')}}]);
