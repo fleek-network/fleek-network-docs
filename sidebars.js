@@ -45,6 +45,7 @@ const sidebars = {
         'node/install',
         'node/health-check',
         'node/analyzing-logs',
+        'node/systemd-service',
         // TODO: Disabled `node/configuration` and `node/diagnostics` sidebar category
         // 'node/configuration',
         // 'node/diagnostics',
