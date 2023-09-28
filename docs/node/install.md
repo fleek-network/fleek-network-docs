@@ -541,6 +541,135 @@ Find the timeline of events for the Lightning service by checking the log files.
 
 To learn more, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
 
+## Docker installation
+
+In this section we'll describe how to run a Fleek Network Lightning Node as a Docker Service. We're going to assume that you have Docker installed and running. If you need help to install Docker, check the guide [running a node in docker](/guides/Node%20Operators/running-a-node-in-docker).
+
+a) We can [easily pull and run](#quick-pull-and-run) the Lightning Docker image from our registry to run the Docker Container quickly.
+
+b) [Build the Docker image](#build-from-source) from the repository source code
+
+Optionally, [wrap the Docker Container as a Systemd Service](#docker-container-as-a-systemd-service).
+
+:::tip
+The Docker images are built for particular CPU architectures (x64) and as declared in the [requirements](/docs/node/requirements/#specs), we're mainly supporting `GenuineIntel`, as there has been reports of failure to build and run the binary on AMD. If you're running on a `AuthenticAMD`, provide us feedback on our [Discord](https://discord.gg/fleekxyz).
+:::
+
+### Quick pull and run
+
+You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
+
+```sh
+sudo docker run \
+    -p 4069:4069 \
+    -p 4200:4200 \
+    -p 6969:6969 \
+    -p 18000:18000 \
+    -p 18101:18101 \
+    -p 18102:18102 \
+    --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+    --name lightning-cli \
+    -it ghcr.io/fleek-network/lightning:latest
+```
+
+:::tip
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+:::
+
+### Build from source
+
+Clone the repository located at [https://github.com/fleek-network/lightning](https://github.com/fleek-network/lightning).
+
+<GitCloneOptions />
+
+Change directory to the project source code directory, e.g. the default `~/fleek-network/lightning`.
+
+```sh
+cd ~/fleek-network/lightning
+```
+
+Build the image named as `lightning` from our Dockerfile:
+
+```sh
+sudo docker build -t lightning -f ./Dockerfile .
+```
+
+:::tip
+Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be succesfull. You can name it differently if that's your preference.
+:::
+
+Once the image is built, you can launch the Docker Container with a `--name` such as `lightning-cli` from the `lightning` image we just created by running:
+
+```sh
+sudo docker run \
+  -p 4069:4069 \
+  -p 4200:4200 \
+  -p 6969:6969 \
+  -p 18000:18000 \
+  -p 18101:18101 \
+  -p 18102:18102 \
+  --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+  --name lightning-cli \
+  -it lightning
+```
+
+:::tip
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+:::
+
+If a `~/.lightning` directory or `~/.lightning/keystore` doesn't exist, one is created for you on `docker run`. You'll need to have the directory populated with the `config.toml` and `keystore` if you want to use a particular identity. Learn more about managing the keystore [here](/guides/Node%20Operators/managing-the-keystore).
+
+### Docker Container as a Systemd Service
+
+Create a unit configuration file:
+
+```sh
+sudo touch /etc/systemd/system/docker-lightning.service
+```
+
+Open the `docker-lightning.service` file in your favourite text editor and put the content:
+
+```sh
+[Unit]
+Description=Fleek Network Node lightning service
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+RestartSec=5
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill lightning-cli
+ExecStartPre=-/usr/bin/docker rm lightning-cli
+ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4069:4069 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-cli ghcr.io/fleek-network/lightning:latest
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Change the file permissions by running the command:
+
+```sh
+sudo chmod 644 /etc/systemd/system/docker-lightning.service
+```
+
+Next, reload the Systemctl Daemon:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Enable the service on startup when the system boots:
+
+```sh
+sudo systemctl enable docker-lightning.service
+```
+
+Learn how to manage the Systemd Service by reading the section [manage systemd service](/docs/node/install#use-systemctl-to-manage-systemd-service).
+
 ## Health Check
 
 A health check is a special API endpoint that's used to validate the status of a service. To do a health check of a Fleek Network node use the JSON RPC interface via the command line.
