@@ -46,7 +46,7 @@ The Docker Container image for Lightning is located at [https://github.com/fleek
 
 ### Pull and run image
 
-You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly. Run the command:
+You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
 
 ```sh
 sudo docker run \
@@ -222,71 +222,7 @@ A Docker image is a read-only template with instructions for creating a Docker c
 
 The starting point for our use-case is a Dockerfile, where all those "template instructions" are declared.
 
-Create a new file `Dockerfile` in the [source code directory](#change-directory-to-lightning-source-code):
-
-```sh
-touch Dockerfile
-```
-
-Copy and paste to the Dockerfile the following content:
-
-```sh
-# The Fleek Network Lightning Docker container is hosted at:
-# https://github.com/fleek-network/lightning/pkgs/container/lightning
-FROM rust:latest as build
-WORKDIR /build
-
-RUN apt-get update
-RUN apt-get install -y \
-    build-essential \
-    cmake \
-    clang \
-    pkg-config \
-    libssl-dev \
-    gcc \
-    protobuf-compiler
-
-RUN --mount=type=cache,target=/usr/local/cargo/registry \
-    cargo install cargo-strip
-
-COPY . .
-ENV RUST_BACKTRACE=1
-
-RUN mkdir -p /build/target/release
-RUN --mount=type=cache,target=/usr/local/cargo/registry \
-    --mount=type=cache,target=/build/target \
-    cargo build --profile release --bin lightning-cli && \
-    cargo strip && \
-    cp /build/target/release/lightning-cli /build
-
-FROM ubuntu:latest
-ARG LIGHTNING_PORTS="4069 4200 6969 18000 18101 18102"
-WORKDIR /root
-SHELL ["/bin/bash", "-c"] 
-
-RUN apt-get update && \
-    apt-get install -y \
-    libssl-dev \
-    ca-certificates
-
-COPY --from=build /build/lightning-cli /usr/local/bin/lgtn
-
-COPY <<EOF /root/init
-#!/usr/bin/bash
-
-if [[ ! -d /root/.lightning/keystore ]]; then
-  lgtn key generate
-fi
-
-lgtn run
-EOF
-
-RUN chmod +x /root/init
-
-EXPOSE $LIGHTNING_PORTS
-
-ENTRYPOINT ["/root/init"]
-```
+A [Dockerfile](https://raw.githubusercontent.com/fleek-network/lightning/main/Dockerfile) should exist in the repository source code, so make sure you have [chage directory to the lightning source code](#change-directory-to-lightning-source-code) to find it.
 
 ### Build the Docker image
 
@@ -364,7 +300,7 @@ sudo docker run \
 ```
 
 :::tip
-Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#create-the-docker-image).
+Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#build-the-docker-image).
 :::
 
 The output would look as the following, showing the error message "Node is not whitelisted" (this error message is due to the testnet phase that requires nodes to be whitelisted to run successfully):
