@@ -410,7 +410,7 @@ sudo docker start lightning-cli
 
 ## Run the Docker Container as Systemd Service
 
-In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some of the reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
+In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some of the reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI complaint solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
 
 :::tip
 Docker recommends using their cross-platform built-in restart policy for running a Container as a Service. For that, configure your Docker service to [start on system boot](https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot).
