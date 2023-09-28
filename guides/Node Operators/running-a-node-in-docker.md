@@ -408,6 +408,67 @@ Finaly, you can start the Fleek Network node by running the command:
 sudo docker start lightning-cli
 ```
 
+## Run the Docker Container as Systemd Service
+
+In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some of the reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
+
+:::tip
+Docker recommends using their cross-platform built-in restart policy for running a Container as a Service. For that, configure your Docker service to [start on system boot](https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot).
+:::
+
+Systemd was specifically developed to serve the purpose of stopping services, dependency checking and recovery of failed services. You can have your host start, stop, enable, check the status, and generally manage a container as a Systemd Service.
+
+### Create the Systemd Service Unit
+
+We are going to create the unit configuration file in the /etc/systemd/system/ directory. The Service Unit is going to be named as `docker-lightning.service`. To create the file run the following command:
+
+```sh
+sudo touch /etc/systemd/system/docker-lightning.service
+```
+
+Open the file in your favourite text editor and populate with the content found here:
+
+```sh
+[Unit]
+Description=Fleek Network Node lightning service
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+RestartSec=5
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill lightning-cli
+ExecStartPre=-/usr/bin/docker rm lightning-cli
+ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4069:4069 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-cli ghcr.io/fleek-network/lightning:latest
+StandardOutput=append:/var/log/lightning/output.log
+StandardError=append:/var/log/lightning/diagnostic.log
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Once the file is saved, change the file permissions by running the command:
+
+```sh
+sudo chmod 644 /etc/systemd/system/docker-lightning.service
+```
+
+Next, reload the Systemctl Daemon:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Enable the service on startup when the system boots:
+
+```sh
+sudo systemctl enable docker-lightning.service
+```
+
+As a result, we are now able to run our containers as a Systemd service. For this, read the document [manage systemd service](/docs/node/install#use-systemctl-to-manage-systemd-service) to find more about how to control the service.
+
 ## Viewing logs
 
 To view the logs of a Docker container in real time, use the following command:
@@ -415,6 +476,22 @@ To view the logs of a Docker container in real time, use the following command:
 ```sh
 sudo docker logs -f lightning-cli
 ```
+
+If you have wraped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
+
+For standard output:
+
+```sh
+tail -f /var/log/lightning/output.log
+```
+
+Or, the standard error:
+
+```sh
+tail -f /var/log/lightning/diagnostic.log
+```
+
+Learn more about how to [analyze log messages](/docs/node/install#analyzing-log-messages).
 
 ## Conclusion
 
