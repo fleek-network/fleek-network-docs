@@ -21,7 +21,7 @@ import ImgBannerDocs from '@site/static/img/banner-docs.png?202309041511';
 
 Fleek Network is an open-source Edge Computing Platform to accelerate the development and execution of decentralized Web Services.
 
-The system builds on a distributed network of Nodes, where services run within a fair and incentivized ecosystem constituted by an open community of developers and operators who can operate Nodes, build services that use the network’s resources, or consume Fleek Network services on the Edge.
+The system builds on a distributed network of nodes, where services run within a fair and incentivized ecosystem constituted by an open community of developers and operators who can operate nodes, build services that use the network’s resources, or consume Fleek Network services on the Edge.
 
 Applications, platforms and protocols build and utilize decentralized services on Fleek Network to optimize performance and reduce dependency on centralized cloud providers. Developers can build faster and launch better products by offloading parts of the stack to the Edge to focus on core features.
 
@@ -47,8 +47,8 @@ We aim to bring computation to where demand is. You can find Fleek Network's pub
 
 ## Need help?
 
-Be part of a community! Join the Fleek Network [Discord](https://discord.gg/fleekxyz) if you want to ask a question, require help or exchange ideas.
+Be part of a community! Join the Fleek Network [discord](https://discord.gg/fleekxyz) if you want to ask a question, require help or exchange ideas.
 
 ## Found an issue?
 
-Issues can be reported in the correspondent repositories [here](https://github.com/fleek-network) and any other reports by messaging us on [Discord](https://discord.gg/fleekxyz).
+Issues can be reported in the correspondent repositories [here](https://github.com/fleek-network) and any other reports by messaging us on [discord](https://discord.gg/fleekxyz).
