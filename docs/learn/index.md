@@ -18,7 +18,7 @@ The Core of Fleek Network offers a foundational layer to enable developers to bu
 
 In contrast, end users have access to network services on the edge, that provide different kinds of computation and data processing features.
 
-We'll take a brief look into [Why does it exist](#why-does-it-exist), [How does it work](#how-does-it-work), and learn about [services](/docs/learn/services), amongst other topics.
+We'll take a brief look into [why does it exist](#why-does-it-exist), [how does it work](#how-does-it-work), and learn about [services](/docs/learn/services), amongst other topics.
 
 :::tip
 For a deep dive into Fleek Network, check the [whitepaper](/docs/whitepaper) section.
@@ -46,7 +46,7 @@ When a client requests a service, the protocol determines the best route to the 
 
 Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed.
 
-The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled up to the protocol consensus consistently throughout the Epoch. This agreement is formed by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
+The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled up to the protocol consensus consistently throughout the epoch (about 24h). This agreement is formed by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
 
 <Author
     name="Helder Oliveira"
