@@ -89,12 +89,11 @@ sudo docker run hello-world
 
 You should get a "Hello from Docker!".
 
-## Create the Dockerfile
+## Check the Dockerfile
 
-```sh
-touch Dockerfile
-```
-Copy and paste to the Dockerfile the following content:
+You should have [changed directory](#change-directory-to-lightning-source-code) to the projectory directory.
+
+If you run a `cat Dockerfile`, you should have content similar to:
 
 ```sh
 FROM rust:latest as builder
@@ -111,29 +110,7 @@ RUN apt-get install -y \
     gcc \
     protobuf-compiler
 
-RUN --mount=type=cache,target=/usr/local/cargo/registry \
-    cargo install cargo-strip
-
-COPY . .
-ENV RUST_BACKTRACE=1
-
-RUN --mount=type=cache,target=/usr/local/cargo/registry \
-    --mount=type=cache,target=/lightning/target \
-    cargo build --profile $PROFILE --bin lightning-cli \
-    && cargo strip \
-    && mv /lightning/target/release/lightning-cli /lightning-cli
-
-FROM ubuntu:latest
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get update -yq && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq \
-    libssl-dev \
-    ca-certificates
-
-# Get compiled binaries from builder's cargo install directory
-COPY --from=builder /lightning/target/release/lightning-cli /usr/local/bin/lgtn
-
-ENTRYPOINT ["lgtn", "run"]
+...
 ```
 
 ## Build the Docker image
