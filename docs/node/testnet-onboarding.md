@@ -11,34 +11,28 @@ tags:
 sidebarCollapsible: false
 ---
 
-## Testnet Onboarding
+## Testnet Phase {1}:
 
-1. Join our [Discord](https://discord.gg/fleekxyz) server
-    
-  a) To get onboarded, go to the `Fleek Network Nodes` section and follow the instructions in the **#access-guide** channel
+Following the successful completion of Fleek Network Testnet **Phase {0}**, the core development team has been actively implementing the next set of core protocol functionalities which include services, the rewards system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
-2. Learn about the [required server specifications](/docs/node/requirements) on which the Fleek Network Node can be installed and run.
+Applications for node operators will open on Fleek’s Discord Wednesday 20th at 12pm EST. This is a rolling application form in [preparation](https://blog.fleek.network/post/fleek-network-testnet-phase1-early-brief) for the release of Phase {1} in October.
 
-3. Follow the [instructions](/docs/node/install) to install the node via the [assisted installer](/docs/node/install#assisted-installer) (easy) or [manually](/docs/node/install#manual-installation) (advanced).
+:::tip
+The application is **open to everyone** interested regardless if have participated in any previews phases. As we are building, the application process help us manage expectations and gather feedback. In the future, the Fleek Network is aiming to allow anyone to have the ability to set up a node without need of applying via forms or requesting permissions.
+:::
 
-4. In our [Discord](https://discord.gg/fleekxyz) server, visit **#access-form,** run the node commands, and submit the information in the form.
+1) Follow the instructions in the **#access-guide** channel and submit your application.
+
+2) The team will provide updates in [discord](https://discord.gg/fleekxyz) to all applicants and might reach out for further information.
+
+3) Stay tuned to updates in the **#node-announcements** channel regarding node hardware requirements, or preparations for Phase {1}.
+
+Visit the blog [Fleek Network Testnet Phase {1}: Preview](https://blog.fleek.network/post/fleek-network-testnet-phase1-early-brief/) to learn more about the Testnet Phase {1} and find answers to frequently asked questions.
 
 :::caution Important
 Live information should be checked in the Fleek Network 
 [node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) Discord channel. Due to the number of requests and to improve the onboarding experience, the channel or forms might have offline periods. Check the [node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) for live updates, please!
 :::
-
-5. The team will review your application, allowing/listing your node if approved
-
-:::info
-When approved, you will be notified in the **#access-approved** channel on Discord and given the Node Operator role.
-:::
-
-## Important [Discord](https://discord.gg/fleekxyz) Notes & Events:
-
-- All announcements for node operators will be sent to **#node-announcements**
-- You can ask for help in **#troubleshooting**, or chat with the team in the **#node-operators** channel
-- Every Friday at 3 pm EST, we will conduct Node Community Calls in **#node-stage**
 
 ## Node whitelist verification
 
@@ -54,10 +48,12 @@ You might find it useful to run the following command to verify the status of th
 curl -sS https://get.fleek.network/whitelist | bash
 ```
 
+## News and Announcements
+
+- All announcements for node operators will be sent to **#node-announcements**
+- You can ask for help in **#troubleshooting**, or chat with the team in the **#node-operators** channel
+
+
 :::tip
 The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/analyzing-logs).
-:::
-
-:::warning
-We are going to be whitlisting in waves at the beginning of every epoch. Epochs are currently 30 mins (as for this period of testnet). If you have [updated the binary](/references/Lightning%20CLI/update-cli-from-source-code), run the node that you applied with. While your not whitelisted your node will be checking every 5 minutes and will start when whitelisted.
 :::
