@@ -30,7 +30,7 @@ We're using cURL, for the examples, thus make sure that you have it installed on
 
 ## Quick health check
 
-Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/learn/ports) 4069.
+Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/node/requirements#ports) 4069.
 
 ```sh
 curl -w "\p" localhost:4069/health
