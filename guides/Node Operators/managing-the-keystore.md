@@ -329,7 +329,7 @@ tar -cf "keystore.tar" $HOME/.lightning/keystore
 
 The `keystore.tar` should be in the current work directory.
 
-Use `gpg` with the [symmetric option](ttps://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with assymetric `gpg`, it's similar but it's not signed with your public key or such.
+Use `gpg` with the [symmetric option](https://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with assymetric `gpg`, it's similar but it's not signed with your public key or such.
 
 The encryption command is:
 
