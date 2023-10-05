@@ -568,7 +568,7 @@ sudo docker run \
     -p 18101:18101 \
     -p 18102:18102 \
     --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
-    --name lightning-cli \
+    --name lightning-node \
     -it ghcr.io/fleek-network/lightning:latest
 ```
 
@@ -598,7 +598,7 @@ sudo docker build -t lightning -f ./Dockerfile .
 Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be succesfull. You can name it differently if that's your preference.
 :::
 
-Once the image is built, you can launch the Docker Container with a `--name` such as `lightning-cli` from the `lightning` image we just created by running:
+Once the image is built, you can launch the Docker Container with a `--name` such as `lightning-node` from the `lightning` image we just created by running:
 
 ```sh
 sudo docker run \
@@ -609,7 +609,7 @@ sudo docker run \
   -p 18101:18101 \
   -p 18102:18102 \
   --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
-  --name lightning-cli \
+  --name lightning-node \
   -it lightning
 ```
 
@@ -639,10 +639,10 @@ Requires=docker.service
 Restart=always
 RestartSec=5
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill lightning-cli
-ExecStartPre=-/usr/bin/docker rm lightning-cli
+ExecStartPre=-/usr/bin/docker kill lightning-node
+ExecStartPre=-/usr/bin/docker rm lightning-node
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
-ExecStart=/usr/bin/docker run -p 4069:4069 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-cli ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4069:4069 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-node ghcr.io/fleek-network/lightning:latest
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 

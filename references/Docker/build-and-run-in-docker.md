@@ -124,7 +124,7 @@ sudo docker build -t lightning -f ./Dockerfile .
 ## Generate keys
 
 ```sh
-sudo docker exec -it lightning-cli lgtn keys generate
+sudo docker exec -it lightning-node lgtn keys generate
 ```
 
 ## Docker Container
@@ -138,7 +138,7 @@ sudo docker run \
   -p 18101:18101 \
   -p 18102:18102 \
   -v $HOME/.lightning/:/root/.lightning/:rw \
-  --name lightning-cli \
+  --name lightning-node \
   -it lightning
 ```
 
@@ -147,7 +147,7 @@ sudo docker run \
 To view the logs of a Docker container in real time, use the following command:
 
 ```sh
-sudo docker logs -f lightning-cli
+sudo docker logs -f lightning-node
 ```
 
 <Author

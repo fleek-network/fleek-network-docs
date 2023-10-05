@@ -51,7 +51,7 @@ If you are controlling the Docker Container as a Systemd Service (Systemctl to s
 In any case, you can use the Docker command to analyze the logs. If you have stick with the default naming conventions it'd look like:
 
 ```sh
-sudo docker logs -f lightning-cli
+sudo docker logs -f lightning-node
 ```
 :::
 

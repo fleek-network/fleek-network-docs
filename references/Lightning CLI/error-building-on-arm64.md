@@ -51,18 +51,18 @@ Set `RUSTFLAGS` on build, as follows:
 RUSTFLAGS="-Clink-arg=-Wl,--allow-multiple-definition" cargo +stable build --release 
 ```
 
-Once the build completes, you should find the generated binary `lightning-cli` under the directory `~/fleek-network/lightning/target/release/lightning-cli`.
+Once the build completes, you should find the generated binary `lightning-node` under the directory `~/fleek-network/lightning/target/release/lightning-node`.
 
 As an example, execute:
 
 ```sh
-~/fleek-network/lightning/target/release/lightning-cli help
+~/fleek-network/lightning/target/release/lightning-node help
 ```
 
 To find the help output:
 
 ```sh
-Usage: lightning-cli [OPTIONS] <COMMAND>
+Usage: lightning-node [OPTIONS] <COMMAND>
 
 Commands:
   run           Start the node
