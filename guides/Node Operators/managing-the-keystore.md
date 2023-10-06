@@ -28,7 +28,7 @@ At time of writing the rewards mechanism hasn't yet been introduced, read the [t
 
 We'll use the term identity to describe the key store declared in the configuration, in our case [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) files. The content of the PEM files and the file itself should be kept secret.
 
-The key store is in the file system and the location is defined in the Fleek Network `~/.lightning/config.toml`, as a private key stored in an identity named PEM file (by default `consensus.pem` and `node.pem`). It's essential to understand this, as you may want to copy the identity to a new server setup, to persist the identity accross to the new server setup.
+The key store is in the file system and the location is defined in the Fleek Network `~/.lightning/config.toml`, as a private key stored in an identity named PEM file (by default `consensus.pem` and `node.pem`). It's essential to understand this, as you may want to copy the identity to a new server setup, to persist the identity across to the new server setup.
 
 :::caution
 Security is achieved by issuing users private cryptographic keys. Only the holder of the private key has access to sensitive information, such as an identity, which relates to reputation, rewards, etc. The security of the private key is the responsibility of the user. Unfortunately, Fleek Network is unable to help you regain access to your private key if you've lost or failed to secure it. The private keys are your responsibility.
@@ -270,7 +270,7 @@ To verify which keys are loaded by the Lightning CLI run the command:
 lgtn keys show
 ```
 
-You'd find the public keys in the output, which can be used for comparision and should be different everytime the configuration changes and reloaded. Here's an example of the output:
+You'd find the public keys in the output, which can be used for comparison and should be different every time the configuration changes and reloaded. Here's an example of the output:
 
 ```sh
 Node Public Key: RwPpr35H5AAfWwSDFxwYuJv5TA8PWUd2pdBg+UKsORc=
@@ -314,7 +314,7 @@ unzip keystore.zip.enc -d $HOME/.lightning/keystore
 ```
 
 :::tip
-We provide the unzip destiny target to the flag `-d`. The unzip process outputs the files onto the desired location `$HOME/.lightning/keystore`, thus overriding any contents. If you have any files in the destiny target directory it'll be overriden, effectively replacing with the output of the unzipped directory content, so make sure you backup any files as required.
+We provide the unzip destiny target to the flag `-d`. The unzip process outputs the files onto the desired location `$HOME/.lightning/keystore`, thus overriding any contents. If you have any files in the destiny target directory it'll be overridden, effectively replacing with the output of the unzipped directory content, so make sure you backup any files as required.
 :::
 
 ### Higher security
@@ -329,7 +329,7 @@ tar -cf "keystore.tar" $HOME/.lightning/keystore
 
 The `keystore.tar` should be in the current work directory.
 
-Use `gpg` with the [symmetric option](https://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with assymetric `gpg`, it's similar but it's not signed with your public key or such.
+Use `gpg` with the [symmetric option](https://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with asymmetric `gpg`, it's similar but it's not signed with your public key or such.
 
 The encryption command is:
 
@@ -409,7 +409,7 @@ For instance, we can imagine a scenario where our service is started with the co
 lgtn -c /home/lgtn/.lightning/config.toml run
 ```
 
-Where the `keystore` is placed under the parent directory `/home/lgtn/.lightning/`. Resulting in the configuration file have the following settings for the hypotetical username `lgtn`:
+Where the `keystore` is placed under the parent directory `/home/lgtn/.lightning/`. Resulting in the configuration file have the following settings for the hypothetical username `lgtn`:
 
 ```sh
 [signer]
@@ -427,7 +427,7 @@ We've walked through most basics of where the configuration file is located, the
 
 Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
 
-Separatily, at risk of oversimpliying provided an brief introduction into the backup of the keystore directory.
+Separately, at risk of oversimplifying provided a brief introduction into the backup of the keystore directory.
 
 In the future, we'll introduce more advanced topics that will help you improve the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
 
