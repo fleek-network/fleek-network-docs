@@ -243,7 +243,7 @@ The repository contains the source code for the implementation of the Fleek Netw
 
 ### Directory structure
 
-There are three top-level directories, namely `lib` , `core` and `services`.
+There are three top-level directories, namely `lib`, `core` and `services`.
 
 Lib - These are open-source libraries created to help tackle the project features and packaged with a friendly license in the Rust ecosystem (MIT, Apache).
 
