@@ -146,7 +146,7 @@ The build command uses the Rust compiler, which might take a while depending on 
 
 Once the Rust compiler completes, the generated binary will be available in the source code project directory. If you stick with the default, that'll look like `~/fleek-network/lightning/target/debug/lightning-node`.
 
-To avoid having to specify the pathname everytime, create a symbolic link to keep it short. Here we'll name the process as the global `lgtn`:
+To avoid having to specify the pathname every time, create a symbolic link to keep it short. Here we'll name the process as the global `lgtn`:
 
 ```sh
 sudo ln -s "~/fleek-network/lightning/target/debug/lightning-node" /usr/local/bin/lgtn
