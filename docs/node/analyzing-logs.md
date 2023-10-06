@@ -27,7 +27,7 @@ Standard out and standard error are two data streams created when we launch the 
 By convention, most of the log files create on Linux are found under the directory `/var/log/`, a standard area where system messages are logged and recorded.
 :::
 
-Because normal output and error messages have their own channel, they can be handled independently of one another. Thus, we keep this in separate files that aggregate the output messages emited by the Lightning process.
+Because normal output and error messages have their own channel, they can be handled independently of one another. Thus, we keep this in separate files that aggregate the output messages emitted by the Lightning process.
 
 ## Watch logs
 
