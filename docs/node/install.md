@@ -543,7 +543,7 @@ To learn more, visit the section [Use Systemctl to manage the Lightning Service]
 
 ## Docker installation
 
-In this section we'll describe how to run a Fleek Network Lightning Node as a Docker Service, where:
+In this section we'll describe how to run a Fleek Network Lightning Node as a Docker Service. We're going to assume that you have Docker installed and running. If you need help to install Docker, check the guide [running a node in docker](/guides/Node%20Operators/running-a-node-in-docker).
 
 a) We can [easily pull and run](#quick-pull-and-run) the Lightning Docker image from our registry to run the Docker Container quickly.
 
@@ -552,18 +552,12 @@ b) [Build the Docker image](#build-from-source) from the repository source code
 Optionally, [wrap the Docker Container as a Systemd Service](#docker-container-as-a-systemd-service).
 
 :::tip
-The Docker images are built for particular CPU architectures (x64) and as declared in the [requirements](/docs/node/requirements/#specs), we're mainly supporting `GenuineIntel`, as there have been reports of failure to build and run the binary on AMD. If you're running on an `AuthenticAMD`, provide us feedback on our [Discord](https://discord.gg/fleekxyz).
+The Docker images are built for particular CPU architectures (x64) and as declared in the [requirements](/docs/node/requirements/#specs), we're mainly supporting `GenuineIntel`, as there has been reports of failure to build and run the binary on AMD. If you're running on a `AuthenticAMD`, provide us feedback on our [Discord](https://discord.gg/fleekxyz).
 :::
-
-### Prerequesites
-
-- A basic knowledge of command line interface (CLI)
-- Have Docker installed and running, if you need help installing Docker, check the guide [running a node in docker](/guides/Node%20Operators/running-a-node-in-docker)
-- Docker basics
 
 ### Quick pull and run
 
-You can pull and run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
+You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
 
 ```sh
 sudo docker run \
