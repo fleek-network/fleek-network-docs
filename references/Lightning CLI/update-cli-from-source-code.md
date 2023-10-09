@@ -62,7 +62,7 @@ git fetch --tags
 Checkout to the tag `fn-alpha-0`
 
 ```sh
-git checkout tags/fn-alpha-0
+git checkout fn-alpha-0
 ```
 
 :::tip
