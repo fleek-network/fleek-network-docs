@@ -75,11 +75,10 @@ cd ~/fleek-network/lightning
 
 ### Checkout to branch
 
-
-Make sure that you are checked in to the correct branch. For example, if that'd be the first testnet phase it'd be called `testnet-alpha-0`.
+Make sure that you are checked in to the correct commit in history. For example, if that'd be the first testnet phase you'd checkout the tag `fn-alpha-0`.
 
 ```sh
-git checkout <BRANCH-NAME>
+git checkout tags/fn-alpha-0
 ```
 
 Here's an example of how the comman would look like for the main default branch with corresponding name `main`.
@@ -90,24 +89,18 @@ git checkout main
 
 <CheckoutCommitWarning />
 
-Here's an example of how the comman would look like for the branch name `testnet-alpha-0`.
-
-```sh
-git checkout testnet-alpha-0
-```
-
 ### Pull the latest changes
 
 The syntax to pull the latest commits is the following:
 
 ```sh
-git pull <REPOSITORY-NAME> <BRANCH-NAME>
+git pull <REPOSITORY-NAME> tags/<TAG-NAME>
 ```
 
-The git pull command is used to fetch and merge changes from the remote repository to the local repository. Here we're pulling from remote named `origin` and branch `main`. 
+The git pull command is used to fetch and merge changes from the remote repository to the local repository. Here we're pulling from remote named `origin` and tag `fn-alpha-0`.
 
 ```sh
-git pull origin main
+git pull origin tags/fn-alpha-0
 ```
 
 :::tip
@@ -136,8 +129,8 @@ origin	git@github.com:fleek-network/lightning.git (push)
 Alternatively, you can stash and pull, to reset the repository to the origin.
 
 ```sh
-git fetch origin <BRANCH-NAME>
-git reset --hard origin/<BRANCH-NAME>
+git fetch --tags
+git reset --hard tags/<TAG-NAME>
 git clean -f
 ```
 
