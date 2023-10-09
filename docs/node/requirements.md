@@ -41,7 +41,7 @@ If you don’t have a server or a spare machine, keep reading as we'll give you 
 ## Specs
 ---
 
-The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).
+The recommended number of CPU cores is a minimum of 4 with a minimum CPU speed of 2.0 GHz. The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).
 
 A minimum of 32 GB of memory (RAM) is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
 
