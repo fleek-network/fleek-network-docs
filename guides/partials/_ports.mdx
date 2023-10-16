@@ -1,20 +1,55 @@
 Amongst other resources, ports play the role of managing and organizing network traffic. The ports initiate and terminate network connections crucial for the node to operate in the Fleek Network. The operating system should have the ports enabled and open for the node to run successfully.
 
+We reserve the following top level ranges:
+
+- TCP: `4200-4299`
+- UDP: `4300-4399`
+
+Each service in the node has 10 ports reserved within each range.
+
+:::note
+For node operators, they can either choose to individually open up the assigned ports, or just open the top level ranges, at their discretion. But we reserve the full ranges for future use, so they should avoid any port conflicts with other software running on the node.
+:::
+
+:::tip
+For the Node Operators who opt to run the `get.fleek.network` assisted installer, the ports are verified if in use.
+:::
+
 The Node process requires the following ports:
 
-- RPC (port 4069)
-- Pool (4200)
-- Handshake (6969)
-- Narwhal
-    - Primary (port 18000)
-    - Worker (port 18101)
-    - Mempool (port 18102)
+### Connection Pool (`4x00-4x09`)
 
-There’s a single worker at the protocol level. In the future, if a node is allowed to run >1 worker, the ports can look like (worker#X):
+- Netkit QUIC: `4300 (UDP)`
 
-- Narwhal
-    - Worker (port 18X01)
-    - Mempool (or 18X02)
+### Consensus (`4x10-4x19`)
+
+- Mempool: `4210 (TCP)`
+- Primary: `4310 (UDP)`
+- Worker: `4311 (UDP)`
+
+### Handshake (`4x20-4x29`)
+
+- HTTP: `4220 (TCP)`
+- TCP: `4221 (TCP)`
+- WebRTC: `4320 (UDP)`
+- WebTransport: `4321 (UDP)`
+
+### RPC (`4x30-4x39`)
+
+- HTTP: `4230 (TCP)`
+- WebSocket / WebTransport?
+
+### DHT (`4x40-4x49`)
+
+- UDP: `4340 (UDP)`
+
+### Broadcast
+
+- Uses connection pool
+
+### Blockstore Server
+
+- Uses connection pool
 
 :::caution required
 The ports should be freed before launching the node process. Any blockers or firewalls should be configured to enable the ports.
