@@ -58,7 +58,17 @@ Once `FLK` balance is available, click in the `Stake` button. You'll be required
 You can get the details by running the **server details** script in your terminal connected to your machine or server, as follows:
 
 ```sh
-curl https://get.fleek.network/server_details | bash
+curl https://get.fleek.network/node_details | bash
+```
+
+The response should be similar to the following:
+
+```
+🤖 Your server details are the following
+
+The Node Public Key is XXXXXXXX
+The Consensus Public Key is YYYYYYYY
+The Node Server IP address is X.X.X.X
 ```
 
 
