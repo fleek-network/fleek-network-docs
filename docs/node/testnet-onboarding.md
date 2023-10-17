@@ -55,7 +55,7 @@ Once `FLK` balance is available, click in the `Stake` button. You'll be required
 - Consensus Public Key
 - Server IP Address
 
-You can get the details by running the **server details** script in your terminal connected to your machine or server, as follows:
+You can get the details by running the **node details** script in your terminal connected to your machine or server, as follows:
 
 ```sh
 curl https://get.fleek.network/node_details | bash
@@ -91,6 +91,29 @@ Visit the section [Systemd Service](/docs/node/systemd-service) to learn how to 
 The Systemd Service is setup automatically by the assisted installer, manually if you have followed the instructions provided, or the docker install. If you have a custom set up, you'll have to do the equivalent to start the node as described in the section [Systemd Service](/docs/node/systemd-service).
 :::
 
+Make sure you do a quick healthcheck:
+
+```
+curl -w "\p" localhost:4230/health
+```
+
+To learn more about healchecks read the section [here](/docs/node/health-check).
+
+9) Confirm Node Stake
+
+To confirm the Node Stake amount, you can run the **node details** script to get the information. It should only show the information if available, as follows:
+
+```sh
+curl https://get.fleek.network/node_details | bash
+```
+
+The Stake amount can be verified by querying the [RPC-JSON API](/docs/learn/the-network/#json-rpc-interface) method `flk_get_node_info`. 
+
+Alternatively, you can run the `node_details` script to get the information if available, as follows:
+
+```sh
+curl https://get.fleek.network/node_details | bash
+```
 
 ## Troubleshooting
 
