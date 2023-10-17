@@ -53,7 +53,7 @@ Once `FLK` balance is available, click in the `Stake` button. You'll be required
 
 - Node Public Key
 - Consensus Public Key
-- Server IP Address or domain name (pointing to the server IP)
+- Server IP Address
 
 You can get the details by running the **server details** script in your terminal connected to your machine or server, as follows:
 
@@ -68,10 +68,30 @@ The response should be similar to the following:
 
 The Node Public Key is XXXXXXXX
 The Consensus Public Key is YYYYYYYY
-The Node Server IP address is X.X.X.X
+The Node Server IP address is Z.Z.Z.Z
 ```
 
-
-:::tip
-The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear Local data`. After doing this Metamask will clear the cache.
+:::caution warning
+Make sure that you copy and paste the correct values otherwise the transaction it'll fail.
 :::
+
+7) Confirm the transaction on metamask
+
+It is important to note that when transacting through Metamask, a warning message might pop up regarding gas costs, but rest assured that there won't be any deductions from your wallet balance.
+
+You'll have to wait for Metamask to confirm the transaction, which Metamask should take about 10 seconds to confirm. Although, the transaction takes under a second.
+
+Important to note that in Testnet Phase {1} the Epoch is set to about 30 minutes. This is the average period you'll have to wait to see any meaningful logs.
+
+8) Start the Node
+
+Visit the section [Systemd Service](/docs/node/systemd-service) to learn how to enable, disable, start, stop the Systemd Service.
+
+:::note
+The Systemd Service is setup automatically by the assisted installer, manually if you have followed the instructions provided, or the docker install. If you have a custom set up, you'll have to do the equivalent to start the node as described in the section [Systemd Service](/docs/node/systemd-service).
+:::
+
+
+## Troubleshooting
+
+The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear Local data`. After doing this Metamask will clear the cache.
