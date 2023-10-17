@@ -13,47 +13,55 @@ sidebarCollapsible: false
 
 ## Testnet Phase {1}:
 
-Following the successful completion of Fleek Network Testnet **Phase {0}**, the core development team has been actively implementing the next set of core protocol functionalities which include services, the rewards system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
+Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the rewards system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
-Applications for node operators will open on Fleek’s Discord Wednesday 20th at 12pm EST. This is a rolling application form in [preparation](https://blog.fleek.network/post/fleek-network-testnet-phase1-early-brief) for the release of Phase {1} in October.
 
-:::tip
-The application is **open to everyone** interested regardless if have participated in any previews phases. As we are building, the application process help us manage expectations and gather feedback. In the future, the Fleek Network is aiming to allow anyone to have the ability to set up a node without need of applying via forms or requesting permissions.
+The Testnet Phase {1} is open to everybody. To join, you will have to follow the steps below:
+
+1) Install the Fleek Network Lightning CLI latest version. Find the instructions to installer [here](/docs/node/install), if you already have it installed use the update instructions [here](/references/Lightning%20CLI/update-cli-from-source-code)
+
+Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update instructions provided [here](/references/Lightning%20CLI/update-cli-from-source-code).
+
+:::caution Warning
+The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own and misaligned which causes issues. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicy that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient please!
 :::
 
-1) Follow the instructions in the **#access-guide** channel and submit your application.
+2) Setup the Metamask browser extention
 
-2) The team will provide updates in [discord](https://discord.gg/fleekxyz) to all applicants and might reach out for further information.
+Open the Metamask `settings`, located in the drop-down (top-right menu options).
 
-3) Stay tuned to updates in the **#node-announcements** channel regarding node hardware requirements, or preparations for Phase {1}.
+- Network Name: `Fleek Network Testnet`
+- RPC URL: `https://rpc.testnet.fleek.network/rpc/v0`
+- Chain ID: `1337`
+- Currency symbol: `FLK`
 
-Visit the blog [Fleek Network Testnet Phase {1}: Preview](https://blog.fleek.network/post/fleek-network-testnet-phase1-early-brief/) to learn more about the Testnet Phase {1} and find answers to frequently asked questions.
+3) Visit the faucet website
 
-:::caution Important
-Live information should be checked in the Fleek Network 
-[node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) Discord channel. Due to the number of requests and to improve the onboarding experience, the channel or forms might have offline periods. Check the [node announcements](https://discord.com/channels/965698989464887386/1148719641896693873) for live updates, please!
-:::
+Before proceeding, make sure to have the Fleek Network selected as the metamask network. Once confirmed, visit the [Faucet website](https://TODO:add-faucet-url)
 
-## Node whitelist verification
+4) Connect wallet
 
-You might find it useful to run the following command to verify the status of the node whitelist status–since a node throws an error if not whitelisted, this can be verified by looking at and monitoring the `diagnostic.log` file manually, otherwise, use the method shared here.
+In the [Faucet website](https://TODO:add-faucet-url), you have to `Connect Wallet`.
 
-1) Connect to the server terminal where the node is installed
+5) Mint FLK
 
-2) Switch to the user account that was used to set up the node as recommended in the [installation guide](/docs/node/install#create-a-user)
+Once `Connect Wallet` is ready, proceed to `Mint FLK` and wait until the balance of the account in your Metamask increases. You need to have `FLK` before proceeding. Be patient.
 
-3) Execute the following command
+6) Stake FLK
+
+Once `FLK` balance is available, click in the `Stake` button. You'll be required to provided the following details from your node:
+
+- Node Public Key
+- Consensus Public Key
+- Server IP Address or domain name (pointing to the server IP)
+
+You can get the details by running the **server details** script in your terminal connected to your machine or server, as follows:
 
 ```sh
-curl -sS https://get.fleek.network/whitelist | bash
+curl https://get.fleek.network/server_details | bash
 ```
-
-## News and Announcements
-
-- All announcements for node operators will be sent to **#node-announcements**
-- You can ask for help in **#troubleshooting**, or chat with the team in the **#node-operators** channel
 
 
 :::tip
-The node whitelist verification will verify the logs output to determine if the node has the "node whitelist" error. You can verify this manually by observing the `diagnostic.log`. To learn how to check the `logs`, read the section [analyzing log messages](/docs/node/analyzing-logs).
+The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear Local data`. After doing this Metamask will clear the cache.
 :::
