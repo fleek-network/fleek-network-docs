@@ -25,7 +25,7 @@ To join, you will have to follow the steps below:
 
 ### 1) Install the Fleek Network Lightning CLI latest version
 
-Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/update-lightning).
+Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/updating-lightning).
 
 :::caution Warning
 The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicy that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
@@ -38,7 +38,11 @@ Open the Metamask `settings`, located in the drop-down (top-right menu options).
 - Network Name: `Fleek Network Testnet`
 - RPC URL: `https://rpc.testnet.fleek.network/rpc/v0`
 - Chain ID: `1337`
-- Currency symbol: `FLK`
+- Currency symbol: `tFLK`
+
+:::note
+`Testnet FLK` on testnets are supposed to have no real value. Since you need Testnet `FLK` to actually interact with Fleek Network, users get `Testnet FLK` for free from the faucet. For clarity and simplicity we'll refer to `Testnet FLK` as `tFLK`.
+:::
 
 ### 3) Visit the faucet website
 
@@ -48,13 +52,13 @@ Before proceeding, make sure to have the Fleek Network selected as the metamask 
 
 In the [Faucet website](https://TODO:add-faucet-url), you have to click the `Connect Wallet`.
 
-### 5) Mint FLK
+### 5) Mint tFLK
 
-Once `Connect Wallet` is ready, proceed to `Mint FLK` and wait until the balance of the account in your Metamask increases. You need to have `FLK` before proceeding. Be patient.
+Once `Connect Wallet` is ready, proceed to `Mint tFLK` and wait until the balance of the account in your Metamask increases. You need to have `tFLK` before proceeding. Be patient.
 
-### 6) Stake FLK
+### 6) Stake tFLK
 
-Once `FLK` balance is available, click in the `Stake` button. You'll be required to provided the following details from your node:
+Once `tFLK` balance is available, click in the `Stake` button. You'll be required to provided the following details from your node:
 
 - Node Public Key
 - Consensus Public Key
@@ -129,7 +133,7 @@ If you have staked successfully and the transaction details in the Metamask wall
 
 Metamask:
 - Copy the Account address at the very top of your Metamask home
-- Copy the Transaction ID by clicking in the FLK transaction → Copy Transaction ID at the very top
+- Copy the Transaction ID by clicking in the tFLK transaction → Copy Transaction ID at the very top
 - Copy the Activity log details of the transaction
 
 Server where the Node is setup:
@@ -137,7 +141,7 @@ Server where the Node is setup:
 - Copy the Server IP Address
 
 :::tip
-You can get the Node Public Key and Server IP Address quick by using the [node details](#6-stake-flk) script described in the section.
+You can get the Node Public Key and Server IP Address quick by using the [node details](#6-stake-tflk) script described in the section.
 :::
 
 Report to us by sharing the details about via our [discord](https://discord.gg/fleekxyz) troubleshooting channel.
