@@ -15,8 +15,13 @@ sidebarCollapsible: false
 
 Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the rewards system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
+### Prerequesites
 
-The Testnet Phase {1} is open to everybody. To join, you will have to follow the steps below:
+The Testnet Phase {1} is open to everybody. Everyone's free to join the Testnet Phase {1}, regardless of whether they have participated in any prior testnet phase or filled any forms.
+
+The Fleek team cares about user experience and provides documentation and tools (whichever's your preference) to onboard easily and quickly. However, the Node operator's server should have the [minimum requirements](/docs/node/requirements) to set up and run a Fleek Network node.
+
+To join, you will have to follow the steps below:
 
 ### 1) Install the Fleek Network Lightning CLI latest version
 
