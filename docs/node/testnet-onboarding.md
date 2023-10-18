@@ -18,36 +18,36 @@ Following the successful completion of Fleek Network Testnet Phase {0}, the core
 
 The Testnet Phase {1} is open to everybody. To join, you will have to follow the steps below:
 
-1) Install the Fleek Network Lightning CLI latest version. Find the instructions to installer [here](/docs/node/install), if you already have it installed use the update instructions [here](/references/Lightning%20CLI/update-cli-from-source-code)
+### 1) Install the Fleek Network Lightning CLI latest version
 
-Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update instructions provided [here](/references/Lightning%20CLI/update-cli-from-source-code).
+Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/update-lightning).
 
 :::caution Warning
-The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own and misaligned which causes issues. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicy that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient please!
+The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicy that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
 :::
 
-2) Setup the Metamask browser extention
+### 2) Setup the Metamask browser extension
 
-Open the Metamask `settings`, located in the drop-down (top-right menu options).
+Open the Metamask `settings`, located in the drop-down (top-right menu options). Set the following property values:
 
 - Network Name: `Fleek Network Testnet`
 - RPC URL: `https://rpc.testnet.fleek.network/rpc/v0`
 - Chain ID: `1337`
 - Currency symbol: `FLK`
 
-3) Visit the faucet website
+### 3) Visit the faucet website
 
 Before proceeding, make sure to have the Fleek Network selected as the metamask network. Once confirmed, visit the [Faucet website](https://TODO:add-faucet-url)
 
-4) Connect wallet
+### 4) Connect wallet
 
-In the [Faucet website](https://TODO:add-faucet-url), you have to `Connect Wallet`.
+In the [Faucet website](https://TODO:add-faucet-url), you have to click the `Connect Wallet`.
 
-5) Mint FLK
+### 5) Mint FLK
 
 Once `Connect Wallet` is ready, proceed to `Mint FLK` and wait until the balance of the account in your Metamask increases. You need to have `FLK` before proceeding. Be patient.
 
-6) Stake FLK
+### 6) Stake FLK
 
 Once `FLK` balance is available, click in the `Stake` button. You'll be required to provided the following details from your node:
 
@@ -55,27 +55,28 @@ Once `FLK` balance is available, click in the `Stake` button. You'll be required
 - Consensus Public Key
 - Server IP Address
 
-You can get the details by running the **node details** script in your terminal connected to your machine or server, as follows:
+You can get the details quickly by running the **node details** script in the terminal connected to your machine or server where the node is setup and running, as follows:
 
 ```sh
 curl https://get.fleek.network/node_details | bash
 ```
 
-The response should be similar to the following:
+The response should included the following details:
 
 ```
 🤖 Your server details are the following
 
-The Node Public Key is XXXXXXXX
-The Consensus Public Key is YYYYYYYY
-The Node Server IP address is Z.Z.Z.Z
+The Node Public Key is <NODE PUBLIC KEY>
+The Consensus Public Key is <CONSENSUS PUBLIC KEY>
+The Node Server IP address is <SERVER IP ADDRESS>
 ```
 
 :::caution warning
-Make sure that you copy and paste the correct values otherwise the transaction it'll fail.
+The output above is an example, you'll not find the actual text `<NODE PUBLIC KEY>`, `<CONSENSUS PUBLIC KEY>` but the text values (string of bits), or `<SERVER IP ADDRESS>` where instead you'll find a numerical ip address.
+Make sure that you copy and paste the correct values otherwise the transaction will fail!
 :::
 
-7) Confirm the transaction on metamask
+### 7) Confirm the transaction on metamask
 
 It is important to note that when transacting through Metamask, a warning message might pop up regarding gas costs, but rest assured that there won't be any deductions from your wallet balance.
 
@@ -83,7 +84,7 @@ You'll have to wait for Metamask to confirm the transaction, which Metamask shou
 
 Important to note that in Testnet Phase {1} the Epoch is set to about 30 minutes. This is the average period you'll have to wait to see any meaningful logs.
 
-8) Start the Node
+### 8) Start the Node
 
 Visit the section [Systemd Service](/docs/node/systemd-service) to learn how to enable, disable, start, stop the Systemd Service.
 
@@ -99,7 +100,7 @@ curl -w "\p" localhost:4230/health
 
 To learn more about healchecks read the section [here](/docs/node/health-check).
 
-9) Confirm Node Stake
+### 9) Confirm Node Stake
 
 To confirm the Node Staked amount, you can run the **node details** script to get the information. The **node details** output will only show staked information if available, if it doesn't show staked information it means that your Node is not properly staked.
 
