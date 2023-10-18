@@ -104,7 +104,7 @@ The Systemd Service is setup automatically by the assisted installer, manually i
 Make sure you do a quick healthcheck:
 
 ```
-curl -w "\p" localhost:4230/health
+curl https://get.fleek.network/healthcheck | bash
 ```
 
 To learn more about healchecks read the section [here](/docs/node/health-check).
