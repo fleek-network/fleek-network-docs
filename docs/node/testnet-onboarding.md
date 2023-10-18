@@ -101,19 +101,15 @@ To learn more about healchecks read the section [here](/docs/node/health-check).
 
 9) Confirm Node Stake
 
-To confirm the Node Stake amount, you can run the **node details** script to get the information. It should only show the information if available, as follows:
+To confirm the Node Staked amount, you can run the **node details** script to get the information. The **node details** output will only show staked information if available, if it doesn't show staked information it means that your Node is not properly staked.
+
+Check the Node stake by running the following command in the machine or server where the node is setup:
 
 ```sh
 curl https://get.fleek.network/node_details | bash
 ```
 
-The Stake amount can be verified by querying the [RPC-JSON API](/docs/learn/the-network/#json-rpc-interface) method `flk_get_node_info`. 
-
-Alternatively, you can run the `node_details` script to get the information if available, as follows:
-
-```sh
-curl https://get.fleek.network/node_details | bash
-```
+Alternatively, the Stake amount can be verified by querying the [RPC-JSON API](/docs/learn/the-network/#json-rpc-interface) method `flk_get_node_info`. 
 
 ## Troubleshooting
 
