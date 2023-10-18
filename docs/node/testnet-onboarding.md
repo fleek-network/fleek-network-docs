@@ -119,4 +119,25 @@ Alternatively, the Stake amount can be verified by querying the [RPC-JSON API](/
 
 ## Troubleshooting
 
+### The Node fails to run after successfully stake and run? Or the Core team network restart announcement?
+
 The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear Local data`. After doing this Metamask will clear the cache.
+
+### Node details doesn't show staked amount?
+
+If you have staked successfully and the transaction details in the Metamask wallet is confirmed, but the **node details** script or the [RPC-JSON API](/docs/learn/the-network/#json-rpc-interface) method `flk_get_node_info` shows an empty result, do the following:
+
+Metamask:
+- Copy the Account address at the very top of your Metamask home
+- Copy the Transaction ID by clicking in the FLK transaction → Copy Transaction ID at the very top
+- Copy the Activity log details of the transaction
+
+Server where the Node is setup:
+- Copy the Node Public Key
+- Copy the Server IP Address
+
+:::tip
+You can get the Node Public Key and Server IP Address quick by using the [node details](#6-stake-flk) script described in the section.
+:::
+
+Report to us by sharing the details about via our [discord](https://discord.gg/fleekxyz) troubleshooting channel.
