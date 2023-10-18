@@ -82,7 +82,7 @@ Make sure that you are checked in to the correct branch. For example, if that'd 
 git checkout <BRANCH-NAME>
 ```
 
-Here's an example of how the comman would look like for the main default branch with corresponding name `main`.
+Here's an example of how the command would look like for the main default branch with corresponding name `main`.
 
 ```sh
 git checkout main
@@ -90,7 +90,7 @@ git checkout main
 
 <CheckoutCommitWarning />
 
-Here's an example of how the comman would look like for the branch name `testnet-alpha-0`.
+Here's an example of how the command would look like for the branch name `testnet-alpha-0`.
 
 ```sh
 git checkout testnet-alpha-0
@@ -213,7 +213,7 @@ If you have stick with the default recommendation, that'll be at `~/fleek-networ
 
 ## Checkup the symlink setup
 
-During the original install and setup process, a symbolic link (symlink) was created linking the generated binary file located in `~/fleek-network/lightning/target/release/lightning-node` to `/usr/local/bin/lgtn`. By placing the symlink in the the default installation location of the user, the executable application is available globally as `lgtn`.
+During the original install and setup process, a symbolic link (symlink) was created linking the generated binary file located in `~/fleek-network/lightning/target/release/lightning-node` to `/usr/local/bin/lgtn`. By placing the symlink in the default installation location of the user, the executable application is available globally as `lgtn`.
 
 
 You can see the full absolute path of the symlink and verify if setup correctly by running:
@@ -280,7 +280,7 @@ Environment=TMPDIR=/var/tmp
 WantedBy=multi-user.target
 ```
 
-Everytime the file is modified, the Systemd process should be reloaded. You can do this by executing:
+Every time the file is modified, the Systemd process should be reloaded. You can do this by executing:
 
 ```sh
 sudo systemctl daemon-reload
@@ -304,7 +304,7 @@ To learn more about how to use Systemctl to manage the Lightning service, read t
 
 First, complete all the steps and checkups mentioned throught the guide and once the Node process is running perform a health check.
 
-To run a quick health checkup, send a GET request to `/health` endpoing of the RPC on [port](/docs/node/requirements#ports) 4069.
+To run a quick health checkup, send a GET request to `/health` endpoint of the RPC on [port](/docs/node/requirements#ports) 4069.
 
 ```sh
 curl -w "\p" localhost:4069/health

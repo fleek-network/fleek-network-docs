@@ -36,7 +36,7 @@ To use the automated script execute the following command in your server termina
 curl -sS https://get.fleek.network/transfer_system_user_setup_ownership | bash
 ```
 
-We try to make the auomated scripts as useful as possible, but it's impossible to fit every single use-case. So, if you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
+We try to make the automated scripts as useful as possible, but it's impossible to fit every single use-case. So, if you find any issues or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
 :::
 
 ## Introduction
@@ -161,7 +161,7 @@ drwxrwxr-x 3 root root  4096 Sep 11 12:28 fleek-network
 
 ## Change ownership of files
 
-Once the directories and files are moved, they should have have the wrong ownership, which should be set to **root:root**. We'll now have to change the ownership of the directories and files recursively.
+Once the directories and files are moved, they should have the wrong ownership, which should be set to **root:root**. We'll now have to change the ownership of the directories and files recursively.
 
 Change the ownership of `/home/lgtn/.lightning` to the user **lgtn** as follows:
 
@@ -316,13 +316,13 @@ sudo systemctl daemon-reload
 
 Open the `/home/lgtn/.lightning/config.toml` file in your favorite text editor.
 
-Replace every instance of `~` (tilde) with the user's home path. We do this to ensure that every time we control the service via systemctl, the configuration file that tells which keystore to use is declared upfront regardless of running it as user or delegating to root with **sudo**. Learn more about [file permissions and ownership](/references/Lightning%20CLI/file-permissions-and-ownership) by reading the reference document.
+Replace every instance of `~` (tilde) with the user's home path. We do this to ensure that every time we control the service via systemctl, the configuration file that tells which keystore to use is declared upfront regardless of running it as a user or delegating to root with **sudo**. Learn more about [file permissions and ownership](/references/Lightning%20CLI/file-permissions-and-ownership) by reading the reference document.
 
 <FindAndReplaceConfigWithUserPaths />
 
 ## Start the service
 
-At this stage, you should have migrated the essential files to the user   home.
+At this stage, you should have migrated the essential files to the user home.
 
 Ideally, you would now manage the service as the `user` (as described in the [user service reference](/references/Systemd/user-service/)). To keep our guide wider to all users, we'll prefix the commands with **sudo**, which elevates the permissions to **root**. But since we have provided the configuration file the `-c` in our [systemd service](#systemd-service), we'll have the user-preferred configuration options ruling. 
 

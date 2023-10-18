@@ -68,7 +68,7 @@ The Docker image is tied to a CPU architecture, make sure that you have verified
 :::
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 ## Setup
@@ -271,11 +271,11 @@ The output should be similar to:
  ```
 
 :::tip
-The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or specific versions you might be interested in. Otherwise, you're not required to build it everytime to run the node. If you'd like to learn how to update the Lightning CLI, find our references [here](/references/Lightning%20CLI/update-cli-from-source-code).
+The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or specific versions you might be interested in. Otherwise, you're not required to build it every time to run the node. If you'd like to learn how to update the Lightning CLI, find our references [here](/references/Lightning%20CLI/update-cli-from-source-code).
 :::
 
 :::caution
-If you don't update your source code and binary build often, you won't have the latest changes, which should happen frequently to take advandate of all the ongoing development. This is quite important to understand, as it causes confusion to some users. The Lightning application at time of writing does not update automatically.
+If you don't update your source code and binary build often, you won't have the latest changes, which should happen frequently to take advantage of all the ongoing development. This is quite important to understand, as it causes confusion to some users. The Lightning application at time of writing does not update automatically.
 :::
 
 ## Docker Container
@@ -284,7 +284,7 @@ A container is what's originated from the image we discussed in the section [bui
 
 Following up, we'll learn how to run the Docker container that includes our Lightning CLI program, built from our Dockerfile.
 
-Once the [Docker image](#build-the-docker-image) is ready, run the container based on the image `lightning`. Effectively running the Fleek Network Lighthing node process:
+Once the [Docker image](#build-the-docker-image) is ready, run the container based on the image `lightning`. Effectively running the Fleek Network Lightning node process:
 
 ```sh
 sudo docker run \
@@ -338,7 +338,7 @@ keystore
 
 You only have to run the `keys generate` once from your host.
 
-Finaly, you can start the Fleek Network node by running the command:
+Finally, you can start the Fleek Network node by running the command:
 
 ```sh
 sudo docker start lightning-cli
@@ -413,7 +413,7 @@ To view the logs of a Docker container in real time, use the following command:
 sudo docker logs -f lightning-cli
 ```
 
-If you have wraped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
+If you have wrapped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
 
 For standard output:
 
@@ -435,7 +435,7 @@ Containers are a way to have a self-contained environment that includes all nece
 
 Fleek Network's Lightning is developed with [Rust](https://www.rust-lang.org/), a general-purpose programming language, that requires several dependencies and libraries to compile the project. Some of these libraries are not installed by default and require some troubleshooting for the end user. [Docker](https://www.docker.com/) provides us with containers, self-containing all the required libraries for the purpose of running Lightning, our application.
 
-We guided you through the initial installation steps, and how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided lower-level commands, to help you understand other present or advanced use-cases, and also at higher level, offerring simple utility methods.
+We guided you through the initial installation steps, and how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided lower-level commands, to help you understand other present or advanced use-cases, and also at higher level, offering simple utility methods.
 
 While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
 

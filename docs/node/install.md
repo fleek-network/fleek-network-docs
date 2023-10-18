@@ -34,7 +34,7 @@ If you'd like to participate in the [alpha Testnet](/docs/roadmap), you have to 
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
 
-### Prerequesites
+### Prerequisites
 
 - A basic knowledge of command line interface (CLI)
 - A [supported](/docs/node/requirements#server) Linux server
@@ -283,7 +283,7 @@ Install the build-essentials packages, necessary for compiling general software 
 sudo apt-get install build-essential
 ```
 
-Followed by the required tools to compile the application ([cmake](https://cmake.org/), [clang](https://clang.llvm.org/), [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/) and [libssl-dev ](https://packages.debian.org/sid/libssl-dev)).
+Followed by the required tools to compile the application ([cmake](https://cmake.org/), [clang](https://clang.llvm.org/), [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/) and [libssl-dev](https://packages.debian.org/sid/libssl-dev)).
 
 ```sh
 sudo apt-get install cmake clang pkg-config libssl-dev gcc-multilib
@@ -366,7 +366,7 @@ cargo +stable build --release
 
 The installation process is long, as it compiles the application binary for us from the source code.
 
-🌈 Here's the output when successful! Note, that the output might differ slightly from time of writting.
+🌈 Here's the output when successful! Note, that the output might differ slightly from time of writing.
 
 ```sh
     Finished release [optimized] target(s) in 11m 22s
@@ -573,7 +573,7 @@ sudo docker run \
 ```
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 ### Build from source
@@ -595,7 +595,7 @@ sudo docker build -t lightning -f ./Dockerfile .
 ```
 
 :::tip
-Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be succesfull. You can name it differently if that's your preference.
+Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be successful. You can name it differently if that's your preference.
 :::
 
 Once the image is built, you can launch the Docker Container with a `--name` such as `lightning-node` from the `lightning` image we just created by running:
@@ -614,7 +614,7 @@ sudo docker run \
 ```
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 If a `~/.lightning` directory or `~/.lightning/keystore` doesn't exist, one is created for you on `docker run`. You'll need to have the directory populated with the `config.toml` and `keystore` if you want to use a particular identity. Learn more about managing the keystore [here](/guides/Node%20Operators/managing-the-keystore).
