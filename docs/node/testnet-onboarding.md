@@ -125,7 +125,7 @@ Alternatively, the Stake amount can be verified by querying the [RPC-JSON API](/
 
 ### The Node fails to run after successfully stake and run? Or the Core team network restart announcement?
 
-The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear Local data`. After doing this Metamask will clear the cache.
+The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear activity and nonce data` or `Clear Local data`. After doing this Metamask will clear the cache.
 
 ### Node details doesn't show staked amount?
 
