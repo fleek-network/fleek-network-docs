@@ -76,7 +76,7 @@ cd ~/fleek-network/lightning
 ### Checkout to branch
 
 
-Make sure that you are checked in to the correct branch. For example, if that'd be the first testnet phase it'd be called `testnet-alpha-0`.
+Make sure that you are checked in to the correct branch. For example, if that'd be the first testnet phase it'd be called `testnet-alpha-1`.
 
 ```sh
 git checkout <BRANCH-NAME>
@@ -90,10 +90,10 @@ git checkout main
 
 <CheckoutCommitWarning />
 
-Here's an example of how the comman would look like for the branch name `testnet-alpha-0`.
+Here's an example of how the comman would look like for the branch name `testnet-alpha-1`.
 
 ```sh
-git checkout testnet-alpha-0
+git checkout testnet-alpha-1
 ```
 
 ### Pull the latest changes
