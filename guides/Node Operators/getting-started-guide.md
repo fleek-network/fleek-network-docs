@@ -199,7 +199,7 @@ Learn how to create a new Systemd service in the [manual installation](/docs/nod
 It's important for Node operators to regularly check on the health of their resources to make sure everything is running smoothly. By doing this, they can get helpful feedback and know for sure if their Node is up and running. Some experienced node operators even automate this process using cronjobs and get reports sent to them via email or other custom methods.
 
 ```sh
-curl -w "\n" localhost:4069/health
+curl -w "\n" localhost:4230/health
 ```
 
 If everything goes well, the response should be:
@@ -220,7 +220,7 @@ curl -s \
         "params": [],
         "id": 1
         }' \
-    localhost:4069/rpc/v0
+    localhost:4230/rpc/v0
 ```
 
 Which response should return the key `result` with value `pong`:

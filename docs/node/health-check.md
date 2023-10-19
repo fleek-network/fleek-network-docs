@@ -30,10 +30,10 @@ We're using cURL, for the examples, thus make sure that you have it installed on
 
 ## Quick health check
 
-Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/node/requirements#ports) 4069.
+Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/node/requirements#ports) 4230.
 
 ```sh
-curl -w "\p" localhost:4069/health
+curl -w "\p" localhost:4230/health
 ```
 
 If successful, you should get the response `OK`, as follows:
@@ -54,7 +54,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
       "method": "flk_ping",
       "params": [],
       "id": 1
-    }' http://127.0.0.1:4069/rpc/v0
+    }' http://127.0.0.1:4230/rpc/v0
 ```
 
 If the request is successful, you should get the result `pong` as follows:

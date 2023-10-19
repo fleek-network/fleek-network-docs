@@ -172,7 +172,7 @@ store_path = "/home/lgtn/.lightning/data/resolver_store"
 
 [rpc]
 addr = "0.0.0.0"
-port = 4069
+port = 4230
 
 [service-executor]
 services = [0, 1]

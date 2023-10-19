@@ -131,7 +131,7 @@ sudo docker exec -it lightning-node lgtn keys generate
 
 ```sh
 sudo docker run \
-  -p 4069:4069 \
+  -p 4230:4230 \
   -p 4200:4200 \
   -p 6969:6969 \
   -p 18000:18000 \

@@ -185,13 +185,13 @@ If you have installed the Fleek Network lightning manually, the [installation in
 Do a quick health check by running:
 
 ```sh
-curl -w "\p" localhost:4069/health
+curl -w "\p" localhost:4230/health
 ```
 
-If successful, you should get the response `OK`, as follows:
+If successful, you should get the response `running and staked`, as follows:
 
 ```sh
-OK
+running and staked
 ```
 
 <Author

@@ -27,7 +27,7 @@ The logs should be similar to the following:
 2023-09-11 18:02:07 | WARN  | lightning_consensus::consensus - core/consensus/src/consensus.rs:373 - ##################
 2023-09-11 18:02:07 | WARN  | lightning_consensus::consensus - core/consensus/src/consensus.rs:374 - ********************************
 RPC server starting up
-listening on 0.0.0.0:4069
+listening on 0.0.0.0:4230
 Shutting node down.
 Shutting node down.
 Shutting node down.

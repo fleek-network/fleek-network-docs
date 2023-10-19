@@ -304,10 +304,10 @@ To learn more about how to use Systemctl to manage the Lightning service, read t
 
 First, complete all the steps and checkups mentioned throught the guide and once the Node process is running perform a health check.
 
-To run a quick health checkup, send a GET request to `/health` endpoint of the RPC on [port](/docs/node/requirements#ports) 4069.
+To run a quick health checkup, send a GET request to `/health` endpoint of the RPC on [port](/docs/node/requirements#ports) 4230.
 
 ```sh
-curl -w "\p" localhost:4069/health
+curl -w "\p" localhost:4230/health
 ```
 
 If successful, you should get the response `OK`, as follows:

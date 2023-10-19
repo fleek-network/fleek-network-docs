@@ -561,7 +561,7 @@ You can pull an run the Lightning pre-built Docker image from our GitHub and run
 
 ```sh
 sudo docker run \
-    -p 4069:4069 \
+    -p 4230:4230 \
     -p 4200:4200 \
     -p 6969:6969 \
     -p 18000:18000 \
@@ -602,7 +602,7 @@ Once the image is built, you can launch the Docker Container with a `--name` suc
 
 ```sh
 sudo docker run \
-  -p 4069:4069 \
+  -p 4230:4230 \
   -p 4200:4200 \
   -p 6969:6969 \
   -p 18000:18000 \
@@ -642,7 +642,7 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill lightning-node
 ExecStartPre=-/usr/bin/docker rm lightning-node
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
-ExecStart=/usr/bin/docker run -p 4069:4069 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-node ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4230:4230 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-node ghcr.io/fleek-network/lightning:latest
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
