@@ -46,11 +46,11 @@ Open the Metamask `settings`, located in the drop-down (top-right menu options).
 
 ### 3) Visit the faucet website
 
-Before proceeding, make sure to have the Fleek Network selected as the metamask network. Once confirmed, visit the [Faucet website](https://TODO:add-faucet-url)
+Before proceeding, make sure to have the Fleek Network selected as the metamask network. Once confirmed, visit the [Faucet website](https://https://faucet.testnet.fleek.network/)
 
 ### 4) Connect wallet
 
-In the [Faucet website](https://TODO:add-faucet-url), you have to click the `Connect Wallet`.
+In the [Faucet website](https://faucet.testnet.fleek.network/), you have to click the `Connect Wallet`.
 
 ### 5) Mint tFLK
 
