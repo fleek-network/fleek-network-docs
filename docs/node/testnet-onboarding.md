@@ -37,7 +37,7 @@ Open the Metamask `settings`, located in the drop-down (top-right menu options).
 
 - Network Name: `Fleek Network Testnet`
 - RPC URL: `https://rpc.testnet.fleek.network/rpc/v0`
-- Chain ID: `1337`
+- Chain ID: `59330`
 - Currency symbol: `tFLK`
 
 :::note
