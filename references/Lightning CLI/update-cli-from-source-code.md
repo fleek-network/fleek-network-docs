@@ -130,12 +130,11 @@ Open and edit the `/etc/systemd/system/lightning.service` file.
 Description=Fleek Network Node lightning service
 
 [Service]
-User=<YOUR-USERNAME>
 Type=simple
 MemoryHigh=32G
 RestartSec=15s
 Restart=always
-ExecStart=lgtn -c /home/lgtn/.lightning/config.toml run
+ExecStart=lgtn -c /home/<YOUR-USERNAME>/.lightning/config.toml run
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 Environment=TMPDIR=/var/tmp

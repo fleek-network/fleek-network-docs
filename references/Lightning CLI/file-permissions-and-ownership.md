@@ -98,7 +98,7 @@ The following section assumes that a System service unit has been declared, and 
 
 Open and edit the **/etc/systemd/system/lightning.service** file.
 
-1) Replace `<USERNAME>` with YOUR username. For example, in the documentation we use the username **lgtn**, which means we'd replace `User=<USERNAME>` with `User=lgtn`.
+1) Replace `<USERNAME>` with YOUR username. For example, in the documentation we use the username **lgtn**, which means we'd replace `<USERNAME>` with `lgtn`.
 
 2) Make sure that the ExecStart is set correctly, including the `-c`
 
@@ -107,7 +107,6 @@ Open and edit the **/etc/systemd/system/lightning.service** file.
 Description=Fleek Network Node lightning service
 
 [Service]
-User=<USERNAME>
 Type=simple
 MemoryHigh=32G
 RestartSec=15s
@@ -128,7 +127,6 @@ For our example, as the username **lgtn** it would look like:
 Description=Fleek Network Node lightning service
 
 [Service]
-User=lgtn
 Type=simple
 MemoryHigh=32G
 RestartSec=15s
