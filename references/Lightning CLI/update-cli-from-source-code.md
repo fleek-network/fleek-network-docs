@@ -163,6 +163,20 @@ Depending on how you control the system, this might need **sudo**.
 sudo rm -rf ~/.lightning/data
 ```
 
+## Update the `config.toml`
+
+Remove the `~/.lightning/config.toml`.
+
+```sh
+rm ~/.lightning/config.toml
+```
+
+Create a new `config.toml`
+
+```sh
+lgtn print-config --default > ~/.lightning/config.toml
+```
+
 ## Update the `config.toml` with user home path
 
 <FindAndReplaceConfigWithUserPaths />
