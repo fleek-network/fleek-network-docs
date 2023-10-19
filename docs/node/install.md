@@ -366,7 +366,7 @@ cargo +stable build --release
 
 The installation process is long, as it compiles the application binary for us from the source code.
 
-🌈 Here's the output when successful! Note, that the output might differ slightly from time of writting.
+🌈 Here's the output when successful! Note, that the output might differ slightly from time of writing.
 
 ```sh
     Finished release [optimized] target(s) in 11m 22s
@@ -426,7 +426,7 @@ The keys will be generated and placed under the system directory `~/.lightning/k
 
 ### Set testnet in config.toml
 
-Set the testnet attribute to `true` in the `config.toml` lcated in the path `~/.lightning/config.toml`.
+Set the testnet attribute to `true` in the `config.toml` located in the path `~/.lightning/config.toml`.
 
 ```sh
 [application]
@@ -448,7 +448,7 @@ The configuration file should have more content, which was omitted here to keep 
 To participate in the [alpha Testnet](/docs/roadmap), you have to through the onboarding process. Make sure you request access by following the [onboarding instructions](/docs/node/testnet-onboarding). If you fail to enable your node for testnet, it'll not run!
 :::
 
-To start the node, you should execute the sub-command `run`. Noteworthy that while it launches the node, you're recommended to setup a systemd service to run it for a long period.
+To start the node, you should execute the sub-command `run`. Noteworthy that while it launches the node, you're recommended to set up a systemd service to run it for a long period.
 
 ```sh
 lgtn run
@@ -573,7 +573,7 @@ sudo docker run \
 ```
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with the latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 ### Build from source
@@ -595,7 +595,7 @@ sudo docker build -t lightning -f ./Dockerfile .
 ```
 
 :::tip
-Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be succesfull. You can name it differently if that's your preference.
+Take note of the Docker image name `lightning`, as that's the name we'll use and pass to the `Docker run` to be successful. You can name it differently if that's your preference.
 :::
 
 Once the image is built, you can launch the Docker Container with a `--name` such as `lightning-node` from the `lightning` image we just created by running:
@@ -614,7 +614,7 @@ sudo docker run \
 ```
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with the latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 If a `~/.lightning` directory or `~/.lightning/keystore` doesn't exist, one is created for you on `docker run`. You'll need to have the directory populated with the `config.toml` and `keystore` if you want to use a particular identity. Learn more about managing the keystore [here](/guides/Node%20Operators/managing-the-keystore).

@@ -13,7 +13,7 @@ sidebarCollapsible: false
 
 ## Testnet Phase {1}:
 
-Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the rewards system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
+Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
 ### Prerequesites
 
@@ -28,10 +28,10 @@ To join, you will have to follow the steps below:
 Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/updating-lightning).
 
 :::caution Warning
-The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicy that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
+The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicly that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
 :::
 
-### 2) Setup the Metamask browser extension
+### 2) Set up the Metamask browser extension
 
 Open the Metamask `settings`, located in the drop-down (top-right menu options). Set the following property values:
 
@@ -64,13 +64,13 @@ Once `tFLK` balance is available, click in the `Stake` button. You'll be require
 - Consensus Public Key
 - Server IP Address
 
-You can get the details quickly by running the **node details** script in the terminal connected to your machine or server where the node is setup and running, as follows:
+You can get the details quickly by running the **node details** script in the terminal connected to your machine or server where the node is set up and running, as follows:
 
 ```sh
 curl https://get.fleek.network/node_details | bash
 ```
 
-The response should included the following details:
+The response should include the following details:
 
 ```
 🤖 Your server details are the following
@@ -113,7 +113,7 @@ To learn more about healchecks read the section [here](/docs/node/health-check).
 
 To confirm the Node Staked amount, you can run the **node details** script to get the information. The **node details** output will only show staked information if available, if it doesn't show staked information it means that your Node is not properly staked.
 
-Check the Node stake by running the following command in the machine or server where the node is setup:
+Check the Node stake by running the following command in the machine or server where the node is set up:
 
 ```sh
 curl https://get.fleek.network/node_details | bash
@@ -127,7 +127,7 @@ Alternatively, the Stake amount can be verified by querying the [RPC-JSON API](/
 
 The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear activity and nonce data` or `Clear Local data`. After doing this Metamask will clear the cache.
 
-### Node details doesn't show staked amount?
+### Node details don't show staked amount?
 
 If you have staked successfully and the transaction details in the Metamask wallet is confirmed, but the **node details** script or the [RPC-JSON API](/docs/learn/the-network/#json-rpc-interface) method `flk_get_node_info` shows an empty result, do the following:
 
@@ -136,7 +136,7 @@ Metamask:
 - Copy the Transaction ID by clicking in the tFLK transaction → Copy Transaction ID at the very top
 - Copy the Activity log details of the transaction
 
-Server where the Node is setup:
+Server where the Node is set up:
 - Copy the Node Public Key
 - Copy the Server IP Address
 

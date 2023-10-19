@@ -82,7 +82,7 @@ Make sure that you are checked in to the correct branch. For example, if that'd 
 git checkout <BRANCH-NAME>
 ```
 
-Here's an example of how the comman would look like for the main default branch with corresponding name `main`.
+Here's an example of how the command would look like for the main default branch with corresponding name `main`.
 
 ```sh
 git checkout main
@@ -90,7 +90,7 @@ git checkout main
 
 <CheckoutCommitWarning />
 
-Here's an example of how the comman would look like for the branch name `testnet-alpha-1`.
+Here's an example of how the command would look like for the branch name `testnet-alpha-1`.
 
 ```sh
 git checkout testnet-alpha-1
@@ -182,7 +182,7 @@ From https://github.com/fleek-network/lightning
 Already up to date.
 ```
 
-A "already up to date" message means that you have the latest version of the source code and can proceed with compiling the binary process from the source code to override the `Lightning CLI` version you're on. You can also make any other setup changes that might find necessary. Some of the changes might be related to the recommended setup of Systemd Service that helps control the Fleek Network Lightning Node binary process, etc.
+A "already up to date" message means that you have the latest version of the source code and can proceed with compiling the binary process from the source code to override the `Lightning CLI` version you're on. You can also make any other setup changes that might find necessary. Some changes might be related to the recommended setup of Systemd Service that helps control the Fleek Network Lightning Node binary process, etc.
 
 ## Build the binary from the source code
 
@@ -190,7 +190,7 @@ We're assuming that your system setup hasn't changed, such as Rust toolchain sti
 
 First, switch the user and change directory to the Lightning directory in your file system as described in [switch to installer username](#switch-to-installer-username) [change directory to the source code](#change-directory-to-the-source-code) sections.
 
-Recall the command from our install document or getting started guide? As you probably guessed, you need to execute the rust cargo build command. But firstly, we are going to cleand and update the Rust package manager, as follows:
+Recall the command from our install document or getting started guide? As you probably guessed, you need to execute the rust cargo build command. But firstly, we are going to clean and update the Rust package manager, as follows:
 
 ```sh
 cargo clean
@@ -222,13 +222,13 @@ You can see the full absolute path of the symlink and verify if setup correctly 
 readlink -f <SYMLINK-NAME>
 ```
 
-If you have followed the recommended name, the symbolink link should be called `lgtn`, short version for `lightning`.
+If you have followed the recommended name, the symbolic link should be called `lgtn`, short version for `lightning`.
 
 ```sh
 readlink -f lgtn
 ```
 
-Here's an example where we find the symlink `lgtn` pointing to the absolutely path where our source code and originated built binary is located, as described in the [build the binary from the source code](#build-the-binary-from-the-source-code) section.
+Here's an example where we find the symlink `lgtn` pointing to the absolute path where our source code and originated built binary is located, as described in the [build the binary from the source code](#build-the-binary-from-the-source-code) section.
 
 ```sh
 /home/<USERNAME>/fleek-network/lightning/target/release/lightning-node
@@ -247,12 +247,12 @@ sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/
 ```
 
 :::tip
-Make sure that the paths provided to the command `ln` are correct. If you are using customised pathnames or switched to a different username other then the one used for installation it has to change accordingly.
+Make sure that the paths provided to the command `ln` are correct. If you are using customized pathnames or switched to a different username other than the one used for installation it has to change accordingly.
 :::
 
 ## Systemd service
 
-It's highly recommend to use systemd to manage the Fleek Network service for node operators. Systemd is a system and service manager for Linux operating systems that provides a consistent way to manage system services across various distributions.
+It's highly recommended to use systemd to manage the Fleek Network service for node operators. Systemd is a system and service manager for Linux operating systems that provides a consistent way to manage system services across various distributions.
 
 ### Verify the setup
 
@@ -280,7 +280,7 @@ Environment=TMPDIR=/var/tmp
 WantedBy=multi-user.target
 ```
 
-Everytime the file is modified, the Systemd process should be reloaded. You can do this by executing:
+Every time the file is modified, the Systemd process should be reloaded. You can do this by executing:
 
 ```sh
 sudo systemctl daemon-reload
@@ -290,7 +290,7 @@ To learn more about how to create a Systemd service read the [manual installatio
 
 ### Launching the node as a systemd service
 
-After completing all the steps and checkups mentioned throughout the guide,  you should have the Fleek Network Lightning Service ready to go.
+After completing all the steps and checkups mentioned throughout the guide, you should have the Fleek Network Lightning Service ready to go.
 
 To launch the service, execute the following command:
 
@@ -304,7 +304,7 @@ To learn more about how to use Systemctl to manage the Lightning service, read t
 
 First, complete all the steps and checkups mentioned throught the guide and once the Node process is running perform a health check.
 
-To run a quick health checkup, send a GET request to `/health` endpoing of the RPC on [port](/docs/node/requirements#ports) 4069.
+To run a quick health checkup, send a GET request to `/health` endpoint of the RPC on [port](/docs/node/requirements#ports) 4069.
 
 ```sh
 curl -w "\p" localhost:4069/health
@@ -326,7 +326,7 @@ In the current phase of development, a proper software release cycle for the upd
 
 We have looked into how to pull the changes via Git, and discussed that contributions can introduce new requirements to the host operating system that leads to updates or changes in the documentation–mentioning how hard it is to keep in sync. Explained how to look into the contributions to understand the nature of the change and get hints about new features.
 
-To complete, provided a step-by-step walkthrough the install and setup process for the Fleek Network Lightning CLI and Systemd service.
+To complete, provided a step-by-step walkthrough the installation and setup process for the Fleek Network Lightning CLI and Systemd service.
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
 

@@ -68,7 +68,7 @@ The Docker image is tied to a CPU architecture, make sure that you have verified
 :::
 
 :::tip
-The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information accross our documentation in sync with latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
+The command has a list of ports `-p` values that map ports in the container on the Docker host. While we try to keep the information across our documentation in sync with the latest changes or requirements e.g. port number changes, make sure that you check the section [ports](/docs/node/requirements#ports) to find the latest updates.
 :::
 
 ## Setup
@@ -77,7 +77,7 @@ The command has a list of ports `-p` values that map ports in the container on t
 
 To follow the guide successfully, a good amount of memory and disk space is necessary to run Docker. The main reason for our use-case is that your host machine requires a generous amount of memory and disk space, for the containers.
 
-For this guide, we used a server with the 4vCPU, 32GB ram memory and 20 GB disk space specifications. Learn more about the recommended specifications [here](/docs/node/requirements).
+For this guide, we used a server with the 4vCPU, 32 GB ram memory and 20 GB disk space specifications. Learn more about the recommended specifications [here](/docs/node/requirements).
 
 ### Create a user
 
@@ -218,7 +218,7 @@ Run all the commands above in your terminal, to confirm everything's working bef
 
 ### Create the Docker image
 
-A Docker image is a read-only template with instructions for creating a Docker container, like a template. Docker images also act as a the starting point when using Docker. 
+A Docker image is a read-only template with instructions for creating a Docker container, like a template. Docker images also act as a starting point when using Docker. 
 
 The starting point for our use-case is a Dockerfile, where all those "template instructions" are declared.
 
@@ -300,7 +300,7 @@ sudo docker run \
 ```
 
 :::tip
-Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#build-the-docker-image).
+Notice that the command arguments we pass are for the flag's `-p` port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we [built earlier](#build-the-docker-image).
 :::
 
 The output would look as the following, showing the error message "Node is not whitelisted" (this error message is due to the testnet phase that requires nodes to be whitelisted to run successfully):
@@ -314,7 +314,7 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 Keys have to be generated when launching the service. On Docker run, if the [keystore](/guides/Node%20Operators/managing-the-keystore) is not found, the keys are automatically generated and stored in the Docker host's `$HOME/.lightning/keystore` directory.
 
 :::tip
-Have in mind that the `$HOME/.lightning/config.toml` is where the keystore location paths are configured, which default value is in the user `$HOME` path. The users who customise or modify the default location, need to apply the required customisations. To learn more about how to manage the keystore, visit the [managing keystore](/guides/Node%20Operators/managing-the-keystore) section.
+Have in mind that the `$HOME/.lightning/config.toml` is where the keystore location paths are configured, which default value is in the user `$HOME` path. The users who customize or modify the default location, need to apply the required customizations. To learn more about how to manage the keystore, visit the [managing keystore](/guides/Node%20Operators/managing-the-keystore) section.
 :::
 
 ## Generate keys
@@ -346,7 +346,7 @@ sudo docker start lightning-cli
 
 ## Run the Docker Container as Systemd Service
 
-In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some of the reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI complaint solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
+In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI complaint solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
 
 :::tip
 Docker recommends using their cross-platform built-in restart policy for running a Container as a Service. For that, configure your Docker service to [start on system boot](https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot).
@@ -362,7 +362,7 @@ We are going to create the unit configuration file in the /etc/systemd/system/ d
 sudo touch /etc/systemd/system/docker-lightning.service
 ```
 
-Open the file in your favourite text editor and populate with the content found here:
+Open the file in your favorite text editor and populate with the content found here:
 
 ```sh
 [Unit]
@@ -413,7 +413,7 @@ To view the logs of a Docker container in real time, use the following command:
 sudo docker logs -f lightning-cli
 ```
 
-If you have wraped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
+If you have wrapped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
 
 For standard output:
 

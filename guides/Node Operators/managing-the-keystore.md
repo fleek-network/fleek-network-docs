@@ -107,7 +107,7 @@ At the time of writing, we have a TOML file with sections. Here are some example
 
 Each of the sections holds several property names and values. If you are accustomed to the [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML) formats, you'll find the TOML format a bit similar (if you'd like to learn more about the TOML file format, read about it [here](https://toml.io/en/)).
 
-By default and at time of writting the Lightning CLI configuration file (config.toml) is similar to:
+By default, and at time of writing the Lightning CLI configuration file (config.toml) is similar to:
 
 ```sh
 [BLANK]
@@ -208,7 +208,7 @@ There are three types of keys related to the identity of a node and the account 
 
 - Account Owner keys are based on [secp256k1](https://www.secg.org/sec2-v2.pdf), which corresponds to an Ethereum Address
 
-For instance, a public key is open to anybody to see and it represents a unique node identifier in the Fleek Network, a bit like a passport number. On the other hand, the private key is secret and the operator is responsible to store it privately.
+For instance, a public key is open to anybody to see, and it represents a unique node identifier in the Fleek Network, a bit like a passport number. On the other hand, the private key is secret, and the operator is responsible to store it privately.
 
 The Fleek Network relies on cryptography, thus the Fleek Network team and anybody can access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identify a node or send rewards to the address without jeopardizing identity security.
 
@@ -287,7 +287,7 @@ When dealing with Fleek Network it's crucial to always be aware of the identity.
 
 Backing up your keystore pem files are crucial to ensure the safety and accessibility of your identity on the Fleek Network. For example, if your `$HOME/.lightning` is deleted you'll still be able to restore it if you have backed it up properly.
 
-There are many ways to make identity backups, each with its own benefits and drawbacks. At risk of oversimplifying, we'll focus on a simple manual approach to expose some of the principles you should be have awareness.
+There are many ways to make identity backups, each with its own benefits and drawbacks. At risk of oversimplifying, we'll focus on a simple manual approach to expose some principles you should have awareness.
 
 :::caution
 The security is never stronger than its weakest link, and it is very likely that the weakest link is not the method itself. It's pointless to encrypt the backup archive with sophisticated methods when the passphrase is weak or of an easy guess.
@@ -329,7 +329,7 @@ tar -cf "keystore.tar" $HOME/.lightning/keystore
 
 The `keystore.tar` should be in the current work directory.
 
-Use `gpg` with the [symmetric option](https://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with assymetric `gpg`, it's similar but it's not signed with your public key or such.
+Use `gpg` with the [symmetric option](https://www.gnupg.org/gph/en/manual/x110.html), it creates the keys for that file and request a password to protect them. If you are familiar with asymmetric `gpg`, it's similar, but it's not signed with your public key or such.
 
 The encryption command is:
 
@@ -409,7 +409,7 @@ For instance, we can imagine a scenario where our service is started with the co
 lgtn -c /home/lgtn/.lightning/config.toml run
 ```
 
-Where the `keystore` is placed under the parent directory `/home/lgtn/.lightning/`. Resulting in the configuration file have the following settings for the hypotetical username `lgtn`:
+Where the `keystore` is placed under the parent directory `/home/lgtn/.lightning/`. Resulting in the configuration file have the following settings for the hypothetical username `lgtn`:
 
 ```sh
 [signer]
@@ -427,7 +427,7 @@ We've walked through most basics of where the configuration file is located, the
 
 Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
 
-Separatily, at risk of oversimpliying provided an brief introduction into the backup of the keystore directory.
+Separately, at risk of oversimpliying provided a brief introduction into the backup of the keystore directory.
 
 In the future, we'll introduce more advanced topics that will help you improve the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
 

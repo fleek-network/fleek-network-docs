@@ -91,7 +91,7 @@ You should get a "Hello from Docker!".
 
 ## Check the Dockerfile
 
-You should have [changed directory](#change-directory-to-lightning-source-code) to the projectory directory.
+You should have [changed directory](#change-directory-to-lightning-source-code) to the projecto directory.
 
 If you run a `cat Dockerfile`, you should have content similar to:
 

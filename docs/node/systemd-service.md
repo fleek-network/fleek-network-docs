@@ -15,7 +15,7 @@ import Author from '@site/src/components/Author';
 
 In this section we describe how to enable, disable, start, stop the Systemd Service.
 
-The service is setup by the [assisted installer](#assisted-installer) automatically, or manually as described in the [manual installation](/docs/node/install#manual-installation) and [docker install](/docs/node/install#docker-installation).
+The service is set up by the [assisted installer](#assisted-installer) automatically, or manually as described in the [manual installation](/docs/node/install#manual-installation) and [docker install](/docs/node/install#docker-installation).
 
 ### Reload the daemon
 
@@ -34,7 +34,7 @@ sudo systemctl enable lightning.service
 ```
 
 :::tip
-If you have installed or setup the Service as a Docker Container, prefix the service name with `docker-`.
+If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
 
 ```sh
 sudo systemctl enable docker-lightning
@@ -42,7 +42,7 @@ sudo systemctl enable docker-lightning
 :::
 
 :::caution
-You shouldn't have prefix the systemctl command with **sudo** when start/stop/status the service. Due to some VPS providers modifying the operating system, we had to present the examples prefixed with sudo for the wider audience. If you'd like to learn more about controlling Systemd services as a `user` check the reference [Systemd user-service](/references/Systemd/user-service).
+You shouldn't have prefixed the systemctl command with **sudo** when start/stop/status the service. Due to some VPS providers modifying the operating system, we had to present the examples prefixed with sudo for the wider audience. If you'd like to learn more about controlling Systemd services as a `user` check the reference [Systemd user-service](/references/Systemd/user-service).
 :::
 
 ### Disable
@@ -79,7 +79,7 @@ sudo systemctl start lightning
 
 
 :::tip
-If you have installed or setup the Service as a Docker Container, prefix the service name with `docker-`.
+If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
 
 ```sh
 sudo systemctl start docker-lightning
@@ -95,7 +95,7 @@ sudo systemctl stop lightning
 ```
 
 :::tip
-If you have installed or setup the Service as a Docker Container, prefix the service name with `docker-`.
+If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
 
 ```sh
 sudo systemctl stop docker-lightning
@@ -111,7 +111,7 @@ sudo systemctl restart lightning
 ```
 
 :::tip
-If you have installed or setup the Service as a Docker Container, prefix the service name with `docker-`.
+If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
 
 ```sh
 sudo systemctl restart docker-lightning
@@ -127,7 +127,7 @@ sudo systemctl status lightning.service
 ```
 
 :::tip
-If you have installed or setup the Service as a Docker Container, prefix the service name with `docker-`.
+If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
 
 ```sh
 sudo systemctl status docker-lightning

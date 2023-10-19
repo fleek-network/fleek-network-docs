@@ -94,7 +94,7 @@ To learn more about the user $HOME directory read the wikipedia [Home directory]
 
 ## Set the configuration flag -c on the service unit file
 
-The following section assumes that a System service unit has been declared and you're using systemctl to control the service, as described in our [Systemd Service Setup](/docs/node/install#systemd-service-setup) install section.
+The following section assumes that a System service unit has been declared, and you're using systemctl to control the service, as described in our [Systemd Service Setup](/docs/node/install#systemd-service-setup) install section.
 
 Open and edit the **/etc/systemd/system/lightning.service** file.
 

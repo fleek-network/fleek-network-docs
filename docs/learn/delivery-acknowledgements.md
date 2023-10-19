@@ -15,10 +15,10 @@ import Author from '@site/src/components/Author';
 When a client signs a message, it creates a Delivery Acknowledgement that confirms a successful service computation delivery by a node. This [process](#node-vs-client-process-flow) ensures the immutability and integrity of the message (the client cannot change or reverse it) and also includes metadata about the commodities consumed by the node during the service execution. This metadata helps in calculating the reward that the node will receive.
 
 :::info
-The Narwhal and Bullshark consensus primary transaction is the order of batched Delivery Acknowledgements. Every time a node serves a request, it gathers Delivery Acknowledgments that, upon submission, reward the node at the end of an epoch (which is approximately 24 hours).
+The Narwhal and Bullshark consensus primary transaction is the order of batched Delivery Acknowledgements. Every time a node serves a request, it gathers Delivery Acknowledgements that, upon submission, reward the node at the end of an epoch (which is approximately 24 hours).
 :::
 
-To claim the reward and other fees, nodes can add received Delivery Acknowledgements to a local pool and periodically submit them in batches to reach a consensus. This process also ensures consistent updates to the client's balance in stablecoin.
+To claim the reward and other fees, nodes can add received Delivery Acknowledgements to a local pool and periodically submit them in batches to reach a consensus. This process also ensures consistent updates to the client's balance in stable coin.
 
 The amounts deducted from all clients during an epoch, move to a payout pool which is distributed fairly to node [account owners](/docs/learn/the-network#identity-on-the-fleek-network) based on the work performed in the epoch.
 
@@ -72,7 +72,7 @@ Thus, the entire network operates based on content addressing based on Blake3 ha
 
 Learn more about it in the [Content Addressing](/docs/learn/the-network#content-addressing) section.
 
-## Delivery Acknowledgement Customisation
+## Delivery Acknowledgement Customization
 
 A Service can have a custom configuration to specify how Delivery Acknowledgements should behave or work. Patterns and conventions should be expected to emerge from the Service builder community and best practices.
 

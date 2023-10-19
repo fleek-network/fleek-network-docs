@@ -88,7 +88,7 @@ systemctl --user status lightning.service
 ## Problem statement
 
 
-On tests done in a DigitalOcean Ubuntu 22.x, we had setup user-level services which were operated with `--user`. When the commands were executed as `--user` it failed with:
+On tests done in a DigitalOcean Ubuntu 22.x, we had set up user-level services which were operated with `--user`. When the commands were executed as `--user` it failed with:
 
 ```sh
 Failed to connect to bus: Operation not permitted (consider using --machine=<user>@.host --user to connect to bus of other user)

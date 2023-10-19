@@ -18,7 +18,7 @@ The security of the private key is the responsibility of the user. Unfortunately
 
 ## Keystore pathname
 
-The default location for the keystore is in the user home. The $HOME or `~` refers to the user home, as such consider the logged in username.
+The default location for the keystore is in the user home. The $HOME or `~` refers to the user home, as such consider the logged-in username.
 
 To Check the user you are logged in with:
 
@@ -88,7 +88,7 @@ Executing the subcommand `run` without the configuration flag `-c`, doesn't mean
 
 ## Low security backup
 
-To zip and encrypto the `$HOME/.lightning/keystore` directory run:
+To zip and encrypt the `$HOME/.lightning/keystore` directory run:
 
 ```sh
 # It'll prompt for password (remember)

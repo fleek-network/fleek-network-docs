@@ -22,7 +22,7 @@ Caused by:
     Node Initialization failed: InitializationFailed(Tag<lightning_signer::Signer<lightning_node::FinalTypes> as SignerInterface>, Node secret key does not exist. Use the CLI to generate keys.)
 ```
 
-Edit the `~/.lightning/config.toml` to include the full location for the PEM files. For example, let's say that its located under `/home/skywalker` that'd look like:
+Edit the `~/.lightning/config.toml` to include the full location for the PEM files. For example, let's say that it's located under `/home/skywalker` that'd look like:
 
 ```
 [signer]

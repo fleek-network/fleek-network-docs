@@ -65,7 +65,7 @@ The TLDR of the current implementation being discussed is that the network will 
 The algorithmic economic system has several goals, listed below in order of priority:
 
 - Provide an opportunity for receiving consistent blended earnings to node operators based on their work in most market conditions
-    - “Blended” means taking into account both the USD stablecoin fees that nodes are earning, as well as the FLK rewards they are earning (including factoring in the time-weighted average market price of FLK).
+    - “Blended” means taking into account both the USD stable coin fees that nodes are earning, and the FLK rewards they are earning (including factoring in the time-weighted average market price of FLK).
     - This means if network usage/revenue increases, FLK rewards will likely decrease, and vice versa. This also means that if the time-weighted average market price of FLK increases, nodes should reasonably expect that the amount of FLK rewards will decrease, but the value of FLK rewards received (in USD terms) will remain approximately the same.
 - Don’t overcompensate nodes, especially in times of market volatility
     - If the market price of FLK deviates from the NPV calculated in-protocol based on time-weighted average protocol-level revenue, nodes should reasonably expect that FLK rewards by number would be reduced.

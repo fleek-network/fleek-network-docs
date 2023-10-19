@@ -92,7 +92,7 @@ For this guide, we are assuming that you are migrating ownership from **root** t
 
 ## Clear the .lightning data
 
-Run the following command to clear the `/root/.lightning/data`, as it can be quite large and we don't need to move it.
+Run the following command to clear the `/root/.lightning/data`, as it can be quite large, and we don't need to move it.
 
 ```sh
 sudo rm -rf /root/.lightning/data
@@ -161,7 +161,7 @@ drwxrwxr-x 3 root root  4096 Sep 11 12:28 fleek-network
 
 ## Change ownership of files
 
-Once the directories and files are moved, they should have have the wrong ownership, which should be set to **root:root**. We'll now have to change the ownership of the directories and files recursively.
+Once the directories and files are moved, they should have the wrong ownership, which should be set to **root:root**. We'll now have to change the ownership of the directories and files recursively.
 
 Change the ownership of `/home/lgtn/.lightning` to the user **lgtn** as follows:
 
@@ -220,7 +220,7 @@ On the output below, we can see that the `/usr/local/bin/lgtn` points to `/root/
 lrwxrwxrwx 1 root root 64 Sep 11 15:48 /usr/local/bin/lgtn -> /root/fleek-network/lightning/target/release/lightning-node
 ```
 
-The target base path is `/root` and we know that we've moved the source code directory to the user home `/home/lgtn`. For this reason, we need to create a new symlink with the updated location of the binary file.
+The target base path is `/root`, and we know that we've moved the source code directory to the user home `/home/lgtn`. For this reason, we need to create a new symlink with the updated location of the binary file.
 
 Unlink the symlink:
 
@@ -282,7 +282,7 @@ Environment=TMPDIR=/var/tmp
 WantedBy=multi-user.target
 ```
 
-Since we opted in for the username **lgtn** for our demo, replaced `<USERNAME>` with `lgtn` and it would look like:
+Since we opted in for the username **lgtn** for our demo, replaced `<USERNAME>` with `lgtn`, and it would look like:
 
 ```sh
 [Unit]
@@ -343,7 +343,7 @@ To learn more, visit the section [Use Systemctl to manage the Lightning Service]
 
 We started by giving a brief introduction to ownership of the Lightning CLI files.
 
-Jumped through topics of Systemd service that helps the user manage the service in the Linux environment, which helps keep keeps track of all the processes and threads that are spawned.
+Jumped through topics of Systemd service that helps the user manage the service in the Linux environment, which helps keep track of all the processes and threads that are spawned.
 
 We've gone through the step-by-step process to migrate the Fleek Network CLI and Systemd service setup from one user to the other. To keep it short, we decided to go with the use-case of where the migration happens between a **root** user and a **sudoer**.
 

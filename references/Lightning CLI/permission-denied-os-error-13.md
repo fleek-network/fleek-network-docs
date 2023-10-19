@@ -12,8 +12,8 @@ import Author from '@site/src/components/Author';
 
 When running the Lightning CLI, the user who's in control can delegate to **root** via **sudo**. Depending on how the Fleek Networking Lightning CLI was installed, this might cause some confusion, which is better explained by reading the reference [Keys not found](/references/Lightning%20CLI/keys-not-found), which illustrates a situation where a user gets an error message about the wrong location of a system path (keystore).
 
-Some of the reasons why the `Permission denied (os error 13)` might occur are related to:
-- The Fleek Network Lightning CLI process trying to write to a `.lightning` stored in a non permited location
+Some reasons why the `Permission denied (os error 13)` might occur are related to:
+- The Fleek Network Lightning CLI process trying to write to a `.lightning` stored in a non permitted location
 - The Fleek Network Lightning CLI process trying to write to `/tmp`
 
 The most common issue can be fixed by reading the section [Override the TMPDIR](#override-the-tmpdir).
@@ -60,7 +60,7 @@ The `/tmp` directory should have wide permissions for all applications, but to m
 
 The Lightning CLI process is aware of the environment variable TMPDIR, which the operators can override as discussed in the reference for [Update the System service unit](/references/Lightning%20CLI/update-cli-from-source-code/#update-the-systemd-service-unit).
 
-In short, it requires you to include an `Environment=` value of `TMPDIR=/var/tmp` as follows:
+In short, it requires you to include a `Environment=` value of `TMPDIR=/var/tmp` as follows:
 
 ```sh
 [Service]

@@ -22,7 +22,7 @@ This documentation is currently placeholder as the team prepares for an early te
 
 As a developer, you will be able to build or use services running on Fleek Network's decentralized edge infrastructure.
 
-This will be possible **after our initial Testnet rollouts in August, and after we publish our Service Development Kit (SDK) for service development**. Currently we are finalizing the core developments of the protocol and setting the foundations for the testnet release.
+This will be possible **after our initial Testnet rollouts in August, and after we publish our Service Development Kit (SDK) for service development**. Currently, we are finalizing the core developments of the protocol and setting the foundations for the testnet release.
 
 ## How can you Start Getting Involved Today?
 

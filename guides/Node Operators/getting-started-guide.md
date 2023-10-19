@@ -146,7 +146,7 @@ The build command uses the Rust compiler, which might take a while depending on 
 
 Once the Rust compiler completes, the generated binary will be available in the source code project directory. If you stick with the default, that'll look like `~/fleek-network/lightning/target/debug/lightning-node`.
 
-To avoid having to specify the pathname everytime, create a symbolic link to keep it short. Here we'll name the process as the global `lgtn`:
+To avoid having to specify the pathname every time, create a symbolic link to keep it short. Here we'll name the process as the global `lgtn`:
 
 ```sh
 sudo ln -s "~/fleek-network/lightning/target/debug/lightning-node" /usr/local/bin/lgtn
@@ -236,7 +236,7 @@ Which response should return the key `result` with value `pong`:
 
 ## Next steps
 
-While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides but we'll provide some guides and references to help you manage your network node server!
+While you can run the Network Node as described here, it's required to set up the Network Node correctly and securely! It requires some degree of patience, knowledge and time to go through our guides, but we'll provide some guides and references to help you manage your network node server!
 
 To avoid having to go through all the steps manually, we recommend reading our [assisted installer](/docs/node/install#assisted-installer) document for quick onboarding.
 
@@ -246,7 +246,7 @@ We introduced Fleek Network as an open-source edge computing platform to help us
 
 We have learned a bit about the importance of a decentralized edge computing network to reach and fulfill the future of computation and how the Fleek Network protocol works succinctly.
 
-We guide you through a step-by-step installation of the network node process, where we pull the source code, build the binary and launch the service.
+Furthermore, we guide you through a step-by-step installation of the network node process, where we pull the source code, build the binary and launch the service.
 
 Finally, we do a quick health check to confirm the status of our node.
 
