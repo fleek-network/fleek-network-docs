@@ -378,6 +378,7 @@ ExecStartPre=-/usr/bin/docker kill lightning-cli
 ExecStartPre=-/usr/bin/docker rm lightning-cli
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
 ExecStart=/usr/bin/docker run -p 4230:4230 -p 4200:4200 -p 6969:6969   -p 18000:18000 -p 18101:18101 -p 18102:18102 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-cli ghcr.io/fleek-network/lightning:latest
+ExecStop=/usr/bin/docker stop
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
