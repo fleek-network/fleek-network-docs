@@ -36,10 +36,10 @@ Run a quick health check by sending a GET request to `/health` endpoint of RPC o
 curl -w "\p" localhost:4230/health
 ```
 
-If successful, you should get the response `OK`, as follows:
+If successful, you should get the response `running and staked`, as follows:
 
 ```sh
-OK
+running and staked
 ```
 
 If you get an error, then it means that your node is not healthy.

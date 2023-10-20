@@ -310,10 +310,10 @@ To run a quick health checkup, send a GET request to `/health` endpoint of the R
 curl -w "\p" localhost:4230/health
 ```
 
-If successful, you should get the response `OK`, as follows:
+If successful, you should get the response `running and staked`, as follows:
 
 ```sh
-OK
+running and staked
 ```
 
 If you'd like to learn more about health check, visit the section [health check](/docs/node/health-check) of our documentation.
