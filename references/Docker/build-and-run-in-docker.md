@@ -131,12 +131,8 @@ sudo docker exec -it lightning-node lgtn keys generate
 
 ```sh
 sudo docker run \
-  -p 4230:4230 \
-  -p 4200:4200 \
-  -p 6969:6969 \
-  -p 18000:18000 \
-  -p 18101:18101 \
-  -p 18102:18102 \
+  -p 4200-4299:4200-4299 \
+  -p 4300-4399:4300-4399 \
   -v $HOME/.lightning/:/root/.lightning/:rw \
   --name lightning-node \
   -it lightning
