@@ -274,7 +274,7 @@ MemoryHigh=32G
 RestartSec=15s
 Restart=always
 ExecStart=lgtn -c /home/<USERNAME>/.lightning/config.toml run
-ExecStop=pkill -f lgtn
+ExecStop=killall lgtn
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 Environment=TMPDIR=/var/tmp
@@ -295,7 +295,7 @@ MemoryHigh=32G
 RestartSec=15s
 Restart=always
 ExecStart=lgtn -c /home/lgtn/.lightning/config.toml run
-ExecStop=pkill -f lgtn
+ExecStop=killall lgtn
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 Environment=TMPDIR=/var/tmp
