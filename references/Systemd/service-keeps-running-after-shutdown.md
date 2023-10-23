@@ -38,7 +38,7 @@ A Systemd service is managed by [Systemctl](/docs/node/systemd-service), to star
 To force stop the service `lgtn` execute the command:
 
 ```sh
-sudo killall lgtn
+sudo killall -9 lgtn
 ```
 
 <Author
