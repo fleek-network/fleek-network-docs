@@ -9,9 +9,13 @@ tags:
 import Author from '@site/src/components/Author';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
+## Invalid Cross-device link (os error 18)
+
 ```sh
 Error: Failed to build app db from checkpoint: Invalid cross-device link (os error 18)
 ```
+
+### Docker run mount /var/tmp
 
 Mount the `/var/tmp` from host to container to persist between sessions.
 
@@ -32,6 +36,8 @@ sudo docker run \
     --name lightning-node \
     -it ghcr.io/fleek-network/lightning:latest
 ```
+
+### Update Systemd service
 
 Since it's recommended to use the Systemd service unit to manage the Fleek Network Lightning service, you'll have to open and update it.
 
@@ -59,7 +65,11 @@ StandardError=append:/var/log/lightning/diagnostic.log
 WantedBy=multi-user.target
 ```
 
-Save the file before proceeding to restart the daemon as follows:
+Save the file before proceeding
+
+### Restart daemon
+
+To restart the daemon as follows:
 
 ```sh
 sudo systemctl daemon-reload
