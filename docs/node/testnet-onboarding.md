@@ -11,6 +11,8 @@ tags:
 sidebarCollapsible: false
 ---
 
+import Author from '@site/src/components/Author';
+
 ## Testnet Phase {1}:
 
 Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
@@ -145,3 +147,10 @@ You can get the Node Public Key and Server IP Address quick by using the [node d
 :::
 
 Report to us by sharing the details about via our [discord](https://discord.gg/fleekxyz) troubleshooting channel.
+
+<Author
+    name="Helder Oliveira"
+    image="https://github.com/heldrida.png"
+    title="Software Developer + DX"
+    url="https://github.com/heldrida"
+/>
