@@ -49,12 +49,12 @@ If you get an error, then it means that your node is not healthy.
 We'll send a request to the JSON RPC `flk_ping` method. Execute the following command:
 
 ```sh
-$ curl -X POST -H "Content-Type: application/json" -d '{
-      "jsonrpc": "2.0",
-      "method": "flk_ping",
-      "params": [],
-      "id": 1
-    }' http://127.0.0.1:4230/rpc/v0
+curl -X POST -H "Content-Type: application/json" -d '{
+    "jsonrpc": "2.0",
+    "method": "flk_ping",
+    "params": [],
+    "id": 1
+  }' http://127.0.0.1:4230/rpc/v0
 ```
 
 If the request is successful, you should get the result `pong` as follows:
