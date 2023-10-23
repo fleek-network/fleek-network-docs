@@ -53,7 +53,8 @@ sudo docker run \
     -p 4200-4299:4200-4299 \
     -p 4300-4399:4300-4399 \
     --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
-    --name lightning-cli \
+    --mount type=bind,source=/var/tmp,target=/var/tmp \
+    --name lightning-node \
     -it ghcr.io/fleek-network/lightning:latest
 ```
 
@@ -286,9 +287,10 @@ Once the [Docker image](#build-the-docker-image) is ready, run the container bas
 sudo docker run \
     -p 4200-4299:4200-4299 \
     -p 4300-4399:4300-4399 \
-  --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
-  --name lightning-cli \
-  -it lightning
+    --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+    --mount type=bind,source=/var/tmp,target=/var/tmp \
+    --name lightning-node \
+    -it ghcr.io/fleek-network/lightning:latest
 ```
 
 :::tip
@@ -369,7 +371,7 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill lightning-cli
 ExecStartPre=-/usr/bin/docker rm lightning-cli
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
-ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --name lightning-cli ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-cli ghcr.io/fleek-network/lightning:latest
 ExecStop=/usr/bin/docker stop
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
