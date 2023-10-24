@@ -19,7 +19,7 @@ Following the successful completion of Fleek Network Testnet Phase {0}, the core
 
 ### Prerequesites
 
-The Testnet Phase {1} is open to everybody. Everyone's free to join the Testnet Phase {1}, regardless of whether they have participated in any prior testnet phase or filled any forms.
+The Testnet Phase {1} is open to everybody. Everyone's free to join the Testnet Phase {1}, regardless of whether they have participated in any prior testnet phase, filled any forms or whitelisting.
 
 The Fleek team cares about user experience and provides documentation and tools (whichever's your preference) to onboard easily and quickly. However, the Node operator's server should have the [minimum requirements](/docs/node/requirements) to set up and run a Fleek Network node.
 
