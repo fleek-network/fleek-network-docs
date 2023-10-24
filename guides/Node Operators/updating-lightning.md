@@ -307,7 +307,7 @@ First, complete all the steps and checkups mentioned throught the guide and once
 To run a quick health checkup, send a GET request to `/health` endpoint of the RPC on [port](/docs/node/requirements#ports) 4230.
 
 ```sh
-curl -w "\p" localhost:4230/health
+curl -w "\n" localhost:4230/health
 ```
 
 If successful, you should get the response `running and staked`, as follows:
