@@ -54,7 +54,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "method": "flk_ping",
     "params": [],
     "id": 1
-  }' http://127.0.0.1:4230/rpc/v0
+  }' localhost:4230/rpc/v0
 ```
 
 If the request is successful, you should get the result `pong` as follows:
