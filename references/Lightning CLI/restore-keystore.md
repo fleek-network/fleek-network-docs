@@ -12,6 +12,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
+import RestoreKeystore from '../../guides/partials/_restore-keystore.mdx';
 
 :::caution
 The security of the private key is the responsibility of the user. Unfortunately, the Fleek Network team and any others are unable to help regain access to private key if lost or failed to secure them. The private keys are the user responsibility. The Fleek Network team doesn't endorse any methods of encryption and storage, the methods described here are for educational purposes only.
@@ -73,33 +74,9 @@ lgtn print-config --default > ~/.lightning/config.toml
 
 <FindAndReplaceConfigWithUserPaths />
 
-## Copy the backup keystore
+## Restoring the keystore
 
-You can restore the keystore (Public Keys) by copying the directory to the `~/.lightning` directory.
-
-Let's assume that you know where your backup directory or files are located. To keep our instructions easy to follow, let's say that:
-
-1) The keystore and files are located under the hypothetical location `/my-keystore-backup`
-2) The files in the `/my-keystore-backup` are the following:
-
-```
-/my-keystore-backup
-├── consensus.pem
-└── node.pem
-
-1 directory, 2 files
-```
-
-Considering the above for our example, you would have to run the following command:
-
-```
-mv /my-keystore-backup /home/<YOUR-USERNAME>/.lightning/keystore
-```
-
-:::tip
-Remember to replace the `<YOUR-USERNAME>` with the correct username for the setup. For example, if you have installed the Fleek Network with the username `lgtn` that would be `/home/lgtn/.lightning/keystore`.
-:::
-
+<RestoreKeystore />
 
 For a more in depth or step-by-step instructions read the guide [managing the keystore](/guides/Node%20Operators/managing-the-keystore).
 
