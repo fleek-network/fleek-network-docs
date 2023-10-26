@@ -313,10 +313,10 @@ Have in mind that the `$HOME/.lightning/config.toml` is where the keystore locat
 
 ## Generate keys
 
-Execute the `keys generate` command on the container `lightning-cli`:
+Execute the `keys generate` command on the container `lightning-node`:
 
 ```sh
-sudo docker exec -it lightning-cli lgtn keys generate
+sudo docker exec -it lightning-node lgtn keys generate
 ```
 
 We've bound the host path `~/.lightning` into the container `/root/.lightning`.
@@ -335,7 +335,7 @@ You only have to run the `keys generate` once from your host.
 Finaly, you can start the Fleek Network node by running the command:
 
 ```sh
-sudo docker start lightning-cli
+sudo docker start lightning-node
 ```
 
 ## Run the Docker Container as Systemd Service
@@ -368,11 +368,11 @@ Requires=docker.service
 Restart=always
 RestartSec=5
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill lightning-cli
-ExecStartPre=-/usr/bin/docker rm lightning-cli
+ExecStartPre=-/usr/bin/docker kill lightning-node
+ExecStartPre=-/usr/bin/docker rm lightning-node
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
-ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-cli ghcr.io/fleek-network/lightning:latest
-ExecStop=/usr/bin/docker stop
+ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-node ghcr.io/fleek-network/lightning:latest
+ExecStop=/usr/bin/docker stop lightning-node
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
@@ -405,7 +405,7 @@ As a result, we are now able to run our containers as a Systemd service. For thi
 To view the logs of a Docker container in real time, use the following command:
 
 ```sh
-sudo docker logs -f lightning-cli
+sudo docker logs -f lightning-node
 ```
 
 If you have wrapped the [docker container as a systemd service](#run-the-docker-container-as-systemd-service), you can use the same commands found when installed natively, such as:
