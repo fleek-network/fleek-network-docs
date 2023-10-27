@@ -13,6 +13,10 @@ sidebarCollapsible: false
 
 import Author from '@site/src/components/Author';
 
+:::info Important
+The Testnet Phase {1} has finished on Thursday, Oct. 26th. Expect to see a detailed [blog](https://blog.fleek.network) on all the results and findings from Phase {1} the following week, as well as some info on what comes next for Fleek Network on the Road to Mainnet.
+:::
+
 ## Testnet Phase {1}:
 
 Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
