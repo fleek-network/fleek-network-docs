@@ -25,7 +25,7 @@ For the purpose of storing Fleek Network Node operation logs, it defaults to sto
 
 To mitigate any concerns or issues, a Node Operator can configure the system to rotate, compress, set maximum size of these files.
 
-In this guide, we'll look into some options available to manage the logs. First, we'll look into journald.conf which controls where to store journal data–the journal is a component of systemd that handles all the messages in a Systemd enabled system. Afterwards, we'll look into Logrotate an application to help us manage automatic rotation and compression of log files.
+In this guide, we'll look into some options available to manage the logs. First, we'll look into journald.conf which controls where to store journal data–the journal is a component of systemd that handles all the messages in a Systemd enabled system. Afterwards, we'll look into Logrotate an application to help us manage automatic rotation and compression of log files. In essence, the journal and the logs duplicate the same information.
 
 ## Journal
 
@@ -40,7 +40,7 @@ Here, we are going to learn how to configure the `journald.conf` service configu
 To check how much disk space is used by systemd log files, run the command below:
 
 ```
-journalctl --disk-usage
+sudo journalctl --disk-usage
 ```
 
 Provides how much disk space is utilized by the log files in your system.
@@ -63,19 +63,19 @@ The flush and rotate flag is used, as vaccum-time only clears archived logs, not
 #### Follow or tail logs of service
 
 ```
-journalctl -u <SERVICE-NAME>.service -f
+sudo journalctl -u <SERVICE-NAME>.service -f
 ```
 
 For example, for a conventional native install (if you haven't followed the conventions, make the appropriate tweaks to fit your needs).
 
 ```
-journalctl -u lightning.service -f
+sudo journalctl -u lightning.service -f
 ```
 
 The Docker service
 
 ```
-journalctl -u docker-lightning.service -f
+sudo journalctl -u docker-lightning.service -f
 ```
 
 #### Show all service entries
@@ -83,7 +83,7 @@ journalctl -u docker-lightning.service -f
 Show all journal entries, which can be fairly long:
 
 ```
-journalctl
+sudo journalctl
 ```
 
 ### Configuration file
@@ -138,11 +138,143 @@ sudo systemctl restart systemd-journald
 You can verify the integrity of the log files by running:
 
 ```
-journalctl --verify
+sudo journalctl --verify
 ```
 
 ## Logrotate
 
+Logrotate is a tool to manage the log files created by a system processes. It can automatically compress, rename, remove logs and more for your convenience and save your system's resources. Log files can be handled timely, or when it grows too large.
+
+### Prerequesite
+
+The logrotate tools is available by default on Ubuntu. We're going to use Ubuntu for your guide to keep it simple. If you are using a different and support operating system make sure you install Logrotate before proceeding.
+
+You can check if logrotate is available by executing:
+
+```
+logrotate --version
+```
+
+At the time this guide was written got the following output:
+
+```
+logrotate 3.21.0
+
+    Default mail command:       /usr/bin/mail
+    Default compress command:   /bin/gzip
+    Default uncompress command: /bin/gunzip
+    Default compress extension: .gz
+    Default state file path:    /var/lib/logrotate/status
+    ACL support:                yes
+    SELinux support:            yes
+```
+
+If you run an earlier or older version, changes or tweaks might apply.
+
+### Explore the Configuration files
+
+The configuration files we'll be exploring today are found in the following locations in Ubuntu:
+
+- **/etc/logrotate.conf**, is the main settings file. It includes the statement to pull in configuration files from other directories, e.g. the `/etc/logrotate.d`
+
+- **/etc/logrotate.d/**, a directory where packages drop log rotation information
+
+:::tip
+We use Ubuntu for our guide, if you are on a different distro, you have to determine the file configuration file locations
+:::
+
+The content of the file `/etc/logrotate.conf` should be similar to:
+
+```
+# see "man logrotate" for details
+
+# global options do not affect preceding include directives
+
+# rotate log files weekly
+weekly
+
+# use the adm group by default, since this is the owning group
+# of /var/log/.
+su root adm
+
+# keep 4 weeks worth of backlogs
+rotate 4
+
+# create new (empty) log files after rotating old ones
+create
+
+# use date as a suffix of the rotated file
+#dateext
+
+# uncomment this if you want your log files compressed
+#compress
+
+# packages drop log rotation information into this directory
+include /etc/logrotate.d
+
+# system-specific logs may also be configured here.
+```
+
+The configuration settings if anything like the above tell us that the rotation happens weekly, keeping 4 weeks worth of backlogs, etc.
+
+To learn more about other configuration options consult the [logrotate manual page](https://linux.die.net/man/8/logrotate).
+
+### Create the Lightning logrotate configuration file
+
+Let's create a Logrotate configuration file for Fleek Network Lightning Service. Create the file by running the command:
+
+```
+sudo touch /etc/logrotate.d/lightning
+```
+
+### Lightning Configuration Settings
+
+Open the recently created file `/etc/logrotate.d/lightning` in your favorite text editor.
+
+Add the following lines to the file:
+
+```
+/var/log/lightning/*.log {
+    rotate 5
+    daily
+    size 50M
+    notifempty
+    compress
+}
+```
+
+Remember to save the file before exiting the text editor. You can test the configuration file by running the command:
+
+```
+sudo logrotate /etc/logrotate.conf --debug
+```
+
+The configuration file above declares that for the log files in the `/var/log/lightning` directory, the log files are rotated 5 times daily before being removed, as long if they grow bigger than 50 megabytes in file size or empty. Old versions of log files are compressed with gzip.
+
+:::tip
+Bear in mind that this configuration file also inherit the default behavior, e.g. the `create` as set in `/etc/logrotate.conf`.
+:::
+
+Feel free to customize the settings to your liking by checking the documentation in the [logrotate manual page](https://linux.die.net/man/8/logrotate).
+
+
+### Cron job
+
+:::note
+Depending on the operating system, you have to set up a cron job to execute logrotate with the configuration file daily. Since we are using Ubuntu for our example, this is already set up for us. If you are on a different Distro/OS make the required amends.
+:::
+
+Verify that the `/etc/cron.daily/logrotate` exists and includes the execution of `logrotate` with the argument `/etc/logrotate.conf`.
+
+```
+/usr/sbin/logrotate /etc/logrotate.conf
+```
+
+:::tip
+If you have modified the location of the binary or main configuration file, make sure this is set correctly to your custom locations.
+:::
+
+To summarize, the `logrotate /etc/logrotate.conf` is executed and as logrotate.conf goes through its list of commands it calls `include /etc/logrotate.d`, which means that any scripts in `/etc/logrotate.d` are executed, that happens to be the case for our [Lightning Configuration Settings](#lightning-configuration-settings).
 
 
 ## Conclusion
