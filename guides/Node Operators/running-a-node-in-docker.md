@@ -46,19 +46,21 @@ The Docker Container image for Lightning is located at [https://github.com/fleek
 
 ### Pull and run image
 
-You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
+You can pull and run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
 
 ```sh
 sudo docker run \
     -p 4200-4299:4200-4299 \
     -p 4300-4399:4300-4399 \
-    --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+    --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
     --mount type=bind,source=/var/tmp,target=/var/tmp \
     --name lightning-node \
     -it ghcr.io/fleek-network/lightning:latest
 ```
 
+:::note
 Keys have to be generated when launching the service. On Docker run, if the [keystore](/guides/Node%20Operators/managing-the-keystore) is not found, the keys are automatically generated and stored in the Docker host's `$HOME/.lightning/keystore` directory. To learn more about how to manage the keystore, visit the [managing keystore](/guides/Node%20Operators/managing-the-keystore) section.
+:::
 
 :::caution warning
 The Docker image is tied to a CPU architecture, make sure that you have verified the [required](/docs/node/requirements#specs) specifications to run the container successfully.
@@ -219,7 +221,7 @@ A Docker image is a read-only template with instructions for creating a Docker c
 
 The starting point for our use-case is a Dockerfile, where all those "template instructions" are declared.
 
-A [Dockerfile](https://raw.githubusercontent.com/fleek-network/lightning/main/Dockerfile) should exist in the repository source code, so make sure you have [chage directory to the lightning source code](#change-directory-to-lightning-source-code) to find it.
+A [Dockerfile](https://raw.githubusercontent.com/fleek-network/lightning/main/Dockerfile) should exist in the repository source code, so make sure you have [change directory to the lightning source code](#change-directory-to-lightning-source-code) to find it.
 
 ### Build the Docker image
 
@@ -237,7 +239,7 @@ BuildKit is required by Docker Build if you are running the docker daemon (deskt
 :::
 -->
 
-The build process takes awhile and you have to wait for completion. 
+The build process takes awhile, and you have to wait for completion. 
 
 The output should be similar to:
 
@@ -268,26 +270,26 @@ The output should be similar to:
  ```
 
 :::tip
-The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or specific versions you might be interested in. Otherwise, you're not required to build it everytime to run the node. If you'd like to learn how to update the Lightning CLI, find our references [here](/references/Lightning%20CLI/update-cli-from-source-code).
+The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or specific versions you might be interested in. Otherwise, you're not required to build it every time to run the node. If you'd like to learn how to update the Lightning CLI, find our references [here](/references/Lightning%20CLI/update-cli-from-source-code).
 :::
 
 :::caution
-If you don't update your source code and binary build often, you won't have the latest changes, which should happen frequently to take advandate of all the ongoing development. This is quite important to understand, as it causes confusion to some users. The Lightning application at time of writing does not update automatically.
+If you don't update your source code and binary build often, you won't have the latest changes, which should happen frequently to take advantage of all the ongoing development. This is quite important to understand, as it causes confusion to some users. The Lightning application at time of writing does not update automatically.
 :::
 
 ## Docker Container
 
-A container is what's originated from the image we discussed in the section [build the docker image](#build-the-docker-image), it is a runnable instance of an image. We can create, start, stop, move, or delete a container using the Docker API or CLI.
+A container is what's originated from the image we discussed in the section [build the docker image](#build-the-docker-image), it is a run-able instance of an image. We can create, start, stop, move, or delete a container using the Docker API or CLI.
 
 Following up, we'll learn how to run the Docker container that includes our Lightning CLI program, built from our Dockerfile.
 
-Once the [Docker image](#build-the-docker-image) is ready, run the container based on the image `lightning`. Effectively running the Fleek Network Lighthing node process:
+Once the [Docker image](#build-the-docker-image) is ready, run the container based on the image `lightning`. Effectively running the Fleek Network Lightning node process:
 
 ```sh
 sudo docker run \
     -p 4200-4299:4200-4299 \
     -p 4300-4399:4300-4399 \
-    --mount type=bind,source=$HOME/.lightning,target=/root/.lightning \
+    --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
     --mount type=bind,source=/var/tmp,target=/var/tmp \
     --name lightning-node \
     -it ghcr.io/fleek-network/lightning:latest
@@ -319,7 +321,7 @@ Execute the `keys generate` command on the container `lightning-node`:
 sudo docker exec -it lightning-node lgtn keys generate
 ```
 
-We've bound the host path `~/.lightning` into the container `/root/.lightning`.
+We've bound the host path `~/.lightning` into the container `/home/lgtn/.lightning`.
 
 You can list the contents of the `~/.lightning`, where you should find the `config.toml` and `keystore`:
 
@@ -332,15 +334,19 @@ keystore
 
 You only have to run the `keys generate` once from your host.
 
-Finaly, you can start the Fleek Network node by running the command:
+Finally, you can start the Fleek Network node by running the command:
 
 ```sh
 sudo docker start lightning-node
 ```
 
+:::tip
+The `lightning-node` is the name we provided on first run as described in [docker container](#docker-container) section. If you have set a different name, change accordingly.
+:::
+
 ## Run the Docker Container as Systemd Service
 
-In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some reasons include, minimizing the dependency on the Docker Daemon as we can move to a [OCI complaint solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar.
+In this section we’ll cover how to wrap a Docker Container as a Systemd Service without the need for third party tools or complex commands. Some reasons include, minimizing the dependency on the Docker Daemon as we can move to an [OCI complaint solution](https://opencontainers.org/) other that Docker at anytime, or the fact we recommend Systemd Service Units and Systemctl to control the Service in our [Native install](/docs/node/install) that most users are familiar. Our goal is to provide guidance to the widest audience possible, if you have other preferences on managing your service that is more fitting to your needs that's fine.
 
 :::tip
 Docker recommends using their cross-platform built-in restart policy for running a Container as a Service. For that, configure your Docker service to [start on system boot](https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot).
@@ -371,7 +377,7 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill lightning-node
 ExecStartPre=-/usr/bin/docker rm lightning-node
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
-ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/root/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-node ghcr.io/fleek-network/lightning:latest
+ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/home/lgtn/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-node ghcr.io/fleek-network/lightning:latest
 ExecStop=/usr/bin/docker stop lightning-node
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
