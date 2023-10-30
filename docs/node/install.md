@@ -638,7 +638,7 @@ ExecStartPre=-/usr/bin/docker kill lightning-node
 ExecStartPre=-/usr/bin/docker rm lightning-node
 ExecStartPre=/usr/bin/docker pull ghcr.io/fleek-network/lightning:latest
 ExecStart=/usr/bin/docker run -p 4200-4299:4200-4299 -p 4300-4399:4300-4399 --mount type=bind,source=/home/skywalker/.lightning,target=/home/lgtn/.lightning --mount type=bind,source=/var/tmp,target=/var/tmp --name lightning-node ghcr.io/fleek-network/lightning:latest
-ExecStop=/usr/bin/docker stop
+ExecStop=/usr/bin/docker stop lightning-node
 StandardOutput=append:/var/log/lightning/output.log
 StandardError=append:/var/log/lightning/diagnostic.log
 
