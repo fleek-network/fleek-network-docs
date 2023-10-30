@@ -41,7 +41,7 @@ mv /etc/systemd/system/lightning.service /etc/systemd/system/user/lightning.serv
 
 Check the **Load path when running in user mode (--user)** in [Systemd unit](https://www.freedesktop.org/software/systemd/man/systemd.unit.html) for other alternative user paths, or to understand how it works to customize your server accordingly.
 
-## Reload daemon
+## Reload daemon
 
 ```sh
 sudo systemctl daemon-reload
