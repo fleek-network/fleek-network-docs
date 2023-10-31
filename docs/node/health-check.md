@@ -33,7 +33,7 @@ We're using cURL, for the examples, thus make sure that you have it installed on
 Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/node/requirements#ports) 4230.
 
 ```sh
-curl -w "\p" localhost:4230/health
+curl -w "\n" localhost:4230/health
 ```
 
 If successful, you should get the response `running and staked`, as follows:
