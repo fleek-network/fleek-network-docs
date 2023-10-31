@@ -128,12 +128,12 @@ You should open the `/etc/systemd/journald.conf` file in your favorite text edit
 ```toml
 [Journal]
 Storage=persistent
-SystemMaxUse=100M
+SystemMaxUse=1G
 SystemMaxFileSize=100M
 RuntimeMaxUse=100M
 ```
 
-Here, we set 100M, which means 100 Megabytes. You can also use K for Kbytes, G for Gbytes, amongst others.
+Here, we set 1G and 100M, which means 1 Gigabyte and 100 Megabytes. You can also use K for Kbytes, amongst others.
 
 After the changes, you have to restart the journald after updating the file. To restart use the command:
 
