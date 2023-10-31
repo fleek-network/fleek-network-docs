@@ -666,6 +666,10 @@ sudo systemctl enable docker-lightning.service
 
 Learn how to manage the Systemd Service by reading the section [systemd service](/docs/node/systemd-service).
 
+## Frequently Used Commands (Quick Reference)
+
+A quick reference of the most Frequently Used Commands are available for [Native](/references/Lightning%20CLI/frequently-used-commands-for-native-setup) and [Docker](/references/Docker/frequently-used-commands-for-docker-setup) setups. If you'd like a more in depth explanation of the commands, check the [health check](/docs/node/health-check), [analyzing logs](/docs/node/analyzing-logs), [systemd service](/docs/node/systemd-service) and [guides](/guides/index) sections separately.
+
 <Author
     name="Helder Oliveira"
     image="https://github.com/heldrida.png"
