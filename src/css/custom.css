@@ -174,11 +174,8 @@ div[class*="docItemContainer"] {
 }
 
 /* Main wrapper */
-.main-wrapper {
-  padding: 0 var(--ifm-spacing-horizontal);
-}
 .navbar__inner,
-.main-wrapper > [class^="docPage_"],
+.main-wrapper,
 .footer .container {
   max-width: 1440px;
   margin: 0 auto;
