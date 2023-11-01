@@ -27,13 +27,11 @@ const commonNavbarItems = [{
   to: 'guides',
   label: 'Guides',
   position: 'left',
-  activeBasePath: 'guides',
 },
 {
   to: 'references',
   label: 'References',
   position: 'left',
-  activeBasePath: 'references',
 },
 {
   href: 'https://github.com/fleek-network/',
