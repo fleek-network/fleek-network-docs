@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[2240],{342:a=>{a.exports=JSON.parse('{"label":"Roadmap","permalink":"/docs/tags/roadmap","allTagsPath":"/docs/tags","count":1,"items":[{"id":"roadmap","title":"Roadmap","description":"Fleek Network\'s high-level roadmap per stage. Devnet, Testnet, and Mainnet.","permalink":"/docs/roadmap"}]}')}}]);

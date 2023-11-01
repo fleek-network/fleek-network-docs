@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[1837],{2141:o=>{o.exports=JSON.parse('{"label":"Configuration","permalink":"/docs/tags/configuration","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/configuration","title":"Configuration","description":"TODO: Configuration","permalink":"/docs/node/configuration"}]}')}}]);

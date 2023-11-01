@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocta=self.webpackChunkdocta||[]).push([[1263],{1337:a=>{a.exports=JSON.parse('{"label":"wizard","permalink":"/docs/tags/wizard","allTagsPath":"/docs/tags","count":1,"items":[{"id":"node/install","title":"Install","description":"The Fleek Network Lightning CLI installation walkthrough","permalink":"/docs/node/install"}]}')}}]);
