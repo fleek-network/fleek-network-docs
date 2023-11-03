@@ -14,7 +14,7 @@ sidebarCollapsible: false
 import Author from '@site/src/components/Author';
 
 :::info Important
-The Testnet Phase {1} has finished on Thursday, Oct. 26th. Expect to see a detailed [blog](https://blog.fleek.network) on all the results and findings from Phase {1} the following week, as well as some info on what comes next for Fleek Network on the Road to Mainnet.
+The Testnet Phase {1} has finished on Thursday, Oct. 26th. Phase {1} turned out to be an enormous success. Seeing 5k+ nodes successfully running across the network and demonstrating that Fleek Network is capable of being just as performant as web2 cdn/edge platforms and, with further optimizations, potentially even more performant. Dive into the full performance data and key analysis in the Phase {1} recap [blog](https://blog.fleek.network/post/fleek-network-phase-1-recap).
 :::
 
 ## Testnet Phase {1}:
