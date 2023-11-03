@@ -154,7 +154,9 @@ Report to us by sharing the details about via our [discord](https://discord.gg/f
 
 ### Can I shut down the node after Testnet completion?
 
-Once the Testnet finishes, it's not necessary to keep the node active. Furthermore, as the Testnet identity and its related stake hold no intrinsic value other than for testing purposes, you can delete them. Of course that if you want to learn how to back up or restore keys, you can read about how to [manage the key store](/guides/Node%20Operators/managing-the-keystore) and keep the keys.
+Once the Testnet finishes, it's not necessary to keep the node active. Furthermore, as the Testnet identity (keystore node and consensus pem keys) and its related stake hold no intrinsic value other than for testing purposes, you can delete them.
+
+However, if you wish to learn about key management, you can refer to the [instruction guide](/guides/Node%20Operators/managing-the-keystore) to learn on how to back up or restore keys, etc.
 
 <Author
     name="Helder Oliveira"
