@@ -28,6 +28,20 @@ A Node operator or system administrator can communicate with the node to confirm
 We're using cURL, for the examples, thus make sure that you have it installed on your operating system.
 :::
 
+## What's a node health check?
+
+A Node health check is exactly what it sounds like, a way of checking the health status of a Fleek Network node.
+
+A Node operator can do a health check (as it's common among system operators worth their title) to get feedback and see if the resource is operating successfully. It's a good practice for a Node operator to do it frequently, as otherwise there'd be no way of knowing whether the Node is running. For example, some advanced operators automate this process by using cronjobs and getting reports via email, etc.
+
+Health checks are valuable and a must for all the Node operators, as they are incentivized to participate in the network by making their resources available which the reward mechanism evaluates.
+
+Rewards are only a given for good behavior and thus an unhealthy Node or bad management can cause disappointment. A decentralized and permissionless network, which is beyond anyone's control (us included) requires some education by the users.
+
+A system can be highly customizable and understanding some basics can help you achieve success as a node operator, resource health checking is important.
+
+Fleek Network depends on the Node operator's success, thus we try to keep things simple and try to motivate you to learn for the network's overall health. That's what a Node health check is about, your contribution!
+
 ## Quick health check
 
 Run a quick health check by sending a GET request to `/health` endpoint of RPC on [port](/docs/node/requirements#ports) 4230.
