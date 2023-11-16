@@ -110,9 +110,6 @@ Remaining output omitted for brevity, you'll not see this text line
 
 Follow the installation wizard to have the Fleek Network Lightning CLI and service installed on the [supported server](/docs/node/requirements).
 
-After creating the service file, you should reload the Systemd process, to apply the newly created service. You can do this by executing:
-
-
 After creating the service, launch the service by executing the following command:
 
 ```sh
