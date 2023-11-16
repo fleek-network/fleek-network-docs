@@ -18,6 +18,10 @@ Several milestones were completed toward our next early Testnet goal: the whitep
 
 For a complete description of our testnet plans, road to mainnet, and testnet participation initiatives, read the following [blog post](https://blog.fleek.network/post/fleek-network-testnet-plans/).
 
+:::note
+We're experiencing some delays in our roadmap due to unforeseen circumstances. We're working to get back on track and appreciate your patience. Apologies for any inconvenience caused. Stay tuned for updates.
+:::
+
 ## Current state: Road to Testnet
 
 Our current roadmap on the road to an early testnet stands as follows, currently in **Phase {0}*:
