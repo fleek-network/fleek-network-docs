@@ -211,6 +211,10 @@ It's designed to allow anyone to create and deploy a custom service to the netwo
 
 Within a diverse ecosystem where node operators are free to choose which services to run, e.g. an operator might find popular services more appealing economically. Thus, the network is nonhomogenous, made up of different types of resource servers, requirements and services.
 
+:::note
+Loading a Service dynamically shouldn't be available in the initial version of Fleek Network.
+:::
+
 ## Abstraction and build blocks
 
 Abstraction is conceptually useful in decentralized and distributed web service development because of how incredibly complex it can become and the speed at which developers have to react to the outside world. The core team put most of the complexity into well-defined building blocks.
