@@ -58,7 +58,7 @@ git checkout testnet-alpha-1
 ```
 
 :::tip
-We try to update our documentation promptly but sometimes are a bit behind on any changes we might make in real-time. If you find any typos, such as the wrong branch name, help us by letting us know! Find us in Fleek Network section of our [Discord](https://discord.gg/fleekxyz).
+We try to update our documentation promptly but sometimes are a bit behind on any changes we might make in real-time. If you find any typos, such as the wrong branch name, help us by letting us know! Find us in Fleek Network section of our [Discord](https://discord.gg/fleek).
 :::
 
 ## Pull the latest changes

@@ -36,7 +36,7 @@ To use the automated script execute the following command in your server termina
 curl -sS https://get.fleek.network/transfer_system_user_setup_ownership | bash
 ```
 
-We try to make the auomated scripts as useful as possible, but it's impossible to fit every single use-case. So, if you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleekxyz).
+We try to make the auomated scripts as useful as possible, but it's impossible to fit every single use-case. So, if you find any isses or have feedback to help us improve [message us through our Discord](https://discord.gg/fleek).
 :::
 
 ## Introduction
@@ -349,7 +349,7 @@ Jumped through topics of Systemd service that helps the user manage the service 
 
 We've gone through the step-by-step process to migrate the Fleek Network CLI and Systemd service setup from one user to the other. To keep it short, we decided to go with the use-case of where the migration happens between a **root** user and a **sudoer**.
 
-Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
+Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
 
 <Author
     name="Helder Oliveira"

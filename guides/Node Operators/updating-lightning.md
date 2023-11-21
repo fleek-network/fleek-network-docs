@@ -328,7 +328,7 @@ We have looked into how to pull the changes via Git, and discussed that contribu
 
 To complete, provided a step-by-step walkthrough the installation and setup process for the Fleek Network Lightning CLI and Systemd service.
 
-Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
+Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
 
 <Author
     name="Helder Oliveira"

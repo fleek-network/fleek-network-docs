@@ -47,8 +47,8 @@ We aim to bring computation to where demand is. You can find Fleek Network's pub
 
 ## Need help?
 
-Be part of a community! Join the Fleek Network [discord](https://discord.gg/fleekxyz) if you want to ask a question, require help or exchange ideas.
+Be part of a community! Join the Fleek Network [discord](https://discord.gg/fleek) if you want to ask a question, require help or exchange ideas.
 
 ## Found an issue?
 
-Issues can be reported in the correspondent repositories [here](https://github.com/fleek-network) and any other reports by messaging us on [discord](https://discord.gg/fleekxyz).
+Issues can be reported in the correspondent repositories [here](https://github.com/fleek-network) and any other reports by messaging us on [discord](https://discord.gg/fleek).

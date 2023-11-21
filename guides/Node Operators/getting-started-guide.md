@@ -33,7 +33,7 @@ For those seeking advanced knowledge:
 * Check out [our open-source code](https://github.com/fleek-network/lightning).
 
 :::tip
-If you find any typos in our documentation, feel free to [provide us feedback](https://discord.gg/fleekxyz) or contribute by opening a PR in our repository [here](https://github.com/fleek-network/fleek-network-docs/).
+If you find any typos in our documentation, feel free to [provide us feedback](https://discord.gg/fleek) or contribute by opening a PR in our repository [here](https://github.com/fleek-network/fleek-network-docs/).
 :::
 
 ## Pre-requisites
@@ -250,7 +250,7 @@ Furthermore, we guide you through a step-by-step installation of the network nod
 
 Finally, we do a quick health check to confirm the status of our node.
 
-Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for any updates.
+Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
 
 <Author
     name="Helder Oliveira"

@@ -29,5 +29,5 @@ This will be possible **after our initial Testnet rollouts in August, and after 
 1. Get familiar with the project [with our Whitepaper](https://whitepaper.fleek.network).
 2. Review our open-source [codebase on Github](https://github.com/fleek-network/lightning/).
 3. Learn about [services in Fleek Network.](./services.md)
-3. Want to run a node? Join our community [in Discord to get updates when possible](https://discord.gg/fleekxyz).
+3. Want to run a node? Join our community [in Discord to get updates when possible](https://discord.gg/fleek).
 4. Or sign up to the newsletter on [our website](https://fleek.network/) for updates.

@@ -99,7 +99,7 @@ On success, you should be greeted by the following welcome screen:
 ★★★★★★★★★ 🌍 Website https://fleek.network
 ★★★★★★★★★ 📚 Documentation https://docs.fleek.network
 ★★★★★★★★★ 💾 Git repository https://github.com/fleek-network/lightning
-★★★★★★★★★ 🤖 Discord https://discord.gg/fleekxyz
+★★★★★★★★★ 🤖 Discord https://discord.gg/fleek
 ★★★★★★★★★ 🐤 Twitter https://twitter.com/fleek_net
 ★★★★★★★★★ 🎨 Ascii art by https://www.asciiart.eu
 
@@ -550,7 +550,7 @@ b) [Build the Docker image](#build-from-source) from the repository source code
 Optionally, [wrap the Docker Container as a Systemd Service](#docker-container-as-a-systemd-service).
 
 :::tip
-The Docker images are built for particular CPU architectures (x64) and as declared in the [requirements](/docs/node/requirements/#specs), we're mainly supporting `GenuineIntel`, as there has been reports of failure to build and run the binary on AMD. If you're running on a `AuthenticAMD`, provide us feedback on our [Discord](https://discord.gg/fleekxyz).
+The Docker images are built for particular CPU architectures (x64) and as declared in the [requirements](/docs/node/requirements/#specs), we're mainly supporting `GenuineIntel`, as there has been reports of failure to build and run the binary on AMD. If you're running on a `AuthenticAMD`, provide us feedback on our [Discord](https://discord.gg/fleek).
 :::
 
 ### Quick pull and run

@@ -36,7 +36,7 @@ Amongst others, the use cases we try to cover are:
 - Learning how to analyze the node process log messages
 
 :::tip
-While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [discord](https://discord.gg/fleekxyz) or by opening a PR in any of our repositories.
+While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [discord](https://discord.gg/fleek) or by opening a PR in any of our repositories.
 :::
 
 **Ready?** Start by checking the [server requirements](/docs/node/requirements)
