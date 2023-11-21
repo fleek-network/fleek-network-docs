@@ -1,6 +1,6 @@
 import React from 'react';
 
-const discordUrl = "https://discord.gg/fleekxyz";
+const discordUrl = "https://discord.gg/fleek";
 
 const Author = ({
   image,
