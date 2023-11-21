@@ -34,8 +34,6 @@ The Fleek Network's documentation is organized as follows:
 
 [Documentation](/docs) brief breakdown of the Fleek Network.
 
-[Engineering](/blog) offers a deeper look into how our engineering team works, research, and technology behind Fleek Network.
-
 [Guides](/guides) provide step-by-step instructions for performing specific tasks.
 
 [References](/references) section provides short materials for Fleek Network command-line interfaces (CLIs), and application programming interfaces (APIs) for managing the resources and development. It is assumed that you already have a basic understanding of important concepts.
