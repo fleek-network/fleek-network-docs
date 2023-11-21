@@ -4,7 +4,7 @@
         <title>Fleek Network Docs | Decentralized Edge Platform Blog</title>
         <link>https://docs.fleek.network/blog</link>
         <description>Fleek Network Docs | Decentralized Edge Platform Blog</description>
-        <lastBuildDate>Tue, 21 Nov 2023 13:20:48 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Nov 2023 13:32:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <title><![CDATA[Bloom Filters and Cuckoo Filters for Cache Summarization]]></title>
             <link>https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization</link>
             <guid>https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization</guid>
-            <pubDate>Tue, 21 Nov 2023 13:20:48 GMT</pubDate>
+            <pubDate>Tue, 21 Nov 2023 13:32:20 GMT</pubDate>
             <description><![CDATA[Summary of our experiment informing whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters.]]></description>
             <content:encoded><![CDATA[<p>Disclaimer: This is not a general comparison between Bloom filters and Cuckoo filters. This blog post summarizes some of the experiments we conducted to decide whether or not we should replace our implementation of Counting Bloom filters with Cuckoo filters, for a specific use case.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="background">Background<a href="https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for-cache-summarization#background" class="hash-link" aria-label="Direct link to Background" title="Direct link to Background">​</a></h2>
