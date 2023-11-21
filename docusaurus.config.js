@@ -19,11 +19,6 @@ const commonNavbarItems = [{
   position: 'left',
 },
 {
-  to: 'blog',
-  label: 'Engineering',
-  position: 'left',
-},
-{
   to: 'guides',
   label: 'Guides',
   position: 'left',
@@ -32,6 +27,12 @@ const commonNavbarItems = [{
   to: 'references',
   label: 'References',
   position: 'left',
+},
+{
+  href: 'https://blog.fleek.network',
+  label: 'Blog',
+  position: 'left',
+  target: '_blank',
 },
 {
   href: 'https://github.com/fleek-network/',
