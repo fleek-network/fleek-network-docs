@@ -121,7 +121,7 @@ A service that deploys a virtual machine, such as many zk-VMs, or the EVM can be
 
 The Fleek Network can be utilized as a short-term service platform for a variety of applications or side-chaining that compute state and roll it up to a smart contract. An NFT minting or game event that occurs during a short period, can roll up state to a smart contract after the event time elapses.
 
-To help users mitigate gas costs and feeds while providing instant finality throughout an event. Consequently, roll-ups would run on a decentralized network, that is fault-resistant and highly performant.
+To help users mitigate gas costs and fees while providing instant finality throughout an event. Consequently, roll-ups would run on a decentralized network, that is fault-resistant and highly performant.
 
 #### Proof Generation
 
