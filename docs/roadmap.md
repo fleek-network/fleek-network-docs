@@ -16,46 +16,62 @@ Instead of restricting our network architecture/capabilities to a CDN service, F
 
 Several milestones were completed toward our next early Testnet goal: the whitepaper was launched, and the Github repo was published. 
 
-For a complete description of our testnet plans, road to mainnet, and testnet participation initiatives, read the following [blog post](https://blog.fleek.network/post/fleek-network-testnet-plans/).
+For a complete description of our road to mainnet, read the following [blog post](https://blog.fleek.network/post/fleek-network-updated-roadmap-milestones).
 
-## Current state: Road to Testnet
+## Road to Mainnet
 
-Our current roadmap on the road to an early testnet stands as follows:
+### Complete:
+- **Phase 0 (Sep23): Initial Node Rollout**
+    - Initial Network and Node Testing
+        - Performance, hardware specs, clustering, costs, metrics, etc.
+- **Phase 1 (Oct23): Initial Performance Test & Node Improvements**
+    - Performance metrics gathering & analysis
+    - Public node rollout with improvements from Phase 0
 
-:::note
-The Fleek Network team takes user feedback seriously to help decision-making throughout the development cycle of the protocol. Thus, empirical evidence supports the needs through the different test phases in the Road to Mainnet. Cyclically, the team has to spend more time than anticipated to ensure the resolution and revision of any feedback encountered before any additional progress.
+### In Progress:
+- **Phase 2 (Dec23): Performance Improvements & Long Running Testnet (Internal)**
+    - Long-running testnet deployed internally
+        - All the nodes will be run by the Foundation and core team initially to ensure high quality of service and reliability
+    - “Finish” the following core systems: Consensus, Blockstore, BlockstoreServer, Broadcast, Consensus, DHT, Fetcher, Metrics, Origin-IPFS, Pool, Reputation, Rep-Collector, Resolver, RPC, Signer, and Topology
+    - Finish the spec and begin testing first developer-facing services & functionality
+- **Phase 3A (Jan24): Initial External Developer Use of the Network**
+    - **Decentralized IPFS Pinning + CDN**
+        - First externally usable service
+    - Decentralized Serverless/Edge Functions
+        - Will only be tested internally during this phase
+    - “Finish” Handshake, Proof Of Delivery, Service-Executor, and Synchronizer
+    - Onboard the first third-party node operators to testnet
+        - Will be done in a controlled and gradual way, the details of which will be shared in January
+- **Phase 3B (Q124): Expanded Functionality & Use of the Network All the functionality from 3A, plus:**
+    - Decentralized Serverless/Edge Functions
+        - Externally usable in this phase
+    - Introduce Limited Private Compute Powered Capabilities
+        - For private key signing and potentially also for environment variable handling
+        - This research is still ongoing and subject to change. Current research and testing involves adding SGX chips to node specs, but it would only be for certain limited functionalities that add significant value/usefulness to the network (examples listed in first bullet)
+    - Initial Integrations with Data Availability Layers
+        - Adding DA layers as origins in Fleek Network adds increased usefulness to the network, especially in the context of rollups and the off-chain and verified compute direction of web3
+        - Which specific DA layers we will start with is still TBD
+    - More Services Available for External Use
+        - Exact new services/features to be determined after Phase 2 & 3A
+    - Economic Model & Assumption Testing
+        - More realistic testing of some of the economic aspects of the protocol and edge platform
+    - Full Node Testing, Onboarding, Reputation & Slashing
+        - To provide a very mainnet realistic environment to enable the below
+    - Transform testnet into a fully public testnet
+        - Will be done as part of the end of this phase/start of the next phase
+- **Phase 4 (Q224): Add Supporting Infrastructure & More Services**
+    - Working Bridge
+        - Between Fleek Network and Ethereum (or an L2)
+            - The exact L2 is still TBD, but will be decided for this Phase 4
+        - Handles deposits/payments into & withdrawals out of the network, as well as staking
+    - Full Economics & Resource Pricing
+    - Full Test Version of FLK token
+    - Full Testing of Multiple USD-Denominated Stablecoins
+    - More Externally Usable Services & Use Cases
+    - External Audits
+- **Phase 5 (Summer24): Mainnet**
+    - If all goes according to plan, the goal would be to launch mainnet sometime during the summer of 2024, however, the exact timing will be determined as we approach and work through the final testnet phases and audits.
 
-Please be informed that unforeseen requirements have caused slight delays in our roadmap. We apologize for any inconvenience caused and assure you that our team is working diligently to minimize the impact and get back on track as soon as possible. We appreciate your patience and understanding during this time. Stay tuned for updates on the amended timeline. Thank you for your continued support!
-:::
+As with previous testnet phases, **more specific details regarding each upcoming phase including the timing, how to participate, and what exactly will be included will be shared prior to the start of each one**. As a reminder, all information presented above is not final and is subject to change based on the results/metrics from each testnet phase as well as input from the core team and Fleek Network community.
 
-### Phases 0 to 5
-
-Fleek Network will utilize a multi-phase approach to rolling out mainnet. The current high-level plan, set out below, depends on a variety of factors and may change in response to development timelines and/or data/feedback collected throughout the different phases.
-
-- **Phase 0 (September 5th): Node Rollout**
-    - Initial network and node testing (performance, hardware specs, clustering, costs, metrics, etc.)
-- **Phase 1 (mid-late September): SDK/Service Rollout**
-    - Introduce the SDK and test the building and utilizing of services on the network, as well as some optimizations based on Phase 0.
-- **Phase 2 (October):** **Initial Economics Rollout**
-    - Introduce and test a more concrete version of the economic algorithm, including staking, pricing, and other elements/situations using test (valueless) tokens, as well as some optimizations based on Phase 1.
-- **Phase 3 (November): Layer 2 Contracts Rollout**
-    - Introduce a test version of the aspects of the protocol that will live on an Ethereum L2 (staking, deposit and token contracts, communication between L2/FN, etc).
-- **Phase 4 (December):** **Final Rollout**
-    - Introduce the final form of the first generation of the network, based on all data/feedback and optimizations throughout all the phases, and allow testing of what a realistic mainnet environment will be like.
-- **Phase 5 (Q1 2024):** **Mainnet Launch**
-
-The goals for all stages involve completing and revising the following:
-
-- Network performance
-- Hardware/node specs
-- Sandboxing of services
-- Packaging and pricing of initial network resources/commodities
-- Parameters related to the FLK token
-- Security testing/auditing
-- Criteria for allocation of pre-mainnet community tokens
-
-## Mainnet
-
-The mainnet release of Fleek Network will come with the arrival of a stable and end-to-end tested version of the protocol. Details on the transition to mainnet will be discussed later in the future.
-
-We will continue to update this roadmap in the short and long term to reflect the different stages the network goes through.
+For a complete description of our road to mainnet, read the following [blog post](https://blog.fleek.network/post/fleek-network-updated-roadmap-milestones).
