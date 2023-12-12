@@ -200,7 +200,7 @@ cargo update
 Next, execute the build command to compile the Fleek Network Lightning CLI binary.
 
 ```sh
-cargo +stable build --release
+cargo +stable install --locked --path core/cli
 ```
 
 :::tip
@@ -209,11 +209,11 @@ The build command uses the Rust compiler, which might take a while depending on 
 
 Once the Rust compiler completes, the generated binary will be available in the source code project directory. 
 
-If you have stick with the default recommendation, that'll be at `~/fleek-network/lightning/target/release/lightning-node`.
+If you have stick with the default recommendation, that'll be at `~/.cargo/bin/lightning-node`.
 
 ## Checkup the symlink setup
 
-During the original install and setup process, a symbolic link (symlink) was created linking the generated binary file located in `~/fleek-network/lightning/target/release/lightning-node` to `/usr/local/bin/lgtn`. By placing the symlink in the the default installation location of the user, the executable application is available globally as `lgtn`.
+During the original install and setup process, a symbolic link (symlink) was created linking the generated binary file located in `~/.cargo/bin/lightning-node` to `/usr/local/bin/lgtn`. By placing the symlink in the default installation location of the user, the executable application is available globally as `lgtn`.
 
 
 You can see the full absolute path of the symlink and verify if setup correctly by running:
@@ -231,7 +231,7 @@ readlink -f lgtn
 Here's an example where we find the symlink `lgtn` pointing to the absolute path where our source code and originated built binary is located, as described in the [build the binary from the source code](#build-the-binary-from-the-source-code) section.
 
 ```sh
-/home/<USERNAME>/fleek-network/lightning/target/release/lightning-node
+/home/<USERNAME>/.cargo/bin/lightning-node
 ```
 
 Alternatively, you can use the `ls` command to identify the symlink.
@@ -243,7 +243,7 @@ ls -la $(which lgtn)
 If you find an error, it's very likely that a symlink is not setup. You can revisit the [installation](/docs/node/install) to learn, or execute the command to link the build binary to the user default install location:
 
 ```sh
-sudo ln -s "~/fleek-network/lightning/target/release/lightning-node" /usr/local/bin/lgtn
+sudo ln -s "~/.cargo/bin/lightning-node" /usr/local/bin/lgtn
 ```
 
 :::tip
