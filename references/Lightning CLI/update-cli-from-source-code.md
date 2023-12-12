@@ -95,8 +95,22 @@ We are using the branch named `testnet-alpha-1`, which is specific to the early 
 To build the binary from the source code, we execute the cargo build command:
 
 ```sh
-cargo +stable build --release
+cargo +stable install --locked --path core/cli
 ```
+
+:::tip
+The command uses the stable rust toolchain, if the command fails you have to install it, run the following commands:
+
+```sh
+rustup toolchain install stable
+```
+
+Optionally, set stable as default toolchain as follows:
+
+```sh
+ rustup default stable
+```
+:::
 
 ## Update the symlink
 
