@@ -48,15 +48,15 @@ lto = "thin"
 Set `RUSTFLAGS` on build, as follows:
 
 ```bash
-RUSTFLAGS="-Clink-arg=-Wl,--allow-multiple-definition" cargo +stable build --release 
+RUSTFLAGS="-Clink-arg=-Wl,--allow-multiple-definition" cargo +stable install --locked --path core/cli
 ```
 
-Once the build completes, you should find the generated binary `lightning-node` under the directory `~/fleek-network/lightning/target/release/lightning-node`.
+Once the build completes, you should find the generated binary `lightning-node` under the directory `~/.cargo/bin/lightning-node`.
 
 As an example, execute:
 
 ```sh
-~/fleek-network/lightning/target/release/lightning-node help
+~/.cargo/bin/lightning-node help
 ```
 
 To find the help output:
