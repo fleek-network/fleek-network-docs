@@ -121,13 +121,15 @@ Build the image named as `lightning` from our Dockerfile:
 sudo docker build -t lightning -f ./Dockerfile .
 ```
 
-## Generate keys
+## Docker Container
+
+Create `~/.lightning` configuration directory:
 
 ```sh
-sudo docker exec -it lightning-node lgtn keys generate
+mkdir $HOME/.lightning
 ```
 
-## Docker Container
+Run the lightning-node container:
 
 ```sh
 sudo docker run \
@@ -137,6 +139,12 @@ sudo docker run \
   --mount type=bind,source=/var/tmp,target=/var/tmp \
   --name lightning-node \
   -it lightning
+```
+
+## Generate keys
+
+```sh
+sudo docker exec -it lightning-node lgtn keys generate
 ```
 
 ## View logs
