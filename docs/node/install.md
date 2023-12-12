@@ -372,10 +372,10 @@ The installation process is long, as it compiles the application binary for us f
 ```
 
 :::tip
-Once Rust generates the binary `lightning-node`, you can find it in the directory `$HOME/.cargo/bin/lightning-node`. Alternatively, if you've run the `cargo build` command and depending on the usage of `+stable` flag, the binary should be located at `~/fleek-network/lightning/target/debug/lightning-node` or `~/fleek-network/lightning/target/release/lightning-node`.
+Once Rust generates the binary `lightning-node`, you can find it in the directory `$HOME/.cargo/bin/lightning-node`. The location can be overridden if `$CARGO_HOME` is set. Alternatively, if you've run the `cargo build` command and depending on the usage of `+stable` flag, the binary should be located at `~/fleek-network/lightning/target/debug/lightning-node` or `~/fleek-network/lightning/target/release/lightning-node`.
 :::
 
-You can create an `lgtn` symbolic link to `/usr/local/bin` to make it available globally.
+You can create a `lgtn` symbolic link to `/usr/local/bin` to make it available globally.
 
 ```sh
 sudo ln -s "/home/lgtn/.cargo/bin/lightning-node" /usr/local/bin/lgtn
