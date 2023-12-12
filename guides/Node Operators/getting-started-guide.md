@@ -137,19 +137,19 @@ cargo update
 Next, execute the build command to compile the Fleek Network Lightning CLI binary.
 
 ```sh
-cargo +stable build --release
+cargo +stable install --locked --path core/cli
 ```
 
 :::tip
 The build command uses the Rust compiler, which might take a while depending on how speedy the host machine is capable.
 :::
 
-Once the Rust compiler completes, the generated binary will be available in the source code project directory. If you stick with the default, that'll look like `~/fleek-network/lightning/target/debug/lightning-node`.
+Once the Rust compiler completes, the generated binary will be available in the source code project directory. If you stick with the default, that'll look like `~/.cargo/bin/lightning-node`.
 
 To avoid having to specify the pathname every time, create a symbolic link to keep it short. Here we'll name the process as the global `lgtn`:
 
 ```sh
-sudo ln -s "~/fleek-network/lightning/target/debug/lightning-node" /usr/local/bin/lgtn
+sudo ln -s "~/.cargo/bin/lightning-node" /usr/local/bin/lgtn
 ```
 
 Run the CLI with the flag `version` to confirm it's available globally.
