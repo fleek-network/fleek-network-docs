@@ -555,7 +555,15 @@ The Docker images are built for particular CPU architectures (x64) and as declar
 
 ### Quick pull and run
 
-You can pull an run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly by executing the following command:
+You can pull and run the Lightning pre-built Docker image from our GitHub and run the Docker container quickly.
+
+First, create the `~/.lightning` in the host, which will be bound to the container, as follows:
+
+```sh
+mkdir $HOME/.lightning
+```
+
+After, execute the following command:
 
 ```sh
 sudo docker run \
