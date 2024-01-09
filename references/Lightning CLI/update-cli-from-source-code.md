@@ -95,7 +95,7 @@ We are using the branch named `testnet-alpha-1`, which is specific to the early 
 To build the binary from the source code, we execute the cargo build command:
 
 ```sh
-cargo +stable install --locked --path core/cli
+cargo +stable install --locked --path core/cli --features services
 ```
 
 :::tip
