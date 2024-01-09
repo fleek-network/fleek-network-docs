@@ -137,7 +137,7 @@ cargo update
 Next, execute the build command to compile the Fleek Network Lightning CLI binary.
 
 ```sh
-cargo +stable install --locked --path core/cli
+cargo +stable install --locked --path core/cli --features services
 ```
 
 :::tip
