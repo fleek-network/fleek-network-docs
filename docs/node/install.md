@@ -358,7 +358,7 @@ cargo update
 Start the `install` process by running the command:
 
 ```sh
-cargo +stable install --locked --path core/cli
+cargo +stable install --locked --path core/cli --features services
 ```
 
 The installation process is long, as it compiles the application binary for us from the source code.
