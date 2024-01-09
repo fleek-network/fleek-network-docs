@@ -48,7 +48,7 @@ lto = "thin"
 Set `RUSTFLAGS` on build, as follows:
 
 ```bash
-RUSTFLAGS="-Clink-arg=-Wl,--allow-multiple-definition" cargo +stable install --locked --path core/cli
+RUSTFLAGS="-Clink-arg=-Wl,--allow-multiple-definition" cargo +stable install --locked --path core/cli --features services
 ```
 
 Once the build completes, you should find the generated binary `lightning-node` under the directory `~/.cargo/bin/lightning-node`.
