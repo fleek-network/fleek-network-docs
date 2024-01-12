@@ -100,6 +100,12 @@ sudo systemctl start docker-lightning
 
 ### Stop
 
+:::warning
+To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
+
+To learn more, read the [Lightning-CLI](/docs/node/lightning-cli) section for command [opt](/docs/node/lightning-cli#opt).
+:::
+
 Stop the service by:
 
 ```sh
@@ -137,6 +143,16 @@ Check the service status by:
 ```sh
 sudo systemctl status lightning.service
 ```
+
+:::warning
+Network participation is solely managed by the Node Operator, who decides to opt-in or opt-out of node network participation.
+
+It' s important for Node Operators to regularly monitor the status of their active nodes and ensure that they are actively participating in the network.
+
+Any node that has opted-in but remains inactive will be subjected to reputation penalties.
+
+To learn more read the [Lightning-CLI Opt](./docs/node/lightning-cli#opt) command section and [health-checkups](./docs/node/health-check).
+:::
 
 :::tip
 If you have installed or set up the Service as a Docker Container, prefix the service name with `docker-`.
