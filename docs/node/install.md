@@ -450,6 +450,33 @@ testnet = true
 The configuration file should have more content, which was omitted here to keep it short and to the point. You're interested in the `testnet` property name only.
 :::
 
+### Request node to participate in the Network
+
+The Node Operator has to request that a node joins the Network to enable it to participate, regardless of wether the node has start or online.
+
+Amongst others, network participation control gives the operator a chance to shutdown a node gracefully at end of the epoch.
+
+To join the Network, you must send a request via the Lightning CLI using the **opt** parameter and one of the options: **in**, **out**, or **status**.
+
+Make a opt-in request by running:
+
+```sh
+lgtn opt in
+```
+
+Similarly, opt-out by:
+
+```sh
+lgtn opt out
+```
+
+The status can be verified by:
+
+```sh
+lgtn opt status
+```
+
+
 ### Start the node
 
 :::caution Warning
