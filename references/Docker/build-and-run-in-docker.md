@@ -133,6 +133,7 @@ Run the lightning-node container:
 
 ```sh
 sudo docker run \
+  -e OPT="in"
   -p 4200-4299:4200-4299 \
   -p 4300-4399:4300-4399 \
   --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
@@ -140,6 +141,10 @@ sudo docker run \
   --name lightning-node \
   -it lightning
 ```
+
+:::info
+Provide one of the following options "in" or "out" to opt-in or opt-out of network participation.
+:::
 
 ## Generate keys
 
