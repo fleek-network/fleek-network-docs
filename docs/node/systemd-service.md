@@ -63,6 +63,18 @@ sudo systemctl disable docker-lightning
 
 ### Start
 
+:::info
+Before starting the service, make sure to opt-in or opt-out of network participation, through the available subcommand **opt** in the CLI.
+
+The quickest way to find help is to run the help subcommand as follows:
+
+```sh
+lgtn opt help
+```
+
+To learn more, read the section [Network Participation Management](/docs/node/lightning-cli#network-participation-management)
+:::
+
 Start the service by:
 
 ```sh
