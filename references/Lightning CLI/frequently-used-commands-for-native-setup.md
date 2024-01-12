@@ -72,6 +72,38 @@ Show the keys by running the sub-commands `keys show` and declaring the configur
 lgtn -c /home/<USERNAME>/.lightning/config.toml keys show
 ```
 
+### Network Participation management
+
+
+Show help for opt into or opt out of network participation by:
+
+```sh
+lgtn opt help
+```
+
+The options are available should be made available to you as follows:
+
+```sh
+Opt into or opt out of network participation
+
+Usage: lgtn opt [OPTIONS] <COMMAND>
+
+Commands:
+  in      Opt into network participation
+  out     Opt out of network participation. Run this command before shutting down your node
+  status  Query the participation status of your node
+```
+
+For example, to opt-in you'd run:
+
+```sh
+lgtn opt in
+```
+
+:::warning
+To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (about 24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
+:::
+
 ## Diagnostic tools
 
 ### Extended verification health check
