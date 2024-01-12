@@ -141,6 +141,8 @@ At a high level, the installer will:
 - Pull the source code from the origin [repository](https://github.com/fleek-network/lightning)
 - Build the binary, e.g. a `lightning CLI` (lgtn) is compiled from source code
 - Setup a [Systemd](https://en.wikipedia.org/wiki/Systemd) service named lightning
+- Announces staking requirement
+- Opt-in to join network
 - Provide instructions to launch, stop the Fleek network via the Systemd lightning service
 
 :::tip
