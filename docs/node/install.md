@@ -478,9 +478,14 @@ lgtn opt status
 
 Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
 
-:::warning
-Network participation control can be carried out regardless of whether the node is started or online. However, it's crucial to note that opting-in without being online causes reputation penalties.
+:::tip
+Network participation control can be carried out regardless of whether the node is started or online.
 :::
+
+:::warning
+To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
+:::
+
 
 ### Start the node
 
