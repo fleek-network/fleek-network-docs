@@ -230,8 +230,13 @@ cargo --version
 Here's the output we got (beware that our version might differ to yours, it's expected 😅).
 
 ```sh
-cargo 1.65.0 (4bc8f24d3 2022-10-20)
+cargo 1.75.0 (1d8b05cdd 2023-11-20)
 ```
+
+:::warning
+To build the Fleek Network Lightning CLI successfully, the version >= 1.75.0 is required. Make sure that you have installed at least cargo, rustc version 1.75.0
+:::
+
 
 ### Lightning installer rust dependencies
 
