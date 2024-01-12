@@ -450,7 +450,7 @@ testnet = true
 The configuration file should have more content, which was omitted here to keep it short and to the point. You're interested in the `testnet` property name only.
 :::
 
-### Request node to participate in the Network
+### Network participation request
 
 The Node Operator has to request that a node joins the Network to enable it to participate, regardless of wether the node has start or online.
 
