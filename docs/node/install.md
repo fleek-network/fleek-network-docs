@@ -265,7 +265,12 @@ rustup default <TOOLCHAIN-LIST-NAME>
 ```
 
 :::tip
-Rust compilation is long and compiler caching can help speed things up immensely. The Lightning CLI project can be used to reduce the perceived compilation times.
+You need to have version 1.75.0 or higher installed, use the following command to update rust:
+
+
+```sh
+cargo update
+```
 :::
 
 ### Linux dependencies
