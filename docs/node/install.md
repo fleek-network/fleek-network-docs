@@ -234,7 +234,7 @@ cargo 1.75.0 (1d8b05cdd 2023-11-20)
 ```
 
 :::warning
-To build the Fleek Network Lightning CLI successfully, the version >= 1.75.0 is required. Make sure that you have installed at least cargo, rustc version 1.75.0
+In order to successfully build the Fleek Network Lightning CLI, you need to have version 1.75.0 or higher installed.
 :::
 
 
