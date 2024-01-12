@@ -265,8 +265,7 @@ rustup default <TOOLCHAIN-LIST-NAME>
 ```
 
 :::tip
-You need to have version 1.75.0 or higher installed, use the following command to update rust:
-
+To build Fleek Network Lightning CLI, version >= 1.75.0 is required. Get the latest version by running the command:
 
 ```sh
 cargo update
