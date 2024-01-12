@@ -11,7 +11,9 @@ tags:
 
 import Author from '@site/src/components/Author';
 
-With the Lightning CLI, you can execute various tasks such as running the node, accessing key management utilities, and printing the loaded configuration. The interface is user-friendly and provides detailed information about each sub-command through the help command.
+The Lightning CLI provides a wide range of capabilities, including running the node, accessing key management utilities, network participation management and printing the loaded configuration. 
+
+Its user-friendly interface provides detailed information about each command through the **help** sub-command, making it easy to navigate and operate efficiently.
 
 :::tip
 A quick reference of frequently used commands are available for [native](/references/Lightning%20CLI/frequently-used-commands-for-native-setup) and [docker](/references/Docker/frequently-used-commands-for-docker-setup) setups.
@@ -67,6 +69,29 @@ Options:
   -v...                      Increases the level of verbosity (the max level is -vvv)
   -h, --help                 Print help
 ```
+
+## Commands
+
+### run
+
+WIP
+
+### keys
+
+WIP
+
+### opt
+
+WIP
+
+### print-config
+
+WIP
+
+## Options
+
+WIP
+
 
 <Author
     name="Helder Oliveira"
