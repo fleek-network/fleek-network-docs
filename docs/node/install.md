@@ -476,6 +476,11 @@ The status can be verified by:
 lgtn opt status
 ```
 
+Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
+
+:::warning
+Network participation control can be carried out regardless of whether the node is started or online. However, it's crucial to note that opting-in without being online causes reputation penalties.
+:::
 
 ### Start the node
 
