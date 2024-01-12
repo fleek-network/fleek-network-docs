@@ -72,7 +72,7 @@ The quickest way to find help is to run the help subcommand as follows:
 lgtn opt help
 ```
 
-To learn more, read the section [Network Participation Management](/docs/node/lightning-cli#network-participation-management)
+To learn more, read the [Lightning-CLI](/docs/node/lightning-cli) section for command [opt](/docs/node/lightning-cli#opt).
 :::
 
 Start the service by:
