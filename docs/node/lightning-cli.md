@@ -29,6 +29,7 @@ Usage: lgtn [OPTIONS] <COMMAND>
 Commands:
   run           Run the full node
   keys          Key management utilities
+  opt           Opt into or opt out of network participation
   print-config  Print the loaded configuration
   help          Print this message or the help of the given subcommand(s)
 
