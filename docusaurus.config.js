@@ -55,6 +55,7 @@ const config = {
   url: 'https://docs.fleek.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico?202301091316',
 
