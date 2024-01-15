@@ -26,15 +26,75 @@ The commands are the interface in which users enter specific commands and option
 
 ### Run
 
-Run the full node
+The command to **run** allows you to start the node process in Fleek Network.
+
+Here's a basic example of how to **run** a node with default settings:
+
+```sh
+lgtn run
+```
+
+On the other hand, the default setup provided by the **get.fleek.network** assisted installer is quite verbose and explicitly defines the configuration path.
+
+```sh
+lgtn -c /home/user/customPath/config.toml -vv run
+```
 
 ### Keys
 
-Key management utilities to **show** (print the node's public keys) or **generate** private keys.
+Key management utilities to **show** (print the node's public keys) or **generate** private keys. For example, to generate new private keys execute:
+
+```sh
+lgtn keys generate
+```
+
+Two private keys are created in the signer configuration paths defined in the configuration (default ~/.lightning/config.toml).
+
+For example, if the configuration file declares the signer consensus_key_path and node_key_path as follows:
+
+```sh
+[signer]
+consensus_key_path = "/home/<USERNAME>/.lightning/keystore/consensus.pem"
+node_key_path = "/home/<USERNAME>/.lightning/keystore/node.pem"
+```
+
+The private keys will be placed in the corresponding locations, as defined for the consensus_key_path (/home/\<USERNAME\>/.lightning/consensus.pem) and node_key_path (/home/\<USERNAME\>/.lightning/node.pem) file paths.
+
+:::warning
+The \<USERNAME\> is a placeholder for the actual system username. So, make sure that you have declared the correct path corresponding to your preferred system username.
+:::
 
 ### Opt
 
-The Opt command allows the user to opt into or out of Network participation. To opt-in, use the subcommand **in**, or opt-out of network participation by using **out**–note that this command should be sent before shutting down the node to avoid reputation penalties. To query the node participation status in the network, use the subcommand **status**.
+The Opt command allows the user to opt into or out of Network participation.
+
+To opt-in, use the subcommand **in**:
+
+```sh
+lgtn opt in
+```
+
+Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
+
+Opt-out of network participation by using **out** (note that this command should be sent before shutting down the node to avoid reputation penalties). Similarly, should shutdown only after the epoch ends to mitigate any participation faults.
+
+```sh
+lgtn opt out
+```
+
+To query the node participation status in the network, use the subcommand **status**.
+
+```sh
+lgtn opt status
+```
+
+:::tip
+Network participation control can be carried out regardless of whether the node is started or online.
+:::
+
+:::warning
+To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
+:::
 
 ### Print-config
 
