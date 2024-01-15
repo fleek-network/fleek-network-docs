@@ -596,6 +596,7 @@ After, execute the following command:
 
 ```sh
 sudo docker run \
+    -e OPT="in" \
     -p 4200-4299:4200-4299 \
     -p 4300-4399:4300-4399 \
     --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
@@ -634,6 +635,7 @@ Once the image is built, you can launch the Docker Container with a `--name` suc
 
 ```sh
 sudo docker run \
+  -e OPT="in" \
   -p 4200-4299:4200-4299 \
   -p 4300-4399:4300-4399 \
   --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
