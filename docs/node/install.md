@@ -466,7 +466,7 @@ lgtn opt in
 
 Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
 
-To learn more about network participation visit the [Opt](./docs/node/lightning-cli/#opt) section in the [Lightning CLI](./docs/node/lightning-cli) page.
+To learn more about network participation visit the [Opt](/docs/node/lightning-cli/#opt) section in the [Lightning CLI](/docs/node/lightning-cli) page.
 
 ### Start the node
 
