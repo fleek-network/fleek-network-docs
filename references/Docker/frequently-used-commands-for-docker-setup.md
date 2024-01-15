@@ -135,6 +135,34 @@ sudo docker exec -it lightning-node bash
 sudo docker ps -a
 ```
 
+### Run Container
+
+Run the `latest` (tag) Lightning pre-built Docker image (ghcr.io/fleek-network/lightning:latest) from Fleek Network registry:
+
+```sh
+sudo docker run \
+  -e OPT="in" \
+  -p 4200-4299:4200-4299 \
+  -p 4300-4399:4300-4399 \
+  --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
+  --mount type=bind,source=/var/tmp,target=/var/tmp \
+  --name lightning-node \
+  -it ghcr.io/fleek-network/lightning:latest
+```
+
+Alternatively, by building the image under name `lightning`:
+
+```sh
+sudo docker run \
+  -e OPT="in" \
+  -p 4200-4299:4200-4299 \
+  -p 4300-4399:4300-4399 \
+  --mount type=bind,source=$HOME/.lightning,target=/home/lgtn/.lightning \
+  --mount type=bind,source=/var/tmp,target=/var/tmp \
+  --name lightning-node \
+  -it lightning
+```
+
 ### Start Container
 
 ```sh
