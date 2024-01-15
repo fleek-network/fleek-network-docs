@@ -19,7 +19,38 @@ Its user-friendly interface provides detailed information about each command thr
 A quick reference of frequently used commands are available for [native](/references/Lightning%20CLI/frequently-used-commands-for-native-setup) and [docker](/references/Docker/frequently-used-commands-for-docker-setup) setups.
 :::
 
-## Show the Lightning CLI help
+
+## Commands
+
+The commands are the interface in which users enter specific commands and options for the Fleek Network to process.
+
+### Run
+
+Run the full node
+
+### Keys
+
+Key management utilities to **show** (print the node's public keys) or **generate** private keys.
+
+### Opt
+
+The Opt command allows the user to opt into or out of Network participation. To opt-in, use the subcommand **in**, or opt-out of network participation by using **out**–note that this command should be sent before shutting down the node to avoid reputation penalties. To query the node participation status in the network, use the subcommand **status**.
+
+### Print-config
+
+Print the loaded configuration.
+
+## Options
+
+The Options flags allows further control or override default settings:
+
+- `-c`, or `--config`, path to the toml configuration file which defaults to ~/.lightning/config.toml
+- `--with-mock-consensus`, determines use of mock consensus backend
+- `--with-console`, enable the Tokio Console asynchronous debugger
+- `--with-log-locations`, enable code locations when printing logs
+- `-v`, increases the level of verbosity (the max level is -vvv)
+
+## Help
 
 ```sh
 lgtn help
@@ -45,7 +76,9 @@ Options:
   -V, --version              Print version
 ```
 
-## Finding help for a specific option
+### Find help for a specific option
+
+Use the subcommand `help` after the `command`. Here's an example to find help for the command **keys**:
 
 ```sh
 lgtn keys help
@@ -69,29 +102,6 @@ Options:
   -v...                      Increases the level of verbosity (the max level is -vvv)
   -h, --help                 Print help
 ```
-
-## Commands
-
-### run
-
-WIP
-
-### keys
-
-WIP
-
-### opt
-
-WIP
-
-### print-config
-
-WIP
-
-## Options
-
-WIP
-
 
 <Author
     name="Helder Oliveira"
