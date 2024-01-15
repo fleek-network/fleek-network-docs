@@ -298,7 +298,7 @@ To launch the service, execute the following command:
 sudo systemctl start lightning.service
 ```
 
-To learn more about how to use Systemctl to manage the Lightning service, read the document [here](/docs/node/install#use-systemctl-to-manage-systemd-service).
+To learn more about how to use Systemctl to manage the Lightning service, read the document [here](/docs/node/systemd-service).
 
 ## Health check
 

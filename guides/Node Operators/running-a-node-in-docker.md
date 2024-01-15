@@ -404,7 +404,7 @@ Enable the service on startup when the system boots:
 sudo systemctl enable docker-lightning.service
 ```
 
-As a result, we are now able to run our containers as a Systemd service. For this, read the document [manage systemd service](/docs/node/install#use-systemctl-to-manage-systemd-service) to find more about how to control the service.
+As a result, we are now able to run our containers as a Systemd service. For this, read the document [manage systemd service](/docs/node/systemd-service) to find more about how to control the service.
 
 ## Viewing logs
 

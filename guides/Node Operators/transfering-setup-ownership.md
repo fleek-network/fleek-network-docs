@@ -335,10 +335,10 @@ sudo systemctl start lightning.service
 ```
 
 :::tip
-Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/install#analyzing-log-messages).
+Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
-To learn more, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/install#use-systemctl-to-manage-systemd-service)
+To learn more, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/systemd-service)
 
 
 ## Conclusion
