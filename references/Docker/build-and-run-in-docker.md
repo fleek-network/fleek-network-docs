@@ -143,7 +143,7 @@ sudo docker run \
 ```
 
 :::info
-Provide one of the following options "in" or "out" to opt-in or opt-out of network participation.
+Provide one of the following options "in" or "out" to opt-in or opt-out of network participation, otherwise it'll default to "in". To learn more about network participation control read the section [Lightning CLI Opt](/docs/node/lightning-cli/#opt).
 :::
 
 ## Generate keys
