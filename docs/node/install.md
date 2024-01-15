@@ -464,28 +464,9 @@ Make a opt-in request by running:
 lgtn opt in
 ```
 
-Similarly, opt-out by:
-
-```sh
-lgtn opt out
-```
-
-The status can be verified by:
-
-```sh
-lgtn opt status
-```
-
 Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
 
-:::tip
-Network participation control can be carried out regardless of whether the node is started or online.
-:::
-
-:::warning
-To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
-:::
-
+To learn more about network participation visit the [Opt](./docs/node/lightning-cli/#opt) section in the [Lightning CLI](./docs/node/lightning-cli) page.
 
 ### Start the node
 
