@@ -18,7 +18,7 @@ In this section we describe how to enable, disable, start, stop the Systemd Serv
 The service is set up by the [assisted installer](#assisted-installer) automatically, or manually as described in the [manual installation](/docs/node/install#manual-installation) and [docker install](/docs/node/install#docker-installation).
 
 :::info
-While the Lightning-CLI Node process can operate independently, it is recommended to utilize Systemd for service management of the Lightning Node process in Linux. It's important to note that any network-related settings, such as opting-in or opting-out of network participation, should be managed separately by the Node Operator via the [CLI](./docs/node/lightning-cli).
+While the Lightning-CLI Node process can operate independently, it is recommended to utilize Systemd for service management of the Lightning Node process in Linux. It's important to note that any network-related settings, such as opting-in or opting-out of network participation, should be managed separately by the Node Operator via the [CLI](/docs/node/lightning-cli).
 :::
 
 ### Reload the daemon
@@ -155,7 +155,7 @@ It' s important for Node Operators to regularly monitor the status of their acti
 
 Any node that has opted-in but remains inactive will be subjected to reputation penalties.
 
-To learn more read the [Lightning-CLI Opt](./docs/node/lightning-cli#opt) command section and [health-checkups](./docs/node/health-check).
+To learn more read the [Lightning-CLI Opt](/docs/node/lightning-cli#opt) command section and [health-checkups](/docs/node/health-check).
 :::
 
 :::tip
