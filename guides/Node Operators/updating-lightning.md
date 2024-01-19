@@ -18,6 +18,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 ## Introduction
 
@@ -288,9 +289,22 @@ sudo systemctl daemon-reload
 
 To learn more about how to create a Systemd service read the [manual installation](/docs/node/install#manual-installation) document that illustrates the steps required in greater detail.
 
+### Network participation status
+
+The Node Network participation should be truthy (online). Verify the status by executing the command:
+
+```sh
+lgtn opt status
+```
+
+Before proceeding, make sure that you have the Node opt-in to participate in the network.
+
+<InfoNetworkParticipation />
+
 ### Launching the node as a systemd service
 
 After completing all the steps and checkups mentioned throughout the guide, you should have the Fleek Network Lightning Service ready to go.
+
 
 To launch the service, execute the following command:
 
