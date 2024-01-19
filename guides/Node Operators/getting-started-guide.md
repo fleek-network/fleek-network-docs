@@ -22,6 +22,7 @@ tags:
 -->
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 ## Introduction
 
@@ -179,6 +180,20 @@ Options:
   -h, --help                 Print help
   -V, --version              Print version
 ```
+
+### Network participation
+
+The Node Operator has to explicitly opt-in for a node to participate in the Network, regardless of whether the node Lightning Service is running.
+
+<InfoNetworkParticipation />
+
+To make an opt-in request, the operator should execute the command:
+
+```sh
+lgtn opt in
+```
+
+Upon success, the operator receives a confirmation text message about the node inclusion in the next Epoch.
 
 ### Node Launch
 

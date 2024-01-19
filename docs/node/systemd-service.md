@@ -12,6 +12,7 @@ tags:
 import Author from '@site/src/components/Author';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 ## Systemd Service
 
@@ -69,17 +70,7 @@ sudo systemctl disable docker-lightning
 
 ### Start
 
-:::info
-Before starting the service, make sure to opt-in or opt-out of network participation, through the available subcommand **opt** in the CLI.
-
-The quickest way to find help is to run the help subcommand as follows:
-
-```sh
-lgtn opt help
-```
-
-To learn more, read the [Lightning-CLI](/docs/node/lightning-cli) section for command [opt](/docs/node/lightning-cli#opt).
-:::
+<InfoNetworkParticipation />
 
 Start the service by:
 
