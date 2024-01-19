@@ -12,6 +12,9 @@ tags:
 
 import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
+import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 
 ## Remove the source code locally
@@ -29,6 +32,10 @@ If you have a custom path, you need to change the pathname to the correct path y
 ## Stop the Docker service
 
 The Fleek Network recommends systemctl to manage the services, either natively or docker. It's an interface that is easily to translate across the setups, and to communicate to the users in a common manner.
+
+<WarningPreventPrematureShutdown />
+
+<TipShutdownGracefully />
 
 If you have followed the recommendations, you should have the Systemd Unit Service setup.
 
