@@ -450,21 +450,25 @@ testnet = true
 The configuration file should have more content, which was omitted here to keep it short and to the point. You're interested in the `testnet` property name only.
 :::
 
-### Network participation request
+### Network participation
 
-The Node Operator has to request that a node joins the Network to enable it to participate, regardless of wether the node has start or online.
+The Node Operator has to explicitly opt-in for a node to participate in the Network, regardless of whether the node Lightning Service is running.
 
-Amongst others, network participation control gives the operator a chance to shutdown a node gracefully at end of the epoch.
+:::info
+Node participation in an Epoch can be true or false (online or offline). Participation is transient when the operator requests to opt in or out, and the network has yet to end the Epoch. Once the Epoch ends, it transitions to true or false. Therefore, a Node Operator can expect a Node state to be online, offline, opted in or out during an Epoch lifetime.
+:::
 
-To join the Network, you must send a request via the Lightning CLI using the **opt** parameter and one of the options: **in**, **out**, or **status**.
+Amongst other motives, the ability to control if a node participates in the Network gives the operator a chance to shut it down gracefully at the end of the Epoch without incurring reputation penalties. For example, a node that opted in should actively participate, not down and unresponsive.
 
-Make a opt-in request by running:
+Therefore, to participate in the Network, a Node Operator must send a request via the command opt of the Lightning CLI. The options available are in, out and status.
 
-```sh
+To make an opt-in request, the operator should execute the command:
+
+```
 lgtn opt in
 ```
 
-Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
+Upon success, the operator receives a confirmation text message about the node inclusion in the next Epoch.
 
 To learn more about network participation visit the [Opt](/docs/node/lightning-cli/#opt) section in the [Lightning CLI](/docs/node/lightning-cli) page.
 
