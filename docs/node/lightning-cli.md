@@ -77,13 +77,27 @@ To opt-in, use the subcommand **in**:
 lgtn opt in
 ```
 
-Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next epoch.
+Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next Epoch.
 
-Opt-out of network participation by using **out** (note that this command should be sent before shutting down the node to avoid reputation penalties). Similarly, should shutdown only after the epoch ends to mitigate any participation faults.
+Opt-out of network participation by using **out** (note that this command should be sent before shutting down the node to avoid reputation penalties). Similarly, should shutdown only after the Epoch ends to mitigate any participation faults.
 
 ```sh
 lgtn opt out
 ```
+
+:::warning
+To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out.
+:::
+
+:::tip
+Shutting down a Node after an Epoch can be tedious, given the remaining time an Epoch can take to end. Doing it prematurely, will cause reputation penalties, e.g. shutting down before the participation state change to offline. Therefore, a shutdown utility is available in the **Tools** menu option of `get.fleek.network`.
+
+To access it, execute the command:
+
+```sh
+curl https://get.fleek.network | bash
+```
+:::
 
 To query the node participation status in the network, use the subcommand **status**.
 
@@ -93,10 +107,6 @@ lgtn opt status
 
 :::tip
 Network participation control can be carried out regardless of whether the node is started or online.
-:::
-
-:::warning
-To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
 :::
 
 ### Print-config
