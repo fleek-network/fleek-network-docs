@@ -11,6 +11,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
+import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 
 ## Systemd Service
 
@@ -106,6 +107,8 @@ sudo systemctl start docker-lightning
 ### Stop
 
 <WarningPreventPrematureShutdown />
+
+<TipShutdownGracefully />
 
 Stop the service by:
 
