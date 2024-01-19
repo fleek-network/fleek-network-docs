@@ -16,7 +16,6 @@ import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prev
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
-
 ## Remove the source code locally
 
 For users who build the Docker image from source-code.
