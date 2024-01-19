@@ -18,10 +18,12 @@ import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prev
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 
 :::tip
-Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
+Although the step-by-step instructions described here are simple to follow, this steps are available as an automated script.
+
+To use the automated script execute the following command in your server terminal, select **Node Update** from the **Tools** menu option and follow the instructions:
 
 ```sh
-curl -sS https://get.fleek.network/update | bash
+curl -sS https://get.fleek.network | bash
 ```
 :::
 
