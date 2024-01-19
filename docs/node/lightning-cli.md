@@ -11,6 +11,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
+import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 
 The Lightning CLI provides a wide range of capabilities, including running the node, accessing key management utilities, network participation management and printing the loaded configuration. 
 
@@ -89,15 +90,7 @@ lgtn opt out
 To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out.
 :::
 
-:::tip
-Shutting down a Node after an Epoch can be tedious, given the remaining time an Epoch can take to end. Doing it prematurely, will cause reputation penalties, e.g. shutting down before the participation state change to offline. Therefore, a shutdown utility is available in the **Tools** menu option of `get.fleek.network`.
-
-To access it, execute the command:
-
-```sh
-curl https://get.fleek.network | bash
-```
-:::
+<TipShutdownGracefully />
 
 To query the node participation status in the network, use the subcommand **status**.
 
