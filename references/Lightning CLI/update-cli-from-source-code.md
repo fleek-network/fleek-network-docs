@@ -14,6 +14,7 @@ import Author from '@site/src/components/Author';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
 import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 
 :::tip
 Although the step-by-step instructions described here are simple to follow, this process is available as an automated script. To use it execute the following command in your server terminal and follow the instructions:
@@ -22,6 +23,8 @@ Although the step-by-step instructions described here are simple to follow, this
 curl -sS https://get.fleek.network/update | bash
 ```
 :::
+
+<WarningPreventPrematureShutdown />
 
 ## Switch to the installation user
 
