@@ -18,6 +18,8 @@ tags:
 
 import Author from '@site/src/components/Author';
 import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
+import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 ## Introduction
@@ -33,6 +35,20 @@ To follow the guide, you will need the following:
 - Familiarity with the command-line interface
 - Some experience with Git
 - Have installed and set up the Lightning CLI and service
+
+## Stop the Lightning Service
+
+Before proceeding, it's best to stop the Lightning Service to perform the update.
+
+<WarningPreventPrematureShutdown />
+
+Stop the Lightning Service by executing the command:
+
+```
+sudo systemctl stop lightning
+```
+
+<TipShutdownGracefully />
 
 ## Pulling the latest changes
 
