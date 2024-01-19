@@ -10,6 +10,7 @@ tags:
 
 import Author from '@site/src/components/Author';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 
 ## TL;DR
 
@@ -104,6 +105,8 @@ lgtn opt in
 :::warning
 To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
 :::
+
+<WarningPreventPrematureShutdown />
 
 <TipShutdownGracefully  />
 
