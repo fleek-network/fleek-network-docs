@@ -12,6 +12,7 @@ sidebarCollapsible: false
 ---
 
 import Author from '@site/src/components/Author';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 :::info Important
 The **Testnet Phase {1} has finished** on Thursday, Oct. 26th. Phase {1} turned out to be an enormous success. Seeing 5k+ nodes successfully running across the network and demonstrating that Fleek Network is capable of being just as performant as web2 cdn/edge platforms and, with further optimizations, potentially even more performant. Dive into the full performance data and key analysis in the Phase {1} recap [blog](https://blog.fleek.network/post/fleek-network-phase-1-recap). If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/).
@@ -99,7 +100,25 @@ You'll have to wait for Metamask to confirm the transaction, which Metamask shou
 
 Important to note that in Testnet Phase {1} the Epoch is set to about 30 minutes. This is the average period you'll have to wait to see any meaningful logs.
 
-### 8) Start the Node
+### 8) Network participation
+
+The Node Operator has to explicitly opt-in to have the Node participate in the Network.
+
+<InfoNetworkParticipation />
+
+The Opt command allows the user to opt into or out of Network participation.
+
+To opt-in, use the subcommand in:
+
+```sh
+lgtn opt in
+```
+
+Once successful, you will receive a confirmation text message as feedback, notifying you of your inclusion in the next Epoch.
+
+To learn more about network participation visit the [Opt](/docs/node/lightning-cli/#opt) section in the [Lightning CLI](/docs/node/lightning-cli) page.
+
+### 9) Start the Node
 
 Visit the section [Systemd Service](/docs/node/systemd-service) to learn how to enable, disable, start, stop the Systemd Service.
 
@@ -115,7 +134,7 @@ curl https://get.fleek.network/healthcheck | bash
 
 To learn more about healchecks read the section [here](/docs/node/health-check).
 
-### 9) Confirm Node Stake
+### 10) Confirm Node Stake
 
 To confirm the Node Staked amount, you can run the **node details** script to get the information. The **node details** output will only show staked information if available, if it doesn't show staked information it means that your Node is not properly staked.
 
