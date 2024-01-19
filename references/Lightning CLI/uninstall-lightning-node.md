@@ -13,6 +13,12 @@ tags:
 ---
 
 import Author from '@site/src/components/Author';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
+import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
+
+<WarningPreventPrematureShutdown />
+
+<TipShutdownGracefully />
 
 ## Remove symLink
 

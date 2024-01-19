@@ -52,6 +52,10 @@ sudo systemctl start lightning
 sudo systemctl stop lightning
 ```
 
+<WarningPreventPrematureShutdown />
+
+<TipShutdownGracefully  />
+
 ### Restart
 
 ```sh
