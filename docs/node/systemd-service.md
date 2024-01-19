@@ -10,6 +10,7 @@ tags:
 ---
 
 import Author from '@site/src/components/Author';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 
 ## Systemd Service
 
@@ -104,11 +105,7 @@ sudo systemctl start docker-lightning
 
 ### Stop
 
-:::warning
-To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
-
-To learn more, read the [Lightning-CLI](/docs/node/lightning-cli) section for command [opt](/docs/node/lightning-cli#opt).
-:::
+<WarningPreventPrematureShutdown />
 
 Stop the service by:
 

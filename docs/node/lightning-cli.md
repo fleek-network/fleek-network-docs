@@ -12,6 +12,7 @@ tags:
 import Author from '@site/src/components/Author';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
+import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 
 The Lightning CLI provides a wide range of capabilities, including running the node, accessing key management utilities, network participation management and printing the loaded configuration. 
 
@@ -86,9 +87,7 @@ Opt-out of network participation by using **out** (note that this command should
 lgtn opt out
 ```
 
-:::warning
-To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out.
-:::
+<WarningPreventPrematureShutdown />
 
 <TipShutdownGracefully />
 
