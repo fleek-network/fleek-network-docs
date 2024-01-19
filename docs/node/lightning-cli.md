@@ -10,6 +10,7 @@ tags:
 ---
 
 import Author from '@site/src/components/Author';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 The Lightning CLI provides a wide range of capabilities, including running the node, accessing key management utilities, network participation management and printing the loaded configuration. 
 
@@ -67,6 +68,8 @@ The \<USERNAME\> is a placeholder for the actual system username. So, make sure 
 ### Opt
 
 The Opt command allows the user to opt into or out of Network participation.
+
+<InfoNetworkParticipation />
 
 To opt-in, use the subcommand **in**:
 

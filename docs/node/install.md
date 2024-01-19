@@ -23,6 +23,7 @@ import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
 import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
+import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 This section describes how to install the Fleek Network Lightning on supported operating systems. The installation can be made quicker by running the [assisted installer](#assisted-installer) or by following the [manual installation](#manual-installation) if you want a bit more control.
 
@@ -454,9 +455,7 @@ The configuration file should have more content, which was omitted here to keep 
 
 The Node Operator has to explicitly opt-in for a node to participate in the Network, regardless of whether the node Lightning Service is running.
 
-:::info
-Node participation in an Epoch can be true or false (online or offline). Participation is transient when the operator requests to opt in or out, and the network has yet to end the Epoch. Once the Epoch ends, it transitions to true or false. Therefore, a Node Operator can expect a Node state to be online, offline, opted in or out during an Epoch lifetime.
-:::
+<InfoNetworkParticipation />
 
 Amongst other motives, the ability to control if a node participates in the Network gives the operator a chance to shut it down gracefully at the end of the Epoch without incurring reputation penalties. For example, a node that opted in should actively participate, not down and unresponsive.
 
