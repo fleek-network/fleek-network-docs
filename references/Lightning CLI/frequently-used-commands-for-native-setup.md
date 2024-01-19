@@ -102,10 +102,6 @@ For example, to opt-in you'd run:
 lgtn opt in
 ```
 
-:::warning
-To prevent any negative impact on the node's reputation, it's advisable to wait until the end of the Epoch (~24h) before shutting down the node when opting out. The same applies to nodes that have opted-in but are currently offline.
-:::
-
 <WarningPreventPrematureShutdown />
 
 <TipShutdownGracefully  />
