@@ -18,7 +18,11 @@ import InfoNetworkParticipation from '../../guides/partials/_info_network_partic
 The **Testnet Phase {1} has finished** on Thursday, Oct. 26th. Phase {1} turned out to be an enormous success. Seeing 5k+ nodes successfully running across the network and demonstrating that Fleek Network is capable of being just as performant as web2 cdn/edge platforms and, with further optimizations, potentially even more performant. Dive into the full performance data and key analysis in the Phase {1} recap [blog](https://blog.fleek.network/post/fleek-network-phase-1-recap). If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/).
 :::
 
-## Testnet Phase {1}:
+:::warning
+The following documentation is for onboarding Node Operators into the Testnet. The Testnet Phase {3}, launched Jan. 31st, has all nodes operated by the Fleek Foundation. Thus, not open to general public and you will not have the ability to install and run a node in this Phase {3}. If you'd like to participate, visit the [blog posts](https://blog.fleek.network/) for details about the next **Testnet Phase**.
+:::
+
+## Testnet Phase:
 
 Following the successful completion of Fleek Network Testnet Phase {0}, the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
