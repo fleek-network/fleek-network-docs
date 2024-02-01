@@ -15,7 +15,7 @@ import Author from '@site/src/components/Author';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 :::warning
-The following documentation is for onboarding Node Operators into the Testnet. The Testnet Phase {3} which launched in Jan. 31st, have all nodes operated by the Fleek Foundation. Thus, is not open to the general public and you will not have the ability to run a node in this Phase. If you'd like to **participate**, visit the [blog posts](https://blog.fleek.network/) for details about the next **Testnet Phase**.
+This documentation is intended for onboarding Node Operators into the Testnet and will only be useful for Testnet Phases that are **public** or for Node Operators who have been **contacted** by the Fleek Foundation. Testnet Phase launches and instructions to participate are available prior to launch, e.g. Phase {0} required whitelisting, {1} was open to everybody, {3} [operated by the Fleek Foundation](https://blog.fleek.network/post/fleek-network-phase-3-release) and {4} through selection following up the [Genesis Node Operator Application](https://blog.fleek.network/post/genesis-node-operator-application). If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/)
 :::
 
 ## Testnet Phase:
@@ -23,10 +23,6 @@ The following documentation is for onboarding Node Operators into the Testnet. T
 Following the successful completion of Fleek Network [first Testnet Phases](https://blog.fleek.network), the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
 
 ### Prerequesites
-
-:::warning
-The following instructions are only valid for Testnet Phases, which are public, or Node Operators which have been contacted by the Fleek Foundation. Testnet Phase launches and instructions to participate are available prior to launch, e.g. Phase {0} required whitelisting, {1} was open to everybody and {4} through selection following up the [Genesis Node Operator Application](https://blog.fleek.network/post/genesis-node-operator-application). If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/)
-:::
 
 The Fleek team cares about user experience and provides documentation and tools (whichever's your preference) to onboard easily and quickly. However, the Node operator's server should have the [minimum requirements](/docs/node/requirements) to set up and run a Fleek Network node.
 
