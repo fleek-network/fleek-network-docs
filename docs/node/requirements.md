@@ -41,13 +41,22 @@ If you don’t have a server or a spare machine, keep reading as we'll give you 
 ## Specs
 ---
 
+### CPU Architecture
+
+The Testnet Phase {4} testnet includes additional functionality and improvements, such as enhanced security measures and trusted computing that requires **Intel SGX chips** in the Node specifications. A list of hardware which supports **Intel SGX chips - Software Guard Extensions** is available [here](https://github.com/ayeks/SGX-hardware).
+
+:::info
+Intel's Software Guard Extensions (SGX) is a set of
+extensions to the Intel architecture that aims to provide integrity and confidentiality guarantees to security sensitive computation performed on a computer where all the privileged software (kernel, hypervisor, etc) is potentially malicious. See the research paper on [Intel SGX Explained](https://eprint.iacr.org/2016/086.pdf).
+:::
+
+### Number of CPU cores
+
 The recommended number of CPU cores is a minimum of 4 with a minimum CPU speed of 2.0 GHz. The Fleek Network node binary is only supported on CPUs that adhere to the x86_64 architecture (64-bit).
 
-A minimum of 32 GB of memory (RAM) is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
+### Memory
 
-:::note
-We're mainly supporting `GenuineIntel` and there have been reports of failure to build the binary on `AMD`. The `ARM64` is a different architecture, thus not supported, but there has been some community contributions in that regard, find it in the reference [error building on ARM64](/references/Lightning%20CLI/error-building-on-arm64).
-:::
+A minimum of 32 GB of memory (RAM) is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
 
 <Author
     name="Helder Oliveira"
