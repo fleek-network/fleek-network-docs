@@ -15,7 +15,7 @@ import Author from '@site/src/components/Author';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
 :::warning
-This documentation is intended for onboarding Node Operators into the Testnet and will only be useful for Testnet Phases that are **public** or for Node Operators who have been **contacted** by the Fleek Foundation. Before the launch of a Testnet Phase, instructions on how to participate are made available. If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/)
+The following instructions are intended for onboarding Node Operators into the Testnet and will only be useful for Testnet Phases that are **public** or for Node Operators who have been **contacted** and **selected** by the Fleek Foundation. Please be aware that guidelines or instructions for participation are provided prior to the launch of a Testnet Phase. If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), and our [Blog](https://blog.fleek.network/).
 :::
 
 ## Testnet Phase:
