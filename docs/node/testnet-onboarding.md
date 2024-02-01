@@ -181,6 +181,10 @@ Once the Testnet finishes, it's not necessary to keep the node active. Furthermo
 
 However, if you wish to learn about key management, you can refer to the [instruction guide](/guides/Node%20Operators/managing-the-keystore) to learn on how to back up or restore keys, etc.
 
+### Does Nodes require to have SGX chips?
+
+Phase {4} testnet includes enhancements that require node features, such as [SGX chips](https://en.wikipedia.org/wiki/Software_Guard_Extensions). This enhances the network's capabilities and expands its service and use cases, as described in the [Genesis Node Operator Application](https://blog.fleek.network/post/genesis-node-operator-application/). For more information check the [following list of hardware](https://github.com/ayeks/SGX-hardware) which supports Intel SGX - Software Guard Extensions.
+
 <Author
     name="Helder Oliveira"
     image="https://github.com/heldrida.png"
