@@ -22,7 +22,9 @@ The following instructions are meant for onboarding Node Operators into the Test
 
 The Fleek Network operates the testnet in phases, with each phase having a broadened range of features that are evaluated and tested by the core team. Before each phase, guidelines for participation are communicated to the public. Thus important for Node Operators to follow the team announcements.
 
-Following the successful completion of Fleek Network [first Testnet Phases](https://blog.fleek.network/post/fleek-network-updated-roadmap-milestones), the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during the phases. Learn more by checking the [roadmap](/docs/roadmap/).
+Following the successful completion of Fleek Network [first Testnet Phases](https://blog.fleek.network/post/fleek-network-updated-roadmap-milestones), the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during the phases. A [roadmap](/docs/roadmap) is available.
+
+In case you have been selected for a Testnet Phase that is currently open, follow the instructions provided below.
 
 ### Prerequesites
 
