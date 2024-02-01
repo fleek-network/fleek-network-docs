@@ -25,7 +25,7 @@ Following the successful completion of Fleek Network [first Testnet Phases](http
 ### Prerequesites
 
 :::warning
-The following instructions are only valid for Testnet Phases, which are public, or Node Operators which have been contacted by the Fleek Foundation. Testnet Phase launches and instructions to participate are available prior to launch, e.g. Phase {0} required whitelisting, Phase {1} was open to everybody and Phase {4} through selection following up registration survey. If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/)
+The following instructions are only valid for Testnet Phases, which are public, or Node Operators which have been contacted by the Fleek Foundation. Testnet Phase launches and instructions to participate are available prior to launch, e.g. Phase {0} required whitelisting, {1} was open to everybody and {4} through selection following up the [Genesis Node Operator Application](https://blog.fleek.network/post/genesis-node-operator-application). If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), or our [blog posts](https://blog.fleek.network/)
 :::
 
 The Fleek team cares about user experience and provides documentation and tools (whichever's your preference) to onboard easily and quickly. However, the Node operator's server should have the [minimum requirements](/docs/node/requirements) to set up and run a Fleek Network node.
