@@ -30,10 +30,10 @@ To join, you will have to follow the steps below:
 
 ### 1) Install the Fleek Network Lightning CLI latest version
 
-Once Fleek launches the Testnet Phase {1}, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/updating-lightning).
+Once Fleek launches the Testnet Phase, you have to install or update the Lightning CLI binary to the latest version. The instructions are available [here](/docs/node/install) where you can use an assisted installer or install it manually by following the documentation. If you already have it installed, use the update reference provided [here](/references/Lightning%20CLI/update-cli-from-source-code) or if you prefer a more step-by-step approach use the provided [guide](/guides/Node%20Operators/updating-lightning).
 
 :::caution Warning
-The Testnet Phase {1} version should only be available after the Testnet Phase {1} is ready and announced. Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicly that the testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
+Particular Testnet versions are only available after the Testnet Phase is ready and announced! Since we work transparently (open-source) some users rush to install things on their own assumptions, misaligned, which causes them confusion. The Fleek Network core team is required to provide all the changes, features and tests before announcing publicly that the particular testnet phase is ready. Otherwise, you'll be running the process prematurely, be patient to avoid disappointment please!
 :::
 
 ### 2) Set up the Metamask browser extension
@@ -96,7 +96,9 @@ It is important to note that when transacting through Metamask, a warning messag
 
 You'll have to wait for Metamask to confirm the transaction, which Metamask should take about 10 seconds to confirm. Although, the transaction takes under a second.
 
+:::info
 Important to note that in Testnet Phase {1} the Epoch is set to about 30 minutes. This is the average period you'll have to wait to see any meaningful logs.
+:::
 
 ### 8) Network participation
 
@@ -148,7 +150,7 @@ Alternatively, the Stake amount can be verified by querying the [RPC-JSON API](/
 
 ### The Node fails to run after successfully stake and run? Or the Core team network restart announcement?
 
-The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase {1}. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear activity and nonce data` or `Clear Local data`. After doing this Metamask will clear the cache.
+The Fleek Network core team might have to restart the network, for any development purposes or required updates during the Testnet Phase. If you've done this process before and is running into issues, you'll have to go into the Metamask advance settings (Metamask → Settings → Advanced) and click `Clear activity and nonce data` or `Clear Local data`. After doing this Metamask will clear the cache.
 
 ### Node details don't show staked amount?
 
