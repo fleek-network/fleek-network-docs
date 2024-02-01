@@ -18,9 +18,9 @@ import InfoNetworkParticipation from '../../guides/partials/_info_network_partic
 The following instructions are meant for onboarding Node Operators into the Testnet and only applicable to **public** Testnet Phases or Node Operators **contacted and selected** by the Fleek Foundation. Please be aware that guidelines or instructions for participation are provided prior to the launch of a Testnet Phase. The updates are shared with the public openly. If you'd like to **participate** in the next **Testnet Phase**, follow us on [Discord](https://discord.gg/fleek), [Twitter](https://twitter.com/fleek_net), and our [Blog](https://blog.fleek.network/).
 :::
 
-## Testnet Phase:
+## Testnet:
 
-Following the successful completion of Fleek Network [first Testnet Phases](https://blog.fleek.network), the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during that phase.
+Following the successful completion of Fleek Network [first Testnet Phases](https://blog.fleek.network/post/fleek-network-updated-roadmap-milestones), the core development team has been actively implementing the next set of core protocol functionalities, which include services, the reward's system, the broadcaster/synchronizer, as well as all identified improvements and fixes found during the phases. Learn more by checking the [roadmap](/docs/roadmap/).
 
 ### Prerequesites
 
