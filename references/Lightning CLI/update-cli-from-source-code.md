@@ -76,9 +76,22 @@ Before make sure that you stash or clear any changes you may have in the working
 A quick way to clean is to `stash` the changes, for example:
 
 ```sh
-git stash 
+git stash
 ```
 
+:::tip
+After upgrading, don't forget your stash.
+You will have access to your stashed changes with
+```sh
+git stash list
+git diff stash
+```
+
+You can also drop it if nothing is usefull
+```sh
+git stash drop
+```
+:::
 
 To pull the latest changes use the `git pull` command, as follows:
 
@@ -122,16 +135,10 @@ Optionally, set stable as default toolchain as follows:
 
 ## Update the symlink
 
-Start by removing the existing one:
+Create or overwrite a symlink that links the new built binary to `/usr/local/bin/lgtn`, as follows:
 
 ```sh
-sudo rm -f "/usr/local/bin/lgtn"
-```
-
-Create a new symlink that links the new build binary to `/usr/local/bin/lgtn`, as follows:
-
-```sh
-sudo ln -s ~/fleek-network/lightning/target/release/lightning-node /usr/local/bin/lgtn
+sudo ln -sfv ~/fleek-network/lightning/target/release/lightning-node /usr/local/bin/lgtn
 ```
 
 ## Set user path in config.toml
