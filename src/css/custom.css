@@ -5,7 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@400;500;600;700&display=swap');
+
 
 @font-face {
   font-family: 'Atyp'; /* You can name it anything */
@@ -18,7 +19,7 @@
 }
 
 :root {
-  --ifm-font-family-base: 'IBM Plex Mono', sans-serif;  /* Set the default font to IBM Plex Sans */
+  --ifm-font-family-base: 'IBM Plex Sans', sans-serif;  /* Set the default font to IBM Plex Sans */
   --ifm-color-primary: #000;
   --ifm-color-primary-dark: #000033;
   --ifm-color-primary-darker: #001ac9;
@@ -38,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme='dark'] {
   --ifm-color-primary: #fff;
   --ifm-color-primary-dark: #98beff;
-  --ifm-color-primary-darker: #C9FF57;
+  --ifm-color-primary-darker: #FFE629;
   --ifm-color-primary-darkest: #0048f8;
   --ifm-color-primary-light: #001ac9;
   --ifm-color-primary-lighter: #000033;
@@ -86,7 +87,7 @@ html[data-theme='dark'] {
 
 .alert {
   background: #1C1C1C;
-  border-left: 4px solid #C9FF57;
+  border-left: 4px solid #FFE629;
   border-radius: 0px;
 }
 
