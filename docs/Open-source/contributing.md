@@ -51,7 +51,7 @@ We will then take care of the issue as soon as possible.
 
 ## I Want To Contribute
 
-:::info Legal Notice
+:::info Legal Notice.
 When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
 :::
 
@@ -66,10 +66,10 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 - To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/fleek-network/lightning/issues?q=label%3Abug).
 - Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have discussed the issue.
 - Collect information about the bug:
-  - Stack trace (Traceback)
-  - OS, Platform and Version (Linux, macOS, x86, ARM)
+  - Stack trace (Traceback).
+  - OS, Platform and Version (Linux, macOS, x86, ARM).
   - Version of the compiler, SDK, runtime environment, package manager, depending on what seems relevant.
-  - Possibly your input and the output
+  - Possibly your input and the output.
   - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
 
 #### How Do I Submit a Good Bug Report?
