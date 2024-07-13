@@ -32,7 +32,7 @@ For a complete description of our road to mainnet, read the following [blog post
 - **Phase 2 (Dec23): Performance Improvements & Long Running Testnet (Internal)**
     - Long-running testnet deployed internally
         - All the nodes will be run by the Foundation and core team initially to ensure high quality of service and reliability
-    - “Finish” the following core systems: Consensus, Blockstore, BlockstoreServer, Broadcast, Consensus, DHT, Fetcher, Metrics, Origin-IPFS, Pool, Reputation, Rep-Collector, Resolver, RPC, Signer, and Topology
+    - “Finish” the following core systems: Consensus, Blockstore, BlockstoreServer, Broadcast, DHT, Fetcher, Metrics, Origin-IPFS, Pool, Reputation, Rep-Collector, Resolver, RPC, Signer, and Topology
     - Finish the spec and begin testing first developer-facing services & functionality
 - **Phase 3A (Jan24): Initial External Developer Use of the Network**
     - **Decentralized IPFS Pinning + CDN**
