@@ -29,7 +29,7 @@ This command generates static content into the `build` directory and can be serv
 
 ### 🕸 Crawler
 
-Crawls are handled by the [Algolia [Crawler](https://www.algolia.com/products/search-and-discovery/crawler/) and are scheduled to run once a week by default. You can then trigger new crawls yourself and monitor them directly from the Crawler interface, which also offers a live editor where you can maintain your config.
+Crawls are handled by the Algolia [Crawler](https://www.algolia.com/products/search-and-discovery/crawler/) and are scheduled to run once a week by default. You can then trigger new crawls yourself and monitor them directly from the Crawler interface, which also offers a live editor where you can maintain your config.
 
 For this reason, crawling on CI deployment is disabled and can be enabled if moved from docsearch open-source license to a paid account.
 
