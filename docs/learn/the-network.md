@@ -36,7 +36,7 @@ It's important to keep track of these components to ensure that the system is ru
 
 As a decentralized network, the state of these is replicated across all of the distributed nodes in the network by forming a blockchain, in which consensus on transactions transmutes to the final immutable state.
 
-## The Consensus algorithm
+## The Consensus algorithm {#consensus}
 
 [Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering (as total ordering or linear order) and Bullshark as the consensus engine.
 

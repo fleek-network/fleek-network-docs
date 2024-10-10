@@ -13,40 +13,33 @@ const commonDocsOptions = {
     'https://github.com/fleek-network/fleek-network-docs/edit/main/',
 };
 
+const commonDiscord = 'https://discord.gg/fleek';
+const commonTwitter = 'https://twitter.com/fleek_net';
+const commonHome = 'https://fleek.network';
+const commonCompanyUrl = 'https://fleek.network/';
+const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
+
 const commonNavbarItems = [{
+  href: commonHome,
+  label: 'Explainer',
+  position: 'left',
+}, 
+{
   to: 'docs',
   label: 'Documentation',
   position: 'left',
 },
 {
-  to: 'guides',
-  label: 'Guides',
-  position: 'left',
-},
-{
-  to: 'references',
-  label: 'References',
-  position: 'left',
-},
-{
   href: 'https://blog.fleek.network',
-  label: 'Blog',
+  label: 'Writings',
   position: 'left',
   target: '_blank',
 },
 {
-  href: 'https://github.com/fleek-network/',
-  label: 'Github',
+  to: 'docs',
+  label: 'Resources',
   position: 'left',
-  target: '_blank',
 }];
-
-const commonDiscord = 'https://discord.gg/fleek';
-const commonTwitter = 'https://twitter.com/fleek_net';
-const commonHome = 'https://fleek.network';
-const commonCompanyUrl = 'https://fleek.network/';
-
-const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -123,7 +116,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Fleek',
-          src: 'img/logo.png?2023091241',
+          src: 'img/logo.svg?20241009',
         },
         items: [
           ...commonNavbarItems,

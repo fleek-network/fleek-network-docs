@@ -14,11 +14,11 @@ import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prev
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
-## Systemd Service
+## Systemd Service {#use-systemctl-to-manage-systemd-service}
 
 In this section we describe how to enable, disable, start, stop the Systemd Service.
 
-The service is set up by the [assisted installer](#assisted-installer) automatically, or manually as described in the [manual installation](/docs/node/install#manual-installation) and [docker install](/docs/node/install#docker-installation).
+The service is set up by the [assisted installer](/docs/node/install#assisted-installer) automatically, or manually as described in the [manual installation](/docs/node/install#manual-installation) and [docker install](/docs/node/install#docker-installation).
 
 :::info
 While the Lightning-CLI Node process can operate independently, it is recommended to utilize Systemd for service management of the Lightning Node process in Linux. It's important to note that any network-related settings, such as opting-in or opting-out of network participation, should be managed separately by the Node Operator via the [CLI](/docs/node/lightning-cli).

@@ -41,7 +41,7 @@ The periodic submission of Delivery Acknowledgements, allows us to leverage SNAR
 The Fleek Network uses Narwhal as a [DAG-mempool](https://arxiv.org/pdf/2105.11827.pdf) for transaction ordering (as total ordering or linear order) and Bullshark as the consensus engine.
 
 :::tip
-Read [The Consensus Algorithm](/docs/learn/the-network#the-consensus-algorithm) section, to learn more about Narwhal and Bullshark. Alternatively, check the [whitepaper](/docs/whitepaper) for more detailed information.
+Read [The Consensus Algorithm](/docs/learn/the-network#consensus) section, to learn more about Narwhal and Bullshark. Alternatively, check the [whitepaper](/docs/whitepaper) for more detailed information.
 :::
 
 Total ordering is performed by a committee-based approach. The committee is formed from a subset of any valid staked node at the end of every epoch (about 24 hours). Integrity is met due to the node rotation that occurs at each period, reducing risks associated with nodes being compromised and affecting the committee's purity.

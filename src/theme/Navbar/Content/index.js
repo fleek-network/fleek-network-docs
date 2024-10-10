@@ -11,6 +11,8 @@ import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
 import styles from './styles.module.css';
+import clsx from 'clsx';
+
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
   return useThemeConfig().navbar.items;
@@ -26,8 +28,8 @@ function NavbarItems({items}) {
 }
 function NavbarContentLayout({left, right}) {
   return (
-    <div className="navbar__inner">
-      <div className="navbar__items">{left}</div>
+    <div className={styles.navbar__inner}>
+      <div className={clsx('navbar__items', styles.navbar__items)}>{left}</div>
       <div className="navbar__items navbar__items--right">{right}</div>
     </div>
   );
@@ -37,23 +39,25 @@ export default function NavbarContent() {
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
   const searchBarItem = items.find((item) => item.type === 'search');
+
   return (
     <NavbarContentLayout
       left={
         // TODO stop hardcoding items?
         <>
+          <NavbarLogo />
           <div>
             {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-            <NavbarLogo />
             <NavbarItems items={leftItems} />
+
+            {!searchBarItem && (
+              <NavbarSearch className={styles.navbar__search}>
+                <SearchBar />
+              </NavbarSearch>
+            )}
           </div>
-          <div>
-          {!searchBarItem && (
-            <NavbarSearch>
-              <SearchBar />
-            </NavbarSearch>
-          )}
-          </div>
+
+          <a className={styles.whitepaperLink} href="/docs/whitepaper">Whitepaper</a>
         </>
       }
       right={

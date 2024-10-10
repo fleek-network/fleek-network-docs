@@ -1,0 +1,56 @@
+.navbar {
+  box-shadow: none;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.DocSearch-Modal .DocSearch-Footer,
+.DocSearch .DocSearch-Button-Keys {
+  display: none;
+}
+
+.DocSearch-Button,
+.DocSearch-Button:hover {
+  width: 250px;
+  border-radius: 0px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  background: var(--background-color);
+
+  .DocSearch-Search-Icon {
+    color: var(--text-color);
+  }
+}
+
+@media (max-width: 996px) {
+  .navbar__toggle+.navbar__brand {
+    display: none;
+  }
+
+  .navbar__items>div:nth-child(2) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .navbar__items [class^="searchBox_"] {
+    position: static;
+  }
+}
+
+@media (min-width: 996px) {
+  .navbar__items {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .navbar__items div:nth-child(1) {
+    display: flex;
+    align-items: inherit;
+  }
+
+  .navbar__items .DocSearch-Button {
+    justify-content: flex-start;
+  }
+}

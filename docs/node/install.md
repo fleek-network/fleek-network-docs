@@ -31,7 +31,7 @@ This section describes how to install the Fleek Network Lightning on supported o
 If you'd like to participate in the [alpha Testnet](/docs/roadmap), you have to go through the onboarding process. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to proceed and [install](/docs/node/install) a network node successfully.
 :::
 
-## Assisted installer
+## Assisted installer {#assisted-installer}
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
 
@@ -118,7 +118,7 @@ sudo systemctl start lightning.service
 ```
 
 :::tip
-To learn more about Systemctl commands, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
+To learn more about Systemctl commands, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/systemd-service/#use-systemctl-to-manage-systemd-service)
 :::
 
 :::tip
@@ -569,7 +569,7 @@ sudo systemctl start lightning.service
 Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
-To learn more, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
+To learn more, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/systemd-service/#use-systemctl-to-manage-systemd-service)
 
 ## Docker installation
 
