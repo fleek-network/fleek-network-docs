@@ -48,13 +48,12 @@ export default function NavbarContent() {
           <NavbarLogo />
           <div>
             {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-            <NavbarItems items={leftItems} />
-
             {!searchBarItem && (
               <NavbarSearch className={styles.navbar__search}>
                 <SearchBar />
               </NavbarSearch>
             )}
+            <NavbarItems items={leftItems} />
           </div>
 
           <a className={styles.whitepaperLink} href="/docs/whitepaper">Whitepaper</a>

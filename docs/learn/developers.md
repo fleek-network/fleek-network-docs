@@ -12,7 +12,6 @@ tags:
 - Guide
 - Learn
 - Fleek Network
-hide_table_of_contents: true
 ---
 
 :::info

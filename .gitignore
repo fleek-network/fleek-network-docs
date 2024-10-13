@@ -23,3 +23,6 @@ yarn-error.log*
 
 # IDE specific
 /.vscode
+
+# Local Fleek Configs
+fleek.config.json

@@ -5,16 +5,14 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'Atyp'; /* You can name it anything */
-  src: url('/fonts/AtypDisplay-Bold.woff2') format('woff2'),
-       url('/fonts/AtypDisplay-Medium.woff2') format('woff2'),
-       url('/fonts/AtypDisplay-Regular.woff2') format('woff2'),
-       url('/fonts/AtypDisplay-Semibold.woff2') format('woff2');
-  /* font-weight: normal;
-  font-style: normal; */
+  font-family: 'Atyp';
+  src: url('/fonts/AtypDisplay-Regular.woff2') format('woff2') font-weight 400;
+  src: url('/fonts/AtypDisplay-Medium.woff2') format('woff2') font-weight 500;
+  src: url('/fonts/AtypDisplay-Semibold.woff2') format('woff2') font-weight 600;
+  src: url('/fonts/AtypDisplay-Bold.woff2') format('woff2') font-weight 700;
 }
 
 :root {
@@ -41,11 +39,14 @@
   --sidebar-menu-item_border: #d9d9d9;
   
   --ifm-color-primary-darker: var(--link-active);
-  
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Atyp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-footer-link-color: var(--text-color);
+  --ifm-footer-link-hover-color: var(--link-active);
+  --ifm-footer-padding-vertical: 0;
+
+  --ifm-color-content-secondary: var(--text-color);
+  --ifm-pagination-nav-color-hover: var(--link-active);
+  --ifm-font-weight-base: var(--ifm-font-weight-light);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -63,6 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 @import url('../theme/Navbar/styles.css');
 @import url('../components/Author/styles.css');
 @import url('./sidebar.css');
+@import url('./tags.css');
+@import url('./pagination-nav.css');
+@import url('./breadcrumbs.css');
+@import url('./typography.css');
+@import url('./toc.css');
 
 :root {
   --docsearch-modal-background: #000 !important;
@@ -96,9 +102,14 @@ html[data-theme='dark'] {
 }
 
 .alert {
-  background: #1C1C1C;
-  border-left: 4px solid #C9FF57;
+  background: transparent;
+  border: 1px solid var(--sidebar-menu-item_border);
   border-radius: 0px;
+  color: var(--text-color);
+
+  svg {
+    fill: var(--link-active) !important;
+  }
 }
 
 .alert a {
@@ -130,7 +141,35 @@ div[class*="docItemContainer"] {
 @media (min-width: 996px) {
   .footer .container {
     padding: 0;
+
+    .footer__title {
+      display: none;
+    }
+
+    .footer__links {
+      margin-bottom: 0;
+      padding: 2rem var(--ifm-footer-padding-horizontal);
+    }
   }
+}
+
+@media (max-width: 996px) {
+  .footer__col {
+      margin-bottom: 0;
+      flex-basis: 0;
+  }
+
+  .footer__links {
+    margin-bottom: 0;
+    padding: 2rem var(--ifm-footer-padding-horizontal);
+    padding-left: 4rem;
+  }
+
+
+  .footer__title {
+    display: none;
+  }
+
 }
 
 /* Main wrapper */
@@ -141,16 +180,22 @@ div[class*="docItemContainer"] {
   width: 100%;
 }
 
+main > .container > .row {
+  margin: 0;
+}
 
 .DocSearch-Button-Container svg,
 .DocSearch-Form .DocSearch-LoadingIndicator svg,
 .DocSearch-Form .DocSearch-MagnifierLabel svg {
   width: 14px;
   height: 14px;
+  padding-top: 2px;
 }
 
 .DocSearch-Button-Container .DocSearch-Button-Placeholder {
-  padding: 0 0.5rem;
+  padding: 2px 0.5rem 0 0.5rem;
+  font-family: var(--ifm-font-family-base);
+  font-weight: 300;
 }
 
 .DocSearch-Button svg {
@@ -161,7 +206,7 @@ div[class*="docItemContainer"] {
 .DocSearch-Button:hover svg {
   opacity: 1;
 }
-
+§
 .DocSearch-Container > .DocSearch-Modal,
 .DocSearch-Modal .DocSearch-Form {
   box-shadow: none;

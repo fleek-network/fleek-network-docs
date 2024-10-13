@@ -11,7 +11,6 @@ tags:
 - CDN
 - Fleek Network
 - Whitepaper
-hide_table_of_contents: true
 ---
 
 This section provides in-depth documentation and materials about the Fleek Network technology stack.

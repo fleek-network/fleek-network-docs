@@ -1,0 +1,20 @@
+.breadcrumbs__item--active .breadcrumbs__link {
+    color: var(--text-color) !important;
+}
+
+.breadcrumbs__item [aria-label="Home page"], .breadcrumbs__item [aria-label="Home page"]:hover {
+    line-height: 1.6;
+    svg {
+        color: var(--text-color)
+    }
+}
+
+.breadcrumbs__item:not(:last-child)::after  {
+    content: "/" !important;
+    color: var(--text-color);
+    filter: none;
+    background: none;
+    opacity: 1;
+    height: 1.5rem;
+    font-weight: var(--ifm-font-weight-light);
+}

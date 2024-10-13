@@ -27,6 +27,20 @@ Hide color mode toggle in small viewports
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+
+  @media (max-width: 996px) {
+    .whitepaperLink {
+      display: none;
+    }
+
+    [class^="navbar__search"] {
+      display: none;
+    }
+
+    [class="navbar__logo"] {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .navbar__items {

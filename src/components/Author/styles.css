@@ -30,8 +30,6 @@
 }
 
 .author_card>div {
-    /* display: flex;
-    gap: 1rem; */
     display: grid;
     grid-template-columns: auto auto;
     gap: 1rem;
@@ -64,6 +62,9 @@
 
 .author_card .name {
     font: bold var(--ifm-h4-font-size) / var(--ifm-heading-line-height) var(--ifm-font-family-base);
+    a {
+        color: var(--text-color);
+    }
 }
 
 

@@ -5,7 +5,6 @@ hide_title: true
 description: Learn about server requirements, installation, configuration, and more. Become a Node Operator and contribute to the network's growth.  
 tags:
   - build
-hide_table_of_contents: true
 ---
 
 import Author from '@site/src/components/Author';

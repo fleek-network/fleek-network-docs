@@ -10,7 +10,6 @@ tags:
 - pledge
 - contribute
 - code of conduct
-hide_table_of_contents: true
 ---
 
 

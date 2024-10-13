@@ -1,10 +1,3 @@
-@media (min-width: 996px) {
-    [class^="sidebar_"] .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
-        padding: 1rem 0;
-    }
-}
-
-
 .menu .menu__list {
     padding-right: 2rem;
 }
@@ -28,7 +21,8 @@ nav>.menu__list {
     border-radius: 0;
 }
 
-.menu__link--active, .menu__link--active:hover {
+.menu__link--active,
+.menu__link--active:hover {
     color: var(--link-active);
     border-color: var(--link-active);
 }
@@ -58,4 +52,13 @@ nav>.menu__list {
 .menu__list-item--collapsed.theme-doc-sidebar-item-category::after {
     top: 0;
     transform: rotate(0deg);
-} 
+}
+
+@media (min-width: 997px) {
+    aside .sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-styles-module {
+        top: 36px;
+        position: sticky;
+        height: inherit;
+        max-height: inherit;
+    }
+}

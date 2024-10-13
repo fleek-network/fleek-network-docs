@@ -6,7 +6,6 @@ tags:
   - requirements
   - server
 sidebarCollapsible: false
-hide_table_of_contents: true
 ---
 
 import Author from '@site/src/components/Author';

@@ -1,0 +1,12 @@
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Atyp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown {
+    font-weight: var(--ifm-font-weight-light);
+    
+    h1, h2, h3, h4, h5, h6 {
+       font-weight: 400;
+    }
+}

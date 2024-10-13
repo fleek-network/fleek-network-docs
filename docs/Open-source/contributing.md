@@ -10,7 +10,6 @@ tags:
 - repository
 - contribute
 - open source
-hide_table_of_contents: true
 ---
 
 # Contributing to Lightning
