@@ -36,7 +36,7 @@ const commonNavbarItems = [{
   target: '_blank',
 },
 {
-  to: 'docs',
+  href: commonHome,
   label: 'Resources',
   position: 'left',
 }];

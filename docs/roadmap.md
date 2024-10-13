@@ -8,6 +8,7 @@ keywords: [roadmap]
 tags:
 - Roadmap
 - Fleek Network
+hide_table_of_contents: true
 ---
 
 ## Introduction

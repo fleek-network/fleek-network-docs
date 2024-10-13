@@ -21,7 +21,6 @@
   --ifm-font-family-base: 'IBM Plex Mono', sans-serif;  /* Set the default font to IBM Plex Sans */
   --ifm-color-primary: #000;
   --ifm-color-primary-dark: #000033;
-  --ifm-color-primary-darker: #001ac9;
   --ifm-color-primary-darkest: #0048f8;
   --ifm-color-primary-light: #0073ff;
   --ifm-color-primary-lighter: #98beff;
@@ -36,8 +35,13 @@
   
   --ifm-navbar-background-color: var(--background-color);
   --ifm-navbar-link-color: var(--text-color);
-  --ifm-navbar-link-hover-color: var(--link-active)
-  ;
+  --ifm-navbar-link-hover-color: var(--link-active);
+
+  --ifm-menu-color: var(--text-color);
+  --sidebar-menu-item_border: #d9d9d9;
+  
+  --ifm-color-primary-darker: var(--link-active);
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,19 +52,17 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme='dark'] {
   --ifm-color-primary: #fff;
   --ifm-color-primary-dark: #98beff;
-  --ifm-color-primary-darker: #C9FF57;
   --ifm-color-primary-darkest: #0048f8;
   --ifm-color-primary-light: #001ac9;
   --ifm-color-primary-lighter: #000033;
   --ifm-color-primary-lightest: #000;
   --ifm-menu-color-background-active: rgba(255, 255, 255, 0.1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  
-  --ifm-menu-color: #888;
 }
 
 @import url('../theme/Navbar/styles.css');
 @import url('../components/Author/styles.css');
+@import url('./sidebar.css');
 
 :root {
   --docsearch-modal-background: #000 !important;
@@ -126,9 +128,6 @@ div[class*="docItemContainer"] {
 }
 
 @media (min-width: 996px) {
-  [class^="sidebar_"] .menu_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-Content-styles-module {
-    padding: 1rem 0;
-  }
   .footer .container {
     padding: 0;
   }
@@ -142,33 +141,6 @@ div[class*="docItemContainer"] {
   width: 100%;
 }
 
-.menu .menu__list {
-  padding-right: 2rem;
-}
-
-nav > .menu__list {
-  padding-bottom: 4rem;
-}
-
-.menu .menu__list a::first-letter {
-  text-transform: capitalize;
-}
-
-.menu__link--active:not(.menu__link--sublist) {
-  background-color: transparent;
-}
-
-.menu__link {
-  padding: var(--ifm-menu-link-padding-vertical) 0;
-}
-
-.menu__link {
-  color: var(--ifm-menu-color);
-}
-
-.menu__link--active {
-  color: var(--ifm-color-primary);
-}
 
 .DocSearch-Button-Container svg,
 .DocSearch-Form .DocSearch-LoadingIndicator svg,
@@ -282,7 +254,10 @@ article h1,
   aspect-ratio: 16 / 9;
 }
 
-
 .container .banner {
   margin-bottom: 1rem;
+}
+
+aside.theme-doc-sidebar-container {
+  border-right: none;
 }

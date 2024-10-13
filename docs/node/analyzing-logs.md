@@ -5,6 +5,7 @@ hide_title: true
 tags:
   - logs
   - diagnostic
+hide_table_of_contents: true
 ---
 
 import Author from '@site/src/components/Author';
