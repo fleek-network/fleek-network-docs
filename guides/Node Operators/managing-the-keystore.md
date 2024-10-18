@@ -430,7 +430,7 @@ On the [install instructions](/docs/node/install) provided by the documentation,
 
 We've walked through most basics of where the configuration file is located, the configuration settings we use to set up and run the node, the different configuration sections we have, and most importantly the identity section.
 
-Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
+Additionally, a brief guide on the [identity](#identity-selection), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principles.
 
 Separately, at risk of oversimpliying provided a brief introduction into the backup of the keystore directory.
 

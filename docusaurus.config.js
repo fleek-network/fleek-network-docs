@@ -13,40 +13,35 @@ const commonDocsOptions = {
     'https://github.com/fleek-network/fleek-network-docs/edit/main/',
 };
 
+const commonDiscord = 'https://discord.gg/fleek';
+const commonTwitter = 'https://twitter.com/fleek_net';
+const commonHome = 'https://fleek.network';
+const commonCompanyUrl = 'https://fleek.network/';
+const fleekXyzUrl = 'https://fleek.xyz/';
+const fleekNetworkGithubUrl = 'https://github.com/fleek-network';
+const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
+
 const commonNavbarItems = [{
+  href: commonHome,
+  label: 'Explainer',
+  position: 'left',
+}, 
+{
   to: 'docs',
   label: 'Documentation',
   position: 'left',
 },
 {
-  to: 'guides',
-  label: 'Guides',
-  position: 'left',
-},
-{
-  to: 'references',
-  label: 'References',
-  position: 'left',
-},
-{
   href: 'https://blog.fleek.network',
-  label: 'Blog',
+  label: 'Writings',
   position: 'left',
   target: '_blank',
 },
 {
-  href: 'https://github.com/fleek-network/',
-  label: 'Github',
+  href: commonHome,
+  label: 'Resources',
   position: 'left',
-  target: '_blank',
 }];
-
-const commonDiscord = 'https://discord.gg/fleek';
-const commonTwitter = 'https://twitter.com/fleek_net';
-const commonHome = 'https://fleek.network';
-const commonCompanyUrl = 'https://fleek.network/';
-
-const copyright = `Copyright © ${new Date().getFullYear()} Fleek`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -123,7 +118,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Fleek',
-          src: 'img/logo.png?2023091241',
+          src: 'img/logo.svg?20241009',
         },
         items: [
           ...commonNavbarItems,
@@ -133,34 +128,38 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Resources',
-            items: [
-              ...commonNavbarItems,
-            ],
-          },
-          {
-            title: 'Community',
             items: [
               {
                 label: 'Discord',
                 href: commonDiscord,
               },
               {
-                label: 'Twitter',
+                label: 'X',
                 href: commonTwitter,
               },
             ],
           },
           {
-            title: 'Company',
             items: [
               {
-                label: 'Home',
-                href: commonCompanyUrl,
+                label: 'Whitepaper',
+                to: '/docs/whitepaper',
               },
               {
-                label: 'Contact us',
-                href: commonDiscord,
+                label: 'Documentation',
+                href: '/docs',
+              },
+            ],
+          },
+          {
+            items: [
+              {
+                label: 'Github',
+                href: fleekNetworkGithubUrl,
+              },
+              {
+                label: 'Fleek Platform',
+                href: fleekXyzUrl,
               },
             ],
           },
@@ -168,7 +167,7 @@ const config = {
         // copyright: `Copyright © ${new Date().getFullYear()} Fleek. All rights reserved.`,
         logo: {
           alt: 'Fleek Network',
-          src: 'img/logo+named.svg?202301101154',
+          src: 'img/logo.svg?202301101154',
           href: 'https://fleek.network',
           width: 160
         },

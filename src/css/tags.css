@@ -1,0 +1,12 @@
+.theme-doc-footer-tags-row {
+    a {
+        color: var(--text-color);
+        border-color: var(--text-color);
+        transition: ease-in-out 0.2s color, ease-in-out 0.2s border-color;
+    }
+
+    a:hover {
+        color: var(--link-active);
+        border-color: var(--link-active);
+    }
+}

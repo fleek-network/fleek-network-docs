@@ -49,7 +49,7 @@ If you then still feel the need to ask a question and need clarification, we rec
 
 We will then take care of the issue as soon as possible.
 
-## I Want To Contribute
+## I Want To Contribute {#your-first-code-contribution}
 
 :::info Legal Notice
 When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.

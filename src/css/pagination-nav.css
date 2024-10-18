@@ -1,0 +1,14 @@
+.pagination-nav__link {
+    transition: ease-in-out 0.2s border-color;
+
+    .pagination-nav__sublabel, .pagination-nav__label {
+        color: var(--text-color);
+        transition: ease-in-out 0.2s color;
+    }
+}
+
+.pagination-nav__link:hover {
+    .pagination-nav__sublabel, .pagination-nav__label {
+        color: var(--link-active);
+    }
+}
