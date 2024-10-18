@@ -21,7 +21,6 @@ tags:
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
-import Author from '@site/src/components/Author';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
@@ -350,10 +349,3 @@ Jumped through topics of Systemd service that helps the user manage the service 
 We've gone through the step-by-step process to migrate the Fleek Network CLI and Systemd service setup from one user to the other. To keep it short, we decided to go with the use-case of where the migration happens between a **root** user and a **sudoer**.
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

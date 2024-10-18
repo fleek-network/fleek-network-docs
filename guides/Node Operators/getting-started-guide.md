@@ -20,7 +20,6 @@ tags:
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 
@@ -266,10 +265,3 @@ Furthermore, we guide you through a step-by-step installation of the network nod
 Finally, we do a quick health check to confirm the status of our node.
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

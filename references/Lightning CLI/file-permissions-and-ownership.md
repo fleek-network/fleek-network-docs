@@ -9,7 +9,6 @@ tags:
 - root
 ---
 
-import Author from '@site/src/components/Author';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 
 ## Ownership
@@ -147,10 +146,3 @@ sudo systemctl daemon-reload
 ```
 
 Consequently, when a user manages the service via the systemctl, the Lightning CLI process will read the configuration file settings provided above. It includes the location of the user preferences, such as the keystore location amongst others, preventing confusion regardless of **root** delegation.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

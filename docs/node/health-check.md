@@ -8,8 +8,6 @@ tags:
   - node status
 ---
 
-import Author from '@site/src/components/Author';
-
 ## TL;DR: Run the command
 
 A script is available to do and provide a health check overview:
@@ -104,10 +102,3 @@ If the request is successful, you should get the result `pong` as follows:
 ```
 
 Any other response, such as errors determine that the node is not healthy.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

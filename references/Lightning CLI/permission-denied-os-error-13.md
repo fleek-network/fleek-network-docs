@@ -6,8 +6,6 @@ tags:
 - permissions
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Ownership and file permissions
 
 When running the Lightning CLI, the user who's in control can delegate to **root** via **sudo**. Depending on how the Fleek Networking Lightning CLI was installed, this might cause some confusion, which is better explained by reading the reference [Keys not found](/references/Lightning%20CLI/keys-not-found), which illustrates a situation where a user gets an error message about the wrong location of a system path (keystore).
@@ -73,10 +71,3 @@ Environment=TMPDIR=/var/tmp
 :::caution attention
 The `/etc/systemd/system/lightning.service` service unit file presented here is a shorter version for simplicity. Do not replace your service unit file with the shorter content version presented here.
 :::
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

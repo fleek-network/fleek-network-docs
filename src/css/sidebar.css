@@ -1,5 +1,6 @@
 .menu .menu__list {
     padding-right: 2rem;
+    margin-top: 0;
 }
 
 nav>.menu__list {
@@ -43,15 +44,21 @@ nav>.menu__list {
 
 .theme-doc-sidebar-item-category::after {
     content: url("../../static/img/chevron-down.svg");
+    fill: var(--text-color);
     position: absolute;
-    top: 5px;
+    top: 7px;
     right: 0;
     transform: rotate(180deg);
+    pointer-events: none;
 }
 
 .menu__list-item--collapsed.theme-doc-sidebar-item-category::after {
-    top: 0;
+    top: 3px;
     transform: rotate(0deg);
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
 }
 
 @media (min-width: 997px) {

@@ -16,7 +16,6 @@ tags:
 
 ![Update Lightning](./assets/updating-lightning.png?202309191740)
 
-import Author from '@site/src/components/Author';
 import CheckoutCommitWarning from '../../guides/partials/_checkout-commit-warning.mdx';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
@@ -359,10 +358,3 @@ We have looked into how to pull the changes via Git, and discussed that contribu
 To complete, provided a step-by-step walkthrough the installation and setup process for the Fleek Network Lightning CLI and Systemd service.
 
 Discover more about the project by [watching/contributing on GitHub](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for any updates.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

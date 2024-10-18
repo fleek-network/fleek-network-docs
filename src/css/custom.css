@@ -30,6 +30,7 @@
   --background-color: #fff;
   --text-color: #202020;
   --link-active: #9E6C00;
+  --neutral-6: #d9d9d9;
   
   --ifm-navbar-background-color: var(--background-color);
   --ifm-navbar-link-color: var(--text-color);
@@ -47,6 +48,7 @@
   --ifm-color-content-secondary: var(--text-color);
   --ifm-pagination-nav-color-hover: var(--link-active);
   --ifm-font-weight-base: var(--ifm-font-weight-light);
+  --ifm-heading-color: var(--text-color);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -61,8 +63,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-@import url('../theme/Navbar/styles.css');
-@import url('../components/Author/styles.css');
+@import url('./navbar.css');
 @import url('./sidebar.css');
 @import url('./tags.css');
 @import url('./pagination-nav.css');
@@ -98,7 +99,7 @@ html[data-theme='dark'] {
 
 [data-theme='dark'] .footer {
   background: transparent;
-  border-top: 1px solid var(--ifm-toc-border-color);
+  border-top: 1px solid var(--neutral-6);
 }
 
 .alert {
@@ -245,7 +246,6 @@ article h1,
 .col article header > h2 {
   background: #ffffff;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .pagination-nav__link {

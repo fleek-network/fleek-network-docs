@@ -46,7 +46,7 @@ export default function NavbarContent() {
         // TODO stop hardcoding items?
         <>
           <NavbarLogo />
-          <div>
+          <div className={clsx('navbar__items', styles.navbar__items)}>
             {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
             {!searchBarItem && (
               <NavbarSearch className={styles.navbar__search}>

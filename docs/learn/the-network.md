@@ -17,7 +17,6 @@ tags:
 sidebarCollapsible: false
 ---
 
-import Author from '@site/src/components/Author';
 import Ports from '../../guides/partials/_ports.mdx';
 
 ## Protocol
@@ -401,10 +400,3 @@ The Fleek Network binary process is the program that's been compiled down to mac
 A JSON-RPC (JavaScript Object Notation Remote Procedure Call) is a protocol that enables communication between client and server applications. The [Fleek Network JSON-RPC](https://fleek-network.github.io/lightning/api-documentation/?202308171515) API enables JSON-RPC interaction with Fleek Network Node.
 
 Fleek Network JSON-RPC API reference documentation is available at [https://fleek-network.github.io/lightning/api-documentation](https://fleek-network.github.io/lightning/api-documentation).
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

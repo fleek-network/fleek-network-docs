@@ -7,7 +7,6 @@ tags:
   - diagnostic
 ---
 
-import Author from '@site/src/components/Author';
 
 ## Analyzing Logs
 
@@ -86,10 +85,3 @@ In any case, you can use the Docker command to analyze the logs. If you have sti
 sudo docker logs -f lightning-node
 ```
 :::
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

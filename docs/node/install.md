@@ -18,7 +18,6 @@ tags:
 - manual
 ---
 
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
@@ -708,10 +707,3 @@ Learn how to manage the Systemd Service by reading the section [systemd service]
 ## Frequently Used Commands (Quick Reference)
 
 A quick reference of the most Frequently Used Commands are available for [Native](/references/Lightning%20CLI/frequently-used-commands-for-native-setup) and [Docker](/references/Docker/frequently-used-commands-for-docker-setup) setups. If you'd like a more in depth explanation of the commands, check the [health check](/docs/node/health-check), [analyzing logs](/docs/node/analyzing-logs), [systemd service](/docs/node/systemd-service) and [guides](/guides) sections separately.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

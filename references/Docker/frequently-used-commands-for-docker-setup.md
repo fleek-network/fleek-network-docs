@@ -9,8 +9,6 @@ tags:
 - docker
 ---
 
-import Author from '@site/src/components/Author';
-
 ## TL;DR
 
 Most assisted processes are available through the `get.fleek.network` command, where you can select to install, do a health check amongst others.
@@ -184,10 +182,3 @@ sudo docker stop <CONTAINER ID or CONTAINER NAME>
 ```sh
 sudo docker rm <CONTAINER ID or CONTAINER NAME>
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

@@ -10,8 +10,6 @@ tags:
   - whitepaper
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Introduction
 
 The Core of Fleek Network offers a foundational layer to enable developers to build and deploy Edge Services efficiently. It abstracts away the development complexities of consensus, cryptography, storage and peer-to-peer networking, etc, to simplify things conceptually. It frees developers and teams to focus on what matters the most to reach business goals.
@@ -47,10 +45,3 @@ When a client requests a service, the protocol determines the best route to the 
 Once the computation is successful, the data streaming routes to the client. On-client request fulfillment, a proof of delivery is generated containing cryptographically secured metadata about the original request, any parts involved and the resources consumed.
 
 The Delivery Acknowledgements are stored locally in the participating node memory pools, rolled up to the protocol consensus consistently throughout the epoch (about 24h). This agreement is formed by a random committee of any healthy Nodes that use the information provided to reward the Nodes fairly.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

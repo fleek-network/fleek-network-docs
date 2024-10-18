@@ -17,7 +17,6 @@ tags:
 <!--
   The following import is intentional (see partial <CheckoutCommitWarning />)
 -->
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 
@@ -441,10 +440,3 @@ We guided you through the initial installation steps, and how to build a [Docker
 While we do our best to provide the clearest instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleek) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/lightning), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleek) for all the best updates!
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

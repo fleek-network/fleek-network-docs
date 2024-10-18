@@ -10,8 +10,6 @@ tags:
 - fix
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Check if CPU is supported
 
 ```sh
@@ -54,11 +52,3 @@ curl https://get.fleek.network | bash
 ```
 
 Alternatively, read the [manual installation instructions](/docs/node/install#manual-installation) for more information.
-
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

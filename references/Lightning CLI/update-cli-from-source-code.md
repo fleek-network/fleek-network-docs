@@ -10,7 +10,6 @@ tags:
 - fix
 ---
 
-import Author from '@site/src/components/Author';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
 import NoteExecStartFlagCConfigPath from '../../guides/partials/_note_execstart-flag-c-config-path.mdx';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
@@ -228,10 +227,3 @@ If successful, you should get the response `running and staked`, as follows:
 ```sh
 running and staked
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

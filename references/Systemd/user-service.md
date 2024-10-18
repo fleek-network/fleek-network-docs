@@ -11,8 +11,6 @@ tags:
 - systemd
 ---
 
-import Author from '@site/src/components/Author';
-
 A user should have the ability to run a Systemd user service unit without having to use `sudo` to control it.
 
 ## Check `--user` support
@@ -130,10 +128,3 @@ For example, if we check the `$XDG_RUNTIME_DIR` in a DigitalOcean box, we get th
 ```
 
 For this reason and to provide support for a wider audience of users and systems, we've stuck to sudo to execute the service, but this should not be a requirement and is not recommended.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

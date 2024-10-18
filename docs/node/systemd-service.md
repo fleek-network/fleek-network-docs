@@ -9,7 +9,6 @@ tags:
   - manage
 ---
 
-import Author from '@site/src/components/Author';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
@@ -156,10 +155,3 @@ If you have installed or set up the Service as a Docker Container, prefix the se
 sudo systemctl status docker-lightning
 ```
 :::
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

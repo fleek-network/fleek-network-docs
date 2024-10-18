@@ -10,7 +10,6 @@ tags:
 - restore
 ---
 
-import Author from '@site/src/components/Author';
 import FindAndReplaceConfigWithUserPaths from '../../guides/partials/_find-and-replace-config-with-user-paths.mdx';
 import RestoreKeystore from '../../guides/partials/_restore-keystore.mdx';
 
@@ -79,10 +78,3 @@ lgtn print-config --default > ~/.lightning/config.toml
 <RestoreKeystore />
 
 For a more in depth or step-by-step instructions read the guide [managing the keystore](/guides/Node%20Operators/managing-the-keystore).
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

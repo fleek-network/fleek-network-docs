@@ -7,8 +7,6 @@ tags:
   - build
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Overview
 
 This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a node operator.
@@ -40,11 +38,3 @@ While we do our best to provide the clearest instructions, there's always space 
 :::
 
 **Ready?** Start by checking the [server requirements](/docs/node/requirements)
-
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

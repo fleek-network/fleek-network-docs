@@ -12,9 +12,6 @@ tags:
 - systemd
 ---
 
-import Author from '@site/src/components/Author';
-
-
 ## Systemd Service as frozen or idle
 
 If you have a `Shutting node down` message on the service log, the process is likely failing to respond to Systemd shut down command by failing to terminate all the child processes that were started by the service.
@@ -85,10 +82,3 @@ Alternatively, you can watch the diagnostic.log
 ```sh
 tail -f /var/log/lightning/diagnostic.log
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>
