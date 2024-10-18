@@ -61,8 +61,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-@import url('../theme/Navbar/styles.css');
-@import url('../components/Author/styles.css');
+@import url('./navbar.css');
+@import url('./author.css');
 @import url('./sidebar.css');
 @import url('./tags.css');
 @import url('./pagination-nav.css');
