@@ -23,8 +23,6 @@ Hide color mode toggle in small viewports
 }
 
 .navbar__inner {
-  max-width: 1440px;
-  margin: 0 auto;
   width: 100%;
 
   @media (max-width: 996px) {
@@ -35,41 +33,15 @@ Hide color mode toggle in small viewports
     [class^="navbar__search"] {
       display: none;
     }
-
-    [class="navbar__logo"] {
-      margin-left: 1rem;
-    }
   }
 }
 
 .navbar__items {
-  a, a:hover {
+  a,
+  a:hover {
     font-weight: 300;
     svg {
       display: none;
     }
-  }
-}
-
-.navbar__search {
-  display: inline-block;
-
-  button, button:hover {
-    color: var(--text-color);
-    background: transparent;
-    border: 1px solid transparent;
-    border-color: transparent;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    border-color: var(--link-active);
-    transition: ease-in-out 0.2s border-color;
-  }
-
-  svg, svg:hover {
-    display: block;
-    color: var(--text-color);
-    opacity: 1;
   }
 }

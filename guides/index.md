@@ -3,12 +3,12 @@ title: About guides
 hide_title: true
 sidebar_position: 1
 tags:
-- Guides
-- Help
-- Fleek Network
+  - Guides
+  - Help
+  - Fleek Network
 ---
 
-import ImgBannerGuides from '@site/static/img/banner-guides.png?202309041511';
+import ImgBannerGuides from '@site/static/img/banner-guides.webp?202309041511';
 
 <img className="banner" src={ImgBannerGuides} />
 

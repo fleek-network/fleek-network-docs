@@ -24,6 +24,7 @@ const sidebars = {
       label: 'Learn',
       collapsed: true,
       collapsible: true,
+      link: {type: 'doc', id: 'learn/index'},
       items: [
         'learn/index',
         'learn/the-network',
@@ -38,6 +39,7 @@ const sidebars = {
       label: 'Node',
       collapsed: true,
       collapsible: true,
+      link: {type: 'doc', id: 'node/index'},
       items: [
         'node/index',
         'node/requirements',
@@ -71,6 +73,7 @@ const sidebars = {
       label: 'Open-source',
       collapsed: true,
       collapsible: true,
+      link: {type: 'doc', id: 'Open-source/code-of-conduct'},
       items: [
         'Open-source/code-of-conduct',
         'Open-source/contributing',

@@ -9,13 +9,13 @@ description: Welcome to the documentation site for Fleek Network, the decentrali
 category: Documentation
 keywords: [introduction, documentation, getting started]
 tags:
-- Edge Platform
-- Guide
-- Learn
-- Fleek Network
+  - Edge Platform
+  - Guide
+  - Learn
+  - Fleek Network
 ---
 
-import ImgBannerDocs from '@site/static/img/banner-docs.png?202309041511';
+import ImgBannerDocs from '@site/static/img/banner-docs.webp?202309041511';
 
 <img className="banner" src={ImgBannerDocs} />
 

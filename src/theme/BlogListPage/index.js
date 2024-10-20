@@ -10,7 +10,7 @@ import BlogLayout from '@theme/BlogLayout';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import BlogPostItems from '@theme/BlogPostItems';
-import ImgBannerEngineering from '@site/static/img/banner-engineering.png?202309041511';
+import ImgBannerEngineering from '@site/static/img/banner-engineering.webp?202309041511';
 
 function BlogListPageMetadata(props) {
   const {metadata} = props;

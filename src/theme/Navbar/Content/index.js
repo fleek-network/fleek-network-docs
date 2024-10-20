@@ -6,10 +6,8 @@ import {
 } from '@docusaurus/theme-common/internal';
 import NavbarItem from '@theme/NavbarItem';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
-import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
-import NavbarSearch from '@theme/Navbar/Search';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
@@ -38,7 +36,6 @@ export default function NavbarContent() {
   const mobileSidebar = useNavbarMobileSidebar();
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
-  const searchBarItem = items.find((item) => item.type === 'search');
 
   return (
     <NavbarContentLayout
@@ -48,11 +45,7 @@ export default function NavbarContent() {
           <NavbarLogo />
           <div className={clsx('navbar__items', styles.navbar__items)}>
             {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-            {!searchBarItem && (
-              <NavbarSearch className={styles.navbar__search}>
-                <SearchBar />
-              </NavbarSearch>
-            )}
+
             <NavbarItems items={leftItems} />
           </div>
 

@@ -3,11 +3,11 @@ title: About references
 hide_title: true
 sidebar_position: 1
 tags:
-- References
-- Help
+  - References
+  - Help
 ---
 
-import ImgBannerReferences from '@site/static/img/banner-references.png?202309041511';
+import ImgBannerReferences from '@site/static/img/banner-references.webp?202309041511';
 
 <img className="banner" src={ImgBannerReferences} />
 

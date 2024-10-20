@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start --no-minify",
-    "build": "docusaurus build --no-minify",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -33,7 +33,9 @@
     "@docusaurus/module-type-aliases": "^3.5.2",
     "@docusaurus/tsconfig": "^3.5.2",
     "@docusaurus/types": "^3.5.2",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "husky": "^8.0.3",
+    "postcss-preset-env": "^10.0.9",
     "typescript": "^5.6.3"
   },
   "browserslist": {

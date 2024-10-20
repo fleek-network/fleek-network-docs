@@ -1,7 +1,9 @@
 .navbar {
   box-shadow: none;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .DocSearch-Modal .DocSearch-Footer,
@@ -11,10 +13,12 @@
 
 .DocSearch-Button,
 .DocSearch-Button:hover {
+  height: 34px;
   border-radius: 0px;
   color: var(--text-color);
   border: 1px solid var(--text-color);
   background: var(--background-color);
+  box-shadow: none !important;
 
   .DocSearch-Search-Icon {
     color: var(--text-color);
@@ -22,11 +26,19 @@
 }
 
 @media (max-width: 996px) {
-  .navbar__toggle+.navbar__brand {
+  .navbar {
+    padding: 1.5rem 1rem;
+  }
+
+  .navbar__toggle + .navbar__brand {
     display: none;
   }
 
-  .navbar__items>div:nth-child(2) {
+  .navbar__toggle {
+    margin-right: 0;
+  }
+
+  .navbar__items > div:nth-child(2) {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -40,8 +52,9 @@
 
 @media (min-width: 996px) {
   .navbar__items {
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+    gap: 18px;
   }
 
   .navbar__items div:nth-child(1) {
