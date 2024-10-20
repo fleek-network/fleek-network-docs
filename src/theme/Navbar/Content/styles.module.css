@@ -51,25 +51,3 @@ Hide color mode toggle in small viewports
   }
 }
 
-.navbar__search {
-  display: inline-block;
-
-  button, button:hover {
-    color: var(--text-color);
-    background: transparent;
-    border: 1px solid transparent;
-    border-color: transparent;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    border-color: var(--link-active);
-    transition: ease-in-out 0.2s border-color;
-  }
-
-  svg, svg:hover {
-    display: block;
-    color: var(--text-color);
-    opacity: 1;
-  }
-}

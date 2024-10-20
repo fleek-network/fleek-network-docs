@@ -15,7 +15,8 @@ This section provides instructions to help you build a **Fleek Network Node**, i
 To participate in the [alpha Testnet](/docs/roadmap), you can begin by setting up and running nodes. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to [install](/docs/node/install) a network node successfully.
 :::
 
-# Node operator {#node-operator}
+## Node operator {#node-operator}
+
 ---
 
 A **Node Operator** is represented as a system administrator who builds, installs or maintains one or many nodes in a server or more.

@@ -15,6 +15,7 @@
   color: var(--text-color);
   border: 1px solid var(--text-color);
   background: var(--background-color);
+  box-shadow: none !important;
 
   .DocSearch-Search-Icon {
     color: var(--text-color);
@@ -40,8 +41,9 @@
 
 @media (min-width: 996px) {
   .navbar__items {
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+    gap: 18px;
   }
 
   .navbar__items div:nth-child(1) {

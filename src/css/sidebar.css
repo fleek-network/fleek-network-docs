@@ -40,6 +40,12 @@ nav>.menu__list {
             padding-left: 2rem;
         }
     }
+
+    .menu__caret {
+        position: absolute;
+        right: -17px;
+        top: 2px;
+    }
 }
 
 .theme-doc-sidebar-item-category::after {
@@ -62,8 +68,8 @@ nav>.menu__list {
 }
 
 @media (min-width: 997px) {
-    aside .sidebarViewport_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-styles-module {
-        top: 36px;
+    aside [class^="sidebarViewport"] {
+        top: 96px;
         position: sticky;
         height: inherit;
         max-height: inherit;

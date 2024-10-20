@@ -31,6 +31,8 @@
   --text-color: #202020;
   --link-active: #9E6C00;
   --neutral-6: #d9d9d9;
+  --neutral-7: #CECECE;
+  --neutral-11: #646464;
   
   --ifm-navbar-background-color: var(--background-color);
   --ifm-navbar-link-color: var(--text-color);
@@ -49,6 +51,18 @@
   --ifm-pagination-nav-color-hover: var(--link-active);
   --ifm-font-weight-base: var(--ifm-font-weight-light);
   --ifm-heading-color: var(--text-color);
+  --docsearch-searchbox-focus-background: var(--background-color) !important;
+  --docsearch-modal-background: var(--background-color) !important;
+  --docsearch-hit-background: var(--neutral-6) !important;
+  --docsearch-hit-active-color: var(--link-active) !important;
+  --docsearch-highlight-color: var(--text-color) !important;
+  --docsearch-text-color: var(--text-color) !important;
+  --docsearch-hit-color: var(--text-color) !important;
+  --docsearch-muted-color: var(--text-color) !important;
+
+  --ifm-link-color: var(--text-color);
+  --ifm-color-content-secondary: var(--text-color) !important;
+  --docsearch-primary-color: var(--text-color) !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -70,11 +84,6 @@
 @import url('./breadcrumbs.css');
 @import url('./typography.css');
 @import url('./toc.css');
-
-:root {
-  --docsearch-modal-background: #000 !important;
-  --custom-color-gray-blue: rgb(62 72 105 / 37.5%);
-}
 
 .main-wrapper a,
 .main-wrapper span,
