@@ -8,7 +8,6 @@ tags:
 sidebarCollapsible: false
 ---
 
-import Author from '@site/src/components/Author';
 import Ports from '../../guides/partials/_ports.mdx';
 
 ## Requirements
@@ -57,10 +56,3 @@ The recommended number of CPU cores is a minimum of 4 with a minimum CPU speed o
 ### Memory
 
 A minimum of 32 GB of memory (RAM) is required and a reasonable amount of disk space for the installation and running processes, which at the minimum should be around 20 GB.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

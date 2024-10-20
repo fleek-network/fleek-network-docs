@@ -8,8 +8,6 @@ tags:
 sidebarCollapsible: false
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Overview
 
 When a client signs a message, it creates a Delivery Acknowledgement that confirms a successful service computation delivery by a node. This [process](#node-vs-client-process-flow) ensures the immutability and integrity of the message (the client cannot change or reverse it) and also includes metadata about the commodities consumed by the node during the service execution. This metadata helps in calculating the reward that the node will receive.
@@ -41,7 +39,7 @@ The periodic submission of Delivery Acknowledgements, allows us to leverage SNAR
 The Fleek Network uses Narwhal as a [DAG-mempool](https://arxiv.org/pdf/2105.11827.pdf) for transaction ordering (as total ordering or linear order) and Bullshark as the consensus engine.
 
 :::tip
-Read [The Consensus Algorithm](/docs/learn/the-network#the-consensus-algorithm) section, to learn more about Narwhal and Bullshark. Alternatively, check the [whitepaper](/docs/whitepaper) for more detailed information.
+Read [The Consensus Algorithm](/docs/learn/the-network#consensus) section, to learn more about Narwhal and Bullshark. Alternatively, check the [whitepaper](/docs/whitepaper) for more detailed information.
 :::
 
 Total ordering is performed by a committee-based approach. The committee is formed from a subset of any valid staked node at the end of every epoch (about 24 hours). Integrity is met due to the node rotation that occurs at each period, reducing risks associated with nodes being compromised and affecting the committee's purity.
@@ -75,10 +73,3 @@ Learn more about it in the [Content Addressing](/docs/learn/the-network#content-
 ## Delivery Acknowledgement Customization
 
 A Service can have a custom configuration to specify how Delivery Acknowledgements should behave or work. Patterns and conventions should be expected to emerge from the Service builder community and best practices.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

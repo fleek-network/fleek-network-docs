@@ -17,7 +17,6 @@ tags:
 sidebarCollapsible: false
 ---
 
-import Author from '@site/src/components/Author';
 import Ports from '../../guides/partials/_ports.mdx';
 
 ## Protocol
@@ -36,7 +35,7 @@ It's important to keep track of these components to ensure that the system is ru
 
 As a decentralized network, the state of these is replicated across all of the distributed nodes in the network by forming a blockchain, in which consensus on transactions transmutes to the final immutable state.
 
-## The Consensus algorithm
+## The Consensus algorithm {#consensus}
 
 [Narwhal](https://arxiv.org/abs/2105.11827) and [Bullshark](https://arxiv.org/abs/2209.05633), are high-performant mempool and consensus engines by [Mysten Labs](https://github.com/MystenLabs). The Fleek Network uses Narwhal as a DAG-mempool for transaction ordering (as total ordering or linear order) and Bullshark as the consensus engine.
 
@@ -401,10 +400,3 @@ The Fleek Network binary process is the program that's been compiled down to mac
 A JSON-RPC (JavaScript Object Notation Remote Procedure Call) is a protocol that enables communication between client and server applications. The [Fleek Network JSON-RPC](https://fleek-network.github.io/lightning/api-documentation/?202308171515) API enables JSON-RPC interaction with Fleek Network Node.
 
 Fleek Network JSON-RPC API reference documentation is available at [https://fleek-network.github.io/lightning/api-documentation](https://fleek-network.github.io/lightning/api-documentation).
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

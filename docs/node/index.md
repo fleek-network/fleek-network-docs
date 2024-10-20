@@ -7,17 +7,16 @@ tags:
   - build
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Overview
 
-This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a [node operator](#node-operator).
+This section provides instructions to help you build a **Fleek Network Node**, it's aimed at everybody willing to learn and cultivate knowledge as a node operator.
 
 :::tip
 To participate in the [alpha Testnet](/docs/roadmap), you can begin by setting up and running nodes. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to [install](/docs/node/install) a network node successfully.
 :::
 
-# Node operator
+## Node operator {#node-operator}
+
 ---
 
 A **Node Operator** is represented as a system administrator who builds, installs or maintains one or many nodes in a server or more.
@@ -40,11 +39,3 @@ While we do our best to provide the clearest instructions, there's always space 
 :::
 
 **Ready?** Start by checking the [server requirements](/docs/node/requirements)
-
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

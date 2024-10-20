@@ -10,8 +10,6 @@ tags:
 - restore
 ---
 
-import Author from '@site/src/components/Author';
-
 :::caution
 The security of the private key is the responsibility of the user. Unfortunately, the Fleek Network team and any others are unable to help regain access to private key if lost or failed to secure them. The private keys are the user responsibility. The Fleek Network team doesn't endorse any methods of encryption and storage, the methods described here are for educational purposes only.
 :::
@@ -137,10 +135,3 @@ tar -xf keystore.tar -C $HOME/tar_keystore_extract
 Locate the extracted files in `$HOME/tar_keystore_extract`, which should look like `$HOME/tar_keystore/home/<USERNAME>/.lightning/keystore`
 
 For a more in depth or step-by-step instructions read the guide [managing the keystore](/guides/Node%20Operators/managing-the-keystore).
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

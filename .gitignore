@@ -19,3 +19,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.yarn
+
+# IDE specific
+/.vscode
+
+# Local Fleek Configs
+fleek.config.json

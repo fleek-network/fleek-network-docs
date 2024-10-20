@@ -9,7 +9,6 @@ tags:
   - lgtn
 ---
 
-import Author from '@site/src/components/Author';
 import InfoNetworkParticipation from '../../guides/partials/_info_network_participation.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
@@ -167,10 +166,3 @@ Options:
   -v...                      Increases the level of verbosity (the max level is -vvv)
   -h, --help                 Print help
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

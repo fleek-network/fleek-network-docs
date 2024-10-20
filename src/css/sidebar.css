@@ -1,0 +1,77 @@
+.menu .menu__list {
+    padding-right: 2rem;
+    margin-top: 0;
+}
+
+nav>.menu__list {
+    padding-bottom: 4rem;
+}
+
+.menu .menu__list a::first-letter {
+    text-transform: capitalize;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+    background-color: transparent;
+}
+
+.menu__link {
+    padding: var(--ifm-menu-link-padding-vertical) 0;
+    font-weight: 300;
+    border-bottom: 1px solid var(--sidebar-menu-item_border);
+    border-radius: 0;
+}
+
+.menu__link--active,
+.menu__link--active:hover {
+    color: var(--link-active);
+    border-color: var(--link-active);
+}
+
+.theme-doc-sidebar-item-category {
+    position: relative;
+
+    .menu__list {
+        padding-right: 0;
+        padding-left: 0;
+
+        .menu__link {
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+
+    .menu__caret {
+        position: absolute;
+        right: -17px;
+        top: 2px;
+    }
+}
+
+.theme-doc-sidebar-item-category::after {
+    content: url("../../static/img/chevron-down.svg");
+    fill: var(--text-color);
+    position: absolute;
+    top: 7px;
+    right: 0;
+    transform: rotate(180deg);
+    pointer-events: none;
+}
+
+.menu__list-item--collapsed.theme-doc-sidebar-item-category::after {
+    top: 3px;
+    transform: rotate(0deg);
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
+}
+
+@media (min-width: 997px) {
+    aside [class^="sidebarViewport"] {
+        top: 96px;
+        position: sticky;
+        height: inherit;
+        max-height: inherit;
+    }
+}

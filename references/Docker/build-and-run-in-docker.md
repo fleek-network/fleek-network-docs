@@ -11,7 +11,6 @@ tags:
 - container
 ---
 
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 
 ## Clone the source code locally
@@ -159,10 +158,3 @@ To view the logs of a Docker container in real time, use the following command:
 ```sh
 sudo docker logs -f lightning-node
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

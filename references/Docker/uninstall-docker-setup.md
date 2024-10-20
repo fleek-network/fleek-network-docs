@@ -10,7 +10,6 @@ tags:
 - container
 ---
 
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
@@ -147,10 +146,3 @@ To completely remove the directory run the command:
 ```sh
 sudo rm -rf /var/log/lightning
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

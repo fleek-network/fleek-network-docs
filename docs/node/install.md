@@ -18,7 +18,6 @@ tags:
 - manual
 ---
 
-import Author from '@site/src/components/Author';
 import GitCloneOptions from '../../guides/partials/_git-clone-options.mdx';
 import CreateAUser from '../../guides/partials/_create-a-user.mdx';
 import SetUserPathInConfigToml from '../../guides/partials/_set-user-path-config-toml.mdx';
@@ -31,7 +30,7 @@ This section describes how to install the Fleek Network Lightning on supported o
 If you'd like to participate in the [alpha Testnet](/docs/roadmap), you have to go through the onboarding process. Check the [requirements](/docs/node/requirements) and find the [onboarding instructions](/docs/node/testnet-onboarding) to enable you to proceed and [install](/docs/node/install) a network node successfully.
 :::
 
-## Assisted installer
+## Assisted installer {#assisted-installer}
 
 The assisted installer is a script written in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Unix shell) that is available as a curl command line.
 
@@ -118,7 +117,7 @@ sudo systemctl start lightning.service
 ```
 
 :::tip
-To learn more about Systemctl commands, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
+To learn more about Systemctl commands, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/systemd-service/#use-systemctl-to-manage-systemd-service)
 :::
 
 :::tip
@@ -569,7 +568,7 @@ sudo systemctl start lightning.service
 Find the timeline of events for the Lightning service by checking the log files. Learn about it in the section [Log Messages](/docs/node/analyzing-logs).
 :::
 
-To learn more, visit the section [Use Systemctl to manage the Lightning Service](#use-systemctl-to-manage-systemd-service)
+To learn more, visit the section [Use Systemctl to manage the Lightning Service](/docs/node/systemd-service/#use-systemctl-to-manage-systemd-service)
 
 ## Docker installation
 
@@ -708,10 +707,3 @@ Learn how to manage the Systemd Service by reading the section [systemd service]
 ## Frequently Used Commands (Quick Reference)
 
 A quick reference of the most Frequently Used Commands are available for [Native](/references/Lightning%20CLI/frequently-used-commands-for-native-setup) and [Docker](/references/Docker/frequently-used-commands-for-docker-setup) setups. If you'd like a more in depth explanation of the commands, check the [health check](/docs/node/health-check), [analyzing logs](/docs/node/analyzing-logs), [systemd service](/docs/node/systemd-service) and [guides](/guides) sections separately.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

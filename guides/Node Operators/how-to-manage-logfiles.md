@@ -13,8 +13,6 @@ tags:
 
 ![How to manage log files](./assets/how-to-manage-log-files.png?202310271441)
 
-import Author from '@site/src/components/Author';
-
 ## Introduction
 
 The Fleek Network node streams text messages to the standard output and error in Linux. Given that disk space is a limited resource for most systems, the number of text data can be a cause of concern. Managing the file sizes by means of rotation and compression can help.
@@ -292,10 +290,3 @@ The guide starts by warning us about the stream text messages that the Fleek Net
 To help control it, the journald is introduced, by explaining its role as a centralized message system, that runs alongside the application logs. Then, have it configured to limit the maximum file size, amongst other system-wide settings.
 
 Finally, logrotate is discussed in helping us manage the Fleek Network Lightning application log files by setting it to automatically compress, rename, remove logs for the system admin convenience and saving system's resources.
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

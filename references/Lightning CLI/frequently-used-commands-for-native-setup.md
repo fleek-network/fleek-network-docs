@@ -8,7 +8,6 @@ tags:
 - lightning
 ---
 
-import Author from '@site/src/components/Author';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 
@@ -143,10 +142,3 @@ tail -f /var/log/lightning/output.log
 ```sh
 tail -f /var/log/lightning/diagnostic.log
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

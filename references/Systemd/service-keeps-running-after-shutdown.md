@@ -11,8 +11,6 @@ tags:
 - process
 ---
 
-import Author from '@site/src/components/Author';
-
 ## Stop the service
 
 The [Systemd service](/docs/node/systemd-service) section tells how to stop the service, as follows:
@@ -40,10 +38,3 @@ To force stop the service `lgtn` execute the command:
 ```sh
 sudo killall -9 lgtn
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

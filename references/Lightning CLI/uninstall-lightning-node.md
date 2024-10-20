@@ -12,7 +12,6 @@ tags:
 - Clean
 ---
 
-import Author from '@site/src/components/Author';
 import WarningPreventPrematureShutdown from '../../guides/partials/_warning_prevent_premature_shutdown.mdx';
 import TipShutdownGracefully from '../../guides/partials/_tip_shutdown_gracefully.mdx';
 
@@ -107,10 +106,3 @@ To uninstall rustc, rustup and cargo run the following command:
 ```sh
 rustup self uninstall
 ```
-
-<Author
-    name="Helder Oliveira"
-    image="https://github.com/heldrida.png"
-    title="Software Developer + DX"
-    url="https://github.com/heldrida"
-/>

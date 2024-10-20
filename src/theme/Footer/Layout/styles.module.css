@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    margin: 0 0 0 auto;
+    max-width: 750px;
+    flex-grow: 1;
+
+    a {
+        text-decoration: none;
+
+        svg {
+            display: none;
+        }
+    }
+}
