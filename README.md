@@ -8,13 +8,13 @@ The Fleek Network documentation and guides source.
 ### 🤖 Installation
 
 ```
-yarn
+npm i
 ```
 
 ### 🏠 Local Development
 
 ```
-yarn start
+npm run start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -22,7 +22,7 @@ This command starts a local development server and opens up a browser window. Mo
 ### 👷 Build
 
 ```
-yarn build
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
@@ -44,7 +44,7 @@ Any new commit into the `main` branch will trigger the [Deploy (Github pages)](h
 Alternatively, to publish manually to `gh_pages` use the `deploy` command. Here we prefix the command with the optional variables.
 
 ```sh
-USE_SSH=true GIT_USER=<Your github username> yarn deploy
+USE_SSH=true GIT_USER=<Your github username> npm run deploy
 ```
 
 💡 The command requires you to have Git authenticated via ssh.
@@ -76,7 +76,7 @@ API_KEY=<YOUR API KEY>
 Then you need to start the crawl according to your configuration.
 
 ```
-yarn crawl:docker
+npm run crawl:docker
 ```
 
 ### 👩‍🎨 Custom domain
